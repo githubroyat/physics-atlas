@@ -1,0 +1,702 @@
+{
+  "hero": {
+    "sfx": "ZOOM!",
+    "caption": "Where is it, how fast is it going, and how fast is that changing?"
+  },
+  "intro": "A hero sprints, brakes, slides to a stop. How do you put that into numbers? With a simple recipe: **where** it is (position **s**), **how fast** it moves (velocity **v**) and **how fast that changes** (acceleration **a**), plus three graphs that let you *see* all three at once. This chapter teaches the booklet's two motion formulas step by step. Unless we say otherwise: motion along a **straight line**, we choose a direction to be positive first, g = {g} m/s², no air resistance.\n\n**Recaps from earlier chapters.** From *Stored lightning*: between two parallel plates the field is uniform, **E = U/d**, the force on a charge is **F = q·E**, and moving a charge q through a voltage U changes its energy by **W = q·U**. From *Swing*: height energy turns into movement energy, **m·g·h = ½·m·v²**. And from earlier years: **F = m·a**. The next chapter, *Throw*, uses today's formulas for balls flying in curves.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "describe straight-line motion with **position, displacement, velocity and acceleration**, and choose a positive direction;",
+      "use **v = Δs/Δt** and **a = Δv/Δt**;",
+      "use **s(t) = s_{0} + v_{0}·t + ½·a·t²** and **v(t) = v_{0} + a·t** for uniform and uniformly accelerated motion;",
+      "read and sketch **s–t, v–t and a–t graphs**: the slope of s–t is v, the slope of v–t is a, the area under v–t is the displacement;",
+      "treat **free fall** (a = −g) and use **energy conservation** to check an answer;",
+      "find the acceleration of a **charge in a uniform electric field**, a = q·E/m."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "You throw a ball straight up. At the very top it stops for an instant, so its velocity is v = 0 there. Up is positive and there is no air resistance.\n\nWhat is the ball's **acceleration** at that top moment?",
+    "choices": [
+      "Zero: it isn't moving",
+      "{qTop} m/s²: gravity is still pulling",
+      "Positive, because it is going up",
+      "It depends on how hard you threw it"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Many people say that, but no:",
+      "Yes! That surprises almost everyone.",
+      "Not quite:",
+      "Not that either:"
+    ],
+    "explain": "**Standing still for an instant is not the same as zero acceleration.** Gravity pulls on the ball the whole time, on the way up, at the top and on the way down, so a = −g = {qTop} m/s² throughout (up is positive, so the minus sign means 'pointing down'). The velocity is what changes: it shrinks to 0 at the top and then grows downwards. Let's learn the tools to see this clearly.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "fig": {
+    "s": {
+      "unit": "m",
+      "axis": "s (m)"
+    },
+    "s_aria": "An s–t graph: a straight line rising from 10 m at 0 s to 30 m at 5 s, with a dashed triangle showing the change in position and the change in time"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Where are you, and how fast?",
+    "do": "**Do this:** pace out **10 m** (about a dozen big steps) in a corridor or garden. Walk it at an even speed while a friend times you. Say it took **8.0 s**: then you walked at v = 10 m / 8.0 s = {paceV} m/s. Try it with your own time.",
+    "body": "The **position s** says where something is on a line, measured from a starting point (s = 0). **Before any problem, choose which direction is positive.** Then every position, velocity and acceleration gets a sign: + if it points the chosen way, − if it points the other way.\n\nThe **displacement** is the change of position, Δs = s_{end} − s_{start}. (It isn't the distance walked: 5 m forward and 5 m back is a displacement of 0.)\n\nThe **velocity** says how fast the position changes (booklet):\n\n$ v = Δs / Δt\n\nUnit: m/s. A positive v means moving in the positive direction, a negative v means moving the other way. If v stays the same (**uniform motion**), the position at time t is the starting position plus the displacement so far:\n\n$ s(t) = s_{0} + v_{0}·t\n\nThis is the booklet's s(t) = s_{0} + v_{0}·t + ½·a·t² with a = 0, so v_{0} is simply the constant velocity.\n\n**Example.** A hero starts 20 m from a door and runs towards it at 4.0 m/s. Choose the direction **away from the door** as positive: s_{0} = +20 m and v_{0} = −4.0 m/s. After 3.0 s: s = 20 + (−4.0) × 3.0 = {runS} m.",
+    "after": "**On an s–t graph** (position against time), uniform motion is a **straight line**, and its **slope is the velocity**: slope = Δs/Δt = v. In the graph the position goes from 10 m at t = 0 to 30 m at t = 5 s, so v = (30 − 10) / 5 = {figV} m/s. A steeper line means faster, a line sloping down means a negative v, and a flat line means standing still.",
+    "check": {
+      "q": "A hero starts at s_{0} = 30 m and moves with a velocity of **−5.0 m/s** (we chose positive as the direction away from the origin). Where is she at t = 4.0 s?",
+      "choices": [
+        "{c1s} m",
+        "{c1w1} m",
+        "{c1w2} m",
+        "{c1w3} m"
+      ],
+      "answer": 0,
+      "why": "s = s_{0} + v_{0}·t = 30 + (−5.0) × 4.0 = **{c1s} m**. The minus sign matters: she is moving back towards the origin.",
+      "whyNot": [
+        null,
+        "You treated the −5.0 as +5.0. Moving back towards the origin should leave her closer to it than 30 m.",
+        "That is only the displacement v_{0}·t. A position is the start point plus the displacement.",
+        "You took 5 off 30 without multiplying by the time. The velocity acts for every one of the t seconds."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Speeding up and braking",
+    "do": "**Do this:** next time you are in a bus, car or lift, notice the push you feel when it **speeds up** and when it **brakes**. That push comes from **acceleration**. While it cruises at a steady speed you feel no push, even at 100 km/h.",
+    "body": "**Acceleration** says how fast the *velocity* changes (booklet):\n\n$ a = Δv / Δt\n\nUnit: m/s². A scooter whose velocity grows by 1.5 m/s every second has a = 1.5 m/s².\n\n**Signs.** Whether something speeds up or slows down depends on **both signs together**: if v and a have the **same sign** it speeds up, if they have **opposite signs** it slows down. Example: a car slows from 20 m/s to 8 m/s in 3.0 s, moving in the positive direction: a = (8 − 20) / 3.0 = {accC} m/s². The negative a doesn't mean 'less', it means 'pointing the negative way', which here is braking.\n\nIf a is **constant**, the velocity changes by the same amount every second (booklet):\n\n$ v(t) = v_{0} + a·t\n\nv_{0} is the velocity at t = 0. Example: a scooter at 2.0 m/s with a = 1.5 m/s² has, after 4.0 s, v = 2.0 + 1.5 × 4.0 = {vScoot} m/s.\n\n**On a v–t graph** constant acceleration is a **straight line whose slope is a**. On an **a–t graph** it is a **flat line** at height a.\n\n**Sketch it:** if the s–t line slopes **down** at a steady rate, the v–t graph is a flat line **below** the t-axis.",
+    "check": {
+      "q": "A car on a straight road speeds up from **4.0 m/s to 16 m/s in 3.0 s**. Assuming a constant acceleration, what is it?",
+      "choices": [
+        "{c2a} m/s²",
+        "{c2w1} m/s²",
+        "{c2w2} m/s²",
+        "{c2w3} m/s²"
+      ],
+      "answer": 0,
+      "why": "a = Δv/Δt = (16 − 4.0) / 3.0 = **{c2a} m/s²**.",
+      "whyNot": [
+        null,
+        "You divided the final velocity by the time. Acceleration uses the **change** in velocity, not v itself.",
+        "That is the change in velocity with no time in it. Acceleration means that change per second.",
+        "Upside down: that is time over velocity change. Acceleration is the change in velocity divided by the time."
+      ]
+    }
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "The area under the line",
+    "lead": "Here's a neat trick: **the area under a v–t graph is the displacement.** If v is constant, the area is height × width = v × t, and that's exactly the displacement. It works for slanted lines too. Below is a scooter whose velocity rises in a straight line from 4 m/s to 10 m/s in 6 s. Tap through the steps to build the booklet's position formula from that area.",
+    "after": "**So the booklet formula is an area:** s(t) = s_{0} + v_{0}·t + ½·a·t² is the starting position plus the area under the v–t line (rectangle v_{0}·t plus triangle ½·a·t·t). For the scooter in the graph, a = (10 − 4) / 6 = {figAcc} m/s², and the area is a rectangle of 4 × 6 = {figRect} m plus a triangle of ½ × 6 × 6 = {figTri} m, so **{figArea} m**. The formula agrees: 4 × 6 + ½ × {figAcc} × 6² = {figArea2} m.\n\n**Signs again.** Area **above** the t axis (positive v) is displacement in the positive direction, area **below** it (negative v) is displacement the other way. And for constant acceleration the **s–t graph is a curve** (a parabola): it bends up if a is positive and down if a is negative. At every moment, its slope is v.",
+    "check": {
+      "q": "A scooter starts from rest. Its v–t graph is a straight line that rises to **12 m/s at t = 6.0 s**. What is its displacement during these 6.0 s?",
+      "choices": [
+        "{c3} m",
+        "{c3w1} m",
+        "{c3w2} m",
+        "{c3w3} m"
+      ],
+      "answer": 0,
+      "why": "The area under the line is a triangle: ½ × 6.0 × 12 = **{c3} m**. (12 × 6.0 would be the rectangle you get for a constant 12 m/s.)",
+      "whyNot": [
+        null,
+        "That is a rectangle, 12 × 6.0: it treats the velocity as 12 m/s all the time. But it starts at 0.",
+        "That is 12/6.0, the slope of the line, which is the acceleration. The question asks for the displacement, a different thing to read off the graph.",
+        "You added 12 and 6.0, which have different units (m/s and s), so the sum means nothing physical. What does the 12 m/s have to be combined with?"
+      ]
+    }
+  },
+  "derive": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "The v–t line starts at height v_{0} and runs for a time t. Split the area under it into a rectangle (height v_{0}) and a triangle on top. The **rectangle's** area is...",
+        "options": [
+          "v_{0}·t",
+          "½·v_{0}·t",
+          "a·t"
+        ],
+        "answer": 0,
+        "then": "Rectangle: height × width = **v_{0}·t**. That's the displacement if the velocity stayed v_{0}."
+      },
+      {
+        "prompt": "On top sits a triangle of width t. Its height is the **extra** velocity gained, from v = v_{0} + a·t, so the height is a·t. The triangle's area is...",
+        "options": [
+          "½·a·t²",
+          "a·t²",
+          "a·t"
+        ],
+        "answer": 0,
+        "then": "Triangle: ½ × base × height = ½ × t × (a·t) = **½·a·t²**."
+      },
+      {
+        "prompt": "Add both areas, and the position where you started. The position at time t is...",
+        "options": [
+          "s_{0} + v_{0}·t + ½·a·t²",
+          "s_{0} + v_{0}·t + a·t²",
+          "v_{0}·t + ½·a·t²"
+        ],
+        "answer": 0,
+        "then": "The area is the displacement, and you start at s_{0}:\n\n$ s(t) = s_{0} + v_{0}·t + ½·a·t²\n\nThat's the formula from your booklet."
+      }
+    ]
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Three graphs, one story",
+    "do": "**Do this:** in the lab below press **Run** and watch the three graphs grow. Then **drag the white dot** on the yellow s–t graph back and forth (or use the Time slider).",
+    "check": {
+      "q": "An s–t graph is a curve that gets steeper and steeper. At t = 0 its slope is **2.0 m/s**, and at t = 4.0 s its slope is **10.0 m/s**. What is the acceleration, assuming it is constant?",
+      "choices": [
+        "{c4a} m/s²",
+        "{c4w1} m/s²",
+        "{c4w2} m/s²",
+        "{c4w3} m/s²"
+      ],
+      "answer": 0,
+      "why": "The slope of s–t is v, so v goes from 2.0 to 10.0 m/s in 4.0 s. Then a = Δv/Δt = (10.0 − 2.0) / 4.0 = **{c4a} m/s²**.",
+      "whyNot": [
+        null,
+        "You divided the final slope, 10.0, by the time. Use how much the slope (v) **changed**.",
+        "That is the change in v, 10.0 − 2.0, but not yet divided by the 4.0 s it took.",
+        "You added the two slopes. Acceleration is the change in velocity: subtract, then divide by the time."
+      ]
+    }
+  },
+  "lab": {
+    "lead": "An object moves along a track. Yellow is the **position** s, cyan the **velocity** v, pink the **acceleration** a. The faint curves show the whole time window, the bold ones how far time has got. The white dashed line is the **tangent** to the s–t curve: its slope is v. The shaded area on the v–t graph is the displacement. Arrows on the object show v (cyan) and a (pink). The small white dots on the track are the object's position every second.",
+    "scene": "An object on a track and three graphs below it: position, velocity and acceleration against time",
+    "drag": "Time cursor on the position graph, in seconds. Use the arrow keys to move it.",
+    "labels": {
+      "s0": "Start position s0",
+      "v0": "Start velocity v0",
+      "a": "Acceleration a",
+      "T": "Time window"
+    },
+    "time": "Time t",
+    "run": "Run",
+    "pause": "Pause",
+    "reset": "Reset",
+    "vertical": "Up is positive (vertical track)",
+    "presets": {
+      "constant": "Constant speed",
+      "brake": "Braking car",
+      "drop": "Dropped from 20 m",
+      "up": "Thrown up"
+    },
+    "graph": {
+      "s": "position s (m)",
+      "v": "velocity v (m/s)",
+      "a": "acceleration a (m/s²)",
+      "t": "time t (s)",
+      "track": "position s (m)"
+    },
+    "readout": {
+      "t": "Time",
+      "s": "Position s",
+      "v": "Velocity v",
+      "slope_s": "Slope of s–t",
+      "slope_v": "Slope of v–t",
+      "area": "Area under v–t",
+      "disp": "Displacement s − s0"
+    },
+    "status_rest": "At this moment the velocity is 0: it is standing still for an instant.",
+    "status_still": "Standing still: the velocity is 0 and so is the acceleration.",
+    "status_const": "Constant speed: no acceleration, so v does not change.",
+    "status_up": "Speeding up: v and a have the same sign.",
+    "status_down": "Slowing down: v and a have opposite signs.",
+    "turn": "The velocity passes through 0 at t = {t} s, and after that the object moves the other way.",
+    "tasks": "**Try these:**\n- **Constant speed:** s–t is a straight line, v–t is flat, a–t sits at 0. After 6 s the object has moved {labConstS} m (v = 3.0 m/s).\n- **Braking car:** v_{0} = 10 m/s and a = −2.5 m/s², time window 6 s. The v–t line slopes down and reaches 0 at t = {brakeT} s, having covered {brakeD} m, which is the area of the triangle. Let it run on to 6 s: the maths then carries the car *backwards*, to s = {brakeBack} m. Real brakes don't, so the lab only shows the formulas.\n- **Thrown up:** the ball goes up and comes back down, so the area above the t-axis (going up) and the area below it (coming down) almost cancel. The displacement is small even though the path is long. The area under v–t is the **displacement**, not the distance travelled.\n- Slide **a** up and down. The v–t line tilts (its slope is a) and the s–t curve bends.\n- Watch the readouts: *Slope of s–t* always equals v, *Slope of v–t* always equals a, and *Area under v–t* always equals the displacement *s − s0*.\n- Set a **negative v and a negative a**: it speeds up, but backwards. Same signs means speeding up.\n\nThe lab shows only the maths of constant acceleration: there is no ground and no air."
+  },
+  "learn5": {
+    "kicker": "Learn · Step 5",
+    "title": "Free fall",
+    "do": "**Do this:** hold a coin (flat side down) and a heavy key at the same height, about a metre up, and let go at the same time. Listen: you will usually hear one click, or two very close together. If the coin flutters, drop it again or use a small stone. Then press **Dropped from 20 m** and **Thrown up** in the lab above and look at the pink a–t graph.",
+    "body": "Near the Earth's surface, with no air resistance, every falling object has the **same acceleration**, pointing down: g = {g} m/s². Choose **up as positive**. Then in the booklet formulas a = −g:\n\n$ s(t) = s_{0} + v_{0}·t − ½·g·t²\n$ v(t) = v_{0} − g·t\n\nThis holds the **whole time**: going up, at the top and coming down. At the top v = 0 for an instant, but a is still −g (that was the warm-up).\n\n**Dropped from rest** (v_{0} = 0): after 2.0 s, v = −{g} × 2.0 = {ff2v} m/s (negative: moving down) and it has fallen ½·g·t² = {ff2s} m.\n\n**Check a kinematics answer with energy.** Drop a stone from 20 m. Setting s = 0 in the formula gives the landing time t = √(2 × 20 / g) = {dropT} s, and then v = −g·t = −{dropV} m/s. Now energy, with the stone starting at rest: m·g·h = ½·m·v², so v = √(2·g·h) = √(2 × {g} × 20) = {dropVE} m/s. The same speed, from a different road. Throw a stone up at 10 m/s: kinematics says the top comes at t = v_{0}/g = {upT} s, at a height of {upH} m. Energy says ½·m·v_{0}² = m·g·h, so h = v_{0}²/(2·g) = {upHE} m. Two roads, one answer. (Energy gives the speed and the height, but not the time or the direction.)",
+    "check": {
+      "q": "A stone is dropped from rest from a height of **5.0 m**. Ignoring air, how fast is it going just before it hits the ground? (g = {g} m/s²)",
+      "choices": [
+        "{c5v} m/s",
+        "{c5w1} m/s",
+        "{c5w2} m/s",
+        "{c5w3} m/s"
+      ],
+      "answer": 0,
+      "why": "Energy: m·g·h = ½·m·v², so v = √(2·g·h) = √(2 × {g} × 5.0) = **{c5v} m/s**.",
+      "whyNot": [
+        null,
+        "That is g × h. Look at the energy equation m·g·h = ½·m·v²: it has a v² and a ½ in it.",
+        "That is √(g·h): the 2 got lost. In m·g·h = ½·m·v² the ½ moves to the other side as a 2.",
+        "That is 2·g·h, which is v², not v. One more step is needed to get the speed itself."
+      ]
+    }
+  },
+  "learn6": {
+    "kicker": "Learn · Step 6",
+    "title": "A charge in an electric field",
+    "do": "**Do this:** in the lab below press **Release** for the electron. Then pick the proton and press **Release** again. Both start at rest at the plate that pushes them away. Watch how the white time-lapse dots spread out as the charge speeds up.",
+    "body": "**Recap from *Stored lightning*:** between two large parallel plates the field is **uniform**, E = U/d (in V/m), and a charge q feels the same force everywhere between them, F = q·E. The same maths also describes a charged particle in a field: a charge in a uniform field moves like a ball in gravity.\n\nA **constant force** gives a **constant acceleration** (F = m·a):\n\n$ a = F/m = q·E/m\n\nHere q is the size of the charge, e = 1.602 × 10⁻¹⁹ C for an electron or a proton. A charge released from rest (s_{0} = 0, v_{0} = 0) then follows **s(t) = ½·a·t²** and **v(t) = a·t**, exactly like a stone dropped from rest, only with a different a.\n\n**Direction.** Choose the direction of the force on the charge as positive. The force on a **positive** charge points along E (from the + plate towards the − plate), the force on a **negative** charge points against E. So an electron is pulled towards the + plate, a proton towards the − plate.\n\n**Energy check.** Crossing the whole gap, the charge gains W = q·U, which becomes movement energy: q·U = ½·m·v², so v = √(2·q·U/m). That must match v = a·t.\n\n**The lab's start:** an electron (e = 1.602 × 10⁻¹⁹ C, m = 9.109 × 10⁻³¹ kg) with U = 100 V and d = 2.5 cm = 0.025 m.\n\n- E = U/d = 100 / 0.025 = {chE} V/m.\n- F = q·E = 1.602 × 10⁻¹⁹ × {chE} = {chF} N.\n- a = F/m = {chF} / (9.109 × 10⁻³¹) = {chA} m/s².\n- Time to cross: d = ½·a·t², so t = √(2·d/a) = √(2 × 0.025 / {chA}) = {chT} s.\n- Speed: v = a·t = {chA} × {chT} = {chV} m/s.\n- Energy check: v = √(2·q·U/m) = √(2 × 1.602 × 10⁻¹⁹ × 100 / (9.109 × 10⁻³¹)) = {chVE} m/s.\n\nIts weight m·g = {chWt} N is about {chWr} times smaller than the electric force, so we ignore it. The speed is about {chC} % of the speed of light, still slow enough for Newton's laws.",
+    "check": {
+      "q": "An electron (m = 9.109 × 10⁻³¹ kg) and a proton (m = 1.673 × 10⁻²⁷ kg) are released from rest in the **same uniform field E**. Each has a charge of the same size, e. Which one has the larger acceleration?",
+      "choices": [
+        "The electron, about {massRatio} times larger",
+        "The proton, about {massRatio} times larger",
+        "Both the same, because the charges are the same size",
+        "The electron, about {c6w1} times larger"
+      ],
+      "answer": 0,
+      "why": "Same E and same |q| give the **same force**, F = q·E. But a = F/m, so the lighter particle accelerates more. The proton is about {massRatio} times heavier, so the electron's acceleration is **about {massRatio} times larger**.",
+      "whyNot": [
+        null,
+        "Check how the mass enters a = F/m: does a heavier particle get a bigger or a smaller acceleration from the same force?",
+        "The **forces** are the same, F = q·E. But a = F/m, and the two masses are very different.",
+        "{c6w1} is 9.109 ÷ 1.673: only the numbers in front were divided, and the powers of ten (10⁻³¹ and 10⁻²⁷) were left out. Compare the two masses with their powers of ten."
+      ]
+    }
+  },
+  "charge": {
+    "scene": "Two parallel plates, negative on the left and positive on the right, with a charge accelerating across the gap",
+    "U": "Voltage U",
+    "d": "Plate distance d",
+    "electron": "Electron",
+    "proton": "Proton",
+    "release": "Release",
+    "readout": {
+      "E": "Field E = U/d",
+      "F": "Force F = q·E",
+      "a": "Acceleration a",
+      "T": "Crossing time",
+      "v": "Speed v = a·t",
+      "vE": "Energy check"
+    },
+    "note_e": "Electron: negative, so it is pushed against E, towards the + plate (right).",
+    "note_p": "Proton: positive, so it is pushed along E, towards the − plate (left).",
+    "slow": "The real trip takes only a tiny fraction of a second (nanoseconds to microseconds). The screen shows it in slow motion, with white dots at equal time steps.",
+    "tasks": "**Try these:**\n- Start with the electron, U = 100 V, d = 2.5 cm and read the boxes: they match the numbers above.\n- **Double U** (to 200 V): E and a double. Does the speed double? (No: the energy check says v grows with √U.)\n- **Double d** (to 5.0 cm) at the same U: E and a halve. The crossing takes longer, but the final speed stays the same. Why? (Energy: q·U didn't change.)\n- Switch to the **proton**: the same force, but the acceleration is about {massRatio} times smaller (check the box), so it takes much longer and ends up slower. And it goes the other way."
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: a braking car",
+        "problem": "A car travels at **20 m/s** ({we1kmh} km/h) along a straight road. The driver brakes with a constant acceleration of **−5.0 m/s²**. Find the time it takes to stop and the stopping distance. Positive direction: the car's direction of travel.",
+        "steps": [
+          "Known: v_{0} = 20 m/s, a = −5.0 m/s², s_{0} = 0 (where braking starts). At the stop, v = 0.",
+          "**Time:** v(t) = v_{0} + a·t = 0, so t = −v_{0}/a = −20 / (−5.0) = {we1t} s.",
+          "**Distance:** s(t) = v_{0}·t + ½·a·t² = 20 × {we1t} + ½ × (−5.0) × {we1t}² = {we1v0t} + ({we1half}) = {we1s} m.",
+          "**Check with the v–t graph:** the line falls from 20 m/s to 0 over {we1t} s, a triangle of area ½ × {we1t} × 20 = {we1tri} m. The same answer."
+        ],
+        "answer": "It stops after **{we1t} s**, having travelled **{we1s} m**. (Stop the calculation at v = 0: the formulas would let the car reverse, real brakes don't.)"
+      },
+      {
+        "title": "Example 2: an electron crosses the gap",
+        "problem": "An electron starts from rest at the negative plate of two parallel plates. The plates are **3.0 cm** apart and the voltage is **150 V**. Use e = 1.602 × 10⁻¹⁹ C and m = 9.109 × 10⁻³¹ kg. Find its acceleration, the time to reach the other plate and its speed there. Positive direction: towards the + plate. Ignore the electron's weight.",
+        "steps": [
+          "**Field:** d = 3.0 cm = 0.030 m, so E = U/d = 150 / 0.030 = {we2E} V/m.",
+          "**Acceleration:** a = q·E/m = 1.602 × 10⁻¹⁹ × {we2E} / (9.109 × 10⁻³¹) = {we2a} m/s².",
+          "**Time:** s = ½·a·t² with s = d, so t² = 2·d/a = 2 × 0.030 / {we2a} = {we2t2} s², and t = {we2t} s.",
+          "**Speed:** v = a·t = {we2a} × {we2t} = {we2v} m/s.",
+          "**Energy check:** q·U = ½·m·v², so v = √(2·q·U/m) = √(2 × 1.602 × 10⁻¹⁹ × 150 / (9.109 × 10⁻³¹)) = {we2vE} m/s. The same. That is only {we2c} % of the speed of light, so Newton's laws are fine."
+        ],
+        "answer": "a ≈ **{we2a} m/s²**, t ≈ **{we2t} s**, v ≈ **{we2v} m/s**"
+      },
+      {
+        "title": "Example 3: a tram's journey",
+        "problem": "A tram starts from rest and speeds up steadily to **6.0 m/s** in **8.0 s**. It then cruises at 6.0 m/s for **20 s**, and brakes steadily to a stop in **4.0 s**. Draw its v–t graph in your head, then find the acceleration in the first and the last part and the total distance. Positive direction: the tram's travel.",
+        "steps": [
+          "**The graph has three straight pieces:** a line rising from 0 to 6.0 m/s over 8.0 s, a flat line at 6.0 m/s for 20 s, and a line falling from 6.0 to 0 over 4.0 s.",
+          "**Accelerations** (the slope of v–t, a = Δv/Δt): first part a = (6.0 − 0) / 8.0 = {trA1} m/s². Cruise: a = 0. Last part a = (0 − 6.0) / 4.0 = {trA3} m/s² (negative: braking).",
+          "**Distances** (areas under v–t): speeding up is a triangle, ½ × 8.0 × 6.0 = {trS1} m. Cruising is a rectangle, 6.0 × 20 = {trS2} m. Braking is a triangle, ½ × 4.0 × 6.0 = {trS3} m.",
+          "**Total:** {trS1} + {trS2} + {trS3} = {trS} m. Check: the whole trip takes 8.0 + 20 + 4.0 = 32 s, so the average velocity is {trS} / 32 = {trAvg} m/s. That is below the cruising 6.0 m/s, as it must be: part of the time the tram is slower."
+        ],
+        "answer": "a = **{trA1} m/s²** at the start and **{trA3} m/s²** when braking. Total distance **{trS} m**."
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A car starts from rest and accelerates at 2.5 m/s² for 8.0 s along a straight road. What is its speed at the end?",
+        "choices": [
+          "{p1} m/s",
+          "{p1w1} m/s",
+          "{p1w2} m/s",
+          "{p1w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "v(t) = v_{0} + a·t with v_{0} = 0.",
+        "solution": "Formula: v(t) = v_{0} + a·t, with v_{0} = 0 because the car starts from rest.\n\nNumbers: v = 0 + 2.5 m/s² × 8.0 s = **{p1} m/s**.\n\nSense check: that is {p1kmh} km/h, a fair speed for a car after 8 s.",
+        "whyNot": [
+          null,
+          "{p1w1} m/s is ½·a·t. The ½ belongs only to the distance formula. For the velocity, v = v_{0} + a·t = {p1} m/s.",
+          "{p1w2} is t/a (8.0 / 2.5), upside down. Multiply instead: a·t = {p1} m/s.",
+          "{p1w3} m is the distance ½·a·t², not the speed. The question asks for v = a·t = {p1} m/s."
+        ]
+      },
+      {
+        "q": "On an s–t graph a straight line passes through the points (0 s, 40 m) and (10 s, 0 m). What is the velocity of the object?",
+        "choices": [
+          "{p2} m/s",
+          "{p2w1} m/s",
+          "{p2w2} m/s",
+          "{p2w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "The slope of the s–t graph is the velocity: v = Δs/Δt. Watch the sign.",
+        "solution": "The slope of an s–t graph is the velocity: v = Δs/Δt.\n\nNumbers: Δs = 0 − 40 m = −40 m and Δt = 10 s − 0 s = 10 s, so v = −40 m / 10 s = **{p2} m/s**.\n\nSense check: the position falls, so v must be negative. The object moves back towards the origin and reaches it at 10 s.",
+        "whyNot": [
+          null,
+          "Right size, wrong sign. The position falls from 40 m to 0, so Δs is negative: v = {p2} m/s.",
+          "{p2w2} is Δt/Δs, upside down. The velocity is Δs/Δt = −40/10 = {p2} m/s.",
+          "40 is where the line starts on the s-axis, not its slope. The slope is Δs/Δt = {p2} m/s."
+        ]
+      },
+      {
+        "q": "A stone is dropped from rest from a bridge and hits the water after 2.5 s. How high is the bridge above the water? Ignore air resistance. (g = {g} m/s²)",
+        "choices": [
+          "{p3} m",
+          "{p3w1} m",
+          "{p3w2} m",
+          "{p3w3} m"
+        ],
+        "answer": 0,
+        "hint": "s(t) = s_{0} + v_{0}·t + ½·a·t² with v_{0} = 0 and a = −g. The distance fallen is ½·g·t².",
+        "solution": "Formula: s(t) = s_{0} + v_{0}·t + ½·a·t² with v_{0} = 0 and a = −g. The distance fallen is ½·g·t².\n\nNumbers: ½ × {g} m/s² × (2.5 s)² = ½ × {g} × 6.25 = **{p3} m**.\n\nSense check: at the water the stone moves at g·t = {p3w1} m/s. Its average speed is half of that, so it covers about 12 m/s × 2.5 s, roughly 30 m.",
+        "whyNot": [
+          null,
+          "{p3w1} m/s is g·t: the speed as the stone hits the water, not a height. The height is ½·g·t² = {p3} m.",
+          "That is g·t², with the ½ missing. The distance fallen is ½·g·t² = {p3} m.",
+          "{p3w3} is ½·g·t, but the time must be squared: s = ½·g·t² = {p3} m."
+        ]
+      },
+      {
+        "q": "A v–t graph is a straight line from 6.0 m/s at t = 0 to 14 m/s at t = 4.0 s. What is the displacement during these 4.0 s?",
+        "choices": [
+          "{p4} m",
+          "{p4w1} m",
+          "{p4w2} m",
+          "{p4w3} m"
+        ],
+        "answer": 0,
+        "hint": "The displacement is the area under the v–t line: a rectangle plus a triangle, or the average velocity × time.",
+        "solution": "The displacement is the area under the v–t line: a rectangle plus a triangle.\n\nRectangle: v_{0}·t = 6.0 × 4.0 = {p4rect} m. Triangle: ½ × t × Δv = ½ × 4.0 × (14 − 6.0) = {p4tri} m. Total **{p4} m**.\n\nSense check: the average velocity is (6.0 + 14)/2 = {p4avg} m/s, and {p4avg} × 4.0 s = {p4} m.",
+        "whyNot": [
+          null,
+          "{p4w1} m is 14 × 4.0: it treats the velocity as 14 m/s the whole time. It starts at 6.0, so the area is {p4} m.",
+          "{p4w2} m is only the rectangle 6.0 × 4.0. The triangle on top, ½ × 4.0 × 8.0 = {p4tri} m, is missing: {p4} m.",
+          "{p4w3} m is the triangle ½ × 14 × 4.0, as if the line started at 0. Add the rectangle below it: {p4} m."
+        ]
+      },
+      {
+        "q": "A proton (m = 1.673 × 10⁻²⁷ kg, charge e = 1.602 × 10⁻¹⁹ C) is at rest in a uniform electric field of 2.0 × 10⁴ V/m. What is its initial acceleration?",
+        "choices": [
+          "{p5} m/s²",
+          "{p5w1} m/s²",
+          "{p5w2} m/s²",
+          "{p5w3} m/s²"
+        ],
+        "answer": 0,
+        "hint": "F = q·E, then a = F/m. Use the proton's mass.",
+        "solution": "Formulas: F = q·E, then F = m·a gives a = F/m.\n\nNumbers: F = 1.602 × 10⁻¹⁹ C × 2.0 × 10⁴ V/m = {p5w1} N. Then a = {p5w1} N / (1.673 × 10⁻²⁷ kg) = **{p5} m/s²**.\n\nSense check: the same field would give an electron, about {massRatio} times lighter, an acceleration about {massRatio} times larger: {p5w2} m/s².",
+        "whyNot": [
+          null,
+          "{p5w1} is the force F = q·E in newtons. The acceleration needs one more step, a = F/m = {p5} m/s².",
+          "{p5w2} m/s² is what you get with the electron's mass. The question is about the proton, about {massRatio} times heavier: {p5} m/s².",
+          "{p5w3} is E/m: the charge e is missing. The field gives a force only through the charge, F = q·E, and then a = F/m = {p5} m/s²."
+        ]
+      }
+    ]
+  },
+  "game": {
+    "kicker": "Mini-game",
+    "title": "Match the graph",
+    "lead": "The dashed **yellow** curve is where a ghost is at each moment. Your **pink** curve is where your hero is. **Make the pink curve lie on the yellow one.** Three sliders: where you **start** (s0), how steep the curve is at the start, which is your **start velocity** (v0), and how much it **bends**, which is your **acceleration** (a). Press **Run** to race the ghost along the track.",
+    "scene": "A position against time graph with a dashed target curve and your own curve",
+    "strip": "A track with a ghost and your hero",
+    "axis": "position s (m), time t (s)",
+    "legend": "Yellow: the ghost (target). Pink: you. Both start at t = 0 s.",
+    "round": "Round",
+    "s0": "Start position s0",
+    "v0": "Start velocity v0",
+    "a": "Acceleration a",
+    "time": "Time t",
+    "run": "Run",
+    "pause": "Pause",
+    "next": "Next round",
+    "finish": "Finish",
+    "match": "MATCH!",
+    "champion": "GRAPH MASTER!",
+    "done": "You read slopes and bends like a pro.",
+    "hint_start": "Keep adjusting.",
+    "hints": {
+      "s0_hi": "Your curve starts **too high**. Lower the start position s0.",
+      "s0_lo": "Your curve starts **too low**. Raise the start position s0.",
+      "v0_hi": "The starts agree. At t = 0 your curve is **steeper upwards** than the target (its slope, v0, is too big). Lower v0.",
+      "v0_lo": "The starts agree. At t = 0 your curve is **less steep** than the target (its slope, v0, is too small). Raise v0.",
+      "a_hi": "Start and start slope agree. Your curve **bends too far upwards**: lower a.",
+      "a_lo": "Start and start slope agree. Your curve **bends too far downwards**: raise a."
+    },
+    "solved": [
+      "A straight line going up: s0 = 2 m, v0 = +3.0 m/s, a = 0. The slope is the velocity.",
+      "A straight line going down: the slope is **negative**, v0 = −4.0 m/s. The hero moves backwards.",
+      "A bending curve: a = −2.0 m/s² is braking. The curve flattens at 4 s because the velocity is 0 there."
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "How fast things fall",
+    "frames": [
+      {
+        "cap": "Pisa, the story goes",
+        "text": "The story goes that Galileo dropped balls of different weights from the Leaning Tower of Pisa to show that they land together. It is almost certainly a legend: we only know it from his pupil and biographer **Viviani**, who wrote it down long afterwards.",
+        "fx": "WHOOSH"
+      },
+      {
+        "cap": "The ramp",
+        "text": "What Galileo did write about is **rolling a hard, smooth ball down a long sloping groove**. A falling ball is far too quick to time, but a gentle slope slows the same kind of motion down. He timed it with a **water clock**.",
+        "fx": "DRIP"
+      },
+      {
+        "cap": "The result, 1638",
+        "text": "In his book on the **Two New Sciences** (1638) he showed that, from rest, the distance grows as the **square of the time**: 2 s gives 4 times the distance of 1 s. That is s = ½·a·t² with v_{0} = 0 and a = constant.",
+        "fx": "SQUARED"
+      },
+      {
+        "cap": "The Moon, 1971",
+        "text": "On **2 August 1971**, Apollo 15 astronaut David Scott dropped a hammer and a falcon feather together on the Moon. With no air, they hit the ground at the same moment.",
+        "fx": "THUD"
+      }
+    ],
+    "question": "Why did Galileo roll balls down gentle ramps instead of just dropping them?",
+    "choices": [
+      "A falling ball is too fast to time with the clocks of his day; a ramp slows it down",
+      "Balls fall faster on ramps, which is easier to measure",
+      "There is no gravity on a ramp"
+    ],
+    "answer": 0,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Exactly.",
+      "The opposite:",
+      "Gravity is still there:"
+    ],
+    "explain": "On a ramp only a part of gravity speeds the ball up along the slope, so the acceleration is much smaller and the motion slow enough to time. The pattern he found (distance ∝ t²) is the same one the booklet formula gives for constant acceleration: {oT2} m after 2 s is 4 times the {o1} m after 1 s, for a free fall."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Calculus Grapher",
+    "body": "Open the sim and draw a curve. The sim builds other graphs from the curve you draw. Compare them: where is your curve steep, flat or going down, and what do the other graphs do at those places? Predict first, then check. Try a straight line and then a curve that bends.\n\n*This sim goes further than your course in places. Use it to explore the ideas of slope and area.* *Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The hero's dash",
+    "body": "Draw an anime-style hero's sprint-and-skid as a 4-panel strip, and add the three graphs as a tiny inset in each panel. **Panel 1:** the hero standing still: flat s–t line. **Panel 2:** running at a steady speed, with evenly spaced afterimages: straight sloping s–t line. **Panel 3:** braking hard, afterimages getting closer together: the s–t line flattens out. **Panel 4:** stopped, in a cloud of dust: flat again. Mark the moment of the braking on the v–t graph."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "Choose a **positive direction** first. Position **s**, displacement **Δs**, velocity **v** and acceleration **a** all carry signs.",
+      "**v = Δs/Δt** and **a = Δv/Δt**. Units m/s and m/s².",
+      "**s(t) = s_{0} + v_{0}·t + ½·a·t²** and **v(t) = v_{0} + a·t** for constant acceleration. Uniform motion: a = 0.",
+      "**Graphs:** slope of s–t = v; slope of v–t = a; **area under v–t = displacement**; for constant a, v–t is a straight line, a–t is flat, and s–t is a parabola.",
+      "Speeding up: v and a have the **same sign**. Slowing down: **opposite signs**. Stopping time: v = 0 gives t = −v_{0}/a.",
+      "**Free fall:** a = −g = {qTop} m/s² the whole time (up positive), also at the top. Check with energy: **m·g·h = ½·m·v²**.",
+      "**Charge in a uniform field:** E = U/d, F = q·E, **a = q·E/m**. Energy check: q·U = ½·m·v²."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A car moves in the positive direction and brakes. Its acceleration is...",
+        "choices": [
+          "negative",
+          "positive",
+          "zero",
+          "the same as its velocity"
+        ],
+        "answer": 0,
+        "why": "The velocity is positive and decreasing, so Δv is negative and **a = Δv/Δt is negative**: opposite signs, slowing down.",
+        "whyNot": [
+          null,
+          "A positive a would speed the car up in the positive direction. Braking means Δv is negative, so a is too.",
+          "Zero acceleration means a constant velocity. Braking changes v, so a is not zero.",
+          "a and v are different quantities (m/s² and m/s). Here v is positive but a points the other way."
+        ]
+      },
+      {
+        "q": "On a v–t graph, the area between the line and the time axis is...",
+        "choices": [
+          "the displacement",
+          "the acceleration",
+          "the velocity",
+          "the slope"
+        ],
+        "answer": 0,
+        "why": "Area under v–t = **displacement**. The slope of v–t is the acceleration.",
+        "whyNot": [
+          null,
+          "The acceleration is the **slope** of the v–t line, not the area under it.",
+          "The velocity is the **height** of the line at one moment. The area is height × time.",
+          "The slope of v–t is the acceleration. The area is a different thing: the displacement."
+        ]
+      },
+      {
+        "q": "A ball is thrown straight up. At the very top its acceleration is (up positive, no air)...",
+        "choices": [
+          "{qTop} m/s²",
+          "0 m/s²",
+          "+{g} m/s²",
+          "it has no acceleration, only gravity"
+        ],
+        "answer": 0,
+        "why": "Gravity doesn't switch off at the top: **a = −g = {qTop} m/s²** the whole flight. Only the velocity is zero at that instant.",
+        "whyNot": [
+          null,
+          "v is 0 at the top, but a = Δv/Δt and v is still changing (from up to down). So a is not 0.",
+          "Right size, wrong sign. Up is positive and gravity points down, so a = −g.",
+          "Gravity is a pull, and F = m·a says a pull gives an acceleration: g, all the time, also at the top."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "bcalc": {
+    "kicker": "Bonus: calculus",
+    "title": "Slope of a curve, exactly",
+    "lead": "For a curved s–t graph, the slope at one moment is its **derivative**: v = ds/dt, and in the same way a = dv/dt. (The area under a v–t curve is an **integral**.) The rules you need: the derivative of t is 1, of t² is 2t, and of a constant is 0.\n\nA position is given by **s(t) = 5 + 2t + 3t²** (s in m, t in s).",
+    "question": "What is the **velocity** at t = 1.0 s?",
+    "choices": [
+      "{bV} m/s",
+      "{bS1} m/s",
+      "{bW} m/s",
+      "{bA} m/s"
+    ],
+    "answer": 0,
+    "lock": "Decide",
+    "verdicts": [
+      "Yes!",
+      "That's the position at 1 s, not the velocity:",
+      "That's the start position, not the velocity:",
+      "That's the acceleration, not the velocity:"
+    ],
+    "explain": "v = ds/dt = 0 + 2 + 6t, so at t = 1.0 s, v = 2 + 6 = **{bV} m/s**. Compare with the booklet: s = s_{0} + v_{0}·t + ½·a·t² gives s_{0} = 5 m, v_{0} = 2 m/s and ½·a = 3, so a = {bA} m/s², and v = v_{0} + a·t = 2 + {bA} × 1.0 = {bV} m/s. The derivative gives you the booklet's v(t) from s(t) without any area trick."
+  },
+  "bv2": {
+    "kicker": "Bonus: braking distance",
+    "title": "Doubling the speed",
+    "lead": "Combine v = v_{0} + a·t with the average-velocity area Δs = ½·(v_{0} + v)·t and cancel t:\n\n$ v² = v_{0}² + 2·a·Δs\n\nFor a stop (v = 0), Δs = v_{0}² / (2·|a|): the stopping distance depends on the **square** of the speed. Assume a braking acceleration of −6.0 m/s² (a modest value: a hard stop on a dry road with good tyres can reach 7 to 9 m/s²). A car at 54 km/h ({vS} m/s) stops in v²/(2·|a|) = {vS}² / 12 = {dS} m.",
+    "question": "How many times longer is the braking distance from **108 km/h** ({vF} m/s) than from 54 km/h?",
+    "choices": [
+      "2 times",
+      "{dRatio} times",
+      "3 times",
+      "The same"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Doubling the speed does more than that:",
+      "Right.",
+      "Not quite:",
+      "No:"
+    ],
+    "explain": "The distance is proportional to v², and 2² = {dRatio}. From 108 km/h the braking distance is {vF}² / 12 = {dF} m, against {dS} m from 54 km/h. The braking time is only twice as long ({bT} s against {bTS} s), but the car travels much further in it.",
+    "after": "**Add a reaction time.** Suppose the driver needs 1.0 s before the brakes work (an assumption), during which the car keeps its speed: that adds v × 1.0 s, so {rS} m at 54 km/h and {rF} m at 108 km/h. The total stopping distances are **{tS} m** and **{tF} m**. The reaction part grows with v, the braking part with v²."
+  },
+  "bodd": {
+    "kicker": "Bonus: Galileo's odd numbers",
+    "title": "1 : 3 : 5 : 7",
+    "lead": "A ball falls from rest with a = g. From s = ½·g·t², the distance fallen after 1, 2, 3 and 4 s is {o1} m, {oT2} m, {oT3} m and {oT4} m.",
+    "question": "How many times further does the ball fall **during the 3rd second alone** (from t = 2 s to t = 3 s) than during the 1st second?",
+    "choices": [
+      "{oq3} times",
+      "{oq5} times",
+      "{oq9} times",
+      "{oq4} times"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "That's the 2nd second:",
+      "Yes!",
+      "That's the whole fall after 3 s, not the 3rd second alone:",
+      "That's the whole fall after 2 s:"
+    ],
+    "explain": "In the successive seconds the ball falls {o1}, {o2}, {o3} and {o4} m, which is **1 : {oq3} : {oq5} : {oq7}** times the first. The odd numbers appear because the total distance grows as n² and the difference n² − (n − 1)² = 2n − 1. The rule is in Galileo's *Two New Sciences*: equal time steps give distances like the odd numbers 1, 3, 5, 7."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "split": {
+      "aria": "A v–t graph: a straight line rising from 4 m/s to 10 m/s over 6 s. The area under it is split by a dashed horizontal line into a rectangle below, with height v0 and width t, and a triangle on top, with width t and height a times t.",
+      "axis_v": "v (m/s)",
+      "axis_t": "t (s)",
+      "v0": "v_{0}",
+      "rect1": "rectangle",
+      "rect2": "v_{0}·t = {figRect} m",
+      "tri1": "triangle",
+      "tri2": "½·a·t² = {figTri} m",
+      "line": "v(t) = v_{0} + a·t",
+      "width": "t",
+      "height": "a·t",
+      "caption": "**The line cut in two.** Yellow: v(t) = v_{0} + a·t, here from 4 m/s to 10 m/s in 6 s. Under the dashed line is a **rectangle**, v_{0}·t = 4 × 6 = {figRect} m. On top is a **triangle** with base t and height a·t (the extra velocity gained), so its area is ½·a·t² = ½ × {figAcc} × 6² = {figTri} m. Together they make {figArea} m, the displacement."
+    },
+    "three": {
+      "aria": "Three graphs stacked with the same time axis, for a scooter with v0 = 2.0 m/s and a = 1.5 m/s². Top: an s–t curve bending upwards, with a dashed tangent at 2.0 s. Middle: a v–t line rising from 2.0 to 8.0 m/s. Bottom: an a–t flat line at 1.5 m/s².",
+      "s": "s (m)",
+      "v": "v (m/s)",
+      "a": "a (m/s²)",
+      "axis_t": "t (s)",
+      "s_note": "slope = v",
+      "v_note": "slope = a",
+      "a_note": "a stays the same",
+      "caption": "**One motion, three graphs.** The scooter from the example: v_{0} = 2.0 m/s and a = 1.5 m/s² for 4.0 s. At t = 2.0 s the dashed tangent to the yellow s–t curve has slope v = 2.0 + 1.5 × 2.0 = {thV} m/s, which is the height of the cyan line at that moment. The slope of the cyan line is a = {thA} m/s², the height of the pink line. A flat a–t line means a straight v–t line, and a straight sloping v–t line means a curved s–t graph."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Roll a ball down a ramp",
+    "lead": "Galileo slowed falling down by rolling balls down a slope (see *The story*). You can repeat it: a ball starting from rest on a gentle ramp has a constant acceleration, so s = ½·a·t² with v_{0} = 0. Does the distance really grow like the **square of the time**?",
+    "safety": "**Safety:** do this indoors on the floor of a clear room, with the ramp **low and stable** (no stairs, no table edge, no road). Put a book as a stop at the bottom so the ball can't shoot off, and keep marbles away from small children and pets.",
+    "need": "**You need:** a straight board or a long, stiff piece of card about 1.5 m long, two or three books to lift one end by about 4 to 5 cm, a smooth hard ball (a marble or a small ball bearing; a ball that rolls straight), a ruler or tape measure, tape, a phone to film, and a stack of books to hold the phone still. A stopwatch is enough if you skip the film.",
+    "steps": "**Do this:**\n1. Lay the board on the floor and lift one end on the books. Tape the ruler or tape measure along the board. Put the stop at the bottom.\n2. Rest the phone steady on the book stack, level with the board, pointing at it from the side, far enough away to see the whole board. Film at the normal speed. Most phones film 30 frames per second (some 60): time = frame number ÷ frames per second.\n3. Start filming, hold the ball at the top mark, and **let go without a push**.\n4. Play the film back **frame by frame** (many gallery and video apps can step one frame at a time). Count from the first frame in which the ball moves. At 30 frames per second, every 15 frames is 0.5 s. Read the ball's position against the ruler every 0.5 s.\n5. **No film?** Mark the board at {expM1} cm, {expM2} cm and {expM3} cm below the release point. Time the ball to each mark with a stopwatch, five times each, and use the average.",
+    "measure": "**Measure:** a table of time t (s) and distance s (m) from the release point. Then work out s/t² for each row, and divide every distance by the first one.",
+    "compare": "**Compare with the formula:** a ramp this steep gives about a = {expA} m/s² (your value will differ with the slope, but the *pattern* won't). Then s = ½·a·t² should give {expS1}, {expS2}, {expS3}, {expS4} and {expS5} cm after 0.5, 1.0, 1.5, 2.0 and 2.5 s. Dividing each by the first gives **1 : {expR2} : {expR3} : {expR4} : {expR5}**, which is 1² : 2² : 3² : 4² : 5². Also, s/t² should be the same in every row: it is ½·a = {expK} m/s², so a = 2·s/t², for instance 2 × {expS4m} m / ({expT4} s)² = {expA} m/s². With the stopwatch, distances 1 : 4 : 9 (that is {expM1}, {expM2}, {expM3} cm) should take times 1 : 2 : 3, about {expT1} s, {expT2} s and {expT3} s.",
+    "wrong": "**What goes wrong:** a push or a spin at the start, because 'from rest' is hard to do by hand. Choosing the first frame has an error of one frame (0.03 s at 30 frames per second), which matters at the 0.5 s mark; use the later rows more. A stopwatch has a reaction time of 0.2 s or so, which is large next to 1 s: average several runs. A bent board or a wobbling ball spoils the pattern. And the ball also spins, so its acceleration is smaller than that of a frictionless block sliding down the same slope. That changes a, not the 1 : 4 : 9 pattern."
+  }
+}

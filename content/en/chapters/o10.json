@@ -1,0 +1,703 @@
+{
+  "hero": {
+    "sfx": "SPLASH BOING",
+    "caption": "Waves overlap, bounce and bend. Light does all three."
+  },
+  "intro": "A pencil in a glass of water looks broken. A window shows your reflection. A prism turns sunlight into a rainbow. All of this is waves meeting something: another wave, a mirror, or a new material. They **add up**, they **bounce**, they **bend**. One idea (Huygens' wavelets) explains the bouncing and the bending, and one formula from your booklet does the sums: **sin α_{1} / sin α_{2} = n_{2} / n_{1} = c_{1} / c_{2}**. Angles are always measured from the **normal**, the line at right angles to the surface. Refractive indices here are rounded textbook values for yellow light.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "identify **superposition** and add two pulses by **adding their displacements**;",
+      "use **Huygens' principle** (wavelets and their envelope) to show **reflection** and **refraction**;",
+      "use **α_{i} = α_{r}** and **sin α_{1} / sin α_{2} = n_{2} / n_{1} = c_{1} / c_{2}** for simple light problems, with angles from the normal;",
+      "find the **critical angle** and explain **total internal reflection** (optical fibres);",
+      "describe how the refractive index **depends on wavelength** (dispersion): prisms and rainbows, and how earthquake waves bend inside the Earth."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "Two ripples run towards each other on a pond. They cross in the middle.\n\nWhat happens to them after they have crossed?",
+    "choices": [
+      "They bounce off each other and turn back",
+      "They pass through each other and carry on unchanged",
+      "They merge into one bigger ripple for good",
+      "They cancel each other out for good"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Waves aren't balls, so no:",
+      "Yes! Waves just walk through each other.",
+      "Not for good:",
+      "Not for good:"
+    ],
+    "explain": "For a moment the ripples **overlap** and the water does something new. Then each ripple carries on **exactly as before**. That's the first idea of this chapter. Next: what a wave does when it hits a mirror, and when it hits a new material.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Overlap: waves add up",
+    "body": "*Making waves* taught you one wave at a time: v = f·λ. *A wave in space and time* wrote the displacement of a wave as y(x, t). What if **two waves** are in the same place at the same time?\n\n**Superposition:** where waves overlap, the displacement of the medium is the **sum** of the displacements each wave would make alone.\n\n- Two bumps up, +3 cm and +3 cm: the rope is **+{sup6} cm** where they overlap. That's **constructive**.\n- A bump up and a bump down: they **cancel**, partly or fully. That's **destructive**.\n- Afterwards **each pulse carries on exactly as before**. Waves pass through each other. They don't bounce off like balls.\n\nYou meet superposition in real life:\n\n- **Noise-cancelling headphones** record the noise around you and play it back **upside down** (every + becomes a −). The noise and its upside-down copy add to nearly nothing, so you hear (almost) silence.\n- **Beats:** two notes of almost the same pitch drift in and out of step. Sometimes the crests line up (loud), sometimes crest meets trough (quiet), so the loudness **wobbles**. You hear it when tuning a guitar: the wobble slows down and stops when the two strings match.\n\nTry it with two pulses on a rope.",
+    "check": {
+      "q": "On a rope, a pulse of height +3.0 cm and a pulse of height −3.0 cm run towards each other and meet exactly. What does the rope do?",
+      "choices": [
+        "Both pulses are destroyed for good",
+        "The pulses bounce off each other and each goes back the way it came",
+        "It is flat (0 cm) where they overlap for a moment, then both pulses carry on unchanged",
+        "The rope rises to +6.0 cm where they overlap"
+      ],
+      "answer": 2,
+      "why": "Add the displacements: +3.0 cm + (−3.0 cm) = **0 cm** for that moment. The pulses haven't gone anywhere: they pass through each other and carry on exactly as before.",
+      "whyNot": [
+        "The pulses only cancel for a moment, where they overlap. Think about what each one does once the overlap is over.",
+        "Waves aren't balls: they don't bounce off each other. What does each pulse do when the overlap is over?",
+        null,
+        "+6.0 cm is what two pulses of +3.0 cm would give. One of these two is negative, so add with its sign."
+      ]
+    }
+  },
+  "pulses": {
+    "scene": "A rope with two pulses moving towards each other, and the sum of the two",
+    "legend_a": "Pulse A (moves right)",
+    "legend_b": "Pulse B (moves left)",
+    "legend_sum": "The rope (A + B)",
+    "height_a": "Height of pulse A",
+    "height_b": "Height of pulse B",
+    "time": "Time",
+    "play": "Play",
+    "pause": "Pause",
+    "st_one": "One pulse is set to 0 cm: there is only one pulse, so there is nothing to add.",
+    "st_up": "They overlap in the middle: the heights add (constructive).",
+    "st_flat": "They overlap in the middle and cancel completely: the rope is flat there, for this moment only.",
+    "st_part": "They overlap in the middle and partly cancel: the bigger pulse wins what is left.",
+    "st_before": "The pulses are still on their way.",
+    "st_after": "They have passed through each other and carry on unchanged.",
+    "r_a": "A at the middle",
+    "r_b": "B at the middle",
+    "r_sum": "Rope at the middle",
+    "tasks": "**Try these:**\n- Heights **+3 cm** and **+3 cm**. Set the time to **2.00 s** (or press Play). The middle of the rope is **+6 cm**.\n- Set B to **−3 cm**. At 2.00 s the middle is **0 cm**, but at 1.5 s and 2.5 s both pulses are visible. They carry on afterwards.\n- Heights **+4 cm** and **−1 cm**: at 2.00 s the sum is **+3 cm**.\n- Slide the time forward and back. Do the dashed pulses ever change shape? They don't: each wave behaves as if the other isn't there.\n\nSeeing both a **constructive** and a **destructive** meeting earns the crystal."
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Bounce: Huygens and the mirror",
+    "body": "How does a wave travel at all? **Huygens' principle:** every point on a wavefront acts as a source of small circular **wavelets**. A moment later the new wavefront is the line that just touches all the wavelets: their **envelope**.\n\nNow send a flat wavefront at a flat mirror. The result is the **law of reflection** from your booklet:\n\n$ α_{i} = α_{r}\n\nThe angle of the incoming ray and of the reflected ray are measured from the **normal** (the line at right angles to the mirror), and both rays and the normal lie in one flat plane. Why equal? Build it from wavelets.",
+    "after": "Remember the trap: the angle is from the **normal**, not from the mirror. A ray that skims along the mirror has α_{i} = 90°.",
+    "check": {
+      "q": "A ray of light hits a flat mirror. It makes an angle of 35° with the **normal**. What angle does the **reflected ray** make with the **mirror surface**?",
+      "choices": [
+        "{mir}°",
+        "{mirW1}°",
+        "{mirW2}°",
+        "{mirW3}°"
+      ],
+      "answer": 0,
+      "why": "α_{r} = α_{i} = 35° **from the normal**. The normal is at 90° to the mirror, so the reflected ray makes 90° − 35° = **{mir}°** with the mirror surface.",
+      "whyNot": [
+        null,
+        "35° is the angle from the **normal**, as given. The question asks for the angle with the mirror surface itself.",
+        "70° is the angle **between** the incoming and the reflected ray (2 × 35°). The question asks about the reflected ray and the mirror.",
+        "{mirW3}° is 180° − 35°, which is not the angle between the reflected ray and the mirror surface."
+      ]
+    }
+  },
+  "derive": {
+    "lead": "Tap the right move at each step.",
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "A flat wavefront hits a mirror at a slant. One end touches the mirror first, and a wavelet starts to spread from there. When the other end of the wavefront finally touches the mirror, the **first** wavelet is...",
+        "options": [
+          "the smallest circle",
+          "the biggest circle: it has had the longest time to grow",
+          "not there at all"
+        ],
+        "answer": 1,
+        "then": "Wavelets that started **earlier** are **bigger**. Along the mirror you get a row of circles, big at one end and tiny at the other."
+      },
+      {
+        "prompt": "The new wavefront is the line that touches all these circles (their envelope). Compared with the old wavefront, it is...",
+        "options": [
+          "tilted the other way: the wave now moves away from the mirror",
+          "tilted the same way as before",
+          "flat along the mirror"
+        ],
+        "answer": 0,
+        "then": "The envelope leans the other way, so the wave now travels **away** from the mirror. That's the reflected wave."
+      },
+      {
+        "prompt": "Look at the two right-angled triangles: they share the same hypotenuse along the mirror, and the side opposite each angle has the same length (the distance the wave travels in the same time). Sin of each angle is that opposite side divided by the shared hypotenuse. So, measured from the normal...",
+        "options": [
+          "α_{r} = 2·α_{i}",
+          "α_{i} + α_{r} = 90°",
+          "α_{i} = α_{r}"
+        ],
+        "answer": 2,
+        "then": "$ α_{i} = α_{r}\n\nThat's the law of reflection, found from wavelets alone."
+      }
+    ]
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "Bend: refraction",
+    "body": "Light is slower in glass than in air. Combine that with what *Making waves* taught (the **source** sets f, the **medium** sets v, and v = f·λ). At a boundary between two materials:\n\n- the **speed** changes, from c_{1} to c_{2};\n- the **frequency stays the same** (waves arrive f times per second, so they leave f times per second);\n- so the **wavelength** changes in the same ratio as the speed: λ = v/f.\n\nThe ray changes direction too. This is **refraction**. Your booklet gives it as:\n\n$ sin α_{1} / sin α_{2} = n_{2} / n_{1} = c_{1} / c_{2}\n\nMedium 1 is where the light comes from, medium 2 is where it goes. Both angles are from the **normal**. The **refractive index n** says how much slower light is than in vacuum:\n\n$ n = c / v\n\nHere c is the speed of light in vacuum and v is its speed in the material. (The booklet's c_{1} and c_{2} are the same thing as the **v** used in other chapters: the wave's speed in that medium, medium 1 or medium 2.) (With medium 1 = vacuum, n_{1} = 1 and c_{1} = c, the booklet formula gives n_{2} = c / c_{2}.) The same formula solved for the new angle: sin α_{2} = (n_{1} / n_{2})·sin α_{1}.\n\nRounded textbook values, about: **air {nA}**, **water {nW}**, **glass {nG}** (it varies with the type of glass), **diamond {nD}**. With c = {cvac} m/s, light in glass goes about {cG} m/s.\n\n- Into a **higher n** (slower): the ray bends **towards** the normal.\n- Into a **lower n** (faster): the ray bends **away** from the normal.\n- λ_{2} / λ_{1} = c_{2} / c_{1} = n_{1} / n_{2}. Only the speed and wavelength change, never the frequency.\n\nWhy does it bend? **Huygens:** in the slower medium the wavelets grow less in the same time, so their circles are smaller and the envelope tilts. The lab's *Huygens wavelets* view shows exactly that.",
+    "check": {
+      "q": "Light goes from air into water. Which of these stays the **same**?",
+      "choices": [
+        "its speed",
+        "its wavelength",
+        "its frequency",
+        "its speed and its wavelength"
+      ],
+      "answer": 2,
+      "why": "The **frequency** is set by the source and doesn't change at the boundary. The speed drops, and since v = f·λ the wavelength drops in the same ratio.",
+      "whyNot": [
+        "Light is slower in water than in air, so its speed does change.",
+        "Think about v = f·λ and which of these the source controls. Does the wavelength get to stay put when the speed changes?",
+        null,
+        "Speed and wavelength both change here. Something about the wave is set by the source and can't."
+      ]
+    }
+  },
+  "lab": {
+    "lead": "**Drag the yellow handle** (or use the slider, or the arrow keys, Home and End on the handle) to change the angle from the normal. Pick the material on each side. Some light is always reflected at a boundary, so the reflected ray is drawn faint unless it is the only one. Switch the **view**: *Rays*, *Wavefronts* (moving crests) or *Huygens wavelets* (a frozen picture of the circles and their envelope).",
+    "scene": "A ray of light meeting the boundary between two materials, with the normal drawn as a dashed line",
+    "drag": "Angle of the incoming ray from the normal, in degrees",
+    "drag_hint": "Drag the yellow dot, or use the slider.",
+    "angle": "Angle from the normal",
+    "view": "View",
+    "m_rays": "Rays",
+    "m_fronts": "Wavefronts",
+    "m_wavelets": "Huygens wavelets",
+    "top": "Light comes from (medium 1, top)",
+    "bottom": "Light goes into (medium 2, bottom)",
+    "go_crit": "Jump to the critical angle",
+    "materials": {
+      "air": "Air",
+      "water": "Water",
+      "glass": "Glass",
+      "diamond": "Diamond"
+    },
+    "r_crit": "Critical angle",
+    "r_speed": "c_{1} / c_{2} = n_{2} / n_{1}",
+    "r_wave": "Wavelength λ_{2} / λ_{1}",
+    "none": "none",
+    "live_tir": "n_{1}·sin α_{1} / n_{2} = {x}, more than 1. No angle has a sine above 1, so there is no refracted ray.",
+    "live_zero": "At 0° the ratio sin α_{1} / sin α_{2} is 0/0 and can't be found, but n_{2} / n_{1} = {r} still tells how much slower the light gets.",
+    "st_same": "Same material on both sides: no boundary, so the ray goes straight on and nothing is reflected.",
+    "st_tir": "Total internal reflection: no refracted ray. All the light is reflected, with α_{r} = α_{1}.",
+    "st_crit": "Exactly the critical angle: the refracted ray skims along the boundary (α_{2} = 90°). A tiny bit more and it is gone.",
+    "st_zero": "0°: the ray runs along the normal. It goes straight on (no bending) and the reflected ray comes straight back.",
+    "st_graze": "90°: the incoming ray skims the boundary. The refracted ray leaves at the largest angle this pair of materials allows.",
+    "st_toward": "Into a slower medium (higher n): the ray bends towards the normal.",
+    "st_away": "Into a faster medium (lower n): the ray bends away from the normal.",
+    "n_fronts": "Same frequency on both sides, but the crests are closer together in the slower medium (shorter wavelength). The beam changes width as it bends.",
+    "n_fronts89": "The wavefront drawing stops at 89°: at 90° the beam only skims the boundary and would be infinitely wide on it.",
+    "n_fronts_tir": "No refracted wave: all the wave goes back into medium 1.",
+    "n_wave": "A frozen snapshot. Each white dot is a boundary point the wave has already reached, and it sends out wavelets: the earliest are the biggest. Blue circles go back into medium 1, pink ones into medium 2 (smaller if medium 2 is slower). The thick lines are the envelopes: the new wavefronts.",
+    "n_wave_tir": "The pink circles are too big to have a common tangent line, so there is no refracted wavefront. Only the blue envelope (the reflected wave) exists.",
+    "n_wave_zero": "At 0° the whole wavefront reaches the boundary at once, so all the wavelets are the same size. The new wavefronts are flat and parallel to the boundary.",
+    "tasks": "**Try these:**\n- Air to glass at **40°**: the ray bends towards the normal, to α_{2} = **{a40g}°**. Check the formula line under the readouts.\n- Glass to air at **20°**: bends away, to **{a20g}°**.\n- **0°**: no bending at all, whatever the materials.\n- Same material on both sides: nothing happens.\n- Glass to air, then press **Jump to the critical angle** ({critG}°): the refracted ray skims the boundary. Slide one degree further: it is gone, and the reflected ray is the only one left.\n- **90°**, air to glass: the ray leaves at **{critG}°**, the most air can bend it into glass.\n- In *Wavefronts*, watch the crests: the frequency is the same on both sides, but the wavelength shrinks in the slower medium.\n- In *Huygens wavelets*, find out why the envelope tilts."
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Trapped: total internal reflection",
+    "body": "Go from a slower medium to a faster one, like glass to air. The ray bends **away** from the normal. Raise α_{1} and α_{2} grows faster, until α_{2} = 90°: the refracted ray skims the boundary. That α_{1} is the **critical angle** α_{c}. Put α_{2} = 90° (sin 90° = 1) in the booklet formula:\n\n$ sin α_{c} = n_{2} / n_{1}   (only if n_{1} > n_{2})\n\nBeyond α_{c} **no refracted ray exists**. All the light is reflected, with α_{i} = α_{r}. This is **total internal reflection** (TIR). Critical angles to air: glass about **{critG}°**, water about **{critW}°**, diamond about **{critD}°**. Diamond's small angle traps light easily, which is part of why it sparkles.\n\n**Optical fibres:** a thin glass thread with a core and a cladding of lower n. Light hits the wall at angles beyond α_{c}, so it reflects again and again and follows the thread, even round gentle bends, with very little light escaping.",
+    "check": {
+      "q": "Light travels in glass (n about {nG}) and hits the boundary with air (n about {nA}) at α_{1} = 50°. The critical angle for this pair is {critG}°. What happens?",
+      "choices": [
+        "The light refracts into the air and bends towards the normal",
+        "Total internal reflection: no refracted ray, all the light is reflected",
+        "The refracted ray skims along the boundary",
+        "Half the light reflects and half refracts"
+      ],
+      "answer": 1,
+      "why": "50° is **more than** the critical angle {critG}°, so sin α_{2} would have to be (1.50 × sin 50°) / 1.00, which is more than 1. That's impossible: **total internal reflection**.",
+      "whyNot": [
+        "Going into air, a ray that does refract bends **away** from the normal, never towards it. But first compare 50° with {critG}°.",
+        null,
+        "Skimming along the boundary happens at exactly {critG}°, and 50° is not exactly that.",
+        "A split into reflected and refracted ray happens below the critical angle. Compare 50° with {critG}° to see which side you are on."
+      ]
+    }
+  },
+  "game": {
+    "lead": "**Mini-game: find the critical angle.** A transparent mystery material (not one from the list) sits above the boundary, with air below. Slide α_{1} until the pink refracted ray **just** disappears, then press **Check**. You need to be within 1°.",
+    "scene": "A ray inside a mystery material hitting its surface with air, with refracted and reflected rays",
+    "top_tag": "Mystery material",
+    "bottom_tag": "Air  n = 1.00",
+    "angle": "Angle from the normal",
+    "check": "Check",
+    "escapes": "Light escapes?",
+    "yes": "yes",
+    "no": "no",
+    "tries": "Checks",
+    "target": "Needs to be within",
+    "ok": "Within 1°. Found it!",
+    "too_small": "Too small: the refracted ray is still escaping. Try a bigger angle.",
+    "too_big": "Too big: the ray has been trapped for a while. Try a smaller angle.",
+    "win_head": "CRITICAL!",
+    "win": "The critical angle is about **{mysCrit}°**. Now use the formula: sin α_{c} = n_{2} / n_{1} = 1 / n, so\n\n$ n = 1 / sin α_{c} = 1 / sin {mysCrit}° ≈ {mysN}\n\nThat's how you can measure a refractive index with nothing but a light and a protractor."
+  },
+  "learn5": {
+    "kicker": "Learn · Step 5",
+    "title": "Split: colours and prisms",
+    "body": "Visible light runs from about **{lamRed} nm** (red) to about **{lamViolet} nm** (violet): that's the scale on your booklet. In glass, light of different wavelengths travels at slightly different speeds. So **n depends on wavelength**. This is **dispersion**, and a material where it happens is a **dispersive medium**. In ordinary glass, violet has a **larger** n than red: violet is slowed more and **bends more**.\n\nSo a **prism** bends the colours by different amounts, and white light, which is a mix of colours, **fans out into a spectrum**. If n were the same for every colour, a prism would bend them all equally and white light would stay white.\n\nA **rainbow** is the same trick in raindrops: light enters a drop (bending, and splitting into colours), reflects off the back inside, and leaves (bending again). Seen from the ground, red is on the **outside** of the main arch.",
+    "check": {
+      "q": "White light passes through a glass prism. Which colour is bent the **most**?",
+      "choices": [
+        "all colours are bent by the same angle",
+        "red, because red has the longest wavelength",
+        "yellow, because it is in the middle",
+        "violet, because glass has its largest n for violet"
+      ],
+      "answer": 3,
+      "why": "In glass, n is larger for shorter wavelengths, and violet has the shortest. Larger n means slower light, and so a bigger bend. If all colours were bent equally, there would be no rainbow.",
+      "whyNot": [
+        "If all colours bent equally, a prism couldn't make a spectrum, and it does: n depends on wavelength.",
+        "Red does have the longest wavelength, but that is not what decides the bending. Which colour does the glass slow down the most?",
+        "Being in the middle of the spectrum doesn't matter: each colour bends according to its own n.",
+        null
+      ]
+    }
+  },
+  "prism": {
+    "lead": "A beam of white light hits a glass prism. Change the angle and switch the **n depends on colour** switch on and off. *This picture exaggerates the spread: real glass spreads the colours much less.* It uses made-up indices that rise from red to violet.",
+    "scene": "A white light beam entering a triangular prism and leaving as a fan of colours, or as a single white beam when dispersion is off",
+    "angle": "Angle of the beam from the normal of the left face",
+    "disp": "n depends on colour",
+    "trapped": "trapped",
+    "st_on": "Each colour has its own n, so each is bent by a different amount: violet most, red least.",
+    "st_off": "Dispersion off: every colour has the same n, so the beam bends but stays white.",
+    "st_trap": "At this angle some colours hit the second face too steeply (beyond the critical angle) and stay inside.",
+    "r_red": "Red ray turned by",
+    "r_violet": "Violet ray turned by",
+    "r_mean": "A white beam turned by",
+    "tasks": "**Try these:**\n- Dispersion on: which colour is turned the most? (Violet.)\n- Switch it off: the fan collapses into one white beam.\n- Slide the angle. Violet is turned more than red at **every** angle. The beam is turned least somewhere in the middle of the range, and more at either end.\n\nSwitching it off and then on again earns the crystal."
+  },
+  "learn6": {
+    "kicker": "Learn · Step 6",
+    "title": "Bend deep inside the Earth",
+    "body": "*Making waves* told you that earthquakes send **P** and **S** waves through the Earth. Their speed depends on the rock they go through, and speed changes mean **refraction**.\n\n- In most of the mantle, the speed **increases with depth**. A wave heading downwards bends gradually, again and again, and its path **curves back up** towards the surface. There is no sharp boundary: the bending is smooth.\n- At the boundary of the liquid outer core, **P waves slow down** and bend sharply, so there is a region on the far side of the Earth where few direct P waves arrive. **S waves can't enter the liquid** at all: they shake the rock sideways, and a liquid can't carry that kind of shaking.\n\nBy timing waves at stations all over the world, scientists map the layers deep inside the Earth. Geologists looking for oil or minerals use the same trick with small controlled shocks, and the waves that bounce and bend off rock layers.",
+    "check": {
+      "q": "Seismic waves speed up as they go deeper through most of the mantle. A wave starts heading downwards. What does its path do?",
+      "choices": [
+        "It curves further and further towards the centre",
+        "It goes straight down to the centre",
+        "It curves gradually back up towards the surface",
+        "It bounces back at once"
+      ],
+      "answer": 2,
+      "why": "Every little step into faster rock bends the ray **away from the normal** (the vertical), so the ray flattens out and eventually turns back up. It is refraction, but smooth instead of at a sharp boundary.",
+      "whyNot": [
+        "The ray bends a little at every step, but not in this direction: that path does not fit how the wave speed changes with depth.",
+        "A straight path needs a constant speed. The speed changes with depth, so the path bends.",
+        null,
+        "A bounce needs a sharp boundary. Here the speed changes smoothly, a little at every step."
+      ]
+    }
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: air into water",
+        "problem": "A ray of light in air hits the surface of water at **50°** to the normal. Find the angle of the refracted ray. (n for air {nA}, water {nW}: rounded values for yellow light.)",
+        "steps": [
+          "Medium 1 is air (n_{1} = {nA}), medium 2 is water (n_{2} = {nW}). Use sin α_{1} / sin α_{2} = n_{2} / n_{1}.",
+          "Solve for the new angle: sin α_{2} = (n_{1} / n_{2})·sin α_{1} = ({nA} / {nW}) × sin 50°.",
+          "sin 50° = {we1s}, so sin α_{2} = {we1s} / {nW} = {we1q}.",
+          "α_{2} = sin⁻¹({we1q}), with the calculator in degrees. It is smaller than 50°: into water, the ray bends **towards** the normal."
+        ],
+        "answer": "α_{2} ≈ **{we1a}°**"
+      },
+      {
+        "title": "Example 2: water to air",
+        "problem": "A diver looks up from under water (n = {nW}) at the surface (air, n = {nA}). (a) Find the critical angle. (b) What happens to a ray that hits the surface at 60°? (c) And one at 40°?",
+        "steps": [
+          "(a) At the critical angle α_{2} = 90°, so sin α_{c} = n_{2} / n_{1} = {nA} / {nW} = {we2q}.",
+          "α_{c} = sin⁻¹({we2q}) = {we2c}°.",
+          "(b) 60° is **more** than {we2c}°: total internal reflection. The surface acts like a mirror and no light gets out.",
+          "(c) 40° is **less** than {we2c}°, so it refracts out of medium 1 (water) into medium 2 (air): sin α_{2} = ({nW} / {nA}) × sin 40° = {nW} × {we2s40} = {we2s}, so α_{2} = sin⁻¹({we2s}) = {we2a}°. It bends **away** from the normal."
+        ],
+        "answer": "(a) α_{c} ≈ **{we2c}°**. (b) **Total internal reflection**. (c) It refracts out at about **{we2a}°**."
+      },
+      {
+        "title": "Example 3: speed and wavelength in water",
+        "problem": "Green light has a wavelength of **{e3lam} nm** in air (n = {nA}). It enters water (n = {nW}). Find (a) its speed in water and (b) its wavelength in water. Use c = {cvac} m/s for air.",
+        "steps": [
+          "(a) The booklet gives c_{1} / c_{2} = n_{2} / n_{1}, with medium 1 = air and medium 2 = water. Solve for the new speed: c_{2} = c_{1}·n_{1} / n_{2}.",
+          "c_{2} = {cvac} m/s × {nA} / {nW} = {e3c} m/s.",
+          "(b) The frequency stays the same, so the wavelength changes in the same ratio as the speed: λ_{2} / λ_{1} = c_{2} / c_{1} = n_{1} / n_{2}.",
+          "λ_{2} = {e3lam} nm × {nA} / {nW} = {e3lw} nm. Check: the light is slower in water, so both the speed and the wavelength must get smaller. They do."
+        ],
+        "answer": "(a) c_{2} ≈ **{e3c} m/s**. (b) λ_{2} ≈ **{e3lw} nm**. The frequency is unchanged: f = c_{1} / λ_{1} = {e3f} Hz."
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A ray in air (n = {nA}) hits glass (n = {nG}; both rounded values for yellow light) at 40° to the normal. What is the angle between the **refracted ray and the normal**?",
+        "choices": [
+          "{p1}°",
+          "{p1w1}°",
+          "{p1w2}°",
+          "{p1w3}°"
+        ],
+        "answer": 0,
+        "hint": "sin α_{1} / sin α_{2} = n_{2} / n_{1}. Solve for sin α_{2}, then take the inverse sine. Angles are from the normal.",
+        "solution": "Booklet: sin α_{1} / sin α_{2} = n_{2} / n_{1}, with medium 1 = air and medium 2 = glass. Solve: sin α_{2} = (n_{1} / n_{2})·sin α_{1} = ({nA} / {nG}) × sin 40° = {p1s}. Then α_{2} = sin⁻¹({p1s}) = **{p1}°**. Sense check: smaller than 40°, as it must be going into glass (towards the normal). ({p1w3}° would be the angle to the surface.)",
+        "whyNot": [
+          null,
+          "{p1w1}° comes from swapping the media (n_{1} = {nG}, n_{2} = {nA}). The light starts in **air**: sin α_{2} = ({nA}/{nG})·sin 40°.",
+          "{p1w2}° is 40°/{nG}. The formula divides the **sines**, not the angles: sin α_{2} = sin 40°/{nG} = {p1s}, so α_{2} = {p1}°.",
+          "{p1w3}° is 90° − {p1}°, the angle to the **surface**. The question asks for the angle to the normal: {p1}°."
+        ]
+      },
+      {
+        "q": "The refractive index of water is {nW}. Light in air (air: n = {nA}) travels at c = {cvac} m/s. How fast does it travel in water?",
+        "choices": [
+          "{p2} m/s",
+          "{p2w1} m/s",
+          "{p2w2} m/s",
+          "{cvac} m/s (light always goes at c)"
+        ],
+        "answer": 0,
+        "hint": "c_{1} / c_{2} = n_{2} / n_{1}, with air as medium 1 (n_{1} = {nA}). Light goes slower in water.",
+        "solution": "Booklet: c_{1} / c_{2} = n_{2} / n_{1}, with medium 1 = air (n_{1} = {nA}, c_{1} = {cvac} m/s) and medium 2 = water (n_{2} = {nW}). Solve: c_{2} = c_{1}·n_{1} / n_{2} = {cvac} m/s × {nA} / {nW} = **{p2} m/s**. Sense check: about three quarters of c, slower than in air, as it should be.",
+        "whyNot": [
+          null,
+          "{p2w1} m/s is c·n, which would make light **faster** in water. Light slows down by the factor n: c/{nW}.",
+          "{p2w2} m/s divides by n twice (n²). Divide once: {cvac} / {nW} = {p2} m/s.",
+          "Light only goes at c in vacuum (and almost in air). In water it is slower by the factor n = {nW}: {p2} m/s."
+        ]
+      },
+      {
+        "q": "Red light of wavelength 650 nm in air (n = {nA}) enters glass (for this light n = {nG}). What is its wavelength in the glass?",
+        "choices": [
+          "{p3} nm",
+          "{p3w1} nm",
+          "650 nm",
+          "{p3w2} nm"
+        ],
+        "answer": 0,
+        "hint": "The frequency stays the same, so λ changes in the same ratio as the speed: λ_{2} / λ_{1} = n_{1} / n_{2}.",
+        "solution": "The frequency stays the same, so the wavelength changes in the ratio of the speeds: λ_{2} / λ_{1} = c_{2} / c_{1} = n_{1} / n_{2}. So λ_{2} = λ_{1}·n_{1} / n_{2} = 650 nm × {nA} / {nG} = **{p3} nm**. Sense check: shorter, because the light is slower. (The frequency, f = c/λ = {p3f} Hz, is the same in both.)",
+        "whyNot": [
+          null,
+          "{p3w1} nm is 650 × {nG}. Light slows in glass, so the wavelength gets **shorter**: divide by n, {p3} nm.",
+          "650 nm is the wavelength in air. The frequency stays the same but the speed drops, so λ = v/f shrinks to {p3} nm.",
+          "{p3w2} nm divides by n twice. The ratio is λ_{2}/λ_{1} = n_{1}/n_{2} = {nA}/{nG}: {p3} nm."
+        ]
+      },
+      {
+        "q": "What is the critical angle for light going from glass (n = {nG}) into air (n = {nA})?",
+        "choices": [
+          "{p4}°",
+          "{p4w1}°",
+          "{p4w2}°",
+          "{p4w3}°"
+        ],
+        "answer": 0,
+        "hint": "At the critical angle α_{2} = 90°, so sin α_{c} = n_{2} / n_{1}. Which medium is medium 1?",
+        "solution": "At the critical angle α_{2} = 90°, so sin α_{c} = n_{2} / n_{1}. The light goes from glass (medium 1, n_{1} = {nG}) into air (n_{2} = {nA}): sin α_{c} = {nA} / {nG} = {p4s}. Then α_{c} = sin⁻¹({p4s}) = **{p4}°**. Sense check: a ray in glass hitting the surface at more than {p4}° (like 50°) stays inside.",
+        "whyNot": [
+          null,
+          "{p4w1}° is 90° − {p4}°, the angle to the surface. Angles are from the normal: sin α_{c} = {nA}/{nG} gives {p4}°.",
+          "{p4w2}° is tan⁻¹({nG}). The critical angle uses the **sine**: sin α_{c} = n_{2}/n_{1} = {nA}/{nG}, so α_{c} = {p4}°.",
+          "{p4w3}° is tan⁻¹({nA}/{nG}): the right ratio, the wrong function. It is the sine: sin⁻¹({p4s}) = {p4}°."
+        ]
+      },
+      {
+        "q": "On a rope, a pulse of height +3.0 cm and a pulse of height −1.0 cm travel towards each other. At the moment they overlap exactly, how high is the rope at that point?",
+        "choices": [
+          "+{p5} cm",
+          "+{p5w1} cm",
+          "+3.0 cm",
+          "−1.0 cm"
+        ],
+        "answer": 0,
+        "hint": "Superposition: add the displacements, with their signs.",
+        "solution": "Superposition: add the displacements, with their signs. +3.0 cm + (−1.0 cm) = **+{p5} cm**. Sense check: the bigger pulse wins, and part of it is cancelled. Afterwards each pulse carries on unchanged.",
+        "whyNot": [
+          null,
+          "+{p5w1} cm adds the sizes without the sign. The second pulse is **negative**: +3.0 + (−1.0) = +{p5} cm.",
+          "+3.0 cm ignores the second pulse. Both add: +3.0 + (−1.0) = +{p5} cm, and then each pulse carries on.",
+          "−1.0 cm ignores the bigger pulse. Add both with their signs: +3.0 + (−1.0) = +{p5} cm."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "The prism that wasn't cheating",
+    "frames": [
+      {
+        "cap": "A glass toy",
+        "text": "In the 1600s a glass prism is a toy that throws rainbow patches on walls. Many people think the **glass adds the colours** to plain white light, like dye.",
+        "fx": "SPARKLE"
+      },
+      {
+        "cap": "England, about 1666",
+        "text": "Isaac Newton, by his own later account, darkens his room and lets a thin beam of sunlight through a hole in the shutter, onto a prism. The spot on the wall is a long **band of colours**, much longer than wide. He expected a round spot.",
+        "fx": "ZZZAP"
+      },
+      {
+        "cap": "The test",
+        "text": "He picks **one colour** out of the band and sends it through a **second prism**. It bends again, but it **doesn't change colour**. If the glass were adding colour, a pure colour would change.",
+        "fx": "CLICK"
+      },
+      {
+        "cap": "1672 and 1704",
+        "text": "He reports it to the Royal Society in 1672 and in his book *Opticks* in 1704. White light is a **mixture**, and each colour is bent by its own amount: **dispersion**. His own date of 1666 comes from his later account.",
+        "fx": "WHITE!"
+      }
+    ],
+    "question": "Why did Newton send one colour through a second prism?",
+    "choices": [
+      "To make the light brighter",
+      "To see whether the glass was adding the colour. It wasn't: the colour stayed the same",
+      "To slow the light down more"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not the reason:",
+      "Yes! A clean test.",
+      "Not the reason:"
+    ],
+    "explain": "If the first prism had **made** the colour, the second prism could have changed it again. It didn't. The colours were **already in the white light**, and glass just bends each one by a different amount. That's dispersion, and the reason n depends on wavelength."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Bending Light",
+    "body": "Shine a beam from one material into another and use the sim's measuring tools to check the angles. Try different materials. Can you find a case with no refracted ray? Predict first, then check.\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "sim2": {
+    "kicker": "Play with overlap",
+    "title": "Wave Interference",
+    "body": "A second sim, for the **superposition** idea. Use it to watch waves **add up**, with one source or two. Predict first, then check. The patterns it makes when waves from two sources overlap are a topic for next year, so just enjoy them for now.\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The marching line",
+    "body": "Draw a 4-panel strip of an anime-style squad of heroes marching **in a straight line**, arm in arm, across a road onto a muddy field at an angle. **Panel 1:** the line on the road, all in step. **Panel 2:** the first hero's foot hits the mud and slows down. **Panel 3:** the others reach the mud one by one, and the whole line **turns**. **Panel 4:** the line marches on in a new direction, closer together. The line is the wavefront. The mud is the slower medium."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Superposition:** where waves overlap, **add the displacements**. Constructive (same sign) or destructive (opposite). Afterwards each wave **carries on unchanged**.",
+      "**Huygens' principle:** every point on a wavefront is a source of wavelets. The new wavefront is their **envelope**.",
+      "**Reflection:** **α_{i} = α_{r}**, both angles from the **normal**.",
+      "**Refraction (booklet):** **sin α_{1} / sin α_{2} = n_{2} / n_{1} = c_{1} / c_{2}**. Into higher n: slower, bends **towards** the normal. Into lower n: faster, bends **away**.",
+      "At a boundary the **frequency stays the same**; speed and wavelength change in the ratio λ_{2} / λ_{1} = c_{2} / c_{1} = n_{1} / n_{2}.",
+      "**Critical angle:** sin α_{c} = n_{2} / n_{1}, only when n_{1} > n_{2} (glass to air: about {critG}°). Beyond it: **total internal reflection** (optical fibres).",
+      "**Dispersion:** n depends on wavelength (in glass larger for violet than red). Prisms and rainbows split white light. **Earthquake waves** bend where the wave speed changes."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A ray hits a flat mirror at {q1}° to the normal. Which angle does the reflected ray make with the normal?",
+        "choices": [
+          "{q1w2}°",
+          "{q1w}°",
+          "{q1}°",
+          "0°"
+        ],
+        "answer": 2,
+        "why": "**α_{i} = α_{r}**, both from the normal: {q1}°.",
+        "whyNot": [
+          "{q1w2}° is the angle **between** the two rays (2 × {q1}°). The reflected ray is {q1}° from the normal.",
+          "{q1w}° is the angle between the reflected ray and the **mirror** (90° − {q1}°). The question asks for the angle from the normal.",
+          null,
+          "0° would mean the ray comes straight back along the normal, which needs 0° incidence. Here α_{i} = {q1}°, so α_{r} = {q1}°."
+        ]
+      },
+      {
+        "q": "Light goes from air into glass. What happens to its frequency and its wavelength?",
+        "choices": [
+          "frequency the same, wavelength shorter",
+          "frequency lower, wavelength the same",
+          "frequency the same, wavelength longer",
+          "both shorter"
+        ],
+        "answer": 0,
+        "why": "The frequency is set by the source, so it **stays the same**. The speed drops, and since v = f·λ the **wavelength gets shorter**.",
+        "whyNot": [
+          null,
+          "The source sets the frequency, so it doesn't drop. With f fixed, a slower wave has a **shorter** wavelength (λ = v/f).",
+          "Frequency right, but light is slower in glass, so with f fixed λ = v/f gets **shorter**, not longer.",
+          "The wavelength is shorter, but the frequency is set by the source and stays the same at the boundary."
+        ]
+      },
+      {
+        "q": "Light in glass (n about {nG}) hits a glass-to-air boundary at 60°. The critical angle is {critG}°. The light...",
+        "choices": [
+          "refracts out, bending towards the normal",
+          "is totally internally reflected",
+          "refracts out, bending away from the normal",
+          "skims along the boundary"
+        ],
+        "answer": 1,
+        "why": "60° is **more than** the critical angle {critG}°, so there is no refracted ray: **total internal reflection**.",
+        "whyNot": [
+          "Into air a ray bends away from the normal, never towards it. And 60° is beyond {critG}°, so none gets out at all.",
+          null,
+          "Bending away is what a ray does when it gets out, but 60° is more than {critG}°, so it can't get out.",
+          "Skimming needs exactly the critical angle ({critG}°). 60° is beyond it."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "b1": {
+    "kicker": "Bonus: quickest path",
+    "title": "Fermat's lifeguard",
+    "say": "A swimmer is in trouble. Which way is fastest?",
+    "lead": "Fermat's principle says light takes the **quickest** path between two points. Try it on a lifeguard. She stands on the beach {fgA} m from the water's edge. The swimmer is in the water {fgB} m from the edge, and {fgD} m further along the shore. She runs at {fgV1} m/s on sand and swims at {fgV2} m/s. She picks the point where she enters the water, measured along the shore from the point opposite her.",
+    "question": "The straight line to the swimmer enters the water {fgXs} m along. Is that the quickest way?",
+    "choices": [
+      "Yes: a straight line is the shortest, so it is the quickest",
+      "No: she should run further along the beach and swim a shorter way",
+      "No: she should enter the water sooner and swim the long way"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Shortest, yes. Quickest, no:",
+      "Right. Here are the numbers:",
+      "That's slower, since swimming is the slow part:"
+    ],
+    "explain": "She runs {fgVr} times faster than she swims, so she should spend more of the trip on the sand. Time for entering at x metres is t = √(x² + {fgA}²)/{fgV1} + √(({fgD} − x)² + {fgB}²)/{fgV2}.\n\n- Straight line (x = {fgXs} m): **{fgTs} s**.\n- Best point (found by a computer search): x ≈ **{fgX} m**, giving **{fgTb} s**, about {fgSave} s quicker.\n\nAt the best point the angles from the normal (the line at right angles to the shore) are α_{1} ≈ {fgA1}° on sand and α_{2} ≈ {fgA2}° in water, and **sin α_{1} / sin α_{2} = {fgRatio}**, which is the speed ratio v_{1} / v_{2} = {fgVr}. That is Snell's law: light bends at a boundary because that is its quickest route."
+  },
+  "b2": {
+    "kicker": "Bonus: Snell from Huygens",
+    "title": "Deriving the refraction law",
+    "lead": "A flat wavefront hits the boundary at an angle. Its end A touches the boundary first. In the time Δt, the other end of the wavefront travels to the boundary at B'. Meanwhile the wavelet from A grows in medium 2. The wavefront makes angle α_{1} with the boundary, the new one makes angle α_{2}. Tap the right move at each step.",
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "In time Δt the far end of the wavefront covers c_{1}·Δt in medium 1, along the wavefront's path to B'. That is the side opposite α_{1} in a right-angled triangle with hypotenuse AB' (along the boundary). So c_{1}·Δt = ...",
+        "options": [
+          "AB'/sin α_{1}",
+          "AB'·cos α_{1}",
+          "AB'·sin α_{1}"
+        ],
+        "answer": 2,
+        "then": "$ c_{1}·Δt = AB'·sin α_{1}"
+      },
+      {
+        "prompt": "In the same time the wavelet from A in medium 2 has radius c_{2}·Δt, and the new wavefront touches it and B'. The same triangle trick gives c_{2}·Δt = ...",
+        "options": [
+          "AB'·cos α_{2}",
+          "AB'·sin α_{2}",
+          "AB'/sin α_{2}"
+        ],
+        "answer": 1,
+        "then": "$ c_{2}·Δt = AB'·sin α_{2}"
+      },
+      {
+        "prompt": "Divide the first equation by the second. Δt and AB' cancel, leaving...",
+        "options": [
+          "sin α_{1} / sin α_{2} = c_{1} / c_{2}",
+          "sin α_{1} / sin α_{2} = c_{2} / c_{1}",
+          "α_{1} / α_{2} = c_{1} / c_{2}"
+        ],
+        "answer": 0,
+        "then": "$ sin α_{1} / sin α_{2} = c_{1} / c_{2}\n\nSince n is inversely proportional to c, this is the booklet formula sin α_{1} / sin α_{2} = n_{2} / n_{1}."
+      }
+    ],
+    "after": "Full geometry, one sketch, and nothing but wavelets. Huygens' idea gives Snell's law."
+  },
+  "b3": {
+    "kicker": "Bonus: mirages",
+    "title": "The puddle that isn't there",
+    "lead": "On a hot, sunny road you see a shiny puddle far ahead. As you get closer, it's gone. Air close to the hot tarmac is hotter and less dense, so light travels slightly **faster** in it than in the cooler air above. The change is gradual, with no sharp boundary.",
+    "question": "What is the shiny \"puddle\"?",
+    "choices": [
+      "Sound echoes from the road",
+      "A real puddle that dries up as you drive closer",
+      "Light from the sun dispersed into colours",
+      "An image of the sky: rays from the sky bend upwards through the hot air into your eye"
+    ],
+    "answer": 3,
+    "lock": "Decide",
+    "verdicts": [
+      "Light, not sound:",
+      "Not a real puddle:",
+      "Not dispersion:",
+      "Yes! Refraction without a sharp boundary."
+    ],
+    "explain": "Rays from the sky head down, then bend **away from the normal** as they enter faster, lower-n air, again and again, until they curve back **upwards**. Your eye follows them back in a straight line and puts the sky on the road. It's the same smooth bending as earthquake waves in the mantle."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "rays": {
+      "aria": "Diagram of a ray of light hitting a flat boundary between air above and glass below. A dashed normal stands at right angles to the boundary. The incident ray comes in at 50 degrees to the normal, the reflected ray leaves at the same angle on the other side, and the refracted ray goes into the glass at a smaller angle, closer to the normal. All three angles are marked from the normal.",
+      "top": "air  n_{1} = {nA}",
+      "bottom": "glass  n_{2} = {nG}",
+      "normal": "normal",
+      "incident": "incident ray",
+      "reflected": "reflected ray",
+      "refracted": "refracted ray",
+      "a1": "α_{1}",
+      "ar": "α_{r}",
+      "a2": "α_{2}",
+      "caption": "**One ray, three directions.** A ray in air meets glass at **α_{1} = 50°** from the **normal** (the dashed line at right angles to the surface). Some of the light is **reflected**, leaving at **α_{r} = α_{1}**. The rest is **refracted** into the glass and bends **towards** the normal, to **α_{2} = {a50g}°**. All three angles are measured from the normal, never from the surface."
+    },
+    "fibre": {
+      "aria": "Diagram of a ray zig-zagging along an optical fibre. The core is glass, with a cladding of lower refractive index above and below. At each wall the ray hits at a large angle from the normal, bigger than the critical angle, and reflects at the same angle, so it stays inside the core.",
+      "core": "core: glass, n = {nG}",
+      "clad": "cladding: n = {nClad}",
+      "normal": "normal",
+      "a": "α",
+      "ar": "α_{r}",
+      "trapped": "total internal reflection at every wall",
+      "caption": "**Light trapped in a thread.** The core has n = {nG}, the cladding around it a little less, n = {nClad} (values chosen for the drawing). The critical angle for this pair is sin α_{c} = {nClad} / {nG}, so **α_{c} = {fibCrit}°**. The ray in the picture hits each wall at **α = {fibAlpha}°** from the normal, more than α_{c}, so it is **totally internally reflected**, with α_{r} = α, every time. Notice that it must travel almost **along** the thread. A ray that hits the wall at less than α_{c} leaks out into the cladding."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "The coin that appears",
+    "lead": "A coin hides behind the rim of a mug. Pour in water, and it **appears**, without anyone touching it. That is refraction at work, and you can put numbers on it. It is the 'pencil looks broken in water' effect, measured.",
+    "safety": "**Safety:** use cold tap water and a plastic or thick ceramic mug (thin glass can break). Pour over a sink or a tray and wipe up spills, so nobody slips. Keep phones and chargers away from the water. Nothing hot, and don't shine a torch or laser at anyone's eyes.",
+    "need": "**You need:** an opaque mug with straight sides (plain inside), a coin, a dab of tape or blu-tack, a ruler or tape measure, a spoon, a jug of cold water, and a friend to hold the ruler.",
+    "steps": "**Do this:**\n1. Measure the inside height **H** of the mug, from the rim to the bottom. Stick the coin to the bottom with its centre a distance **x** from the wall nearest to you. (Below we use x = {expX} cm and H = {expH} cm, a typical mug. Use your own measurements.)\n2. With the mug **empty**, put your eye a horizontal distance **d** = {expD} cm out from the near rim (your friend holds a ruler along the table). Start with your eye high and lower it slowly until the near rim **just hides** the coin. Your friend measures the height of your eye above the rim: that is **e_{0}**.\n3. Keep your head where it is. Your friend pours cold water **slowly down the side** with the spoon, so the coin doesn't move, until the water is almost at the brim. The coin **appears**.\n4. Lower your eye again until the coin hides, and measure the height above the rim: **e_{1}**. Repeat a few times and average.",
+    "measure": "**Measure:** the eye height above the rim at which the coin just disappears, with the mug empty (e_{0}) and full (e_{1}), at the same d = {expD} cm. For each, tan α = d / e, where α is the angle of your line of sight from the **vertical** (the normal to the water surface).",
+    "compare": "**Compare with the formula:** inside the mug the ray goes from the coin to the rim, at an angle α_{2} from the vertical, where tan α_{2} = x / H = {expX} / {expH}, so α_{2} = **{expA2}°**. With no water, light goes straight, so your eye must be at least e_{0} = d / tan α_{2} = **{expE0} cm** above the rim to see the coin. With water, the ray bends **away from the normal** at the surface (water to air): sin α_{1} = (n_{water} / n_{air})·sin α_{2} = {nW} × sin {expA2}°, so α_{1} = **{expA1}°**. Now your eye can be as low as e_{1} = d / tan α_{1} = **{expE1} cm**: about {expDe} cm lower. **Work backwards:** from your own e_{1}, find α_{1} = tan⁻¹(d / e_{1}), then n = sin α_{1} / sin α_{2}. An e_{1} of {expE1hi} cm gives n = {expNlo}, and {expE1lo} cm gives n = {expNhi}. The textbook value is {nW}.",
+    "wrong": "**What goes wrong:** the formula assumes the water reaches the **rim**: fill it almost to the brim, because a lower surface changes the geometry. The coin has a size and the rim has a thickness, so aim at the coin's near edge and the inner edge of the rim. The water surface curves up at the wall. 'Just hidden' is hard to judge, so repeat it several times. Expect n to come out within about 0.1 to 0.2 of the textbook value."
+  }
+}

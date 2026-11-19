@@ -1,0 +1,607 @@
+{
+  "hero": {
+    "sfx": "WHIRRRR",
+    "caption": "Orbiting is a kind of falling."
+  },
+  "intro": "A ball on a string, a carousel, a car on a roundabout, the Moon. All of them go round in circles, and all of them are **accelerating**, even when the speed never changes. This chapter teaches you step by step why, and how big that acceleration is: **a = v²/r = ω²·r**. You'll also meet the famous \"centrifugal force\" and see why it isn't what it seems. Unless we say otherwise: g = {g} m/s², no air resistance.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "describe **uniform circular motion** with the **period T**, the **speed v** and the **angular velocity ω = Δθ/Δt = v/r**;",
+      "explain why going round a circle at constant speed is still **accelerated motion**;",
+      "calculate the **centripetal acceleration a = v²/r = ω²·r** and the **centripetal force F = m·a**;",
+      "**identify the centripetal force** in examples (string, friction, gravity, normal force) and explain why \"centrifugal force\" is a misleading idea."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Snap! Where does it go?",
+    "question": "You whirl a ball on a string round your head, in a flat circle. Suddenly the string **snaps**.\n\nSeen from above, which way does the ball fly off?",
+    "choices": [
+      "Outwards, along the radius (straight away from the centre)",
+      "Along a curve that keeps bending the same way",
+      "Straight on, along the tangent",
+      "It spirals outwards"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Very common, but no:",
+      "Tempting, but no:",
+      "Yes! Straight along the tangent.",
+      "Not quite:"
+    ],
+    "explain": "**Straight along the tangent**, at the speed it had. Once the string is gone, nothing pushes the ball sideways any more, so it simply carries on in a straight line (Newton's first law).\n\nThe string is what keeps bending the path into a circle. Let's find out how, step by step.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "lab": {
+    "scene": "Top view of a ball going round in a circle on a string, with a velocity arrow and an acceleration arrow",
+    "hint": "Arrow lengths are scaled to fit the picture. Fast spins are shown in slow motion.",
+    "radius": "Radius r",
+    "speed": "Speed v",
+    "mass": "Mass m",
+    "omega": "Angular velocity ω",
+    "period": "Period T",
+    "acc": "Acceleration a_{cent}",
+    "force": "String force F",
+    "cut": "Cut the string",
+    "reattach": "Tie it back on",
+    "cut_done": "Cut! No string, no force, no acceleration. The ball goes straight on, along the tangent.",
+    "gone": "Gone. It never turned back. Resetting the lab...",
+    "free": "String cut: F = 0, so a = 0. The ball keeps its speed and its direction."
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Speed, period and angular velocity",
+    "body": "In **uniform circular motion** an object goes round a circle of radius **r** at a **constant speed v**.\n\nThe time for one full turn is the **period T** (in seconds). The number of turns per second is the **frequency f = 1/T** (in hertz, Hz).\n\nIn one turn the object travels the circumference 2π·r, so its speed is v = 2π·r / T.\n\nAn easier way to say \"how fast does it turn\" is the **angular velocity ω**: the angle swept out per second. A full turn is 2π radians. (A **radian** is the angle for which the arc length equals the radius, about 57°; so 360° = 2π rad. A radian is a ratio of two lengths, so it has no unit of its own: the booklet writes ω in s⁻¹.) Since f = 1/T, we can also write ω = 2π·f. So:",
+    "formula": "$ ω = Δθ/Δt = 2π/T = 2π·f = v/r",
+    "tasks": "ω is measured in **radians per second (rad/s)**; v in m/s. Notice v = ω·r: points farther from the centre have the same ω but a bigger v.\n\n**Try it in the lab** (top view):\n- Start with r = {labR} m and v = {labV} m/s. Read ω = v/r = {labW} rad/s and T = 2π·r/v = {labT} s.\n- Keep v and double the radius (r = {labR2} m): the circle is twice as long, so T becomes {labT2} s and ω drops to {labW2} rad/s.\n- Raise v with r fixed: what happens to T and ω? (The circle is the same length but the ball covers it faster, so T gets shorter and ω gets bigger.)",
+    "check": {
+      "q": "A ball goes round a circle of radius {k1r} m with a period of {k1T} s. What is its speed?",
+      "choices": [
+        "{k1w1} m/s",
+        "{k1v} m/s",
+        "{k1w2} m/s",
+        "{k1w3} m/s"
+      ],
+      "answer": 1,
+      "why": "v = 2π·r / T = 2π × {k1r} / {k1T} = **{k1v} m/s**. (The value 2π/T = {k1w3} is ω in rad/s, not a speed.)",
+      "whyNot": [
+        "That is r/T: one turn is a whole circumference, not just one radius.",
+        null,
+        "That multiplies by T. A speed is a distance divided by a time, so T goes underneath.",
+        "{k1w3} is 2π/T, the angular velocity, in rad/s. Speed is in m/s: it needs the distance 2π·r."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Constant speed, still accelerating",
+    "body": "Here's the surprise. The ball's **speed** is constant, but its **velocity** is a vector: speed **and** direction. The direction keeps changing, so the velocity keeps changing. **A changing velocity means acceleration.** So circular motion is **accelerated motion**, even at constant speed.\n\nWhich way does the acceleration point? Watch the arrows in the lab: the **yellow** one is the velocity (always along the tangent), the **blue** one is the acceleration.",
+    "tasks": "- The yellow arrow keeps turning, but its length stays the same. The blue arrow always points **to the centre**.\n- So the acceleration is perpendicular to the velocity. It changes the **direction** of the motion, not the speed. We call it the **centripetal acceleration** (\"centre-seeking\").\n- By Newton's second law, an acceleration needs a resultant force in the same direction: **a resultant force towards the centre**.\n- Now press **Cut the string**. No force, no acceleration: the ball goes straight along the tangent.",
+    "game_title": "Predict the escape path",
+    "game_lead": "Four rounds. Each time the ball is at a different spot and spinning a different way. Four possible escape paths are drawn. **Tap the one you think the ball will really take** (or use the lettered buttons). Get **3 of 4** right to win a crystal.",
+    "check": {
+      "q": "A ball goes round a circle at a constant speed. Which statement is true?",
+      "choices": [
+        "Its velocity is constant, so a = 0",
+        "Its velocity changes (direction), so it is accelerating",
+        "Its acceleration points along the direction of motion",
+        "Its acceleration points away from the centre"
+      ],
+      "answer": 1,
+      "why": "The speed is constant but the **direction changes**, so the velocity changes: there is an acceleration, and it points **to the centre**.",
+      "whyNot": [
+        "Constant speed is not constant velocity: velocity also contains the direction, and the direction keeps changing.",
+        null,
+        "An acceleration along the motion would change the speed. Here the speed stays the same, so it must point another way.",
+        "Away from the centre would push the ball off its circle. To keep curving inwards, the pull has to point the other way."
+      ]
+    }
+  },
+  "game": {
+    "scene": "A ball on a circle with four possible escape paths labelled A to D",
+    "round": "Round",
+    "score": "Right so far",
+    "path": "Path",
+    "next": "Next round",
+    "finish": "See my score",
+    "again": "Play again",
+    "spin_ccw": "The ball is spinning anticlockwise (the yellow arrow shows the way).",
+    "spin_cw": "The ball is spinning clockwise (the yellow arrow shows the way).",
+    "ask": "Which path will it take when the string is cut?",
+    "cutting": "Snip!",
+    "right": "Yes! Straight along the tangent.",
+    "wrong": "Not that one. The real path is the thick straight line.",
+    "explain": "Whichever way it spins, the ball leaves in a straight line, along the tangent, in the direction it was already moving.",
+    "win": "You've got it: the escape path is always the tangent.",
+    "again_msg": "Close! Play again and look for the tangent each time."
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "How big? a = v²/r and the force that provides it",
+    "body": "The faster the ball goes, and the tighter the circle, the quicker the velocity arrow has to turn. A quick way to see the size: in a short time Δt the velocity arrow (length v) turns through the same small angle Δθ as the ball does on its circle. So Δv ≈ v·Δθ, and a = Δv/Δt = v·(Δθ/Δt) = v·ω. With v = ω·r this is a = ω²·r, and with ω = v/r it is a = v²/r. These are the booklet results:",
+    "formula": "$ a_{cent} = v²/r = ω²·r",
+    "after": "The acceleration points **towards the centre**. Newton's second law then says the **resultant force** must point to the centre too, with size:\n\n$ F = m·a = m·v²/r = m·ω²·r\n\nThis is called the **centripetal force**. It is **not a new kind of force**: it is the name for **whatever real force (or combination of forces) points to the centre**. (Full derivation with similar triangles: see the bonus at the end.)",
+    "tasks": "**Try it in the lab:**\n- With m = {labM} kg, r = {labR} m, v = {labV} m/s: a = v²/r = {labA} m/s² and the string pulls with F = m·a = {labF} N.\n- Double the speed (v = {labV2} m/s) on the same circle: the force becomes **{ratio4} times** bigger, because v is squared.\n- Squeeze the radius down to 0.2 m, keeping v = {labV} m/s: a = {labA02} m/s² and F = {labF02} N. A tighter circle needs a bigger force.",
+    "check": {
+      "q": "A ball goes round a circle of radius {k3r} m at {k3v} m/s. What is its centripetal acceleration?",
+      "choices": [
+        "{k3w1} m/s²",
+        "{k3a} m/s²",
+        "{k3w2} m/s²",
+        "{k3w3} m/s²"
+      ],
+      "answer": 1,
+      "why": "a = v²/r = {k3v}² / {k3r} = **{k3a} m/s²**, towards the centre.",
+      "whyNot": [
+        "{k3w1} is v/r, the angular velocity in rad/s. Acceleration needs v squared.",
+        null,
+        "{k3w2} is v²·r. Think about where the radius belongs: a bigger circle at the same speed turns the velocity more gently.",
+        "{k3w3} is v·r. A bigger circle bends the path less, and the speed counts for more than a single factor."
+      ]
+    }
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "The force that isn't there",
+    "lead": "When a car takes a sharp corner, you feel thrown **outwards**, against the door. It really feels like an outward force. So: which of these are **real forces** acting on you or the car? Tap each card.",
+    "after": "**Ask this about any circular motion:** which real force points to the centre?\n- Ball on a string: the **tension** of the string.\n- Car on a flat bend: **friction** between tyres and road.\n- Coin on a turntable: **friction** from the turntable.\n- Satellite or the Moon: **gravity**.\n- Car on a banked curve: the road is tilted, so its normal force leans towards the centre. The **horizontal part of the normal force** (plus friction, if needed) provides the centripetal force.\n- A car over the top of a round hill: gravity and the normal force are both vertical, and their **resultant** points down to the centre of the curve (see the last practice question).\n\nThe name \"centrifugal force\" (\"centre-fleeing\") is **misleading**: no object pushes you outwards. If the centripetal force vanishes (icy road, snapped string), you fly off **along the tangent**, not outwards.\n\nOrbits, banked curves and charged particles in a magnetic field are worked out in detail in *Falling forever*.",
+    "check": {
+      "q": "A coin lies on a turntable that spins steadily, and the coin goes round with it. Which force is the centripetal force?",
+      "choices": [
+        "Friction from the turntable, pointing to the centre",
+        "The weight of the coin",
+        "A centrifugal force, pointing outwards",
+        "The normal force from the turntable"
+      ],
+      "answer": 0,
+      "why": "Weight and the normal force are vertical and cancel each other. The only real force pointing to the centre is the **friction** from the turntable.",
+      "whyNot": [
+        null,
+        "Weight points straight down. It can't also point sideways to the centre.",
+        "No object pushes the coin outwards: \"centrifugal force\" is a feeling, not a real force. Look for a real force pointing inwards.",
+        "The normal force is straight up, and it cancels the weight. It has no sideways part on a flat turntable."
+      ]
+    }
+  },
+  "bigidea": {
+    "yes": "REAL FORCE",
+    "no": "NOT A FORCE",
+    "cards": [
+      {
+        "label": "The door pushing you",
+        "tagline": "Real or not?",
+        "yes": true,
+        "why": "A real contact force, pointing **inwards**. It is what makes you turn with the car: it is your centripetal force."
+      },
+      {
+        "label": "Tyre friction on the road",
+        "tagline": "Real or not?",
+        "yes": true,
+        "why": "A real force on the car, pointing **to the centre of the bend**. On ice it disappears, and the car goes straight on."
+      },
+      {
+        "label": "An outward \"centrifugal\" push",
+        "tagline": "Real or not?",
+        "yes": false,
+        "why": "Nothing is pushing you outwards: no object is exerting it. It is a feeling, not a force."
+      },
+      {
+        "label": "\"Inertia\" as a force",
+        "tagline": "Real or not?",
+        "yes": false,
+        "why": "Inertia is the tendency to keep moving in a straight line. It is a property of mass, not a push or a pull."
+      }
+    ],
+    "toggle": "Why does it feel so real?",
+    "feel": "From the road, you simply tried to go **straight on** while the car turned **under** you. The door then met you and pushed you into the turn. In your seat that feels like being thrown outwards onto the door, but the only real **sideways** forces on you are the door (and the seat's grip) pushing **inwards**. The \"outward push\" is just your body wanting to go straight.\n\nFrom the road the rule is: **a circle needs a resultant force towards the centre, and no outward force exists**."
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: a car on a flat bend",
+        "problem": "A car of mass **{carM} kg** drives round a flat circular bend of radius **{carR} m** at a constant **{carV} m/s**. Find its acceleration and the friction force needed between the tyres and the road.",
+        "steps": [
+          "Data (SI units): m = {carM} kg, r = {carR} m, v = {carV} m/s.",
+          "Centripetal acceleration: a = v²/r = {carV}² / {carR} = **{carA} m/s²**, pointing to the centre of the bend.",
+          "On a flat road the only real force pointing sideways is friction, so it is the centripetal force: F = m·a = {carM} × {carA}."
+        ],
+        "answer": "a = **{carA} m/s²** towards the centre; friction F ≈ **{carF} N** towards the centre (about {carMu} times the car's weight)"
+      },
+      {
+        "title": "Example 2: a ball on a string",
+        "problem": "A **{wbM} kg** ball on a **{wbR} m** string goes round in a horizontal circle on a smooth table, making **{wbRev} turns per second**. Find ω, v, the acceleration and the tension in the string.",
+        "steps": [
+          "Frequency f = {wbRev} Hz, so the period is T = 1/f = **{wbT} s**.",
+          "Angular velocity: ω = 2π/T = 2π / {wbT} = **{wbW} rad/s** (the same as 2π·f).",
+          "Speed: v = ω·r = {wbW} × {wbR} = **{wbV} m/s**.",
+          "Acceleration: a = ω²·r = {wbW}² × {wbR} ≈ **{wbA} m/s²** (check: v²/r gives {wbA2} m/s²).",
+          "The tension is the only force towards the centre (the table is smooth, weight and normal force cancel): F = m·a = {wbM} × {wbA}."
+        ],
+        "answer": "ω ≈ **{wbW} rad/s**, v ≈ **{wbV} m/s**, a ≈ **{wbA} m/s²**, tension ≈ **{wbF} N**"
+      },
+      {
+        "title": "Example 3: a car over a hill crest",
+        "problem": "A car of mass **{hcM} kg** drives at a constant **{hcV} m/s** over the top of a round hill. The curve of the road has radius **{hcR} m**. Find the normal force from the road on the car at the top. (g = {g} m/s²)",
+        "steps": [
+          "Data (SI units): m = {hcM} kg, v = {hcV} m/s, r = {hcR} m. At the top the centre of the curve is **below** the car, so \"towards the centre\" is **down**.",
+          "The resultant force must be the centripetal force: F = m·v²/r = {hcM} × {hcV}² / {hcR} = **{hcFc} N**, downwards.",
+          "The real forces are vertical: weight m·g = {hcM} × {g} = {hcW} N down, and the normal force N up. Taking down as positive: m·g − N = {hcFc} N.",
+          "Solve: N = m·g − m·v²/r = {hcW} − {hcFc}."
+        ],
+        "answer": "N = **{hcN} N**, upwards: less than the weight ({hcW} N), so the passengers feel lighter at the top"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A fairground carousel makes one full turn in {p1T} s. What is its angular velocity?",
+        "choices": [
+          "{p1w} rad/s",
+          "{p1w1} rad/s",
+          "{p1w2} rad/s",
+          "{p1w3} rad/s"
+        ],
+        "answer": 0,
+        "hint": "One turn is 2π rad, and it takes the period T.",
+        "solution": "Use ω = 2π/T (one turn is 2π rad).\n\nω = 2π / {p1T} s = **{p1w} rad/s**.\n\nSense check: the carousel turns less than one radian per second, a gentle spin. (1/T = {p1w1} is the frequency in Hz.)",
+        "whyNot": [
+          null,
+          "{p1w1} is 1/T, the frequency in Hz. Angular velocity is the angle per second: 2π divided by T.",
+          "{p1w2} is 2π·T. T goes underneath: ω = 2π/T = {p1w} rad/s.",
+          "{p1w3} is just T. One turn is 2π rad in T seconds, so ω = 2π/T = {p1w} rad/s."
+        ]
+      },
+      {
+        "q": "A cyclist rides at a constant {p2v} m/s round a bend of radius {p2r} m. What is the centripetal acceleration?",
+        "choices": [
+          "{p2a} m/s²",
+          "{p2w1} m/s²",
+          "{p2w2} m/s²",
+          "{p2w3} m/s²"
+        ],
+        "answer": 0,
+        "hint": "a = v²/r. Square the speed first.",
+        "solution": "Use a = v²/r.\n\na = {p2v}² / {p2r} = **{p2a} m/s²**, pointing to the centre of the bend.\n\nSense check: about half of g. A cyclist would have to lean about 27° (tan θ = a/g) to ride this bend.",
+        "whyNot": [
+          null,
+          "{p2w1} is v/r, the angular velocity (rad/s), not an acceleration. Square the speed: v²/r = {p2a} m/s².",
+          "{p2w2} is half the answer: v²/(2·r), as if the ½ of kinetic energy (½·m·v²) had been carried over. The acceleration has no ½: v²/r = {p2a} m/s².",
+          "{p2w3} is v·r. The radius goes underneath, and v is squared: v²/r = {p2a} m/s²."
+        ]
+      },
+      {
+        "q": "A {p3m} kg ball on a horizontal string goes round a circle of radius {p3r} m with angular velocity {p3w} rad/s. What is the tension in the string? (Ignore gravity.)",
+        "choices": [
+          "{p3F} N",
+          "{p3w1} N",
+          "{p3w2} N",
+          "{p3w3} N"
+        ],
+        "answer": 0,
+        "hint": "First a = ω²·r, then F = m·a.",
+        "solution": "First the acceleration, a = ω²·r. Then Newton's second law, F = m·a.\n\na = {p3w}² × {p3r} = {p3a} m/s². F = m·a = {p3m} kg × {p3a} m/s² = **{p3F} N**.\n\nThe tension in the string is the centripetal force, so it is {p3F} N, pointing to the centre.",
+        "whyNot": [
+          null,
+          "{p3w1} is m·ω·r. Put in the square: a = ω²·r first, then F = m·a = {p3F} N.",
+          "{p3w2} is m·ω² and has lost the radius. a = ω²·r = {p3a} m/s², so F = {p3F} N.",
+          "{p3w3} squares the radius as well (m·ω²·r²). Only ω is squared: F = m·ω²·r = {p3F} N."
+        ]
+      },
+      {
+        "q": "A car goes round a flat bend at a certain speed. It now takes the same bend at **twice** the speed. The friction force needed becomes...",
+        "choices": [
+          "4 times as big",
+          "2 times as big",
+          "the same",
+          "8 times as big"
+        ],
+        "answer": 0,
+        "hint": "F = m·v²/r. What happens when v doubles?",
+        "solution": "Use F = m·v²/r. The mass and the radius stay the same, only v changes: v → 2v.\n\nF(new) / F(old) = (2v)² / v² = 4. So the force is **4 times** as big.\n\nThat is why speeding into a bend on a wet road is dangerous: friction may not be able to supply 4 times as much.",
+        "whyNot": [
+          null,
+          "That forgets the square. F = m·v²/r, so doubling v makes F 2² = 4 times as big, not 2.",
+          "The force can't stay the same: F grows with v². Doubling v makes it 4 times as big.",
+          "That would be v cubed. Only v is squared in m·v²/r, so the factor is 2² = 4."
+        ]
+      },
+      {
+        "q": "In a car that turns sharply left, you feel pushed to the right. Which explanation is correct?",
+        "choices": [
+          "Your body tends to go straight on while the car turns; the door pushes you inwards",
+          "A centrifugal force pushes you outwards",
+          "The engine pushes you to the right",
+          "Gravity pulls you to the right"
+        ],
+        "answer": 0,
+        "hint": "Which real objects touch you? Which way does the force from them point?",
+        "solution": "Ask which real force points to the centre. None points outwards.\n\nYour body **tends to keep going straight** (Newton's first law) while the car turns under you. The door and seat then push you **inwards**, and that real force is your centripetal force.\n\nThe \"push to the right\" is only the door meeting your body.",
+        "whyNot": [
+          null,
+          "No outward force exists: \"centrifugal force\" is a feeling. Your body wants to go straight on while the door pushes you inwards.",
+          "The engine pushes the car forwards and has nothing to do with a sideways push. The sideways force comes from the door and the seat.",
+          "Gravity pulls straight down; it has no sideways part. The inward push comes from the door."
+        ]
+      },
+      {
+        "q": "A car of mass {p6m} kg drives at a constant {p6v} m/s over the top of a round hill whose curve has radius {p6r} m. What is the normal force from the road on the car at the top? (g = {g} m/s²)",
+        "choices": [
+          "{p6N} N",
+          "{p6w1} N",
+          "{p6W} N",
+          "{p6Fc} N"
+        ],
+        "answer": 0,
+        "hint": "At the top the centre of the curve is below the car. Gravity pulls down, the normal force pushes up. Their resultant must equal m·v²/r, pointing down.",
+        "solution": "The centre of the curve is below the car, so \"towards the centre\" means down.\n\nNeeded centripetal force: m·v²/r = {p6m} × {p6v}² / {p6r} = {p6Fc} N, down. Forces: weight m·g = {p6W} N down, normal force N up. So m·g − N = {p6Fc} N, and N = {p6W} − {p6Fc} = **{p6N} N**.\n\nSense check: N is less than the weight, so you feel lighter at the top of a hill.",
+        "whyNot": [
+          null,
+          "{p6w1} N is weight plus m·v²/r. At the top of a hill the resultant points down, so N is the weight minus m·v²/r: {p6N} N.",
+          "{p6W} N is just m·g. That would be a car going straight, not round the crest: N must be smaller by m·v²/r.",
+          "{p6Fc} N is only m·v²/r, the resultant force needed. N is what is left when you subtract it from m·g: {p6N} N."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Explore · The story",
+    "title": "Is the Moon falling?",
+    "frames": [
+      {
+        "cap": "Huygens, 1659",
+        "text": "Christiaan Huygens works out how hard a whirling object pulls on its string. He worked it out about 1659; the full proof was published in 1703, after his death. His result is equivalent to **a = v²/r**.",
+        "fx": "SPIN"
+      },
+      {
+        "cap": "Newton, the story goes",
+        "text": "In the plague years of 1665 and 1666, a young Isaac Newton wonders whether the force that makes things fall could also be what holds the **Moon** in its circle. *(This is how Newton himself told it, many years later.)*"
+      },
+      {
+        "cap": "The idea",
+        "text": "The Moon is **always falling towards the Earth** but is moving sideways so fast that it keeps missing. Round and round it goes: gravity is its centripetal force.",
+        "fx": "ZOOM"
+      }
+    ],
+    "question": "What provides the centripetal force that keeps the Moon on its circle?",
+    "choices": [
+      "The gravity of the Earth pulling on the Moon",
+      "A \"centrifugal force\" pushing the Moon outwards, which balances it",
+      "The Moon's own engines",
+      "The Sun's pull"
+    ],
+    "answer": 0,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Exactly.",
+      "Nothing pushes the Moon outwards:",
+      "The Moon has no engines:",
+      "The Sun pulls hard on the Moon (even harder than Earth does), but it pulls Earth and the Moon almost equally, so it hardly changes how the Moon circles Earth:"
+    ],
+    "explain": "The centripetal force is the real force towards the centre, and for the Moon it is Earth's gravity. There is no extra outward force: if there were a balance, there would be no acceleration and the Moon would fly off in a straight line, not go round. (Treating the orbit as a circle; the real one is slightly oval.)"
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The snapped string",
+    "body": "Draw a 4-panel strip from **above**. **Panel 1:** the hero whirls a ball on a string, with a little arrow to the centre showing the string's pull. **Panel 2:** SNAP, the string breaks, with the ball still on the circle. **Panel 3:** the ball shoots off along a straight line that only just touches the circle (the tangent), with speed lines. **Panel 4:** the hero stares at the circle she thought it would follow. Label the tangent and the centre."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Uniform circular motion:** constant speed v on a circle of radius r. Period T (s), frequency f = 1/T (Hz); v = 2π·r/T.",
+      "**Angular velocity:** ω = Δθ/Δt = 2π/T = 2π·f = v/r, in **rad/s** (the booklet writes s⁻¹). Also v = ω·r.",
+      "The velocity changes direction, so circular motion is **accelerated motion**, even at constant speed.",
+      "**Centripetal acceleration:** a_{cent} = v²/r = ω²·r, pointing **to the centre**.",
+      "**Centripetal force:** F = m·a = m·v²/r. It is the **resultant real force towards the centre**: tension, friction, gravity, a normal force (on a bank, its horizontal part).",
+      "**No \"centrifugal force\":** no object pushes outwards. Without the centripetal force the object flies off along the **tangent**."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A car goes round a roundabout at a constant speed. Its acceleration is...",
+        "choices": [
+          "zero, because the speed doesn't change",
+          "not zero, pointing to the centre",
+          "not zero, pointing forward along the road",
+          "not zero, pointing outwards"
+        ],
+        "answer": 1,
+        "why": "The speed is steady, but the **direction** keeps changing, so the velocity changes. The acceleration a = v²/r points **to the centre**.",
+        "whyNot": [
+          "Zero would need a constant velocity. The speed is constant, but the direction keeps changing, so the velocity changes.",
+          null,
+          "Forward would change the speed. Here the speed is steady, so the acceleration is sideways, to the centre.",
+          "Outwards would pull the car off the circle. The acceleration a = v²/r points inwards, to the centre."
+        ]
+      },
+      {
+        "q": "A ball goes round a circle of radius {qR} m at {qV} m/s. Its centripetal acceleration is...",
+        "choices": [
+          "{qW} m/s²",
+          "{qVR} m/s²",
+          "{qA} m/s²",
+          "{qV2} m/s²"
+        ],
+        "answer": 2,
+        "why": "a = v²/r = {qV}² / {qR} = **{qA} m/s²**. (The value v/r = {qW} is ω in rad/s, a different quantity.)",
+        "whyNot": [
+          "{qW} is v/r = ω in rad/s, a different quantity. Acceleration needs v²/r.",
+          "{qVR} is v·r. Square the speed and divide by r: v²/r = {qA} m/s².",
+          null,
+          "{qV2} is v² with no division by r. The radius goes underneath: v²/r = {qA} m/s²."
+        ]
+      },
+      {
+        "q": "A car turns a corner on a flat road. What provides the centripetal force?",
+        "choices": [
+          "The friction of the tyres on the road",
+          "The engine",
+          "A centrifugal force",
+          "The weight of the car"
+        ],
+        "answer": 0,
+        "why": "Only the **friction** between the tyres and the road points sideways, to the centre of the bend. That's why a car on ice goes straight on.",
+        "whyNot": [
+          null,
+          "The engine drives the car forwards. The sideways force has to come from where the tyres touch the road.",
+          "\"Centrifugal force\" is a feeling, not a real force: nothing pushes the car outwards.",
+          "Weight is straight down and is balanced by the road's normal force. It has no sideways part."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: a full derivation, a vertical circle, the Moon test and a scaling puzzle. Not needed for your tests."
+  },
+  "derive": {
+    "kicker": "Bonus: derive it yourself",
+    "title": "Why a = v²/r (similar triangles)",
+    "lead": "A ball goes round at constant speed v on a circle of radius r. In a short time Δt it moves a small distance Δs along the arc, and its velocity arrow turns through a small angle Δθ. Tap the right move.",
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "Draw the position triangle (two sides r, apex angle Δθ, short side Δs) and the velocity triangle (two sides v, the same apex angle Δθ, short side Δv). They have the same shape, so they are similar triangles. Then Δv/v = ...",
+        "options": [
+          "Δs/r",
+          "Δs·r",
+          "r/Δs"
+        ],
+        "answer": 0,
+        "then": "Similar triangles: **Δv/v = Δs/r**. And for the velocity triangle, as Δt gets tiny, Δv ends up pointing **to the centre**."
+      },
+      {
+        "prompt": "Divide both sides by Δt and multiply by v. The acceleration is a = Δv/Δt = (v/r)·(Δs/Δt). The ball moves at speed v, so Δs/Δt = v. Therefore a = ...",
+        "options": [
+          "v²/r",
+          "v/r",
+          "v·r"
+        ],
+        "answer": 0,
+        "then": "**a_{cent} = v²/r**, pointing to the centre. With F = m·a, the resultant force must be **m·v²/r**, towards the centre."
+      },
+      {
+        "prompt": "One full turn is a distance 2π·r in a time T, so v = ω·r (the same as ω = v/r from the booklet). Put v = ω·r into a = v²/r and get a = ...",
+        "options": [
+          "ω²·r",
+          "ω·r²",
+          "ω/r"
+        ],
+        "answer": 0,
+        "then": "$ a_{cent} = (ω·r)² / r = ω²·r\n\nTwo forms of the same result: **a = v²/r = ω²·r**. Use v²/r when you know the speed, and ω²·r when you know how fast it spins. (For the ball in the lab at r = {labR} m and v = {labV} m/s: v²/r = {labA} m/s², and ω²·r = {labW}² × {labR} gives the same.)"
+      }
+    ]
+  },
+  "check": {
+    "kicker": "Bonus: could it really happen?",
+    "title": "The bucket loop",
+    "say": "An anime-style hero swings a bucket of water in a vertical circle!",
+    "lead": "She whirls a bucket in a **vertical circle** of radius **{bR} m** (her shoulder is the centre, the arm and bucket are the radius). At the top of the circle the bucket is upside down, and the water must **not** fall out. Assume g = {g} m/s², no air resistance, the water is a point at radius {bR} m, and her arm stays straight. Vote on the **slowest speed at the top** first.",
+    "question": "What is the smallest speed at the top that keeps the water in?",
+    "choices": [
+      "About 0.8 m/s (a slow stroll)",
+      "About 1.5 m/s (a brisk walk)",
+      "About {vTop} m/s (a jog)",
+      "About 8 m/s (a fast sprint)"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": [
+      "Too slow: the water would drop out.",
+      "Too slow: the water would drop out.",
+      "Right. Here's the calculation:",
+      "That works, but it's far more than needed:"
+    ],
+    "steps": [
+      "**What pushes the water towards the centre?** At the top the centre is *below* the water. Gravity pulls down, and the bucket's bottom pushes down too. The slower the bucket, the less the bucket needs to push.",
+      "**The limit:** the bucket just stops pushing at all. Then gravity alone is the centripetal force: m·g = m·v²/r.",
+      "**Solve:** v = √(g·r) = √({g} × {bR}) = **{vTop} m/s**. The mass cancels. That is ω = v/r = {wTop} rad/s, about one turn every {revT} s if she kept that rate.",
+      "**Energy check for the bottom:** from the top to the bottom the bucket drops 2r, so ½·v² (bottom) = ½·v² (top) + g·2r. That gives v (bottom) = √(5·g·r) = **{vBot} m/s**, and the bucket pushes on the water with **{nBot} times** its weight there."
+    ],
+    "after": "So yes, it can happen, with an arm that swings her bucket over the top at about {vTop} m/s or faster. Real swings are not at constant speed: the bucket slows going up and speeds up going down, which is why the speed at the top is the one that matters."
+  },
+  "moon": {
+    "kicker": "Bonus: the Moon test",
+    "title": "Does gravity explain the Moon's circle?",
+    "body": "Moon: r = {moonKm} km, one orbit in {moonD} days. Its centripetal acceleration is ω²·r = **{moonA} mm/s²**, towards the Earth.\n\nNow compare with gravity. g is weakened because the Moon is {moonRatio} times farther from Earth's centre than we are: g/{moonRatio}² = **{moonG} mm/s²**.\n\nThey agree. *(Newton's first sums were rougher: he used a poor value for the size of the Earth. Better data came later.)*"
+  },
+  "challenge": {
+    "kicker": "Bonus puzzle",
+    "title": "Double and double",
+    "lead": "A {chM} kg ball goes round a circle of radius **{chR} m** at **{chV} m/s**. The string pulls with F = m·v²/r = {chF1} N. Now you make **both** the speed and the radius **twice as big** (v = {chV2} m/s and r = {chR2} m).",
+    "question": "What does the string force become?",
+    "choices": [
+      "The same",
+      "Twice as big",
+      "Four times as big",
+      "Eight times as big"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not the same:",
+      "Right.",
+      "That's the speed's effect alone:",
+      "Too much:"
+    ],
+    "explain": "F = m·v²/r. Doubling v multiplies F by 2² = 4. Doubling r divides it by 2. Together: 4 ÷ 2 = **2**. So F = {chF2} N.\n\nWatch for the trap: if you doubled r while keeping the **angular velocity** fixed instead, v would double with it, and then a = ω²·r would only double."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "circle": {
+      "aria": "Top view of a ball going round a circle. At four points the yellow velocity arrow is drawn along the tangent and the blue acceleration arrow points to the centre. All the velocity arrows have the same length, and all the acceleration arrows have the same length.",
+      "v": "v",
+      "a": "a_{cent}",
+      "centre": "centre",
+      "caption": "**Same speed, new direction every moment.** The yellow arrows (velocity) are all equally long, so the speed is constant, but they point in different directions. The blue arrows (acceleration) point **to the centre**, at 90° to the velocity."
+    },
+    "bank": {
+      "aria": "Side view of a car on a road banked at an angle theta, with the centre of the curve to the left. The weight points straight down. The normal force is perpendicular to the road, so it leans towards the centre. Its horizontal part points to the centre and is the centripetal force.",
+      "centre": "centre of the curve",
+      "w": "m·g",
+      "N": "N",
+      "nx": "N·sinθ (horizontal)",
+      "theta": "θ",
+      "caption": "**A banked curve, seen from the front.** The normal force N is perpendicular to the **tilted** road, so it leans towards the centre. Its vertical part balances the weight; its **horizontal part** points to the centre and is the (centripetal) force that turns the car."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Swing a stopper round your head",
+    "lead": "A ball on a string is the chapter's own example, and you can test it in the garden. You will measure the period, work out v and a, and see how big a centripetal acceleration really is.",
+    "safety": "**Safety:** do this **outdoors** on a big open patch, with nobody and nothing near you (at least 3 m all round) and no windows, cars or animals in range. Use a **light, soft** object (a rubber eraser; if you use a small bag of rice, tie it shut tightly) and a string that does not stretch. Tie the knot well and check it first. Hold the string in your hand; never loop it round your wrist or fingers. Swing in a horizontal circle at about shoulder height, never close to your face, with nobody nearby, and let go of the string if anything feels wrong.",
+    "need": "**You need:** a light soft object of about {expM} g (rubber eraser or a small bag of rice), {expLen} m of strong string, a ruler or tape measure, a stopwatch (a phone is fine), and a friend to time and count.",
+    "steps": "**Do this:**\n1. Tie the object to the string. Measure the radius r of the circle: the horizontal distance from the axis of the swing (about your hand) to the **centre of the object**, about {expR} m. (If the string sags, see \"What goes wrong\" below.)\n2. Stand in the open. Swing the object in a **horizontal circle** at about shoulder height, out to your side, as steadily as you can, and keep the radius the same.\n3. Your friend stands at least 3 m away and counts **10 full turns** and times them with the stopwatch. Take the time once the swing is steady, not at the start.\n4. Repeat 3 times and use the average time t_{10}. Then swing faster (and slower) and try again.",
+    "measure": "**Measure:** the time for 10 turns, t_{10} (in s), and the radius r (in m). Then T = t_{10} / 10, v = 2π·r / T and a = v²/r (= ω²·r).",
+    "compare": "**Compare with the formula:** for r = {expR} m and 10 turns in {expTot} s, T = {expT} s, so ω = 2π/T = {expW} rad/s and v = ω·r = **{expV} m/s**. Then a = v²/r = **{expA} m/s²**, which is about {expAg} times g. For an object of {expM} g the string pulls with F = m·a ≈ {expF} N. A turn time of 1.0 s gives a ≈ {expLo} m/s²; a quick 0.6 s gives a ≈ {expHi} m/s². Faster turns mean a much bigger a: it goes with 1/T², so halving T makes a 4 times as big.",
+    "wrong": "**What goes wrong:** gravity pulls the object down, so the string is not exactly horizontal. The circle is a little smaller than the string length, and r is the **horizontal** distance to the centre, so measure it as well as you can. Hand and object do not stay at the same radius, and the swing speeds up and slows down a bit. A timing error of 5 % becomes about **10 %** in a, because a goes with 1/T². Expect to be off by 10 to 20 %: counting more turns (20 instead of 10) helps."
+  }
+}

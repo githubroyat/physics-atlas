@@ -1,0 +1,598 @@
+{
+  "hero": {
+    "sfx": "ZZZAP!",
+    "caption": "Two plates, a gap, and a lot of waiting energy."
+  },
+  "intro": "A camera flash lights up a whole room in a blink, and it runs on a small battery. How? A small battery can't deliver that much power so fast. But it can fill up a **capacitor** slowly, and the capacitor can empty itself in a flash. A thundercloud and the ground make a giant capacitor, and the flash is lightning. In this chapter you'll meet the **uniform field** between two flat plates, then the capacitor and the energy it stores. Notation: **U** is voltage, **W** is energy, **E** is field strength.\n\n**Recap from *Spark*:** the field strength is **E = F/q** (N/C), and a point charge Q makes a field E = k·Q/r² that points away from + and towards −.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "describe the **radial field** of a point charge and the **uniform field** between oppositely charged parallel plates, with field lines;",
+      "use **E = U/d** and **F = q·E** for a charge in a uniform field;",
+      "use **Q = C·U** and the energy **W = ½·C·U²** of a capacitor;",
+      "sketch how the **current and voltage** change in time as a capacitor is **charged or discharged**, and say what makes it slower;",
+      "say, in words, what makes the **capacitance** bigger, and where capacitors are used."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "Two big flat metal plates face each other, with a battery across them: the top plate is **+**, the bottom plate is **−**. A tiny charged speck of dust sits **between** the plates, away from the edges.\n\nWhere is the push on the speck **strongest**?",
+    "choices": [
+      "Close to the + plate",
+      "Right in the middle",
+      "Close to the − plate",
+      "The same push everywhere between the plates"
+    ],
+    "answer": 3,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Tempting, because that's how a point charge works. But no:",
+      "The middle is not special:",
+      "Tempting, but no:",
+      "Yes! It surprises almost everyone."
+    ],
+    "explain": "**The same everywhere.** Between two big parallel plates the field is **uniform**: same strength, same direction at every point. That's very different from the field of a single point charge. You'll see why in a minute, and you can test it yourself in the lab.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Two pictures of a field",
+    "body": "**Recap from *Spark*:** a charge changes the space around it. The **electric field strength** is the force per unit of test charge, **E = F/q** (in N/C), and for a point charge Q it is **E = k·Q/r²**.\n\nWe draw the field with **field lines**: they start on + charges and end on − charges, and a line shows the direction of the force on a **positive** test charge. A negative charge is pushed the opposite way. (Electric field lines **start and end on charges**. Magnetic field lines are different: they are closed loops, as you will see in *Current makes a magnet*.)\n\nTwo field pictures matter in this chapter:\n\n- **Radial field** (one point charge): the lines spread out like spokes. The further away, the fewer lines per area, so the field gets weaker (E ∝ 1/r²).\n- **Uniform field** (between two big, flat, parallel plates with opposite charges): the lines are **parallel and equally spaced**, from the + plate to the − plate. The field has the **same size and direction everywhere** between the plates. Near the edges the lines bulge outwards and the field is weaker.",
+    "formula": "$ E = F/q        E = k·Q/r²  (point charge)",
+    "after": "A field is a **model** of what a charge does to the space around it. The two pictures above are the two models you need for the test.",
+    "check": {
+      "q": "Between two oppositely charged parallel plates (away from the edges), the electric field is...",
+      "choices": [
+        "uniform: the same size and direction everywhere",
+        "strongest next to the + plate and weaker further away",
+        "zero in the middle",
+        "radial, spreading out like spokes"
+      ],
+      "answer": 0,
+      "why": "The field lines are **parallel and equally spaced**, so the field is **uniform**. (A radial field is the picture for a single point charge.)",
+      "whyNot": [
+        null,
+        "That is how a **point charge** behaves. Between plates, look at how the lines are spaced: does it change?",
+        "Both plates push a positive charge the same way there, so their pushes **add**; they don't cancel.",
+        "Spokes are the picture for a **single point charge**. Between two flat plates, how do the lines run?"
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "The uniform field: E = U/d",
+    "body": "Connect a voltage **U** across two parallel plates a distance **d** apart (d in metres). The voltage U is the energy per charge needed to get from one plate to the other. Spread over a longer gap d, the push per metre is smaller: a **bigger gap gives a weaker field**.\n\nThe field between the plates is given by the formula below. (The booklet writes E = ΔV/d; here U is the voltage across the plates.) The unit is **volts per metre (V/m)**, and it is the same as **N/C**, because 1 V = 1 J/C = 1 N·m/C.",
+    "formula": "$ E = U/d",
+    "after": "Force on a charge q anywhere between the plates, from E = F/q:\n\n$ F = q·E\n\nSince E is uniform, **the force is the same size at every point** between the plates. A **+** charge is pushed along the field (towards the − plate), a **−** charge the opposite way. Try it.",
+    "check": {
+      "q": "A voltage of {c2U} V is connected across two plates {c2d} cm apart. What is the field strength between them?",
+      "choices": ["{c2w2} V/m", "{c2E} V/m", "{c2w1} V/m", "{c2w3} V/m"],
+      "answer": 1,
+      "why": "Change cm to m first: d = {c2dm} m. Then **E = U/d = {c2U} / {c2dm} = {c2E} V/m**.",
+      "whyNot": [
+        "{c2w2} V/m is {c2U} ÷ {c2d} with d still in **cm**. Change d to metres first.",
+        null,
+        "That's {c2U} × d: you multiplied. A bigger gap should give a *weaker* field, so d goes underneath.",
+        "That is d ÷ U, upside down. V/m means volts **per** metre: volts on top."
+      ]
+    },
+    "check2": {
+      "q": "The voltage stays the same but the plates are pulled **twice as far apart**. The force on a charge between them becomes...",
+      "choices": ["a quarter as big", "twice as big", "half as big", "the same"],
+      "answer": 2,
+      "why": "E = U/d, so doubling d **halves** E, and F = q·E halves too.",
+      "whyNot": [
+        "A quarter would need E to depend on d twice over. E = U/d has just one d.",
+        "Twice as big would mean a wider gap gives a stronger field. Same voltage over a longer gap: stronger or weaker push per metre?",
+        null,
+        "That is only true if d stays put. Here d doubles, and d is in the formula."
+      ]
+    }
+  },
+  "lab": {
+    "lead": "**Drag the test charge** (the circle) anywhere you like. Change the voltage **U** and the gap **d**, and swap the charge. The yellow lines are the field lines, and the white arrow is the force on the charge; its length is proportional to the force (up to the edge of the picture). Our model takes the field to be zero outside the plates; in real life the edges bulge a little, like the dashed curved lines.",
+    "scene": "Two parallel plates with field lines between them and a test charge that can be dragged",
+    "drag": "Test charge: drag it, or use the arrow keys",
+    "drag_hint": "Drag the charge (or use the arrow keys).",
+    "outside_note": "Outside the plates: E ≈ 0 (model)",
+    "voltage": "Voltage U",
+    "gap": "Gap d",
+    "charge": "Test charge",
+    "field": "Field strength E",
+    "force": "Force size F",
+    "dir": "Force direction",
+    "where": "Charge is",
+    "where_in": "between the plates",
+    "where_out": "outside the plates",
+    "down": "down (towards −)",
+    "up": "up (towards +)",
+    "f_outside": "Outside the plates the model says E ≈ 0, so F = 0",
+    "s_outside": "Outside the plates: in this model there is no field, so no force. (Real edges have a weak, bulging field.)",
+    "f_zero": "U = 0: no field lines, E = 0, so F = 0",
+    "s_zero": "U = 0, so there is no field and no force. Slide U up again.",
+    "s_in": "Between the plates the force has the same size wherever you put the charge.",
+    "tasks": "**Try these:**\n- Start with U = 60 V and d = 3.0 cm: E = U/d = {lE1} V/m, and the +{qT} nC charge feels F = q·E = {lF1} N.\n- Drag the charge from the top plate to the bottom plate. Does the arrow change? (No!)\n- Double d to 6.0 cm: E falls to {lE2} V/m and F to {lF2} N.\n- Switch to the −{qT} nC charge: the same size of force, but the other way.\n- Set U = 100 V and d = 2.0 cm, the biggest field the lab allows: E = {lE3} V/m and F = {lF3} N.\n- Slide U to 0: no field lines, E = 0, no force.\n- Drag the charge outside the plates: in the model E ≈ 0 there."
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "The capacitor: Q = C·U",
+    "body": "A **capacitor** is two conductors (the **plates**) with an **insulator** between them. Connect it to a battery and charge moves: one plate ends up with **+Q**, the other with **−Q**. The capacitor as a whole stays neutral. The bigger the voltage U across it, the more charge it holds.",
+    "formula": "$ Q = C·U",
+    "after": "The constant **C** is the **capacitance**: the charge held per volt. Its unit is the **farad (F)**, with **1 F = 1 C/V**. A farad is huge, so we use **µF** (10⁻⁶ F), **nF** (10⁻⁹ F) and **pF** (10⁻¹² F).\n\nExample: a 100 µF capacitor on a 9 V battery holds Q = C·U = 100×10⁻⁶ × 9 = {s3Q}×10⁻³ C = {s3Q} mC. The capacitance C belongs to the capacitor itself (how it is built); the battery only decides U, and then Q = C·U follows.",
+    "check": {
+      "q": "A capacitor holds {c4Q} mC at {c4U} V (so its capacitance is C = {c4C} µF). It is now connected to **24 V** instead. How much charge does it hold?",
+      "choices": ["{c4w1} mC", "{c4w2} mC", "{c4a} mC", "{c4w3} mC"],
+      "answer": 2,
+      "why": "C stays the same, and Q = C·U. The voltage doubled, so the charge doubles: **{c4a} mC**.",
+      "whyNot": [
+        "That is the old charge. Think about what changed when the battery changed.",
+        "That is 4 times the old charge, as if Q grew with U². Q = C·U has no square in it.",
+        null,
+        "That is half the old charge. Check the direction of the change: the voltage went up, not down."
+      ]
+    }
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "The energy: W = ½·C·U²",
+    "lead": "**Recap:** moving a charge Q through a voltage U changes its energy by **W = Q·U** (formula booklet). But charging a capacitor is trickier, because the voltage across it **grows** from 0 as it fills up. Build the formula yourself. Tap the right move.",
+    "after": "**A camera flash:** a C = {fC} µF capacitor charged to U = {fU} V holds Q = C·U = {fQ} mC and stores W = ½·C·U² = **{fW} J**, enough to lift a {fLift} kg object by 1 m (W = m·g·h, g = {g} m/s²). If it empties in about {fT} ms (assumed), the power is P = W/t = {fP} kW. A small battery cannot deliver that, but a capacitor can.",
+    "check": {
+      "q": "The voltage across a capacitor is **doubled**. The energy it stores becomes...",
+      "choices": ["2 times as big", "the same", "half as big", "4 times as big"],
+      "answer": 3,
+      "why": "W = ½·C·U² depends on **U²**, so doubling U gives 2² = **4 times** the energy.",
+      "whyNot": [
+        "That would be right if W followed U in a straight line. Look at how U appears in W = ½·C·U²: does it appear once, or more?",
+        "More voltage means more charge **and** more energy per charge, so the energy cannot stay the same.",
+        "Half would mean a higher voltage stores *less*. Does a bigger U make W in the formula bigger or smaller?",
+        null
+      ]
+    }
+  },
+  "derive": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "Charge the capacitor in many small bits. When it already holds charge q, the voltage across it is u = q/C. So as it fills, the voltage rises in a straight line from 0 up to the final U. The **average** voltage during charging is...",
+        "options": ["½·U", "U", "0"],
+        "answer": 0,
+        "then": "**½·U.** The first bits of charge are cheap (the voltage is low), the last bits are expensive. On a graph of Q against U you get a straight line through the origin."
+      },
+      {
+        "prompt": "All the charge Q is moved through that average voltage. The energy stored is W = Q × (average voltage) =...",
+        "options": ["½·Q·U", "Q·U", "Q/U"],
+        "answer": 0,
+        "then": "$ W = ½·Q·U\n\nThat's the **area of the triangle** under the Q–U line: ½ × base U × height Q. (The simple W = Q·U would be too much: it would charge every bit at the full voltage.)"
+      },
+      {
+        "prompt": "Now replace Q by C·U, using Q = C·U. What is W?",
+        "options": ["½·C·U²", "C·U²", "½·C²·U"],
+        "answer": 0,
+        "then": "$ W = ½·C·U²\n\nThe energy grows with the **square** of the voltage: double U and the capacitor stores **4 times** the energy. Where is it? **In the electric field between the plates.** The more charge on the plates, the stronger the field, and the more energy it holds."
+      }
+    ]
+  },
+  "learn5": {
+    "kicker": "Learn · Step 5",
+    "title": "Charging and discharging",
+    "body": "Connect an empty capacitor to a battery **through a resistor R**.\n\n- **Charging.** At the start the capacitor is empty, so the whole supply voltage U is across the resistor and the current is **largest**. (Recap: Ohm's law, I = U/R, from your circuits lessons.) So at the start I = U/R. As the capacitor fills, its voltage **rises towards the supply voltage U** and the current **falls towards zero**. The voltage rises fast at first and ever more slowly as it fills up.\n- **Discharging** (take the battery out and let the capacitor push charge through the resistor): the capacitor's voltage **falls towards zero**. The current is again largest at the start and **falls towards zero**, flowing the opposite way.\n- **Slower** with a **bigger R** (the current is smaller, so the charge moves more slowly) or a **bigger C** (there is more charge to move).\n\nIn this chapter you only need these **shapes**.",
+    "check": {
+      "q": "Which change makes a capacitor charge **more slowly** through a resistor?",
+      "choices": [
+        "A smaller resistor R",
+        "A smaller capacitor C",
+        "Taking the resistor out of the circuit",
+        "A larger resistor R"
+      ],
+      "answer": 3,
+      "why": "A larger R means a smaller current, so the charge arrives more slowly. A bigger C would also be slower; a smaller R or C is quicker.",
+      "whyNot": [
+        "A smaller R lets a bigger current flow, so the charge arrives **faster**.",
+        "A smaller C holds less charge, so it fills up sooner: faster, not slower.",
+        "With no resistor nothing holds the current back, so it charges as fast as it can.",
+        null
+      ]
+    }
+  },
+  "charge": {
+    "lead": "Pick **Charging** or **Discharging** and press **Go**. The top graph is the **voltage U** across the capacitor, the bottom graph is the **current I** in the circuit. The dashed curve is the whole story, the bright curve is what has happened so far, and the dot is now. It plays {chSpeed} times faster than real time, and the whole graph is {chTW} s long. You can also drag the **time** slider to look at any moment.",
+    "scene": "Graphs of the capacitor voltage and the current against time",
+    "charge": "Charging",
+    "discharge": "Discharging",
+    "go": "Go",
+    "time": "Time",
+    "voltage": "Supply voltage U",
+    "capacitance": "Capacitance C",
+    "resistance": "Resistance R",
+    "supply": "supply U",
+    "ax_t": "time →",
+    "u_now": "Capacitor voltage",
+    "i_now": "Current",
+    "q_now": "Charge Q",
+    "w_now": "Energy W",
+    "level": "Charge level",
+    "s_zero": "U = 0: there is nothing to charge or discharge, so the curves are flat.",
+    "s_run": "Running. Watch how fast the bright curve flattens out.",
+    "s_reduced": "Animation is off: the whole graph is shown. Drag the time slider to move along it.",
+    "s_charge": "Charging: voltage rises towards U, the current starts big and falls to zero. Press Go.",
+    "s_discharge": "Discharging: voltage falls towards zero, the current starts big and falls to zero. Press Go.",
+    "tasks": "**Try these:**\n- Charging with U = {chU} V, R = {chR} kΩ and C = {chC} µF: at time 0 the current is I = U/R = {chI0} mA. At the end the capacitor holds Q = C·U = {chQ} mC and W = ½·C·U² = {chW} mJ.\n- Make **C** bigger and press Go. Faster or slower? (Slower: more charge to move.)\n- Make **R** bigger. Faster or slower? (Slower: a smaller current.)\n- Drag the **time** to 1 s and compare the **charge level** for a small and a large R.\n- Change R and C: does the final charge Q change? (Only C and U decide Q = C·U.)\n- Switch to **Discharging**: the voltage falls towards zero and so does the energy W.\n- Slide U to 0: nothing to charge."
+  },
+  "learn6": {
+    "kicker": "Learn · Step 6",
+    "title": "What makes C bigger?",
+    "lead": "The capacitance tells you how built-for-storing a capacitor is: the charge it holds per volt. It depends on **how the capacitor is built**. Tap each card: does that change make C **bigger**?",
+    "after": "So: **bigger plates, a smaller gap, and an insulating material (a dielectric) in the gap** all increase C. Neither Q nor U changes the capacitance itself.\n\nWhere capacitors are used:\n- **Camera flash:** charged slowly, emptied in a flash.\n- **Defibrillator:** a capacitor is charged up and then released through the chest in one short pulse (up to a few hundred joules).\n- **Touchscreen:** your finger changes the capacitance at one spot, and the phone finds where.\n- **Thundercloud and the ground:** a giant capacitor with air as the insulator, until it breaks down: lightning.",
+    "check": {
+      "q": "Why does a camera flash use a capacitor rather than connecting the lamp straight to the battery?",
+      "choices": [
+        "A capacitor creates more energy than the battery has",
+        "A capacitor can release its stored energy in a very short time, giving a huge brief power",
+        "Batteries cannot make light",
+        "A capacitor has no resistance at all"
+      ],
+      "answer": 1,
+      "why": "The battery fills the capacitor slowly, and the capacitor can then empty in a tiny fraction of a second. Same energy, a huge power: P = W/t.",
+      "whyNot": [
+        "Energy can't be created. The capacitor only gives back what the battery put in earlier.",
+        null,
+        "Batteries do power lamps (a torch has one), so that cannot be the reason. Look for what a flash needs that a battery on its own does not give.",
+        "Every real component has some resistance, and a flash is not about having none. Reread the question: why not just connect the lamp to the battery?"
+      ]
+    }
+  },
+  "sort": {
+    "pending": "Bigger C?",
+    "yes": "Bigger C!",
+    "no": "Not bigger",
+    "cards": [
+      { "label": "Bigger plates", "yes": true,"why": "More plate area has room for more charge at the same voltage, so C is bigger." },
+      { "label": "Plates closer together", "yes": true,"why": "A smaller gap means a stronger field for the same U (E = U/d), so more charge sits on the plates. C is bigger." },
+      { "label": "An insulator (dielectric) in the gap", "yes": true,"why": "The material partly cancels the field of the plates, so more charge fits on at the same voltage. C is bigger." },
+      { "label": "Plates further apart", "yes": false,"why": "A bigger gap makes C **smaller**." },
+      { "label": "A higher voltage U", "yes": false,"why": "More U gives more charge, Q = C·U, but C itself stays the same." },
+      { "label": "Smaller plates", "yes": false,"why": "Less area makes C **smaller**." }
+    ]
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: field and force between plates",
+        "problem": "Two parallel plates {w1d} cm apart have a voltage of **{w1U} V** across them. An electron is between them. Find the field strength and the force on the electron, and say which way it is pushed. (e = {w1e} C)",
+        "steps": [
+          "Change to metres: d = {w1d} cm = {w1dm} m.",
+          "Field: E = U/d = {w1U} / {w1dm} = {w1E} V/m.",
+          "Force: F = q·E. The size of the electron's charge is e, so F = {w1e} × {w1E} = {w1F} N.",
+          "Direction: the field points from + to −, but the electron is **negative**, so it is pushed the opposite way: **towards the + plate**."
+        ],
+        "answer": "E = **{w1E} V/m**, F ≈ **{w1F} N**, towards the + plate"
+      },
+      {
+        "title": "Example 2: charge and energy of a capacitor",
+        "problem": "A **{w2C} µF** capacitor is connected to a **{w2U} V** battery. How much charge does it hold, and how much energy does it store?",
+        "steps": [
+          "Change to farad: C = {w2C} µF = {w2C}×10⁻⁶ F.",
+          "Charge: Q = C·U = {w2C}×10⁻⁶ × {w2U} = {w2Q} C, which is {w2Qm} mC.",
+          "Energy: W = ½·C·U² = ½ × {w2C}×10⁻⁶ × {w2U}². First U² = {w2U2} V². Then W = ½ × {w2C}×10⁻⁶ × {w2U2} = {w2W} mJ.",
+          "Check with W = ½·Q·U = ½ × {w2Q} × {w2U} = {w2W2} mJ. Same answer."
+        ],
+        "answer": "Q ≈ **{w2Q} C** ({w2Qm} mC), W ≈ **{w2W} mJ**"
+      },
+      {
+        "title": "Example 3: a charged speck between plates (two steps)",
+        "problem": "A speck of dust with a charge of **{w3q} nC** hangs between two parallel plates that are {w3d} cm apart, with **{w3U} V** across them. What is the force on the speck?",
+        "steps": [
+          "Two steps: first the field, then the force. Change to the SI units first: d = {w3d} cm = {w3dm} m and q = {w3q} nC = {w3q}×10⁻⁹ C.",
+          "Field: E = U/d = {w3U} / {w3dm} = {w3E} V/m.",
+          "Force: F = q·E = {w3q}×10⁻⁹ × {w3E} = {w3F} N.",
+          "Sense check: the units work (C × V/m = C × N/C = N), and the force is tiny, as expected for a nanocoulomb charge."
+        ],
+        "answer": "E = **{w3E} V/m**, F = **{w3F} N**"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "Two parallel plates are {p1d} cm apart, with {p1U} V across them. What is the field strength between them?",
+        "choices": ["{p1E} V/m", "{p1w1} V/m", "{p1w2} V/m", "{p1w3} V/m"],
+        "answer": 0,
+        "hint": "E = U/d, and d must be in metres.",
+        "solution": "Formula: E = U/d. Change to metres first: d = {p1d} cm = {p1dm} m.\n\nE = {p1U} V / {p1dm} m = **{p1E} V/m**.\n\nSense check: a big voltage over a small gap gives a big field (thousands of V/m).",
+        "whyNot": [
+          null,
+          "{p1w1} V/m is {p1U} ÷ {p1d} with d still in cm. Use d = {p1dm} m: {p1E} V/m.",
+          "That's U × d, a product. E = U/d, so d goes underneath: {p1E} V/m.",
+          "That is d ÷ U, upside down. V/m means volts per metre: {p1E} V/m."
+        ]
+      },
+      {
+        "q": "A charge of {p2q} nC sits in a uniform field of {p2E} V/m. What is the force on it?",
+        "choices": ["{p2F} N", "{p2w1} N", "{p2w2} N", "{p2w3} N"],
+        "answer": 0,
+        "hint": "F = q·E, with q in coulombs (1 nC = 10⁻⁹ C).",
+        "solution": "Formula: F = q·E. Change to coulombs first: q = {p2q} nC = {p2q}×10⁻⁹ C.\n\nF = {p2q}×10⁻⁹ C × {p2E} V/m = **{p2F} N**.\n\nSense check: a tiny charge in a decent field gives a tiny force, far smaller than a millinewton.",
+        "whyNot": [
+          null,
+          "That's q ÷ E. The force is q **times** E: {p2F} N.",
+          "That's E ÷ q. F = q·E multiplies: {p2F} N.",
+          "You multiplied {p2q} × {p2E} but left q in nC. Convert first (1 nC = 10⁻⁹ C): {p2F} N."
+        ]
+      },
+      {
+        "q": "A {p3C} µF capacitor is charged to {p3U} V. What charge does it hold?",
+        "choices": ["{p3Q} mC", "{p3w1} mC", "{p3w2} mC", "{p3w3} C"],
+        "answer": 0,
+        "hint": "Q = C·U. Change µF to F first.",
+        "solution": "Formula: Q = C·U. Change to farad first: C = {p3C} µF = {p3C}×10⁻⁶ F.\n\nQ = {p3C}×10⁻⁶ F × {p3U} V = **{p3Q} mC**.\n\nSense check: the units work out (F × V = C), and a few tens of mC is plausible for a big 2200 µF capacitor.",
+        "whyNot": [
+          null,
+          "That is ½·C·U: the ½ from the energy formula W = ½·C·U² has crept into the charge. Q = C·U has no ½: {p3Q} mC.",
+          "That's C·U², with an extra U. The charge is Q = C·U, with no square: {p3Q} mC.",
+          "That's U ÷ C, upside down (and in the wrong unit). Q = C·U: {p3Q} mC."
+        ]
+      },
+      {
+        "q": "A camera-flash capacitor of {fC} µF is charged to {fU} V. How much energy does it store?",
+        "choices": ["{p4W} J", "{p4w1} J", "{p4w2} J", "{p4w3} J"],
+        "answer": 0,
+        "hint": "W = ½·C·U². Don't forget the square and the ½.",
+        "solution": "Formula: W = ½·C·U². Change to farad: C = {fC} µF = {fC}×10⁻⁶ F.\n\nW = ½ × {fC}×10⁻⁶ F × ({fU} V)² = ½ × {fC}×10⁻⁶ × {p4U2} = **{p4W} J**.\n\nSense check: a few joules, which is about right for a small flash.",
+        "whyNot": [
+          null,
+          "That's C·U²: you forgot the **½** in W = ½·C·U². With it: {p4W} J.",
+          "That's C·U, which is the charge Q in coulombs, not the energy. For the energy, square the U and take a half: {p4W} J.",
+          "½·C·U has no square on U. The energy formula is ½·C·U²: {p4W} J."
+        ]
+      },
+      {
+        "q": "A charged capacitor is discharged through a resistor. How do the capacitor's voltage and the current change with time?",
+        "choices": [
+          "Both are largest at the start and fall towards zero",
+          "The voltage falls but the current stays constant",
+          "Both start at zero and rise",
+          "The voltage stays constant while the current falls"
+        ],
+        "answer": 0,
+        "hint": "At the start the capacitor is full and the whole voltage is across the resistor.",
+        "solution": "At the start the capacitor holds its full voltage, so the whole voltage is across the resistor: I = U/R is at its largest.\n\nAs the charge leaves, the voltage falls, and so I = U/R falls too. Both **fall towards zero**, the voltage curve and the current curve together.\n\nSense check: compare Learn · Step 5, discharging.",
+        "whyNot": [
+          null,
+          "If the voltage falls, I = U/R falls with it. A constant current would need a constant voltage.",
+          "An **empty** capacitor does start with its voltage at zero and rising, but its current starts at the largest value, and this capacitor starts full. Here both start at their largest and fall.",
+          "If the voltage stayed constant, I = U/R would stay constant too. As the charge leaves, the voltage falls and the current with it."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Explore · the story",
+    "title": "The jar that bit back",
+    "frames": [
+      {
+        "cap": "Pomerania, 1745",
+        "text": "Ewald von Kleist, a cathedral dean, charges a glass bottle with a nail in it. He holds the bottle and touches the nail. A hard **shock**! He has stored electricity.",
+        "fx": "ZAP"
+      },
+      {
+        "cap": "Leiden, winter 1745–46",
+        "text": "In Leiden, the lawyer Andreas Cunaeus gets a shock while holding a water-filled jar. Pieter van Musschenbroek tries it himself and writes that he would not take that shock again for the kingdom of France.",
+        "fx": "OUCH"
+      },
+      {
+        "cap": "France, 1746",
+        "text": "Nollet is said to have sent a jar's shock through about 180 royal guards, and through a long line of monks joined by iron wires. Accounts say **they all jumped at once.**",
+        "fx": "HOP"
+      },
+      {
+        "cap": "Today",
+        "text": "The **Leyden jar** is a capacitor: two conductors (water or metal inside, hand or foil outside) with **glass**, an insulator, between them. Same idea as the flash in your phone.",
+        "fx": "STORE"
+      }
+    ],
+    "question": "In a Leyden jar, which part plays the role of the insulating gap between the two 'plates'?",
+    "choices": ["The water inside", "The glass wall of the jar", "The hand holding it"],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": ["That's one of the two conductors:", "Yes!", "That's the other conductor:"],
+    "explain": "The **glass** is the insulator. The water (or metal) inside is one plate, and your hand (or foil) outside is the other, so charge stored on the inside is matched by opposite charge outside. A thin glass wall and a big area are exactly what makes C large, as you saw with the cards."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Capacitor Lab: Basics",
+    "body": "Build a capacitor: change the plate area and the gap, add a dielectric, connect a battery and watch the charge, the voltage and the stored energy. Predict first: does C go up or down when you move the plates closer? Then check.\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "Charge up, let go",
+    "body": "Draw an anime-style hero who stores a blast as a 4-panel strip. **Panel 1:** her two hands are glowing plates, one marked +, one marked −. **Panel 2:** evenly spaced parallel arrows from + to − across the gap (the uniform field). **Panel 3:** a charge meter that fills quickly at first, then slows as it nears full (that is the charging curve). **Panel 4:** she lets go, and all the stored energy leaves in one giant flash."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Field strength** E = F/q (N/C). Field lines run from + to − and show the push on a **positive** charge. A point charge makes a **radial** field, E = k·Q/r².",
+      "**Between parallel plates** the field is **uniform**: parallel, equally spaced lines, the same E everywhere (edges weaker). **E = U/d** (V/m = N/C), and the force on a charge is **F = q·E**, the same at every point.",
+      "**Capacitor:** two conductors with an insulator between. Plates hold **+Q** and **−Q**. **Q = C·U**, with C in farad (1 F = 1 C/V); µF, nF, pF.",
+      "**Energy:** **W = ½·C·U²** = ½·Q·U, the area under the Q–U graph. It is stored **in the electric field** between the plates. Double U gives **4 times** the energy.",
+      "**Charging or discharging through a resistor:** the current is **largest at the start** and falls to zero. The voltage **rises towards the supply voltage** (charging) or **falls towards zero** (discharging). A bigger R or a bigger C makes it **slower**.",
+      "**C is bigger** with larger plate area, a smaller gap, or a dielectric in the gap. It does not depend on U or Q.",
+      "Uses: camera flash, defibrillator, touchscreen; a thundercloud and the ground form a giant capacitor."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A voltage of {q1U} V is across two plates {q1d} mm apart. The field between them is...",
+        "choices": ["{q1w1} V/m", "{q1E} V/m", "{q1w2} V/m", "{q1w3} V/m"],
+        "answer": 1,
+        "why": "d = {q1d} mm = 0.020 m, so **E = U/d = {q1U} / 0.020 = {q1E} V/m**.",
+        "whyNot": [
+          "That's U × d, a product. E = U/d, so d goes underneath.",
+          null,
+          "That's {q1U} ÷ {q1d} with d still in mm. Convert to metres first: {q1E} V/m.",
+          "That is d ÷ U, upside down. V/m means volts per metre: {q1E} V/m."
+        ]
+      },
+      {
+        "q": "A {q2C} µF capacitor is charged to {q2U} V. It holds a charge of...",
+        "choices": ["{q2w1} mC", "{q2w2} mC", "{q2Q} mC", "{q2w3} mC"],
+        "answer": 2,
+        "why": "**Q = C·U** = {q2C}×10⁻⁶ × {q2U} = {q2Q}×10⁻³ C = **{q2Q} mC**.",
+        "whyNot": [
+          "That is ½·C·U: the ½ from the energy formula W = ½·C·U² has crept into the charge. Q = C·U has no ½: {q2Q} mC.",
+          "That's C·U², with an extra U. The charge is C·U, no square: {q2Q} mC.",
+          null,
+          "That's C ÷ U, upside down. Q = C·U: {q2Q} mC."
+        ]
+      },
+      {
+        "q": "Which change makes the capacitance of a parallel-plate capacitor bigger?",
+        "choices": [
+          "A higher voltage across it",
+          "Pulling the plates further apart",
+          "Moving the plates closer together",
+          "Making the plates smaller"
+        ],
+        "answer": 2,
+        "why": "A **smaller gap**, a larger area or a dielectric increase C. A higher voltage changes Q, not C.",
+        "whyNot": [
+          "A higher voltage puts more **charge** on the plates (Q = C·U), but C stays the same.",
+          "Further apart makes C **smaller**: a bigger gap, a weaker field for the same U.",
+          null,
+          "Smaller plates have less room for charge, so C gets **smaller**, not bigger."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "farad": {
+    "kicker": "Bonus: how big is a farad?",
+    "title": "One farad of air",
+    "say": "One farad! Surely a normal-sized capacitor?",
+    "lead": "Beyond the syllabus: for two parallel plates, **C = ε0·εr·A/d**, where A is the plate area, d the gap, ε0 = {eps0} F/m, and εr the **relative permittivity** of the material in the gap (εr = 1 for vacuum or air). Bigger A, smaller d and a dielectric (bigger εr) all raise C, just like the cards you sorted. Assume vacuum and a gap of {farD} mm.",
+    "question": "How big must the plates be to get C = 1 F?",
+    "choices": [
+      "A football pitch (about 0.007 km²)",
+      "A small town (about 5 km²)",
+      "A square about {farSide} km on each side",
+      "The whole surface of the Earth (about 510 million km²)"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": ["Far too small:", "Still too small:", "Right. Here's the calculation:", "Far too big:"],
+    "steps": [
+      "**Solve for A:** C = ε0·A/d (εr = 1), so A = C·d/ε0.",
+      "**Numbers:** A = 1 × {farD}×10⁻³ / {eps0} = {farA} m², about **{farKm2} km²**.",
+      "**Side of a square:** √({farA} m²) ≈ **{farSide} km**.",
+      "**Small real examples:** two 10 cm × 10 cm plates ({pArea} m²) with a gap of {pD} mm in vacuum have C = ε0·A/d = **{pC1} pF**. With a dielectric of εr = {pEr} (assumed) it is **{pC5} pF**."
+    ],
+    "after": "So a farad of capacitance is a lot of plate. Real capacitors cheat with thin foils rolled up, very small gaps and a dielectric. Supercapacitors use porous carbon with an enormous inner surface, and they really do reach farads in a package you can hold."
+  },
+  "tau": {
+    "kicker": "Bonus: how fast?",
+    "title": "The time constant",
+    "lead": "Beyond the syllabus: the curves you saw have a number behind them, the **time constant τ = R·C**. Charging follows U(t) = U_{0}·(1 − e^(−t/τ)) and discharging follows U(t) = U_{0}·e^(−t/τ), where U_{0} is the supply voltage (the starting voltage when discharging). For R = {tauR} kΩ and C = {tauC} µF, τ = {tau} s.",
+    "question": "After **one** time constant of charging, what fraction of the supply voltage has the capacitor reached?",
+    "choices": ["50 %", "{tau63} %", "100 %", "{tau37} %"],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Close, but no:",
+      "Right.",
+      "It never quite gets there in finite time:",
+      "That's what is left when it discharges:"
+    ],
+    "explain": "At t = τ the exponent is −1, so U = U_{0}·(1 − e⁻¹) = U_{0} × 0.632 = **{tau63} %**. After 3τ it is {tau3} %. (Discharging: after τ only {tau37} % is left.) Test it in the lab: set R = {labR} kΩ and C = {labC} µF, so τ = {labTau} s, press Go for charging and drag the time to {labTau} s. The charge level reads about {tau63} %."
+  },
+  "cloud": {
+    "kicker": "Bonus: could it really happen?",
+    "title": "A thundercloud as a capacitor",
+    "say": "A cloud and the ground: a capacitor with air in between!",
+    "lead": "Estimate the energy of one lightning flash with **assumed round numbers**: a cloud base of A = {clAkm} km² ({clA} m²), {clD} km above the ground, air as the insulator (εr ≈ 1), and a voltage of U = {clU} MV. Treat it as a parallel-plate capacitor with C = ε0·A/d.",
+    "question": "About how much energy is stored?",
+    "choices": [
+      "About 5 J, like a camera flash",
+      "About {clCarKJ} kJ, enough to lift a car by about {clCarH} m",
+      "About {clWm} MJ",
+      "About 10 TJ"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": ["Far too small:", "Too small still:", "Right. Here's the calculation:", "Far too big:"],
+    "steps": [
+      "**Capacitance:** C = ε0·A/d = {eps0} × {clA} / {clDm} = **{clC} nF**.",
+      "**Charge:** Q = C·U = {clC} nF × {clU} MV ≈ **{clQ} C**.",
+      "**Energy:** W = ½·C·U² = {clW} J ≈ **{clWm} MJ**, which is {clKWh} kWh.",
+      "**Compare:** a household uses roughly {clDay} kWh a day (assumed), so this is about {clDays} days of its electricity."
+    ],
+    "after": "Real flashes are in the same ballpark: they carry a few to a few tens of coulombs and about 10⁸ to 10⁹ J (hundreds of megajoules up to about a gigajoule). But a cloud is not a neat flat plate, and most of the energy ends up as heat, light and sound in the air, not as electricity you could catch. This was an order-of-magnitude estimate."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "fields": {
+      "aria": "Two pictures side by side. On the left, the radial field of a positive point charge: lines spread out like spokes, pointing away from the charge. On the right, the uniform field between a positive top plate and a negative bottom plate: parallel, equally spaced lines pointing from the top plate to the bottom plate, bulging outwards at the edges.",
+      "radial": "Radial field",
+      "uniform": "Uniform field",
+      "radial_note": "lines spread out: weaker far away",
+      "uniform_note": "parallel, equal spacing: same E",
+      "edge": "dashed: edges bulge, field weaker",
+      "plus": "+",
+      "minus": "−",
+      "caption": "**Two models of a field.** Left: one **+** charge. The lines run away from it like spokes, so they get further apart with distance: E ∝ 1/r². Right: two oppositely charged plates. The lines run from **+** to **−**, parallel and equally spaced, so the field is **the same size and direction everywhere** between the plates. Near the plate edges the lines bulge (dashed) and the field is weaker."
+    },
+    "qu": {
+      "aria": "Graph of charge Q against voltage U for a capacitor: a straight line from the origin. The triangle under the line is shaded and labelled as the stored energy W equal to a half of Q times U. The dashed rectangle around it, Q times U, is marked as too much.",
+      "tickU": "U = {fU} V",
+      "tickQ": "Q = {fQ} mC",
+      "axis_u": "U",
+      "axis_q": "Q",
+      "area": "W = ½·Q·U",
+      "too_much": "Q·U (the whole box) is too much",
+      "line": "slope = C",
+      "caption": "**The Q–U graph.** For the flash capacitor ({fC} µF at {fU} V) the line runs from 0 up to Q = {fQ} mC. Each small bit of charge is moved through the voltage **at that moment**, so the energy is the **area of the triangle** under the line: ½ × {fU} V × {fQ} mC = **{fW} J**. The full rectangle Q·U would charge every bit at the full voltage, which is exactly twice the triangle."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Your phone screen is a tiny capacitor",
+    "lead": "A phone screen reacts to a finger but not to a glove or a plastic pen. Why? Under the glass is a grid of tiny conducting plates. Your finger and one of those plates, with the **glass between them as the insulator**, form a **tiny capacitor**, and your finger changes its capacitance. The phone finds the spot where the capacitance changed most. Let's test what that means.",
+    "safety": "**Safety:** this is a test with a phone you may use, switched on, **not plugged into anything**. Don't open the phone or its charger, and don't charge or discharge anything. No mains electricity. Keep food away from the charging port, wipe the screen afterwards and wash your hands. Use a crumpled (soft) ball of foil, not sharp edges, so the glass doesn't scratch.",
+    "need": "**You need:** a phone with a touchscreen, an app where taps leave a mark (a drawing app, or a notes app), a plastic pen with the cap on, a thick glove (or a woolly sock over your finger), a small piece of cooked sausage (or a fresh carrot), a little aluminium foil, and a pencil and paper for a tally.",
+    "steps": "**Do this:**\n1. Open the drawing app. Tap the screen {expN} times with a bare **fingertip**, and tally how many taps leave a mark.\n2. Do the same with the **fingernail** (just the nail, not the skin).\n3. Do it with the **plastic pen** tip.\n4. Do it with the **gloved** finger.\n5. Hold the **sausage** piece in your hand and tap with it.\n6. Wrap foil around the pen tip, **hold the foil with your fingers** so it touches your skin, and tap. Then try the foil lying on its own on the screen, not touching you.",
+    "measure": "**Measure:** for each tool, the number of taps out of {expN} that made a mark. A table with two columns, \"tool\" and \"marks out of {expN}\", is enough.",
+    "compare": "**Compare with the chapter:** from Step 6, C gets bigger with a bigger plate area, a smaller gap and an insulator in the gap, and the screen reacts to the capacitance changing. Predict first, then check. A **fingertip** (large area, thin glass in between) should score close to {expN} out of {expN}. The **fingernail** (dry keratin, like an insulator) and the **plastic pen** (an insulator) should both score low, near 0. The **glove** adds a thick insulating layer: the gap gets bigger, so the capacitance change shrinks and usually fails. The **sausage** (full of salty water) conducts a little like a finger and usually works. The **foil** works when you hold it (it is connected to your body), but alone it often does not. This is a *qualitative* test: no numbers from a formula, only the pattern from Step 6.",
+    "wrong": "**What goes wrong:** phones differ. Some screens have a \"glove mode\", so a thin glove may work. A screen protector adds a thin insulator, but usually still works. Moisture or a greasy screen can create stray taps. A dry finger can also score less than a damp one. If a result surprises you, repeat it and note it down: that is how real tests go."
+  }
+}

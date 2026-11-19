@@ -1,0 +1,573 @@
+{
+  "hero": {
+    "sfx": "ZAP!",
+    "caption": "Rub a balloon on your hair. Invisible pushes and pulls."
+  },
+  "intro": "Rub a balloon on your hair and it sticks to the wall. Something invisible is pulling, and nobody is touching anything. That something is **electric charge**. It comes in two kinds, **+** and **−**. Same kinds push apart, different kinds pull together. In this chapter you'll find the rule for how hard, **F = k·Q_{1}·Q_{2}/r²**, and then meet the **field**, the idea that a charge changes the space around it.\n\n**One warning.** In *Push back*, k was the spring constant. Here **k is the Coulomb constant**, k = 1/(4π·ε_{0}) ≈ {k} N m² C⁻², where **ε_{0} = {eps0} A s V⁻¹ m⁻¹** is the permittivity of free space. Same letter, completely different thing. (The booklet writes k = 1/(4π·ε_{0}·ε_{r}); we work in air or vacuum, where ε_{r} ≈ 1.)",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "describe the **two kinds of electric charge** and how like and unlike charges act on each other;",
+      "use the **elementary charge e = {e} C** (we round to 1.6 × 10⁻¹⁹ C in quick estimates) and the fact that charge is **quantised**, Q = n·e;",
+      "use **Coulomb's law, F = k·Q_{1}·Q_{2}/r²**: size, direction (attract or repel) and the equal and opposite pair of forces;",
+      "define **electric field strength, E = F/q** (N/C), and use **E = k·Q/r²** for a point charge, with its direction and its **field-line picture**."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "Two charged balls hang near each other. You move them **twice as far apart**.\n\nThe force between them becomes...",
+    "choices": [
+      "Half as big",
+      "A quarter as big",
+      "The same",
+      "Twice as big"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Tempting, but no:",
+      "Yes!",
+      "Distance matters a lot:",
+      "Closer means stronger, not weaker:"
+    ],
+    "explain": "**A quarter.** Double the distance, and the force falls to 1/2² = 1/4. Triple the distance: 1/9. This is an **inverse-square law**, F ∝ 1/r². You'll test it in the lab.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Charge comes in lumps",
+    "body": "Matter carries **electric charge**, measured in **coulombs (C)**. It comes in **two kinds**, called **+** and **−**. **Like charges repel, unlike charges attract.** Most objects are **neutral**: they have equal amounts of + and −. Rubbing moves **electrons** from one object to the other, so one ends up **−** (extra electrons) and the other **+** (missing electrons).\n\nRevision: in a **conductor** (a metal, say) some charges are free to move. In an **insulator** (plastic, rubber, a balloon) they stay put, which is why a rubbed balloon keeps its charge.",
+    "formula": "$ Q = n·e",
+    "lead": "Charge is **quantised**: it comes in whole lumps of the **elementary charge e = {e} C** (booklet value; we round to 1.6 × 10⁻¹⁹ C in quick estimates). A proton has **+e**, an electron **−e**. You can have 1e, 2e, 3e... but never 1.5e. That's why it's called *elementary*: it's the smallest charge that can be found on its own. It's how chemistry's ions work too: an ion with charge **−2** carries −2e = −{ionC} C.\n\n**Which of these charges could a real object carry?** Tap each card.\n\n{cardList}",
+    "pending": "Possible?",
+    "yes": "Possible!",
+    "no": "Not possible",
+    "why_yes": "That's exactly **{n} × e**. A whole number of e, so it works.",
+    "why_no": "That's **{n} × e**. A fraction of e is not a whole number of lumps, so no object has this charge.",
+    "after": "Whenever a balloon is rubbed, it just collects **billions** of electrons, so we usually can't see the lumps. But Robert Millikan's oil-drop experiment, started around 1909, could: tiny charged droplets always carried a whole number of the same smallest charge, and he measured that smallest charge: **e ≈ 1.6 × 10⁻¹⁹ C**. (Quarks have charges of ±⅓e or ±⅔e, with the up quark +⅔e and the down quark −⅓e, but they are never found alone.)",
+    "check": {
+      "q": "An atom loses **2 electrons** and becomes an ion. What is the charge of the ion? (e = {e2} C, rounded)",
+      "choices": [
+        "+{l1q} C",
+        "−{l1q} C",
+        "+{e2} C",
+        "0 C"
+      ],
+      "answer": 0,
+      "why": "Two electrons (−e each) are gone, so the atom is left with **+2e = +{l1q} C**.",
+      "whyNot": [
+        null,
+        "That would be an atom that **gained** two electrons. Which sign is left when negative charges leave?",
+        "That is the charge of only **one** lost electron. How many electrons were lost?",
+        "A neutral atom has 0. But this one lost electrons, so the + and − no longer cancel."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Coulomb's law",
+    "body": "How hard do two charges push or pull each other? For two **point charges** Q_{1} and Q_{2} a distance r apart, the force is proportional to **each charge** and to **1/r²**:",
+    "formula": "$ F = k·Q_{1}·Q_{2}/r²",
+    "after": "**Q_{1}, Q_{2}** are in coulombs (C), **r** is in **metres**, and **F** is in newtons (N). **k = 1/(4π·ε_{0}) ≈ {k} N m² C⁻²** is the **Coulomb constant**. The booklet gives k = 1/(4π·ε_{0}·ε_{r}) and ε_{0} = {eps0} A s V⁻¹ m⁻¹; we work in air or vacuum, where ε_{r} ≈ 1. Careful: this k is **not** the spring constant from *Push back*.\n\nThe formula gives the **size** of the force. The **direction** comes from the signs: **like charges repel, unlike charges attract**.\n\n**Inverse square:** double the distance and the force becomes **1/4**; triple it and the force is **1/9**.",
+    "check": {
+      "q": "The force between two charges is {l2F0} N when they are {l2r0} m apart. How big is it when they are {l2r1} m apart?",
+      "choices": [
+        "{l2a} N",
+        "{l2b} N",
+        "{l2c} N",
+        "{l2d} N"
+      ],
+      "answer": 0,
+      "why": "Three times the distance: the force becomes 1/3² = **1/9**. {l2F0} ÷ 9 = **{l2a} N**.",
+      "whyNot": [
+        null,
+        "That divides by 3, but Coulomb's law has r², not r. What does tripling r do to r²?",
+        "That used the **gap** 0.30 − 0.10 = {l2dd} m as if it were the new distance. The new distance between the charges is {l2r1} m. Use that in r².",
+        "Which way does a bigger distance push the force?"
+      ]
+    }
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "Equal and opposite",
+    "body": "Q_{1} pulls or pushes Q_{2} with a force. And Q_{2} pulls or pushes Q_{1} with **exactly the same size of force, in the opposite direction**. That's **Newton's third law**. (Recap from S4/S5: when A pushes on B, B pushes back on A with a force of the same size in the opposite direction.)\n\nIt works even when one charge is much bigger than the other: a big charge does **not** push a small one harder than the small one pushes back. In F = k·Q_{1}·Q_{2}/r² the two charges appear in the same way, so there is only **one** force size for the pair.\n\n**Check it in the lab above (Step 2):** make Q_{1} small and Q_{2} large. Both yellow arrows stay **equal in length**. Attracting charges: the arrows point **towards** each other. Repelling charges: they point **away** from each other.",
+    "check": {
+      "q": "Q_{1} = +5.0 nC and Q_{2} = +20 nC are 0.10 m apart. The force on Q_{1} is {l3F} N, pointing away from Q_{2}. What is the force on Q_{2}?",
+      "choices": [
+        "{l3F} N, pointing away from Q_{1}",
+        "{l3F4} N, pointing away from Q_{1}",
+        "{l3F} N, pointing towards Q_{1}",
+        "It is zero"
+      ],
+      "answer": 0,
+      "why": "Newton's third law: the same size, **{l3F} N**, in the opposite direction. Like charges repel, so Q_{2} is pushed **away from Q_{1}**.",
+      "whyNot": [
+        null,
+        "Q_{2} is 4 times bigger, but the force on it is not. The pair share one force size: what does Newton's third law say?",
+        "Both charges are +, and like charges repel. Does a repelled charge move towards the other one?",
+        "The two forces are equal and opposite, but they act on **different** balls, so they don't cancel. Each ball feels one."
+      ]
+    }
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Electric field strength",
+    "lead": "A charge Q changes the space around it. To measure that change, put a tiny **test charge** q nearby and see how hard it is pushed. The **electric field strength** is defined as\n\n$ E = F/q\n\nin **newtons per coulomb (N/C)**. Let's get its formula for a point charge Q. Tap the right move.",
+    "after": "**Direction:** the field points the way a **positive** test charge would be pushed: **away from a + charge, towards a − charge**. A **negative** charge in the field is pushed the **opposite** way to E.\n\nOnce E is known at a place, the force on any charge q there is **F = q·E**. And E = k·Q/r² also follows the inverse-square pattern: twice as far, a quarter of the field.\n\n**Field lines** draw the field as a picture. The rules: lines go **from + to −** (out of a + charge, into a − charge); **closer lines mean a stronger field**; and **lines never cross** (the field has only one direction at each point).",
+    "check": {
+      "q": "A test charge of {l4q} nC feels a force of {l4F} N. What is the electric field strength there?",
+      "choices": [
+        "{l4E} N/C",
+        "{l4w1} N/C",
+        "{l4w2} N/C",
+        "{l4w3} N/C"
+      ],
+      "answer": 0,
+      "why": "E = F/q = {l4F} / ({l4q}×10⁻⁹) = **{l4E} N/C**. Change nC into C first.",
+      "whyNot": [
+        null,
+        "That multiplies F by q. E is the force **per** coulomb: which operation gives 'per'?",
+        "That is q/F, upside down. E = F/q puts the force on top.",
+        "You divided by 2.0 instead of 2.0 × 10⁻⁹. Convert nC to C before you divide."
+      ]
+    }
+  },
+  "derive": {
+    "kicker": "Derive it yourself",
+    "title": "Where does the field come from?",
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "A test charge q sits a distance r from the point charge Q. Coulomb's law gives the force on it:",
+        "options": [
+          "F = k·Q·q/r²",
+          "F = k·Q/r²",
+          "F = k·Q·q/r"
+        ],
+        "answer": 0,
+        "then": "**F = k·Q·q/r².** Both charges appear, so the force depends on how big the test charge is."
+      },
+      {
+        "prompt": "Now divide by q, because E = F/q. What is left?",
+        "options": [
+          "E = k·Q/r²",
+          "E = k·Q·q/r²",
+          "E = k·Q/(q·r²)"
+        ],
+        "answer": 0,
+        "then": "The **q cancels**:\n\n$ E = F/q = k·Q/r²\n\nThe field belongs to the **source charge** Q and to the place (distance r). It points **away** from a + charge, **towards** a − charge."
+      },
+      {
+        "prompt": "You swap in a test charge **twice as big**. What happens to the force F on it, and to the field strength E?",
+        "options": [
+          "F doubles, E stays the same",
+          "Both double",
+          "F stays the same, E doubles"
+        ],
+        "answer": 0,
+        "then": "F doubles, but F/q does not change. **E is a property of the place, not of the test charge.** It's the same idea as g = F/m for gravity (recap from S4/S5: the pull per kilogram, 9.81 N/kg at the ground; see also *Weighing the Earth*)."
+      }
+    ]
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: force between two charges",
+        "problem": "A charge of **+{w1q1} µC** and a charge of **−{w1q2} µC** are **{w1r} m** apart in air. Find the size of the force between them, and say whether it attracts or repels. (k = {k} N m² C⁻²)",
+        "steps": [
+          "Convert to SI units (1 µC = 10⁻⁶ C): Q_{1} = +{w1q1}×10⁻⁶ C, Q_{2} = −{w1q2}×10⁻⁶ C, r = {w1r} m.",
+          "Coulomb's law, using the sizes of the charges: F = k·Q_{1}·Q_{2}/r² = ({k}) × ({w1prod}) / ({w1r} m)² = ({k}) × ({w1prod}) / {w1r2} m².",
+          "The charges have **opposite signs**, so the force is **attractive**. By Newton's third law each charge feels the same force, towards the other."
+        ],
+        "answer": "F ≈ **{w1F} N**, attractive"
+      },
+      {
+        "title": "Example 2: field strength and the force on an electron",
+        "problem": "A point charge of **+{w2Q} nC** sits in air. (a) Find the electric field strength **{w2r} cm** from it, and its direction. (b) An electron is placed at that point. Find the force on it. (e = {e2} C, rounded; k = {k} N m² C⁻²)",
+        "steps": [
+          "Convert to SI units: Q = {w2Q}×10⁻⁹ C, r = {w2r} cm = {w2rm} m.",
+          "Field of a point charge: E = k·Q/r² = ({k}) × ({w2Q}×10⁻⁹) / ({w2rm} m)² = ({k}) × ({w2Q}×10⁻⁹) / {w2r2} m² = **{w2E} N/C**. The charge is +, so E points **away** from it.",
+          "Force on the electron (size): F = q·E = e·E = {e2} × {w2E} = **{w2F} N**.",
+          "An electron is **negative**, so the force is **opposite** to E: it points **towards** the + charge."
+        ],
+        "answer": "E ≈ **{w2E} N/C**, away from the charge; F ≈ **{w2F} N**, towards the charge"
+      },
+      {
+        "title": "Example 3: how many electrons?",
+        "problem": "A rubbed balloon carries a charge of **−{w3Q} nC**. How many **extra electrons** is that? (e = {e2} C, rounded)",
+        "steps": [
+          "Convert to SI units (1 nC = 10⁻⁹ C): Q = −{w3Q}×10⁻⁹ C.",
+          "Charge comes in lumps, Q = n·e, so the number of lumps is n = |Q|/e = ({w3Q}×10⁻⁹) / ({e2}) = **{w3N}**.",
+          "The charge is **negative**, so these are **extra** electrons. (A + charge would mean missing electrons.)",
+          "Sense check: billions of tiny lumps, so the lumps are far too small to notice on a balloon."
+        ],
+        "answer": "n ≈ **{w3N}** extra electrons"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "Two small spheres with charges +{p1q1} nC and +{p1q2} nC are {p1r} cm apart in air. What is the force between them? (k = {k} N m² C⁻²)",
+        "choices": [
+          "{p1F} N, repulsive",
+          "{p1F} N, attractive",
+          "{p1w1} N, repulsive",
+          "{p1w2} N, repulsive"
+        ],
+        "answer": 0,
+        "hint": "Convert nC to C and cm to m. Square the distance. Same signs: attract or repel?",
+        "solution": "**Formula:** F = k·Q_{1}·Q_{2}/r². **Numbers (SI):** Q_{1}·Q_{2} = ({p1q1}×10⁻⁹)({p1q2}×10⁻⁹) = {p1prod} C², r = {p1r}×10⁻² m, r² = {p1r2} m². **Result:** F = ({k}) × ({p1prod}) / ({p1r2}) ≈ **{p1F} N**. Both charges are +, so the force is **repulsive**.",
+        "whyNot": [
+          null,
+          "The size {p1F} N is right, but both charges are +. Like charges repel, so this is repulsive.",
+          "That used r instead of r²: you forgot to square the distance. The right size is {p1F} N.",
+          "That put r in centimetres (3.0, not 0.030 m). Convert to metres first. The right size is {p1F} N."
+        ]
+      },
+      {
+        "q": "Which of these charges can **not** be carried by an object? (e = {e2} C, rounded)",
+        "choices": [
+          "+{p2a} C",
+          "+{p2b} C",
+          "+{p2c} C",
+          "+{p2d} C"
+        ],
+        "answer": 2,
+        "hint": "Divide each charge by e. Charge must be a whole number times e.",
+        "solution": "**Formula:** Q = n·e, so n = Q/e. **Numbers:** {p2c} C ÷ ({e2} C) = **{p2cn}**: not a whole number, so this charge is impossible. The others give {p2an}, {p2bn} and {p2dn}: all whole.",
+        "whyNot": [
+          "{p2a} C ÷ e = {p2an}: a whole number, so an object can carry it.",
+          "{p2b} C ÷ e = {p2bn}: a whole number, so an object can carry it.",
+          null,
+          "{p2d} C ÷ e = {p2dn}: a whole number, so an object can carry it."
+        ]
+      },
+      {
+        "q": "Two charges attract each other with a force of {p3F0} N when they are 6.0 cm apart. They are moved to 2.0 cm apart. What is the force now?",
+        "choices": [
+          "{p3F} N",
+          "{p3w1} N",
+          "{p3w2} N",
+          "{p3w3} N"
+        ],
+        "answer": 0,
+        "hint": "The distance becomes 3 times smaller. Inverse-square law: how does F change?",
+        "solution": "**Formula:** F ∝ 1/r², so F_{2}/F_{1} = (r_{1}/r_{2})². **Numbers:** r_{1} = 6.0 cm, r_{2} = 2.0 cm, (6.0/2.0)² = 3² = 9. **Result:** F_{2} = {p3F0} N × 9 ≈ **{p3F} N**. Sense check: closer, so stronger.",
+        "whyNot": [
+          null,
+          "That multiplies by 3, as if F ∝ 1/r. It's 1/r², so moving 3 times closer gives 3² = 9 times: {p3F} N.",
+          "That divides by 3: wrong way (closer means stronger) and not squared. The force goes up by 3² = 9, to {p3F} N.",
+          "9 is the right factor, but the charges moved **closer**, so the force grows: ×9, giving {p3F} N."
+        ]
+      },
+      {
+        "q": "At a point the electric field strength is {p4E} N/C. A charge of −{p4q} nC is placed there. What is the force on it?",
+        "choices": [
+          "{p4F} N, opposite to the field",
+          "{p4F} N, in the direction of the field",
+          "{p4w1} N, opposite to the field",
+          "{p4w2} N, opposite to the field"
+        ],
+        "answer": 0,
+        "hint": "F = q·E in size. Which way is a negative charge pushed?",
+        "solution": "**Formula:** F = q·E (size). **Numbers:** q = {p4q}×10⁻⁹ C, E = {p4E} N/C. **Result:** F = ({p4q}×10⁻⁹) × ({p4E}) = **{p4F} N**. The charge is negative, so the force is **opposite** to the field.",
+        "whyNot": [
+          null,
+          "The size is right, but a **negative** charge is pushed opposite to the field, not along it.",
+          "That divided E by q. The force is F = q·E: multiply, and the answer is {p4F} N.",
+          "That used q = {p4q} instead of {p4q} × 10⁻⁹ C. Convert nC to C: F = {p4F} N."
+        ]
+      },
+      {
+        "q": "A point charge of −{p5Q} µC sits in air. What is the electric field strength {p5r} cm from it, and in which direction does it point? (k = {k} N m² C⁻²)",
+        "choices": [
+          "{p5E} N/C, towards the charge",
+          "{p5E} N/C, away from the charge",
+          "{p5w1} N/C, towards the charge",
+          "{p5w2} N/C, towards the charge"
+        ],
+        "answer": 0,
+        "hint": "E = k·Q/r² with Q in C and r in m. A negative charge: field towards or away?",
+        "solution": "**Formula:** E = k·|Q|/r². **Numbers (SI):** Q = {p5Q}×10⁻⁶ C, r = {p5r} cm = {p5rm} m, r² = {p5r2} m². **Result:** E = ({k}) × ({p5Q}×10⁻⁶) / ({p5r2}) ≈ **{p5E} N/C**. The charge is negative, so the field points **towards** it.",
+        "whyNot": [
+          null,
+          "The size is right, but the field points the way a + test charge is pushed. A + charge is pulled **towards** a − charge.",
+          "That is kQ/r: you forgot to square r. The right value is {p5E} N/C.",
+          "That put r in centimetres (20, not 0.20 m). Convert to metres: {p5E} N/C."
+        ]
+      }
+    ]
+  },
+  "game": {
+    "kicker": "Explore · just for fun",
+    "title": "Electric versus gravity",
+    "lead": "This comparison is worth knowing for the test. Gravity pulls every mass towards every other, and it has the same 1/r² shape. So which is stronger between a **proton and an electron**? Pick a pair and slide the distance, from 10 pm to 1000 pm (1 pm = 10⁻¹² m; a hydrogen atom is roughly 100 pm across). The bars are on a **powers-of-ten scale**: each tick label is 10 to that power, so neighbouring ticks are 10¹⁰ times apart, and a tiny gap on the bar is a huge gap in newtons. Use G = {Gc} N m² kg⁻², proton mass {mp} kg, electron mass {me} kg and e = {e} C.",
+    "scene": "Two horizontal bars on a powers-of-ten scale: the electric force bar is far longer than the gravity bar",
+    "pair": "Pick a pair",
+    "pairs": {
+      "pe": "Proton + electron",
+      "pp": "Two protons",
+      "ee": "Two electrons"
+    },
+    "dist": "Distance",
+    "f_elec": "Electric force",
+    "f_grav": "Gravity force",
+    "ratio": "Electric ÷ gravity",
+    "kind": "The electric force",
+    "attract": "attracts",
+    "repel": "repels",
+    "axis_note": "force in N (powers of ten)",
+    "after": "**Both forces fall by 4 when you double the distance, so their ratio never changes.** For a proton and an electron it is about **{ratioPE}**. Between two protons it is about {ratioPP}. This is why a tiny charged comb can pick up paper against the pull of the **whole Earth**, and why atoms are held together by electric force, not gravity. Gravity only wins in the big picture, because planets are almost **neutral**: their + and − charges cancel and gravity, which only ever pulls, adds up."
+  },
+  "story": {
+    "kicker": "Explore · the story",
+    "title": "The twisting wire",
+    "frames": [
+      {
+        "cap": "France, 1780s",
+        "text": "Charles-Augustin de Coulomb, a French engineer and scientist, wants to know **how the force between charges depends on distance**. The forces are tiny. Ordinary weights and springs can't measure them.",
+        "fx": "HMM"
+      },
+      {
+        "cap": "The torsion balance",
+        "text": "He hangs a light rod from a **very thin wire**, with a charged ball on one end. A second charged ball is held nearby. The ball is pushed and the wire **twists**. A small push gives a small twist, and the twist can be measured.",
+        "fx": "TWIST"
+      },
+      {
+        "cap": "Move it, measure it",
+        "text": "He changes the distance and measures the twist each time. The results fit a force that shrinks with the **square of the distance**, though his measurements were rough.",
+        "fx": "1/r²"
+      },
+      {
+        "cap": "Result",
+        "text": "He reports his results to the French Academy of Sciences in 1785. Later the **unit of charge**, the coulomb, is named after him. So is the law you just played with: Coulomb's law.",
+        "fx": "ZAP"
+      }
+    ],
+    "question": "Why use a thin wire that twists?",
+    "choices": [
+      "Thin wire is cheaper",
+      "A tiny force gives a visible twist in a thin wire, so a weak force can be measured",
+      "A twisting wire makes the charges stronger"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not the reason:",
+      "Exactly.",
+      "No, it doesn't change the charges:"
+    ],
+    "explain": "Electric forces between small charged balls are tiny, often smaller than the weight of a paper clip. A thin wire twists easily, so even a tiny force makes a visible turn, and the twist angle tells you the force. The same trick (a torsion balance) was later used by Cavendish to measure gravity between lead balls. In the lab you read the force off an arrow. Coulomb read it off an angle."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Coulomb's Law",
+    "body": "Change the size and sign of two charges and the distance between them. Does the force follow F = k·Q_{1}·Q_{2}/r²? Predict first, then check. Try the scientific-notation view for tiny charges.\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The invisible push",
+    "body": "Draw a 4-panel strip. **Panel 1:** two heroes, one with a **+** aura and one with a **−** aura, pulled towards each other by invisible lines. **Panel 2:** two heroes with the **same** aura, pushed apart. **Panel 3:** the distance doubled, with the push shown as a **quarter** of the size. **Panel 4:** a single big charge with the space around it drawn as arrows pointing outwards: the field."
+  },
+  "lab": {
+    "kicker": "Play",
+    "title": "The two-charge lab",
+    "lead": "Two charged balls on a line. **Drag the right-hand ball** (or focus it and use the arrow keys) to change the distance r. Use the sliders to change the charges, in nanocoulombs (1 nC = 10⁻⁹ C). The yellow arrows are the forces. The balls touch at 2 cm, so r never gets smaller than that.",
+    "scene": "Two charged balls on a line with yellow force arrows on both",
+    "graph": "Graph of the force against the distance r, a curve that drops steeply",
+    "drag": "Distance r between the charges, in centimetres",
+    "drag_hint": "Drag the right-hand ball (or use the arrow keys). The arrows are drawn to scale for the charges you have set: full length (60 px) at 3 cm or closer, then shrinking as 1/r² (down to a minimum length beyond about 16 cm). Far away they get tiny, so read the exact force in the box.",
+    "drag_short": "drag me",
+    "q1": "Charge Q_{1}",
+    "q2": "Charge Q_{2}",
+    "r": "Distance r",
+    "f": "Force F on each ball",
+    "kind": "The balls",
+    "fr2": "F × r²",
+    "attract": "attract",
+    "repel": "repel",
+    "none": "feel no force",
+    "no_force": "No charge on one ball: no force",
+    "status_attract": "Opposite charges: the balls pull towards each other.",
+    "status_repel": "Same-sign charges: the balls push apart.",
+    "status_none": "A ball with zero charge feels nothing, and gives nothing.",
+    "graph_x": "r (cm)",
+    "graph_y": "F",
+    "graph_at": "force at",
+    "tasks": "**Try these** (Coulomb constant k = {k} N m² C⁻², balls treated as points):\n- Set Q_{1} = +30 nC, Q_{2} = −30 nC and drag out from 6 cm to 12 cm. **Double the distance: what happens to F?** Check the readout, the arrows (they get 4 times shorter) and the curve.\n- Watch the **F × r²** box while you drag. It doesn't move. That's the inverse-square law: F × r² = k·Q_{1}·Q_{2} never changes.\n- Make Q_{2} **positive**. The arrows flip: attraction becomes repulsion.\n- Set one charge to **0**. The force vanishes.\n- Set Q_{1} = +10 nC, then +20 nC. The force doubles. Now set *both* charges to ±10 nC, then to ±20 nC: the force quadruples."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "Two kinds of charge, **+** and **−**, unit **coulomb (C)**. **Like charges repel, unlike attract.**",
+      "**Elementary charge** e = {e} C (≈ 1.6 × 10⁻¹⁹ C in quick estimates), the smallest free charge. Charge is **quantised**: Q = n·e (proton +e, electron −e). Millikan measured e with oil drops; quark charges are ±⅓e, ±⅔e.",
+      "**Coulomb's law:** F = k·Q_{1}·Q_{2}/r², with k = 1/(4π·ε_{0}) ≈ {k} N m² C⁻². Use metres and coulombs. This k is **not** the spring constant.",
+      "**Inverse square:** double r gives 1/4 of F; triple r gives 1/9.",
+      "The two forces in a pair are **equal in size and opposite in direction** (Newton's third law).",
+      "**Field strength:** E = F/q, in N/C. Force on a charge in a field: F = q·E.",
+      "**Point charge:** E = k·Q/r². The field points **away from +**, **towards −**. A negative charge feels a force opposite to E.",
+      "**Field lines:** they go **from + to −**; **closer lines mean a stronger field**; lines **never cross**."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "Two charges are moved to **three times** their distance. The force becomes...",
+        "choices": [
+          "1/3 as big",
+          "9 times as big",
+          "1/9 as big",
+          "3 times as big"
+        ],
+        "answer": 2,
+        "why": "F ∝ 1/r². Three times the distance: 1/3² = **1/9**.",
+        "whyNot": [
+          "1/3 forgets the square: the law is 1/r², so 1/3² = 1/9.",
+          "That is the inverse of the answer: it would be right for **one third** of the distance. Here the distance grew, so the force gets **weaker**: 1/9.",
+          null,
+          "Further apart means a **weaker** force, not a stronger one. It's 1/9."
+        ]
+      },
+      {
+        "q": "A droplet carries a charge of −{qCharge} C. How many extra electrons does it carry? (e = {e2} C, rounded)",
+        "choices": [
+          "1",
+          "{qN}",
+          "It isn't a whole number of electrons, so it's impossible"
+        ],
+        "answer": 1,
+        "why": "N = |Q|/e = ({qCharge}) ÷ ({e2}) ≈ **{qN}**. A whole number, as charge must be.",
+        "whyNot": [
+          "One electron has −{e2} C. This droplet has {qN} times as much.",
+          null,
+          "{qCharge} ÷ {e2} ≈ {qN}: that **is** a whole number, so it is possible."
+        ]
+      },
+      {
+        "q": "A point charge of {fQ} nC (that's {fQ}×10⁻⁹ C). What is the field strength **{fR} cm** from it? (E = k·Q/r², k = {k} N m² C⁻²)",
+        "choices": [
+          "{fE} N/C",
+          "{fENoSq} N/C",
+          "{fECm} N/C"
+        ],
+        "answer": 0,
+        "why": "Use metres and **square** r: E = ({k}) × ({fQ}×10⁻⁹) / ({fR}×10⁻² m)² ≈ **{fE} N/C**. Forgetting the square gives {fENoSq}. Putting r in cm gives {fECm}.",
+        "whyNot": [
+          null,
+          "That is kQ/r: r was not squared. The law is 1/r², which gives {fE} N/C.",
+          "That used r in centimetres (3.0, not 0.030 m). Use metres: {fE} N/C."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: for when you want a challenge. Not needed for your tests."
+  },
+  "check": {
+    "kicker": "Bonus · could it really happen?",
+    "title": "One coulomb",
+    "say": "A whole coulomb of charge on each of two balls, 1 m apart!",
+    "lead": "The coulomb is the unit of charge, but a rubbed balloon typically carries around a hundred nanocoulombs (about 10⁻⁷ C), give or take a few times. What if you really could put **1 C** on each of two small balls, **1 m** apart? Assume point charges in air, k = {k} N m² C⁻² and g = {g} m/s². Vote first.",
+    "question": "The force would equal the weight of...",
+    "choices": [
+      "A bag of sugar",
+      "A heavy lorry (about 40 tonnes)",
+      "About {nEiffel} Eiffel Towers (about {eiffelT} tonnes each)",
+      "A mountain"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": [
+      "Far too small:",
+      "Still too small:",
+      "Right. Here's the calculation:",
+      "Too big. But it is enormous:"
+    ],
+    "steps": [
+      "**Force:** F = k·Q_{1}·Q_{2}/r² = ({k}) × 1 × 1 / 1² = **{f1C} N**.",
+      "**As a weight:** a mass m weighs m·g, so m = F/g = {f1C} / {g} ≈ **{tonnes} tonnes**.",
+      "**Compare:** that is about {nEiffel} Eiffel Towers, if one weighs about {eiffelT} tonnes.",
+      "**How many electrons is 1 C?** N = Q/e = 1 / ({e}) ≈ **{nElec1C}** of them. For comparison, two balloon-sized charges of 10 nC at 5 cm give only F ≈ {pithF} N, the weight of a mass of only about {pithM} g."
+    ],
+    "after": "So no: you could never gather a coulomb on two small balls, because the like charges would push each other apart with huge force. **Everyday electric forces use nanocoulombs and microcoulombs.** The coulomb is a big unit. (In a circuit, 1 C is simply what 1 A carries past in 1 s.)"
+  },
+  "challenge": {
+    "kicker": "Bonus puzzle",
+    "title": "The calm spot",
+    "lead": "Two fixed positive charges sit on a line {chD} m apart: **+{chFx}Q** on the left and **+Q** on the right. A small positive test charge is placed on the line **between** them. Both charges push it, in opposite directions.",
+    "question": "Where is the net force on the test charge zero?",
+    "choices": [
+      "{chHalf} m from the +{chFx}Q, exactly halfway",
+      "{chNear} m from the +{chFx}Q",
+      "{chX} m from the +{chFx}Q, so {chW} m from the +Q",
+      "Nowhere: both charges always push it"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Halfway is where the *distances* are equal, but the charges are not:",
+      "Too close to the big charge. It pushes harder there:",
+      "Yes! The calm spot is closer to the weaker charge.",
+      "They push in opposite directions, so they can cancel:"
+    ],
+    "explain": "Let x be the distance from the big charge. The pushes are equal when\n\n$ k·{chFx}Q·q/x² = k·Q·q/({chD} − x)²\n\nk, Q and q cancel. Take square roots: 2/x = 1/({chD} − x), so 2·({chD} − x) = x, giving **x = {chX} m**. The charge q and the constant k don't matter. The calm spot sits closer to the weaker charge, because the push of the big charge needs more distance to fade."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "radial": {
+      "aria": "Two pictures side by side. On the left a positive charge with straight lines pointing away from it in all directions. On the right a negative charge with straight lines pointing in towards it from all directions. The lines are closest together near each charge.",
+      "pos": "+ charge: lines point away",
+      "neg": "− charge: lines point in",
+      "caption": "**Radial fields.** The lines show the way a **positive** test charge would be pushed. Near the charge they are **close together**: that is where the field is strong. Far away they spread out and the field is weak. (A picture of E = k·Q/r².)"
+    },
+    "pair": {
+      "aria": "Field lines of a positive charge on the left and a negative charge on the right. Lines leave the positive charge, curve round and enter the negative charge. They never cross. They are packed closest together between the two charges and near each charge. A yellow arrow between the charges points from the positive towards the negative.",
+      "pos": "+",
+      "neg": "−",
+      "e": "E",
+      "strong": "close lines: strong field",
+      "caption": "**A + and a − charge together.** Every line **leaves the + and ends on the −**. The lines **never cross**, because the field has one direction at each point. Between the charges they are close together: a strong field there, pointing from + towards −. A + test charge placed there is pushed towards the − charge, and a − test charge the other way."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Balloon, paper and a stream of water",
+    "lead": "Static charge is the easiest thing in this book to see at home. You will make a rubbed balloon attract bits of paper, bend a thin stream of water, and push away a second rubbed balloon. Rubbing usually leaves the balloon with extra electrons (−), but you can do everything below without knowing the sign.",
+    "safety": "**Safety:** this is **static electricity only**, harmless. Do it at a sink or a table, away from mains sockets and appliances. Never use anything plugged in to make charge. Keep burst balloon pieces away from small children. If anyone has a latex allergy, use a different object (e.g. a plastic comb or ruler).",
+    "need": "**You need:** 2 party balloons (small, blown up), a wool jumper (or your dry hair), 2 pieces of cotton thread about {xL} m long, tape, a ruler or tape measure, a handful of tiny paper bits (about 5 mm), and a tap. A kitchen scale helps to weigh a balloon. Dry days work best.",
+    "steps": "**Do this:**\n1. **Paper.** Rub one balloon on the jumper for about 10 s. Hold it just above the paper bits. They jump up and stick. Watch for bits that leap off again later.\n2. **Water.** Turn the tap on to a **thin, steady stream**, as thin as a pencil lead. Rub the balloon again and hold it **close to the stream, not touching it**. The stream bends towards the balloon.\n3. **Two balloons.** Tie each balloon to a thread. Tape the other ends together at the same point, so the balloons hang side by side, touching. Rub **both** balloons on the jumper in the same way. Let them hang. They push apart.\n4. Measure the **distance d between the centres** of the two balloons (hold the ruler behind them) and the thread length L, from the tape to the middle of a balloon.",
+    "measure": "**Measure:** d, L and the mass m of one balloon (kitchen scale). Then ask: does d grow when you rub longer? Does it shrink when you touch a balloon with your hand?",
+    "compare": "**Compare with the physics (optional: it uses forces in balance from S4/S5, skip it if you only want to see the effect):** each balloon is in balance: its weight m·g, the thread's pull and the electric push F. That gives F = m·g·tanθ, with sin θ = d/(2L). Then Coulomb's law F = k·Q²/d² gives the charge on each balloon, **Q = d·√(F/k)**. For example, a balloon of m = {xm} g on threads of L = {xL} m hanging **{xd1} cm** apart gives θ = {xth1}°, F = {xF1} N and **Q ≈ {xq1u} μC ≈ {xq1} nC**. At {xd2} cm apart it is about {xq2} nC. A rubbed balloon typically carries around a hundred nanocoulombs (0.1 μC), give or take a few times; this point-charge estimate is rough. Expect your answer in that range.",
+    "wrong": "**What goes wrong:** a balloon is big, so it is not a point charge, and the charge sits on its surface, so your Q is only a rough estimate. Humid air and a touch from your hand let the charge leak away fast. Draughts swing the balloons. If the balloons won't separate, rub longer. The water bends towards **either** sign of charge: the water's own charges shift a little, so the nearer ones are pulled harder than the far ones. Paper works the same way."
+  }
+}

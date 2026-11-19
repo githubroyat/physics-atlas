@@ -1,0 +1,542 @@
+{
+  "hero": {
+    "sfx": "CRACK!",
+    "caption": "Find a thing's own beat. Push in time with it."
+  },
+  "intro": "A singer holds one steady note near a wine glass. Nothing happens. She slides her pitch until it matches the glass's own note, and now the glass shakes harder and harder. That match is **resonance**. It is why a child on a swing goes high, why a radio finds one station, and why engineers worry about bridges and skyscrapers. You already know that a spring and a pendulum each have a **natural frequency**. This chapter is about what happens when something keeps pushing them with a regular beat. Unless we say otherwise: g = {g} m/s², small oscillations, and a mass on a spring slides on a horizontal track with no friction, except where a lab has a damping setting.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "find the **natural frequency** f_{0} of a mass on a spring and of a pendulum, and tell a **free** oscillation from a **forced** one;",
+      "explain what a **periodic driving force** with **driving frequency** f_{d} does to an oscillating system, and why it ends up oscillating at f_{d};",
+      "state the **condition for resonance**, **f_{d} = f_{0}**, and explain that this is where the **energy transfer is most efficient**;",
+      "describe how the **amplitude** depends on the driving frequency (a peak at f_{0}) and what **damping** does to that peak;",
+      "recognise resonance in examples such as the **singing glass**, **radio tuning**, **tuning forks**, **buildings** in earthquakes and wind, and **footbridges**."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "You are pushing a child on a swing. You can only push once in a while, and every push is the **same size**. Which way of pushing builds the **biggest swing**?",
+    "choices": [
+      "Push as fast as you possibly can",
+      "Push once each time the swing comes back to you, in time with its own rhythm",
+      "Push once every half minute",
+      "It makes no difference when you push"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Tempting, but no:",
+      "Yes! Everyone who has pushed a swing knows it.",
+      "That is far too slow to build anything:",
+      "It makes a huge difference:"
+    ],
+    "explain": "**Push in time with the swing's own beat.** Every push then arrives just as the swing is already moving the right way, so the pushes add up. Push out of time and some of them fight the motion. That is resonance, and we will measure it.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Every system has a favourite beat",
+    "body": "**Recap** from *The shape of a wobble* and *Swing*. A mass m on a spring of stiffness k, and a pendulum of length L, each swing at a beat of their own once you push them and let go. That beat is the **natural frequency** f_{0}:\n\n$ spring: T = 2π·√(m/k), f_{0} = 1/T = (1/2π)·√(k/m)\n\n$ pendulum: T = 2π·√(L/g), f_{0} = 1/T = (1/2π)·√(g/L)\n\nf_{0} is in hertz (Hz), swings per second. It depends only on the system itself: its mass, stiffness, length and g, and not on how hard you pushed it.\n\nExamples: a {labM} kg mass on a spring with k = {labK} N/m has f_{0} = {labF0} Hz (T = {labT} s). A swing with chains of length {swingL} m has f_{0} = {swingF} Hz (T = {swingT} s).\n\nPush it once and let go: that is a **free oscillation**. The system swings at f_{0} and rings on, until friction slowly eats the energy.",
+    "check": {
+      "q": "A mass on a spring is swapped for one **4 times heavier** (same spring). Its natural frequency f_{0} becomes...",
+      "choices": [
+        "2 times smaller",
+        "4 times smaller",
+        "2 times bigger",
+        "unchanged"
+      ],
+      "answer": 0,
+      "whyNot": [
+        null,
+        "You forgot the square root: f_{0} ∝ 1/√m, so 4 times the mass does not give a 4-fold change.",
+        "Heavier means slower, not faster: a bigger mass is harder to get moving, so f_{0} goes down.",
+        "The mass is in the formula, f_{0} = (1/2π)·√(k/m). Change m and f_{0} changes."
+      ],
+      "why": "f_{0} = (1/2π)·√(k/m), so f_{0} ∝ 1/√m. With 4 times the mass, √4 = 2, so f_{0} is **2 times smaller**."
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Keep pushing: forced oscillation",
+    "body": "Now someone keeps pushing the system, again and again, with a regular beat. That is a **periodic driving force**, and its frequency is the **driving frequency f_{d}**. The driver pours energy into the system with every push. This is a **forced oscillation**.\n\nAfter a short start-up, the system no longer swings at its own f_{0}. It swings at the **driver's** frequency, **f_{d}**. (The start-up wobble at f_{0} dies out because of friction.)\n\nBut how big the swing gets depends on **when** the pushes arrive. Try it.",
+    "after": "Work, as in S5: a push adds energy when the force points the way the swing is **already moving**. At the right timing every single push does that. Out of timing, some pushes slow the swing down and take energy back out.",
+    "check": {
+      "q": "A system with a natural frequency of 2.0 Hz is driven steadily at 3.0 Hz. Once the start-up is over, it oscillates at...",
+      "choices": [
+        "3.0 Hz, the driving frequency",
+        "2.0 Hz, its natural frequency",
+        "5.0 Hz, the sum of the two",
+        "2.5 Hz, the average"
+      ],
+      "answer": 0,
+      "whyNot": [
+        null,
+        "That is the start-up wobble, and friction makes it die out. What is still pushing after a while?",
+        "Frequencies do not add. A steadily pushed system settles into one rhythm, not a mixture of two.",
+        "There is no averaging: a steadily pushed system does not settle halfway between two frequencies."
+      ],
+      "why": "A forced oscillation settles at the **driving frequency f_{d}**. The natural frequency only matters for how big the amplitude gets."
+    }
+  },
+  "game": {
+    "kicker": "Game",
+    "title": "Push the swing",
+    "lead": "**Mini-game: push the swing.** A swing with chains {swingL} m long. Press **Push** to give it one kick **to the right** (a yellow arrow flashes), always the same size. Get the swing to **{goalDeg}°** from the middle. Watch how it moves, and decide when to push. There is a little friction. (Small-swing model.)",
+    "scene": "A swing hanging from a bar; you push it with a button",
+    "push": "Push!",
+    "letgo": "Let it swing",
+    "reset": "Start again",
+    "wait": "Wait 0.25 s",
+    "too_soon": "Too soon! Your arms need a moment between pushes.",
+    "amp": "Swing size",
+    "pushes": "Pushes",
+    "gap": "Gap between your last two pushes",
+    "period": "Swing's own period",
+    "win_head": "RESONANCE!",
+    "win": "You got it to {goalDeg}°. The swing's own period is T = 2π√(L/g) = {swingT} s, so its natural frequency is f_{0} = {swingF} Hz. To build the swing up you pushed about **once per swing** (pushing once every two swings also works, only more slowly): the driving frequency matched **f_{0}**, and each push arrived while the swing was already moving to the right, the same way as the push. If your pushes were a bit too quick or too slow, they drifted in and out of step with the swing, sometimes helping and sometimes fighting, and it never got big."
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "Resonance: sweep through the frequencies",
+    "body": "**Resonance** happens when the driving frequency equals the natural frequency:\n\n$ resonance: f_{d} = f_{0}\n\nThen the pushes arrive in step with the motion, so the **energy transfer from driver to system is most efficient** and the **amplitude is largest**.\n\nIn the lab below a driver pushes a mass on a spring with a force that pushes one way, then the other: **f_{d} full cycles per second**. The peak push is {labF} N, and the spring has k = {labK} N/m. **You build the resonance curve yourself**, one dot at a time."
+  },
+  "lab": {
+    "lead": "**Drive it, then wait.** Move the driving frequency, press **Start driving**, and watch the amplitude settle. When it has settled, a dot appears on the graph. (Impatient? **Settle and plot** skips ahead.) The white dashed line marks f_{0}. The red dashed lines are the limit of the spring.",
+    "scene": "A block on a spring being pushed to and fro by a driving force",
+    "graph": "Graph of settled amplitude against driving frequency, built from your dots",
+    "axis_x": "driving frequency f_{d} (Hz)",
+    "axis_y": "amplitude (cm)",
+    "graph_hint": "Each dot is one settled amplitude. Connect the dots in your head.",
+    "drive": "Driving frequency f_{d}",
+    "mass": "Mass m",
+    "damping": "Damping (friction)",
+    "damp_strong": "Strong",
+    "damp_light": "Light",
+    "damp_vlight": "Very light",
+    "nudge_down": "Lower the driving frequency by 0.01 hertz",
+    "nudge_up": "Raise the driving frequency by 0.01 hertz",
+    "start": "Start driving",
+    "pause": "Pause",
+    "settle": "Settle and plot",
+    "wipe": "Wipe the graph",
+    "amp": "Amplitude",
+    "points": "Dots on graph",
+    "new_mass": "New mass, new natural frequency: the graph starts again.",
+    "plotted": "Settled. Dot added.",
+    "snap_word": "SNAP!",
+    "snap_status": "The spring went past its limit and snapped. Press Start driving to try again.",
+    "snap_still": "The spring went past its limit and snapped! Change a setting to try again.",
+    "tasks": "**Try these:**\n- Use **light** damping. Sweep from low f_{d} to high, about **10 dots**. Where is the tallest dot? Compare it with the white line.\n- Look at the very left, f_{d} near **0**: the push hardly changes, so it just stretches the spring a little and the mass follows it slowly. Far to the right, the push changes direction too fast for the mass to follow, so the amplitude is small.\n- Switch to **strong** damping and plot a few dots around f_{0}. Higher or lower peak? Narrower or wider?\n- Change the **mass**. The white line moves: check it against f_{0} = (1/2π)·√(k/m).\n- Choose **very light** damping and set f_{d} right at f_{0}. Be careful: past {labLimit} cm the spring **snaps**!\n\nThe damping is never zero: every real system loses a little energy. A tiny amount of damping is what decides the height of the peak.",
+    "curve": "**What the curve says** (no formula needed):\n\n- there is a **peak at f_{d} = f_{0}** (with strong damping it sits just below f_{0}): resonance;\n- **more damping** gives a **lower and wider** peak; **less damping** gives a **taller and narrower** one;\n- far away from f_{0}, the response is small whichever way you go."
+  },
+  "learn3check": {
+    "q": "In the lab the mass is {labM} kg and the spring has k = {labK} N/m. With **light** damping, which driving frequency gives the **biggest** amplitude?",
+    "choices": [
+      "{labF0} Hz",
+      "{labW0} Hz",
+      "{labInv} Hz",
+      "{labKm} Hz"
+    ],
+    "answer": 0,
+    "whyNot": [
+        null,
+        "{labW0} is ω_{0} = √(k/m) in rad/s. A frequency in hertz needs one more step: divide by 2π.",
+        "You turned the fraction upside down: {labInv} comes from (1/2π)·√(m/k). The spring stiffness k belongs on top, with m underneath.",
+        "{labKm} is just k/m = {labK} / {labM}. The square root and the 1/2π are both missing."
+      ],
+      "why": "Resonance is at f_{d} = f_{0} = (1/2π)·√(k/m) = (1/2π)·√({labK} / {labM}) = **{labF0} Hz**. (Recap: ω = 2π·f, so f_{0} = ω_{0}/2π. {labW0} is ω_{0} = √(k/m), in rad/s, not Hz.)"
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Friend or foe?",
+    "body": "Resonance is a big deal because a **small, regular push** can build a **huge** amplitude. Sometimes that is exactly what you want, and sometimes it is a disaster.\n\n- **The singing glass.** A wet finger on a wine glass's rim makes a steady note: its natural frequency. A very loud steady note at that same pitch can make the glass vibrate so much that it cracks. (Ordinary singing won't do it: it has to be very loud and very close to the glass's own pitch.)\n- **Radio.** Turning the tuning knob changes the natural frequency of a circuit in the receiver, until it matches the station you want. Only that station sets it ringing. You'll meet this in *The circuit that rings*.\n- **Tuning forks.** Strike one fork, hold a second fork of the same pitch nearby, and the second one starts to ring all by itself.\n- **Structures.** Earthquakes, wind and crowds can shake a building or a footbridge near its natural frequency. Engineers fight this by changing the natural frequency (make it stiffer or heavier), by **adding damping**, or by keeping the driver away from f_{0}.\n\nSort the examples.",
+    "after": "In every case the physics is the same one idea: **f_{d} close to f_{0}** means a big amplitude. What we do about it differs. A friend gets tuned to match. A foe gets detuned or damped.",
+    "check": {
+      "q": "Engineers add dampers to a footbridge that sways a lot. In terms of the resonance curve, what does that do?",
+      "choices": [
+        "Lowers and widens the peak",
+        "Makes the peak taller and narrower",
+        "Moves the peak to a higher frequency",
+        "Nothing: the peak stays the same"
+      ],
+      "answer": 0,
+      "whyNot": [
+        null,
+        "That is what less damping does. More damping takes more energy out of every swing.",
+        "Damping changes the height and width of the peak, not where the system's own beat is.",
+        "Damping removes energy every swing, so the peak cannot stay the same."
+      ],
+      "why": "**More damping gives a lower, wider peak.** The footbridge still has a natural frequency, but the amplitude at resonance is much smaller."
+    }
+  },
+  "sort": {
+    "lead": "Tap each card. Is resonance our **friend** (we make it happen on purpose) or a **foe** (we try to avoid or calm it)?",
+    "yes": "FRIEND",
+    "no": "FOE",
+    "cards": [
+      { "icon": "swing", "label": "Pushing a swing", "tagline": "tap to find out", "yes": true, "why": "Push once per swing and the swing builds up: f_{d} = f_{0}, on purpose." },
+      { "icon": "radio", "label": "Tuning a radio", "tagline": "tap to find out", "yes": true, "why": "The knob sets the receiver's natural frequency to match the station, so only that station gets a big response." },
+      { "icon": "fork", "label": "Two tuning forks", "tagline": "tap to find out", "yes": true, "why": "A second fork of the same pitch is driven at its own natural frequency, so it rings from the first one's sound." },
+      { "icon": "bridge", "label": "Footbridge swaying with the crowd", "tagline": "tap to find out", "yes": false, "why": "The crowd's rhythm lands near the bridge's natural frequency. Engineers add damping or stiffen it." },
+      { "icon": "tower", "label": "Tall building in an earthquake", "tagline": "tap to find out", "yes": false, "why": "Ground shaking near the building's natural frequency can make it sway wildly. Designers keep f_{0} away from it, add damping, or both." },
+      { "icon": "machine", "label": "Washing machine rattling at one spin speed", "tagline": "tap to find out", "yes": false, "why": "At one speed the drum's push matches the machine's natural frequency, so it shakes hard. Past that speed the rattle fades." }
+    ]
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: the resonance frequency of a spring",
+        "problem": "A mass of **{w1m} kg** hangs from a spring with **k = {w1k} N/m**. At what driving frequency will it resonate? Give f_{d} and the period of the driver. Ignore damping.",
+        "steps": [
+          "Resonance means f_{d} = f_{0}, so find f_{0} = (1/2π)·√(k/m).",
+          "k/m = {w1k} / {w1m} = {w1r} s⁻² (N/m ÷ kg = 1/s²), and √{w1r} = {w1s} s⁻¹.",
+          "f_{0} = {w1s} / (2π).",
+          "The driver's period is T = 1/f_{d}."
+        ],
+        "answer": "f_{d} = f_{0} ≈ **{w1f} Hz**, so the driver must push once every T ≈ **{w1T} s**"
+      },
+      {
+        "title": "Example 2: how often to push a swing",
+        "problem": "A swing has chains of length **{w2L} m**. How often must you push it to build up a big swing, and how many pushes is that per minute? (g = {g} m/s², small swings)",
+        "steps": [
+          "Push at the natural frequency: f_{d} = f_{0} = (1/2π)·√(g/L).",
+          "g/L = {g} / {w2L} = {w2r} s⁻², and √{w2r} = {w2s} s⁻¹.",
+          "f_{0} = {w2s} / (2π) = {w2f} Hz.",
+          "The time between pushes is T = 1/f_{0}, and in 60 s you fit 60/T pushes."
+        ],
+        "answer": "Push once every **{w2T} s** (f_{d} = f_{0} ≈ {w2f} Hz), which is about **{w2minR} pushes per minute**"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A mass of {p1m} kg is attached to a spring with k = {p1k} N/m. At what driving frequency does it resonate?",
+        "choices": [
+          "{p1f} Hz",
+          "{p1w1} Hz",
+          "{p1w2} Hz",
+          "{p1w3} Hz"
+        ],
+        "answer": 0,
+        "whyNot": [
+          null,
+          "That is the period 1/f_{0} = {p1w1} s written as hertz. The frequency is {p1f} Hz.",
+          "That is √(k/m) = ω_{0} in rad/s. The 1/2π is missing: divide by 2π to get {p1f} Hz.",
+          "You forgot the square root. k/m = {p1r} s⁻², and the root of that, {p1s}, is what gets divided by 2π."
+        ],
+        "hint": "Resonance: f_{d} = f_{0} = (1/2π)·√(k/m). Don't forget the 1/2π.",
+        "solution": "Resonance means f_{d} = f_{0} = (1/2π)·√(k/m). Here k/m = {p1k} / {p1m} = {p1r} s⁻², and √{p1r} = {p1s} s⁻¹. So f_{d} = {p1s} / (2π) = **{p1f} Hz**. (Sense check: a period of about {p1w1} s is a quick shake, which fits a light mass on a stiff spring.)"
+      },
+      {
+        "q": "You want to push a swing in resonance. The swing is a pendulum of length {p2L} m. How often should you push it? (g = {g} m/s²)",
+        "choices": [
+          "{p2f} Hz, once every {p2w1} s",
+          "{p2w1} Hz, once every {p2f} s",
+          "{p2w2} Hz",
+          "{p2w3} Hz"
+        ],
+        "answer": 0,
+        "whyNot": [
+          null,
+          "That is the period, one push every {p2w1} s, written as a frequency. The frequency is its inverse, {p2f} Hz.",
+          "That is √(g/L) = ω_{0} in rad/s. Divide by 2π to get hertz: {p2f} Hz.",
+          "1/2π is only the last step. The square root √(g/L) = {p2s} s⁻¹ has to go on top: {p2s} / (2π) = {p2f} Hz."
+        ],
+        "hint": "f_{d} = f_{0} = (1/2π)·√(g/L). Frequency is how many pushes per second.",
+        "solution": "Push at the natural frequency: f_{d} = f_{0} = (1/2π)·√(g/L). Here g/L = {g} / {p2L} = {p2r} s⁻², and √{p2r} = {p2s} s⁻¹. So f_{0} = {p2s} / (2π) = **{p2f} Hz**. One push every 1/f_{0} = **{p2w1} s**: about two seconds for a {p2L} m swing, which feels right."
+      },
+      {
+        "q": "A system has a natural frequency of 5.0 Hz and is driven steadily at 2.0 Hz. After the start-up, at what frequency does it oscillate?",
+        "choices": [
+          "2.0 Hz",
+          "5.0 Hz",
+          "7.0 Hz",
+          "3.0 Hz"
+        ],
+        "answer": 0,
+        "whyNot": [
+          null,
+          "5.0 Hz is the system's natural frequency f_{0}. In a forced oscillation, the start-up wobble at f_{0} dies out and the driver wins.",
+          "Frequencies do not add: 7.0 Hz is 5.0 + 2.0, but the system settles into the driver's rhythm alone.",
+          "Not the difference either: 3.0 Hz is 5.0 − 2.0. After the start-up the system follows the driver exactly."
+        ],
+        "hint": "A forced oscillation follows the driver.",
+        "solution": "A forced oscillation settles at the driving frequency, f = f_{d} = **2.0 Hz**. The natural frequency f_{0} = 5.0 Hz does not set the rhythm. It only decides the size of the swing. Here f_{d} is far below f_{0}, so the amplitude is small."
+      },
+      {
+        "q": "In a driven system, the amount of damping is increased. How does the amplitude-versus-driving-frequency curve change?",
+        "choices": [
+          "The peak at f_{0} becomes lower and wider",
+          "The peak at f_{0} becomes taller and narrower",
+          "The peak moves to a much higher frequency",
+          "The peak disappears and the curve is flat"
+        ],
+        "answer": 0,
+        "whyNot": [
+          null,
+          "That is the effect of less damping. With more damping, energy leaves faster and the peak cannot grow as tall.",
+          "Damping does not move the resonance far: the peak stays at (about) f_{0}. It changes the height and width.",
+          "With damping like in the lab there is always a peak near f_{0}; more damping only lowers and widens it."
+        ],
+        "hint": "Damping takes energy out of the system.",
+        "solution": "Damping takes energy out of every swing, so the driver cannot build the amplitude as high: the peak at f_{0} gets **lower**. The driver then does well over a wider range of frequencies, so the peak also gets **wider**. It stays at (about) f_{0}."
+      },
+      {
+        "q": "A footbridge has an up-and-down natural frequency of {p5f} Hz. Each footstep pushes the bridge once. At what walking pace, in steps per minute, are the footsteps in resonance with the bridge?",
+        "choices": [
+          "{p5min} steps per minute",
+          "{p5w1} steps per minute",
+          "{p5w2} steps per minute",
+          "{p5w3} steps per minute"
+        ],
+        "answer": 0,
+        "whyNot": [
+          null,
+          "{p5w1} is the frequency in steps per second, not per minute. Multiply by 60.",
+          "You divided: 60 / {p5f} = {p5w2}. To go from steps per second to steps per minute you multiply by 60.",
+          "{p5w3} per minute is 4 steps a second, twice the bridge's frequency. One push per step means you need exactly f_{0} steps per second: {p5f} × 60 = {p5min} per minute."
+        ],
+        "hint": "Resonance: f_{d} = f_{0}. Steps per second times 60 gives steps per minute.",
+        "solution": "Resonance needs f_{d} = f_{0} = {p5f} Hz. One footstep is one push, so that is {p5f} steps per second. A minute has 60 s, so {p5f} steps/s × 60 s = **{p5min} steps per minute**. (A brisk walk is about 1.7 to 2 steps per second, which is why footbridge designers worry.)"
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "The glass and the wobbly bridge",
+    "frames": [
+      {
+        "cap": "The dinner table",
+        "text": "Wet your finger and run it round the rim of a wine glass. It **sings** a steady note. That note is the glass's own natural frequency, and your finger keeps it ringing at its own note.",
+        "fx": "WEEEE"
+      },
+      {
+        "cap": "The famous trick",
+        "text": "Can a voice break the glass? Yes: it has been filmed (2005), but not with an ordinary singer. It needs a **very loud, very steady** note, matched very closely to the glass's own pitch. *(Plenty of tales of opera singers breaking glass are exaggerated.)*",
+        "fx": "CRACK"
+      },
+      {
+        "cap": "London, June 2000",
+        "text": "The Millennium Bridge opens to crowds. As the crowd crosses it begins to **sway sideways**. People fall into step with the sway, which pushes it **harder**: like resonance, with a twist, because the crowd was not a steady driver, it responded to the sway. It is closed after two days.",
+        "fx": "SWAY"
+      },
+      {
+        "cap": "The fix",
+        "text": "Engineers fit **dampers** under the bridge to soak up the energy. It reopens in February 2002 and stays steady. Not a bigger bridge: a **damped** one.",
+        "fx": "THUD"
+      }
+    ],
+    "question": "What fixed the swaying Millennium Bridge?",
+    "choices": [
+      "Banning people from walking in step",
+      "Adding dampers to take energy out of the sway",
+      "Making the bridge much lighter"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not what they did:",
+      "Exactly.",
+      "Not what they did:"
+    ],
+    "explain": "A damping fix was what they chose: dampers take energy out of the sway, so the resonance peak gets lower and wider and the crowd can no longer build up a big swing. Resonance is not always a matter of changing the driver. Often you change the damping."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The note that cracks",
+    "body": "Draw an anime-style hero's showdown with a crystal goblet as a 4-panel strip. **Panel 1:** the hero sings a loud note that is **slightly too low**: the goblet just trembles. **Panel 2:** she slides her pitch up and the goblet **shakes** harder. **Panel 3:** the note matches f_{0}: the goblet blurs with motion lines. **Panel 4:** CRACK. A tiny split crawls across the glass. Label the notes f_{d} in each panel and f_{0} in the last."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Natural frequency** f_{0}: spring f_{0} = 1/T = (1/2π)·√(k/m), pendulum f_{0} = (1/2π)·√(g/L). A system left alone does a **free oscillation** at f_{0}.",
+      "A **periodic driving force** with **driving frequency f_{d}** gives a **forced oscillation**. After the start-up the system oscillates at **f_{d}**, not at f_{0}.",
+      "**Resonance:** f_{d} = f_{0}. The pushes arrive in step with the motion, so the **energy transfer is most efficient** and the **amplitude is largest**.",
+      "**Amplitude against f_{d}** has a **peak at f_{0}**. More damping gives a **lower, wider** peak; less damping gives a **taller, narrower** one. There is always at least a little damping.",
+      "Examples: pushing a swing, **tuning forks**, the **singing glass**, **radio tuning**, buildings in earthquakes and wind, footbridges. Engineers change f_{0}, add **damping**, or avoid the driving frequency.",
+      "Numbers: use f_{0} = (1/2π)·√(k/m) or (1/2π)·√(g/L). Example: a {w2L} m swing has f_{0} ≈ {w2f} Hz, so push once every {w2T} s."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "Resonance occurs when...",
+        "choices": [
+          "the driving frequency equals the natural frequency",
+          "the driving force is as large as possible",
+          "the damping is as large as possible",
+          "the driving frequency is double the natural frequency"
+        ],
+        "answer": 0,
+        "whyNot": [
+          null,
+          "A big push is not enough: if it arrives out of step it fights the motion. Resonance is about frequency, not force.",
+          "More damping does the opposite: it flattens the peak. Resonance depends on frequencies matching.",
+          "At twice f_{0} the pushes come twice per swing, half of them out of step. The condition is exactly f_{d} = f_{0}."
+        ],
+        "why": "The condition is **f_{d} = f_{0}**: the driving frequency equals the natural frequency."
+      },
+      {
+        "q": "A swing of length {w2L} m is pushed in resonance. How long between pushes?",
+        "choices": [
+          "about {w2T} s",
+          "about {w2f} s",
+          "about {w2s} s",
+          "about {w2min} s"
+        ],
+        "answer": 0,
+        "whyNot": [
+          null,
+          "{w2f} is the frequency f_{0} in hertz, pushes per second. The time between pushes is its inverse, 1/f_{0}.",
+          "{w2s} is √(g/L) in s⁻¹, which is ω_{0}. Divide by 2π for f_{0}, then take 1/f_{0} for the time.",
+          "{w2min} is the number of pushes per minute, 60 / T. The question asks for the time between pushes, T."
+        ],
+        "why": "f_{0} = (1/2π)·√(g/L) = {w2f} Hz, so the gap between pushes is T = 1/f_{0} = **{w2T} s**."
+      },
+      {
+        "q": "The damping of a system is increased. The resonance peak becomes...",
+        "choices": [
+          "lower and wider",
+          "taller and narrower",
+          "taller and wider",
+          "lower and narrower"
+        ],
+        "answer": 0,
+        "whyNot": [
+          null,
+          "That is what less damping does. More damping takes energy out, so the peak cannot grow as tall.",
+          "More damping cannot make the peak taller. It removes energy, so the peak is lower.",
+          "Lower, yes, but damping makes the peak wider too, not narrower: less damping gives the narrow one."
+        ],
+        "why": "More damping takes more energy out: the peak is **lower and wider**."
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "bamp": {
+    "kicker": "Bonus: the formula behind your curve",
+    "title": "How tall is the peak?",
+    "lead": "The lab's curve comes from the equation m·y'' = −k·y − b·y' + F_{0}·cos(2π·f_{d}·t), where b is the damping constant. Solving it gives the settled amplitude:\n\n$ A = (F_{0}/m) / √((ω_{0}² − ω²)² + (b·ω/m)²)\n\nwith ω = 2π·f_{d} and ω_{0} = √(k/m). Exactly at resonance, ω = ω_{0}, the first bracket vanishes and\n\n$ A_{res} = F_{0} / (b·ω_{0})\n\nSo, for a given push and spring, the peak height is set **only** by the damping. (At resonance the mass lags the push by a quarter of a cycle, so the force always points the way the mass is moving: the most efficient transfer.)\n\nThe lab's light damping setting has b = {bLight} N·s/m for the {labM} kg mass, with ω_{0} = {labW0} rad/s and F_{0} = {labF} N. That gives A_{res} = {bAres} cm: on the graph, that is your tallest dot.",
+    "question": "Now **halve** the damping constant, to b = {bHalf} N·s/m. How tall is the peak at f_{d} = f_{0}?",
+    "choices": [
+      "{bAresHalf} cm",
+      "{bAres} cm (the same)",
+      "{bAres2} cm",
+      "{bAres4} cm"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": [
+      "Wrong way round:",
+      "It does change:",
+      "Right.",
+      "Too much:"
+    ],
+    "explain": "A_{res} = F_{0}/(b·ω_{0}) is **inversely proportional to b**, so half the damping gives **double** the peak: {bAres2} cm. (That is over the lab's {labLimit} cm limit: the spring would snap, which is what happens at very light damping.) Compare the static stretch at f_{d} = 0, which is F_{0}/k = {labX0} cm: the ratio A_{res} / (F_{0}/k) is the **quality factor Q**: {bQ} for the light setting, and twice that after halving b."
+  },
+  "bcyc": {
+    "kicker": "Bonus: how fast does it blow up?",
+    "title": "From rest to SNAP",
+    "lead": "Take the **very light** damping setting (Q = {bQ2}) and drive exactly at f_{0}. In the long run the amplitude would settle at A_{res} = {bAvl} cm, far above the {labLimit} cm limit. Starting from rest, the amplitude builds up as A(t) = A_{res}·(1 − e^(−t/τ)) with τ = 2m/b. Setting A = {labLimit} cm gives the number of swings before the snap:\n\n$ n ≈ (Q/π)·ln(1 / (1 − A_{limit}/A_{res}))",
+    "question": "Roughly how many full swings of the mass go by before the spring snaps?",
+    "choices": [
+      "Less than 1",
+      "About {bNform} (3 to 4)",
+      "About 30",
+      "It never snaps"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Too quick:",
+      "Yes.",
+      "Too slow:",
+      "It does:"
+    ],
+    "explain": "The formula gives about **{bNform}** swings. The mass only reaches that growing envelope at its turning points, once every half swing. At about {bNform} swings the turning point sits right at the limit, so the lab snaps at the next one, after about **{bNsim}** swings ({bTsim} s). So a small regular push at the right beat breaks the spring within **a few swings**. With light damping (Q = {bQ}) the peak is only {bAres} cm and it never snaps."
+  },
+  "bmyth": {
+    "kicker": "Bonus: myth-busting",
+    "title": "The bridge that is not a resonance example",
+    "lead": "On 7 November 1940 the Tacoma Narrows Bridge in Washington state twisted wildly in a steady wind of about 64 km/h (about 40 mph); its deck broke apart and fell into the water. Many textbooks have long used it as the classic example of resonance: the wind's gusts matched the bridge's natural frequency. Check your physics.",
+    "question": "What does the engineering analysis say really made it twist?",
+    "choices": [
+      "Simple resonance: gusts at exactly the bridge's natural frequency",
+      "Aeroelastic flutter: the twisting itself changes the airflow, and the airflow pushes the twist harder",
+      "An earthquake that happened at the same time",
+      "Too many cars crossing at once"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "The popular story, but no:",
+      "Yes.",
+      "Not what the analysis says:",
+      "Not what the analysis says:"
+    ],
+    "explain": "The wind was **steady**. It was not an outside driver oscillating at f_{0}. The bridge's own twisting changed how air flowed round the narrow, shallow deck with its solid plate-girder sides, and that flow pushed the twist harder: the bridge fed its own driving, called **aeroelastic flutter** (a self-excited oscillation). Physicists criticised the textbook story (see Billah and Scanlan, *American Journal of Physics*, 1991). Resonance was not the whole story, which is why we kept this one out of the main chapter. In the real world it is often hard to tell where resonance ends and self-excitation begins."
+  },
+  "figs": {
+    "push": {
+      "aria": "Two rows showing the swing's own motion as a wave. In the top row pushes arrive once per swing and every push meets the swing moving the same way as the push. In the bottom row pushes arrive a little faster than the swing: some meet the swing moving with them, others against them.",
+      "rowA": "pushes once per swing: f_{d} = f_{0}",
+      "rowB": "pushes a bit faster: f_{d} = {figRatio}·f_{0}",
+      "helps": "push with the motion",
+      "fights": "push against the motion",
+      "axis_x": "time",
+      "caption": "**Why timing matters.** The blue wave is the swing's own motion (up = swing to the right). A dot marks each push, which always points to the right. **Top:** f_{d} = f_{0}, every push arrives while the swing is moving right, so every push **adds** energy. **Bottom:** f_{d} = {figRatio}·f_{0}, the pushes drift in and out of step: some help, some fight the swing and take energy back. (A sketch of the swing's own beat, as in the game, not of a settled forced oscillation.)"
+    },
+    "curve": {
+      "aria": "Graph of amplitude against driving frequency for a mass on a spring. Both curves start low on the left, rise to a peak at the natural frequency f_{0}, and fall away on the right. The light damping curve has a tall narrow peak. The strong damping curve has a lower, wider peak.",
+      "f0": "f_{0} = {labF0} Hz",
+      "light": "light damping",
+      "strong": "strong damping",
+      "axis_x": "driving frequency f_{d}",
+      "axis_y": "amplitude",
+      "caption": "**The curve you were building, drawn out.** It is the lab's {labM} kg mass on the k = {labK} N/m spring, pushed with a peak force of {labF} N. The white dashed line is f_{0}. **Light damping** gives a **tall, narrow** peak. **Strong damping** gives a **lower, wider** one that sits a touch to the left of f_{0}. Far from f_{0}, on either side, both curves are low. At f_{d} = 0 the amplitude is the small stretch of a slowly pushed spring."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Find a key's own beat",
+    "lead": "You do not need a glass for resonance. A **key on a thread** is a pendulum, and you can drive it with your hand. You will shake the top by a few millimetres at three different rates and see which one builds the biggest swing.",
+    "safety": "**Safety:** use a light key and a thread, sit down, and keep away from faces, screens and anything breakable. No glass, no hanging weights. Stop if the swing becomes wild.",
+    "need": "**You need:** a key (or a small nut) on a thread, a ruler, a stopwatch (a phone's is fine), and a friend to watch the swing. A metronome app is a bonus: any free one will do. Tie the key so that the thread from your fingers to the **middle of the key** is **{expL} m** long.",
+    "steps": "**Do this:**\n1. Hold the top of the thread between finger and thumb, with your elbow on a table. Let the key hang still.\n2. **Free oscillation:** flick the key sideways a little and let go. Time **10 swings** (one swing is out and back). Divide by 10 to get the period T.\n3. Now **drive** it. Hold the key still, then move your hand side to side by only **a few millimetres**, one full movement (right, then back left) per swing. Do it for 15 s, three times: **slower** than the key's own rate (once every {expSlowT} s), **the key's own rate** (once every {expT} s), and **faster** (once every {expFastT} s). With a metronome, move right on one tick and back on the next.\n4. After each try, note how wide the swing got, in centimetres (let your friend hold the ruler behind it).",
+    "measure": "**Measure:** the time for 10 free swings, and the biggest swing width for each of the three driving rates.",
+    "compare": "**Compare with the formula:** for a pendulum f_{0} = (1/2π)·√(g/L) = (1/2π)·√({g} / {expL}) = **{expF} Hz**. So 10 free swings should take about **{expT10} s** (T = {expT} s), and the biggest swing should come when you move your hand once per {expT} s: **{expPm} full movements a minute** ({expTick} metronome ticks a minute). Half that rate ({expSlowF} Hz, {expSlowTick} ticks a minute) and double it ({expFastF} Hz, {expFastTick} ticks) should give much smaller swings. If it works, a few millimetres of shaking can build up a swing of a few centimetres. Now try a thread of {expL2} m: f_{0} = {expF2} Hz and T = {expT2} s, so the best rate moves to **one movement every {expT2} s**.",
+    "wrong": "**What goes wrong:** your hand cannot keep a perfect rhythm, and a key easily swings in circles instead of along a line, so push in one direction only. Measure the length to the key's **centre**, not to its top. The peak is **broad**: a rate a little off still gives a good swing, because the damping is small but not zero. The swing needs several swings to build up. A hand that moves too much just makes the key jump about, so keep the shaking tiny."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  }
+}

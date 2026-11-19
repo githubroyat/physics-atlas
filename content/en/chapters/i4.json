@@ -1,0 +1,718 @@
+{
+  "hero": {
+    "sfx": "WHOOSH",
+    "caption": "Fall sideways fast enough and you never land."
+  },
+  "intro": "Throw a ball harder and it lands farther away. Keep going. What happens when you throw it so hard that the ground curves away beneath it? That is an **orbit**, and the Moon, the space station and every satellite are doing exactly that. This chapter teaches it step by step, with the formulas as on your formula sheet. It uses two earlier ideas, and recaps each one where it is needed: *Weighing the Earth* (gravity, g = G·M/r²) and *Round and round* (a_{cent} = v²/r). Unless we say otherwise: the Earth is a uniform sphere with the booklet's M = {Msci} kg and R = {Rsci} m, there is no air, and g = {g} m/s² at the ground.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "explain an **orbit** as falling with enough sideways speed (Newton's cannon);",
+      "use gravity as the centripetal force, G·M·m/r² = m·v²/r, to get **v = √(G·M/r)** and **T = 2π·r/v**, with **r measured from the centre** of the Earth;",
+      "describe the **space station's** orbit and find the radius of a **geostationary** orbit;",
+      "explain why astronauts **feel weightless** (they still have about {issPct} % of their weight, but they are in free fall);",
+      "say which force points to the centre when a car goes round a **flat** and a **banked** bend;",
+      "find the radius of the circle of a **charged particle** in a magnetic field, r = m·v/(q·B)."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "You stand on a very high mountain, above the air, and fire a cannonball **horizontally**. The faster the shot, the farther it lands. Now you make the shot faster and faster.\n\nWhat happens in the end?",
+    "choices": [
+      "It always lands somewhere, just farther and farther away",
+      "It flies off in a straight line and never comes back",
+      "The ground curves away beneath it as fast as it falls, so it never lands",
+      "It stops falling once it is fast enough"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "It does at first, but the Earth is round:",
+      "Gravity never switches off:",
+      "Yes! That is an orbit.",
+      "Gravity keeps pulling, always:"
+    ],
+    "explain": "**The ball keeps falling, but the Earth's surface curves away below it.** Fast enough, it keeps missing the ground. Let's see how fast, and what that means for satellites.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Fall, and keep missing",
+    "body": "**Recap.** *Weighing the Earth* gave the pull of gravity, F_{G} = G·m_{1}·m_{2}/r², and the field g = G·M/r². The distance r is measured from the **centre** of the Earth. *Round and round* gave the rule for circles: a_{cent} = v²/r, pointing to the centre.\n\nNewton's thought experiment: put a cannon on a mountain so high that it is above the air, and fire **horizontally**. Gravity pulls the ball down at once. A slow ball lands close by. A faster ball lands farther away. But the Earth is **round**, so its surface curves away below the ball. Fire fast enough and the ground curves away just as quickly as the ball falls. The ball **keeps falling and keeps missing the ground**.\n\nThat is all an **orbit** is: falling, with enough sideways speed.",
+    "check": {
+      "q": "A satellite is in a **circular** orbit round the Earth. What is it doing?",
+      "choices": [
+        "Floating at a place where gravity is switched off",
+        "Held up by a force that balances gravity",
+        "Falling towards the Earth all the time, while moving sideways so fast that it keeps missing it",
+        "Moving in a straight line"
+      ],
+      "answer": 2,
+      "why": "Gravity pulls the satellite towards the Earth **all the time**. Its sideways speed makes the ground curve away as fast as the satellite falls. Gravity is not zero, and nothing balances it: the satellite is accelerating towards the centre.",
+      "whyNot": [
+        "Gravity doesn't switch off up there: it is still strong. Try again with that in mind.",
+        "If a force balanced gravity, the net force would be zero. Would the satellite then keep curving round the Earth?",
+        null,
+        "Moving in a straight line at a steady speed needs zero net force. Gravity keeps pulling on the satellite, so the path bends. Try again."
+      ]
+    }
+  },
+  "cannon": {
+    "lead": "**Newton's cannon.** The cannon sits on a tower {issH} km above the ground, above the air (no air resistance here). Set the launch speed and press **Fire**. The lab adds up gravity in tiny 2-second steps, with gravity getting weaker as the ball moves away from the Earth. It runs as a time-lapse.",
+    "scene": "The Earth seen from above with a tall tower and a cannon firing sideways; the ball's path is drawn as it moves",
+    "scene_note": "Top view. The tower is {issH} km tall and the Earth is drawn to scale.",
+    "boom": "CRASH",
+    "speed": "Launch speed",
+    "fire": "Fire!",
+    "reset": "Back to the tower",
+    "r_launch": "Launch speed",
+    "r_circ": "Speed for a circle here",
+    "r_low": "Lowest height so far",
+    "r_high": "Highest height so far",
+    "r_time": "Time",
+    "r_result": "Result",
+    "ground": "hit the ground",
+    "one_lap": "one full lap",
+    "s_fly": "Flying...",
+    "s_crash": "Too slow: it falls back and hits the ground.",
+    "s_circle": "A circular orbit: the lowest and highest points are almost equal.",
+    "s_ellipse": "An oval orbit (an ellipse): it swings out and comes back to where it started.",
+    "crash": "Crash",
+    "circle": "Circle",
+    "ellipse": "Ellipse",
+    "tasks": "**Try these:**\n- Fire at **5.00 km/s**. The ball curves, but not enough: it hits the ground.\n- Raise the speed in small steps. Just above **7.5 km/s** the ball finally misses the ground. Watch the lowest-height readout.\n- Find the speed that gives a **circle**: the lowest and highest heights are nearly equal. Compare with the readout \"Speed for a circle here\": {vcI} km/s. Step 2 shows where that number comes from.\n- Go faster still: the orbit becomes an **ellipse**. The launch point is now its **lowest** point, and the ball swings far out and comes back. (Slower than the circle speed, the launch point is the highest point.)\n\nThe slider stops at {capV} km/s. Faster than about {escI} km/s (the escape speed from this height, see the bonus), the ball would leave the Earth for good."
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "How fast is a circle?",
+    "lead": "From *Round and round*: for a circle the resultant force must point to the centre and have size m·v²/r. Up in orbit, only one real force acts on the satellite: **gravity**. So gravity *is* the centripetal force. Tap the right move at each step.",
+    "check": {
+      "q": "Two satellites, one of **500 kg** and one of **1500 kg**, circle the Earth at the same radius **{c3r} m**. Which one moves faster?",
+      "choices": [
+        "The 500 kg one",
+        "The 1500 kg one",
+        "They move at the same speed",
+        "It depends on how they were launched, not on the radius"
+      ],
+      "answer": 2,
+      "why": "v = √(G·M/r) has **no m** in it. The heavier satellite is pulled harder, but it is also harder to turn, and the two cancel. At the same radius the speed is the same.",
+      "whyNot": [
+        "Lighter does not mean faster here. Look at v = √(G·M/r): does the satellite's mass m appear in it?",
+        "Heavier does not mean faster either. Look at v = √(G·M/r): does m appear in it?",
+        null,
+        "For a circle, the radius alone sets the speed. Which letters are in v = √(G·M/r)?"
+      ]
+    }
+  },
+  "derive": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "A satellite of mass m circles the Earth (mass M) at distance r from the Earth's centre. Which real force provides the centripetal force?",
+        "options": [
+          "Gravity, F_{G} = G·M·m/r²",
+          "A \"centrifugal\" force pushing outwards",
+          "Air pushing it round"
+        ],
+        "answer": 0,
+        "then": "**Gravity.** There is no air, and the \"centrifugal force\" is not a real force on the satellite (see *Round and round*). Gravity points to the centre, and that is exactly what a circle needs."
+      },
+      {
+        "prompt": "The centripetal force needed is m·a_{cent} = m·v²/r. Set it equal to gravity: G·M·m/r² = ...",
+        "options": [
+          "m·v²/r",
+          "m·v·r",
+          "m²·v/r"
+        ],
+        "answer": 0,
+        "then": "$ G·M·m/r² = m·v²/r\n\nThe satellite's mass **m cancels** from both sides, and multiplying by r leaves\n\n$ v² = G·M/r"
+      },
+      {
+        "prompt": "Now solve for the speed v of a circular orbit of radius r:",
+        "options": [
+          "v = √(G·M/r)",
+          "v = G·M/r",
+          "v = √(G·M·r)"
+        ],
+        "answer": 0,
+        "then": "$ v = √(G·M/r)\n\nOne lap is a distance 2π·r at speed v, so the time for one lap is\n\n$ T = 2π·r/v\n\nTwo things to notice: the satellite's own mass is **not in the formula**, and r is measured **from the centre** of the Earth, so **r = R + h** for a height h above the ground."
+      }
+    ]
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "The space station and friends",
+    "body": "Take the International Space Station at **{issH} km**. (Same assumption as in *Weighing the Earth*: a perfect circle exactly {issH} km up. The real ISS flies at roughly 400 to 420 km.) The distance from the **centre** is r = R + h = {Rsci} + {issHm} = **{issR} m**, not {issH} km. Use G = 6.6743 × 10⁻¹¹ N m² kg⁻² (one more digit than the 6.674 of *Weighing the Earth*), so G·M = {GM5} m³/s².\n\n$ v = √(G·M/r) = √({GM5} / {issR}) = {issVm} m/s ≈ {issV} km/s\n$ T = 2π·r/v = 2π × {issR} / {issVm} = {issTs} s ≈ {issT} min\n\nThe station goes round the Earth in about an hour and a half. The bigger the radius, the **slower** the speed, and the lap takes even longer (a longer path at a lower speed):\n\n- **{issH} km** up: v = {issV} km/s, T = {issT} min\n- **2 000 km** up (r = {t2r} km): v = {t2v} km/s, T = {t2T} min\n- **{geoH} km** up (the geostationary orbit, next step): v = {geoV} km/s, T = 23 h 56 min\n\n(Right at ground level, with no air and no mountains, a circular orbit would need v = {surfV} km/s and T = {surfT} min.)",
+    "check": {
+      "q": "A satellite circles at r = {c3r} m with speed {c3v} km/s. It is moved to a circular orbit with a radius **4 times bigger**, r = {c3r4} m. Its speed is now about...",
+      "choices": [
+        "{c3w1} km/s",
+        "{c3v4} km/s",
+        "{c3w2} km/s",
+        "{c3v} km/s"
+      ],
+      "answer": 1,
+      "why": "v ∝ 1/√r, and √4 = 2, so the speed **halves**: {c3v} / 2 = {c3v4} km/s. Higher orbits are slower.",
+      "whyNot": [
+        "That is too small a speed: it would need v ∝ 1/r. Look at the formula again: where does r stand in v = √(G·M/r)?",
+        null,
+        "That is more than before. In a higher orbit, is the satellite faster or slower? Check Step 3's list.",
+        "The speed does depend on the radius: v = √(G·M/r). Try again."
+      ]
+    }
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Parking a satellite",
+    "body": "A satellite-TV dish points at one fixed spot in the sky. So the satellite must stay above **one spot on the Earth**. That happens when its lap takes exactly as long as one turn of the Earth, and it circles above the equator. This is the **geostationary orbit**.\n\nThe Earth turns once relative to the stars in **23 h 56 min** = {sid} s (the 24-hour day is a little longer, because we also move round the Sun). So T = {sid} s. Which radius gives that? Use the two facts you know:\n\n$ v = 2π·r/T   and   v = √(G·M/r)\n\nSquare both and set them equal: (2π·r/T)² = G·M/r, which is\n\n$ 4π²·r²/T² = G·M/r\n\nSolve for r³:\n\n$ r³ = G·M·T² / (4π²)\n\nNumbers: G·M = {GM5} m³/s², T² = {geoT2} s², so G·M·T² = {geoNum}. Divide by 4π² = {geoDen}: r³ = {geoR3} m³. Take the cube root:\n\n$ r = {geoRc} m ≈ {geoRkm} km\n\nThat is {geoRatio} times the Earth's radius. The height above the ground is r − R ≈ **{geoH} km**, and the speed is v = 2π·r/T ≈ {geoV} km/s.",
+    "check": {
+      "q": "You need a satellite whose lap takes **6 hours** instead of 23 h 56 min. Compared with the geostationary orbit, its radius must be...",
+      "choices": [
+        "bigger (a higher orbit)",
+        "the same, but the satellite must be heavier",
+        "the same, but the satellite must fly faster",
+        "smaller (a lower orbit)"
+      ],
+      "answer": 3,
+      "why": "A shorter lap needs a **smaller r**: T = 2π·r/v, and in lower orbits the satellite is faster too. Radius and speed are tied together by v = √(G·M/r); you cannot choose both.",
+      "whyNot": [
+        "Check Step 3's list: as the height grows, does the lap time grow or shrink?",
+        "The satellite's mass is not in r³ = G·M·T²/(4π²). Only the lap time T matters for the radius.",
+        "The same radius gives the same speed and the same lap time. A different lap time needs a different radius.",
+        null
+      ]
+    }
+  },
+  "park": {
+    "lead": "**Park the satellite!** Pick a target lap time with a button. Then slide the **orbit radius** (from the Earth's centre) until one lap takes that long, to within 2 %, and press **Park here**. The yellow square is a house on the equator; the lab is a time-lapse (one day passes in 20 seconds). The dashed line links the house to the satellite. Use the − and + buttons for tiny steps.",
+    "scene": "The Earth from above with a satellite on a dashed circular orbit and a yellow house on the equator",
+    "radius": "Orbit radius from the centre",
+    "lower": "A tiny bit lower",
+    "higher": "A tiny bit higher",
+    "free": "Free play",
+    "target": "Target lap time",
+    "park": "Park here",
+    "r_radius": "Radius r",
+    "r_height": "Height above ground",
+    "r_speed": "Speed v",
+    "r_period": "Time for one lap",
+    "r_target": "Target",
+    "note": "Slider: from 200 km above the ground up to 46 000 km from the centre. Each lap time here comes from T = 2π·r/v with v = √(G·M/r).",
+    "ok": "Parked! The lap time is on target.",
+    "ok_geo": "Parked! The house and the satellite turn together: the link line stays still. Geostationary!",
+    "too_slow": "Too slow a lap. Go lower: a smaller radius means a shorter lap.",
+    "too_fast": "Too quick a lap. Go higher: a bigger radius means a longer lap.",
+    "after": "Park all four. The **longer** the lap time you want, the **higher** the orbit. At the last target, the house and the satellite keep step. Try the 2-hour target and watch the house get left behind."
+  },
+  "learn5": {
+    "kicker": "Learn · Step 5",
+    "title": "Weightless?",
+    "body": "Astronauts float inside the station. Is gravity switched off up there? No. *Weighing the Earth* showed that at {issH} km, g = G·M/r² = **{issG} m/s²**, about **{issPct} %** of the ground value (9.81 m/s²). Gravity pulls hard.\n\nYour **weight** is the pull of gravity on you, m·g. At {issH} km an astronaut still has about {issPct} % of the weight they have on the ground. What you *feel* as weight is something else: the **contact force** of the floor (or chair) on you. On the ground it is m·g upwards. In orbit the astronauts and the station **fall together**, with the same acceleration (gravity still pulls on them: that is *why* they fall). The astronauts and the floor fall at the same rate, so the floor never pushes on the astronauts: they **float**. They are \"weightless\" in this second sense, which means **free fall**, not \"no gravity\".\n\nSort these: is each one in free fall (only gravity acts)?",
+    "after": "A free-falling lift, a ball in the air and the station are all the same idea: gravity is the **only** force, so everything falls with the same acceleration and nothing presses on anything else. (The station just has so much sideways speed that it keeps missing the Earth.)",
+    "check": {
+      "q": "An astronaut floats inside the space station at {issH} km. Which statement is correct?",
+      "choices": [
+        "There is no gravity at that height",
+        "Gravity there is about {issPct} % of the ground value, but the astronaut and the station fall together",
+        "The Moon's gravity cancels the Earth's gravity",
+        "A \"centrifugal force\" pushes the astronaut outwards and cancels gravity"
+      ],
+      "answer": 1,
+      "why": "g at {issH} km is {issG} m/s², so the astronaut still has a weight of about {issPct} % of the ground value. The astronaut feels weightless because the astronaut and the station are in **free fall** together, so the floor doesn't need to push. Gravity is not zero, and \"centrifugal force\" is not a real force on them.",
+      "whyNot": [
+        "Gravity doesn't vanish with height: over {issH} km it only gets a little weaker.",
+        null,
+        "The Moon is far away and its pull on the astronaut is tiny. It cannot cancel the Earth's pull.",
+        "\"Centrifugal force\" is not a real force on the astronaut (see *Round and round*). Which real force acts?"
+      ]
+    }
+  },
+  "sort": {
+    "yes": "Free fall: weightless",
+    "no": "Not free fall",
+    "cards": [
+      {
+        "label": "Astronaut in the space station",
+        "tagline": "Tap to check",
+        "yes": true,
+        "why": "Only gravity acts, and the astronaut falls round the Earth together with the station."
+      },
+      {
+        "label": "You, standing on the ground",
+        "tagline": "Tap to check",
+        "yes": false,
+        "why": "The floor pushes up with m·g. That contact force is what you feel as your weight."
+      },
+      {
+        "label": "A ball in the air after you throw it (no air resistance)",
+        "tagline": "Tap to check",
+        "yes": true,
+        "why": "Only gravity acts on it, whether it is going up or down. It is in free fall the whole time."
+      },
+      {
+        "label": "A lift with a snapped cable (ideal: no braking)",
+        "tagline": "Tap to check",
+        "yes": true,
+        "why": "The lift and the person inside fall together, so the floor does not push on the person."
+      },
+      {
+        "label": "A rocket with its engine firing",
+        "tagline": "Tap to check",
+        "yes": false,
+        "why": "The engine pushes with a second force, so it is not only gravity. The crew feel pressed into their seats."
+      }
+    ]
+  },
+  "learn6": {
+    "kicker": "Learn · Step 6",
+    "title": "Bends in the road",
+    "body": "**Recap** from *Round and round*: the centripetal force is **whatever real force points to the centre**. For a coin on a turntable it was friction. For a car on a **flat** bend it is the same: **friction** between tyres and road. On ice there is none, and the car slides straight on.\n\nBuilders can do better by **banking** the bend: tilting the road so that the outside is higher. The road pushes on the car with the **normal force N**, perpendicular to the road surface. On a banked road N leans towards the centre of the bend, so part of it helps to turn the car. Flip the switches and see which forces point to the centre.",
+    "after": "Racing circuits, cycle tracks and many motorway bends are banked this way. On the right bank, at the right speed, the leaning normal force alone supplies the centripetal force, with no friction needed. (How big the angle must be is a bonus calculation at the end.)",
+    "check": {
+      "q": "A car goes round a **banked** bend on an icy road (no friction) at the speed the bank was built for. Which force points towards the centre of the bend?",
+      "choices": [
+        "A centrifugal force",
+        "Friction from the tyres",
+        "The part of the normal force that leans towards the centre",
+        "Nothing: the car goes straight"
+      ],
+      "answer": 2,
+      "why": "The normal force is perpendicular to the tilted road, so it has a sideways part pointing **to the centre**. At the design speed that part alone is the centripetal force.",
+      "whyNot": [
+        "No real \"centrifugal\" force acts on the car, and it would point outwards anyway. Look for a real force pointing inwards.",
+        "The road is icy, so there is no friction to count on. Which real force is left?",
+        null,
+        "The car does go round the bend, so some real force must point to the centre. Which one is left without friction?"
+      ]
+    }
+  },
+  "bend": {
+    "scene": "A car seen from behind on a bend, with arrows for its weight, the normal force and friction; the centre of the bend is on the right",
+    "road": "Road",
+    "surface": "Surface",
+    "flat": "Flat",
+    "banked": "Banked",
+    "dry": "Dry",
+    "icy": "Icy",
+    "centre": "centre of the bend",
+    "slides": "slides out",
+    "modes": {
+      "flat-dry": "**Flat, dry.** Weight m·g and the normal force N are vertical and cancel. The only real force pointing to the centre is **friction** (yellow). It is the centripetal force.",
+      "flat-icy": "**Flat, icy.** With no friction nothing points to the centre. The car carries straight on, which on a bend means **sliding outwards** (orange).",
+      "banked-dry": "**Banked, dry.** N is perpendicular to the road, so it leans towards the centre (yellow). Together with a little friction it supplies the centripetal force. At other speeds friction helps: down the slope if the car is faster than the design speed, up the slope if it is slower.",
+      "banked-icy": "**Banked, icy.** Even without friction, N leans towards the centre. At the speed the bank is built for, that sideways part alone is the centripetal force. Go too fast and the car still slides out."
+    }
+  },
+  "learn7": {
+    "kicker": "Learn · Step 7",
+    "title": "Charged particles in a magnetic field",
+    "body": "Same recipe, a different force. In *Current makes a magnet* you met the magnetic flux density **B** (in tesla) and saw that an electron beam is a current. Now the field acts back on moving charges. A particle with charge q moving with speed v **perpendicular** to a field B feels a magnetic force (formula booklet)\n\n$ F = B·q·v·sin θ\n\nwhere θ is the angle between v and B. Here v ⟂ B, so sin θ = 1 and F = B·q·v.\n\n(Which way it points is a rule for next year.) What matters here: this force is always **perpendicular to the velocity**. A force that is always sideways never speeds the particle up or slows it down; it only turns it. Its size stays the same, so the particle moves on a **circle**, and the magnetic force **is the centripetal force**, just as gravity was for the satellite:\n\n$ B·q·v = m·v²/r\n\nCancel one v and solve for r:\n\n$ r = m·v/(q·B)\n\n**Example.** An electron (m = {mm} kg, q = {me} C; the booklet gives 1.602 × 10⁻¹⁹ C) moves at v = {cv} m/s in a uniform field B = {cB} mT = {cB} × 10⁻³ T:\n\n$ r = ({mm} × {cv}) / ({me} × {cB} × 10⁻³) = {cnum} / {cden} m ≈ {crm} m = {cr} cm\n\nA faster particle makes a **bigger** circle, a stronger field a **smaller** one. Particle beams in accelerators and mass spectrometers are bent into circles like this.",
+    "check": {
+      "q": "A second electron enters the same uniform magnetic field with **twice** the speed of the first. The radius of its circle is...",
+      "choices": [
+        "half as big",
+        "the same",
+        "twice as big",
+        "four times as big"
+      ],
+      "answer": 2,
+      "why": "r = m·v/(q·B), so r is proportional to v. Double the speed, **double the radius**.",
+      "whyNot": [
+        "In r = m·v/(q·B) the speed is on top. Does a bigger v make r bigger or smaller?",
+        "The speed is in the formula, so it matters: r = m·v/(q·B).",
+        null,
+        "That would be r ∝ v². In r = m·v/(q·B) the speed appears once, to the first power."
+      ]
+    }
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: speed and lap time",
+        "problem": "A satellite circles the Earth in a circular orbit **700 km** above the surface. Find its speed and the time for one lap. (G = 6.6743 × 10⁻¹¹ N m² kg⁻², M = {Msci} kg, R = {Rsci} m)",
+        "steps": [
+          "Distance from the **centre**: r = R + h = {Rsci} + 7.0 × 10⁵ = {w1r} m.",
+          "G·M = {GM5} m³/s². Then G·M/r = {GM5} / {w1r} = {w1v2} m²/s².",
+          "v = √(G·M/r) = √({w1v2}) = {w1v} m/s.",
+          "One lap is 2π·r, so T = 2π·r/v = 2π × {w1r} / {w1v} = {w1T} s."
+        ],
+        "answer": "v ≈ **{w1vk} km/s**, T ≈ **{w1T} s**, about {w1Tm} min"
+      },
+      {
+        "title": "Example 2: find the height for a given lap time",
+        "problem": "A satellite must complete one circular lap in **2.00 hours**. How high above the Earth's surface must it orbit? (Same constants as above.)",
+        "steps": [
+          "T = 2.00 h = {w2T} s. From v = 2π·r/T and v = √(G·M/r): r³ = G·M·T² / (4π²).",
+          "T² = {w2T2} s², so G·M·T² = {GM5} × {w2T2} = {w2num}.",
+          "Divide by 4π² = {geoDen}: r³ = {w2r3} m³.",
+          "Cube root: r = {w2r} m. This is measured from the centre, so the height is h = r − R."
+        ],
+        "answer": "r ≈ **{w2r} m**, so h = r − R ≈ **{w2h} km** above the surface"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A satellite is in a circular orbit of radius **{p1r} m**, measured from the centre of the Earth. What is its speed? (G = 6.6743 × 10⁻¹¹ N m² kg⁻², M = {Msci} kg)",
+        "choices": [
+          "{p1v} km/s",
+          "{p1w1} km/s",
+          "{p1w2} km/s",
+          "{p1w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "v = √(G·M/r). Don't forget the square root, and use the radius that is given.",
+        "solution": "Gravity is the centripetal force, so v = √(G·M/r).\n\nG·M = {GM5} m³/s² and r = {p1r} m, so G·M/r = {p1v2} m²/s² and v = √({p1v2}) ≈ **{p1v} km/s**.\n\nSense check: a little below the {surfV} km/s needed at ground level, as it should be for a higher orbit.",
+        "whyNot": [
+          null,
+          "{p1w1} km/s is √(g·r) with the ground value g = 9.81 m/s². Gravity is weaker at r = {p1r} m ({p1w3} m/s²), and the formula has G·M/r under the root, not g·r. v = √(G·M/r) = {p1v} km/s.",
+          "{p1w2} km/s adds the Earth's radius R to the given r, but r = {p1r} m is already measured from the centre. Use it as it is: v = {p1v} km/s.",
+          "{p1w3} m/s² is G·M/r², the gravity at that radius, not a speed. The speed is √(G·M/r) = {p1v} km/s."
+        ]
+      },
+      {
+        "q": "A satellite orbits in a circle **{p2h} km above the Earth's surface**. What is its speed? (R = {Rsci} m, M = {Msci} kg, G = 6.6743 × 10⁻¹¹ N m² kg⁻²)",
+        "choices": [
+          "{p2v} km/s",
+          "{p2w1} km/s",
+          "{p2w2} km/s",
+          "{p2w3} km/s"
+        ],
+        "answer": 0,
+        "hint": "r is measured from the centre, so r = R + h.",
+        "solution": "r is measured from the centre: r = R + h = {Rsci} + 1.0 × 10⁶ = {p2r} m.\n\nThen v = √(G·M/r) = √({GM5} / {p2r}) = **{p2v} km/s**.\n\nSense check: a bit slower than the station's {issV} km/s, because 1 000 km is higher than 400 km.",
+        "whyNot": [
+          null,
+          "{p2w1} km/s is the speed right at the ground (r = R). You left out the height: r = R + h = {p2r} m, so v = {p2v} km/s.",
+          "{p2w2} km/s uses r = 1.0 × 10⁶ m, the height alone. r is measured from the Earth's centre, so add R: v = {p2v} km/s.",
+          "{p2w3} km/s uses r = R − h, as if the satellite were below the surface. It is **above** it, so add the height: r = R + h = {p2r} m, and v = {p2v} km/s."
+        ]
+      },
+      {
+        "q": "Satellite A orbits at **9 times the radius** of satellite B (same planet, both circular). Compared with B, the speed of A is...",
+        "choices": [
+          "3 times smaller",
+          "9 times smaller",
+          "3 times bigger",
+          "9 times bigger"
+        ],
+        "answer": 0,
+        "hint": "v ∝ 1/√r. What is √9?",
+        "solution": "v = √(G·M/r), so v ∝ 1/√r.\n\nWith r_{A} = 9·r_{B}: v_{A}/v_{B} = √(r_{B}/r_{A}) = √(1/9) = 1/3.\n\nSo A is **3 times smaller** (3 times slower). Sense check: the higher orbit must be the slower one.",
+        "whyNot": [
+          null,
+          "That forgets the square root. v ∝ 1/√r, so 9 times the radius gives √9 = 3 times smaller, not 9.",
+          "Higher orbits are slower, not faster. v = √(G·M/r) falls as r grows.",
+          "Two slips: a higher orbit is slower, and v ∝ 1/√r, not 1/r. The answer is 3 times smaller."
+        ]
+      },
+      {
+        "q": "Astronauts float inside the space station, {issH} km above the ground. Why?",
+        "choices": [
+          "They and the station are in free fall together, with gravity as the only force",
+          "Gravity is zero at that height",
+          "The station spins and makes an outward force that cancels gravity",
+          "There is no air up there, so nothing pushes them down"
+        ],
+        "answer": 0,
+        "hint": "Is gravity really zero at {issH} km? Think about what you feel as weight.",
+        "solution": "Weight is the pull of gravity, m·g. At {issH} km, g = G·M/r² = {issG} m/s², still about {issPct} % of the ground value, so gravity is **not** zero.\n\nThe astronauts and the station fall together with the same acceleration, so the floor does not push on them and they feel weightless. That means free fall.\n\nSense check: with gravity at {issPct} %, the station could not float by itself; it keeps falling round the Earth.",
+        "whyNot": [
+          null,
+          "Gravity at {issH} km is still {issG} m/s², about {issPct} % of the ground value. It is not zero: they float because of free fall.",
+          "A \"centrifugal\" outward force is not a real force on them (see *Round and round*). Only gravity acts, and they fall together with the station.",
+          "Gravity pulls with or without air. They float because they and the station fall together, so the floor never pushes on them."
+        ]
+      },
+      {
+        "q": "A satellite circles at r = **{p1r} m** with a speed of **{p5v} km/s**. How long does one lap take?",
+        "choices": [
+          "{p5T} min",
+          "{p5w1} min",
+          "{p5w2} min",
+          "{p5w3} min"
+        ],
+        "answer": 0,
+        "hint": "One lap is a distance 2π·r. Use T = 2π·r/v and convert from seconds to minutes.",
+        "solution": "One lap is a distance 2π·r, so T = 2π·r/v.\n\nT = 2π × {p1r} / {p5vm} = {p5Ts} s. Divide by 60: {p5Ts} / 60 = **{p5T} min**.\n\nSense check: a little longer than the station's {issT} min, since this orbit is a bit higher.",
+        "whyNot": [
+          null,
+          "{p5w1} min is just r/v: you left out the 2π. One lap is 2π·r, so T = 2π·r/v = {p5T} min.",
+          "{p5w2} min is half the right time, like using π·r instead of 2π·r (only half a lap). T = 2π·r/v = {p5T} min.",
+          "{p5w3} min is twice the right time, as if the diameter 2r were used as the radius. With r: T = {p5T} min."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "The cannon on the mountain",
+    "frames": [
+      {
+        "cap": "1680s",
+        "text": "Isaac Newton imagines a cannon on a very high mountain. Fired sideways, the ball lands far away. He describes the idea in a text called *The System of the World*, written in the 1680s and published after his death, in 1728. A short version is already in his famous book, the *Principia* (1687).",
+        "fx": "BOOM"
+      },
+      {
+        "cap": "The idea",
+        "text": "Shoot **faster** and the ball lands farther. Shoot fast enough and the ground curves away as quickly as the ball falls: it **circles the Earth**. With no air and no mountains in the way, that takes about {surfV} km/s at ground level.",
+        "fx": "WHOOSH"
+      },
+      {
+        "cap": "October 1945",
+        "text": "The writer Arthur C. Clarke publishes an article in the magazine *Wireless World*. His idea: radio relay stations (he pictured crewed ones) in an orbit where one lap takes one day, so each hangs above one spot. He says three would be enough to cover the world.",
+        "fx": "SIGNAL"
+      },
+      {
+        "cap": "4 October 1957",
+        "text": "The Soviet Union launches **Sputnik 1**, the first artificial satellite. Newton's cannonball finally exists: it falls round the Earth about every 96 minutes.",
+        "fx": "BEEP"
+      }
+    ],
+    "question": "A satellite dish on a house points at a fixed spot in the sky. The satellite it points at must...",
+    "choices": [
+      "hang still, because gravity is zero up there",
+      "circle above the equator with a lap time of one sidereal day (one turn relative to the stars)",
+      "orbit just above the air, with a lap of about 90 minutes",
+      "be tied to the Moon"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Gravity is not zero up there:",
+      "Yes.",
+      "That lap would sweep it across the sky:",
+      "No:"
+    ],
+    "explain": "A geostationary satellite goes round once in 23 h 56 min, exactly as the Earth turns, so from the ground it seems to hang still. That needs r = {geoRkm} km from the Earth's centre. A satellite at {issH} km would race across the sky and be gone in minutes."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Gravity and Orbits",
+    "body": "Put bodies in orbit and change what is going on. Use the sim's controls to change the masses and the distances, switch on the paths and the force arrows, and watch how the orbit changes. Predict first: when you move a body farther out, does its lap take longer?\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The mountain cannon",
+    "body": "Draw an anime-style hero with a giant cannon on a mountain peak as a 4-panel strip. **Panel 1:** a slow shot, and the ball hits the ground near the foot of the mountain. **Panel 2:** a faster shot, landing far away over the curve of the Earth. **Panel 3:** the perfect speed: the ball goes all the way round the planet and comes back to hit the hero in the back! **Panel 4:** the hero floating in a space station, falling together with everything around them."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "An **orbit** is falling with enough sideways speed: the satellite keeps missing the Earth. Too slow: it crashes. The right speed: a circle. Faster: an ellipse.",
+      "Gravity is the centripetal force: **G·M·m/r² = m·v²/r**, so **v = √(G·M/r)** and **T = 2π·r/v**. The satellite's mass cancels.",
+      "**r is measured from the centre** of the Earth: r = R + h, with R = {Rsci} m and M = {Msci} kg.",
+      "Higher orbit: **slower** and a **longer lap**. Space station at {issH} km: v ≈ {issV} km/s, T ≈ {issT} min.",
+      "**Geostationary**: T = 23 h 56 min = {sid} s, so r³ = G·M·T²/(4π²), r ≈ {geoRkm} km from the centre ({geoH} km up), above the equator.",
+      "**Feeling weightless = free fall**, not zero gravity. At {issH} km, g is still about {issPct} % of the ground value (9.81 m/s²), so the weight m·g is still about {issPct} %. What you feel as weight is the contact force of the floor, and in free fall there is none.",
+      "Bends: on a flat road the centripetal force is **friction**. On a banked road part of the **normal force** points to the centre as well.",
+      "**Charged particle in a magnetic field:** F = B·q·v (v ⟂ B) is always perpendicular to v, so it is the centripetal force: B·q·v = m·v²/r, so **r = m·v/(q·B)**. A faster particle makes a bigger circle, a stronger field a smaller one."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A satellite moves in a circle at constant speed. Its acceleration...",
+        "choices": [
+          "points along its path",
+          "points away from the Earth",
+          "points to the centre of the Earth",
+          "is zero, because the speed is constant"
+        ],
+        "answer": 2,
+        "why": "The direction of the velocity keeps changing, so there is an acceleration, a_{cent} = v²/r, and it points **to the centre**. Gravity provides it.",
+        "whyNot": [
+          "Along the path would change the speed. The speed is constant, so the acceleration is sideways: to the centre.",
+          "Away from the Earth is the \"centrifugal\" idea. The real acceleration comes from gravity, which pulls towards the Earth.",
+          null,
+          "A constant speed is not a constant velocity: the direction keeps changing, so a_{cent} = v²/r is not zero."
+        ]
+      },
+      {
+        "q": "A geostationary satellite goes round the Earth once every...",
+        "choices": [
+          "12 hours",
+          "23 h 56 min",
+          "1 week",
+          "90 minutes"
+        ],
+        "answer": 1,
+        "why": "Its lap must match one turn of the Earth relative to the stars: **23 h 56 min**.",
+        "whyNot": [
+          "12 hours is two laps per turn of the Earth, so the satellite would drift off its spot. One lap per turn is 23 h 56 min.",
+          null,
+          "A week is far too slow: the satellite would be left behind as the Earth turns. One lap must match one turn: 23 h 56 min.",
+          "About 90 minutes is a low orbit like the space station's. It races across the sky instead of hanging still."
+        ]
+      },
+      {
+        "q": "A satellite is moved to a higher circular orbit. Its speed and the time for one lap become...",
+        "choices": [
+          "bigger speed, longer lap",
+          "smaller speed, shorter lap",
+          "smaller speed, longer lap",
+          "bigger speed, shorter lap"
+        ],
+        "answer": 2,
+        "why": "v = √(G·M/r) gets **smaller** as r grows, and the path 2π·r gets longer, so T = 2π·r/v gets **longer**.",
+        "whyNot": [
+          "Higher means slower: v = √(G·M/r) falls as r grows. Only the lap time gets longer.",
+          "Smaller speed is right, but then the lap is longer: the path 2π·r is longer and it is travelled more slowly.",
+          null,
+          "Higher orbits are slower and have a longer path, so the lap is longer, never shorter."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "bk": {
+    "kicker": "Bonus: Kepler's third law",
+    "title": "A month from a day",
+    "lead": "Put v = √(G·M/r) into T = 2π·r/v and square it: T² = 4π²·r³/(G·M). So **T² ∝ r³**, or T ∝ r^(3/2). That is Kepler's third law, which he found in the planets' orbits and published in 1619. It lets you scale from one known orbit to another.",
+    "question": "A geostationary satellite has r = {geoR} m and T = 1 day (23 h 56 min). The Moon is at r = {moonR} m, about {moonRatio} times farther. Treating its orbit as a circle, how long is its lap?",
+    "choices": [
+      "about 3 days",
+      "about 9 days",
+      "about 27 days",
+      "about 83 days"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": [
+      "That would be T ∝ √r. It is r to the power 3/2:",
+      "That would be T ∝ r. It is r to the power 3/2:",
+      "Right. Here's the calculation:",
+      "That would be T ∝ r². It is r to the power 3/2:"
+    ],
+    "explain": "T ∝ r^(3/2), so T = 1 day × {moonRatio}^(3/2) ≈ **{moonDays} days**. Computing straight from T = 2π√(r³/(G·M)) with r = {moonR} m gives about {moonDirect} days too. The real Moon takes about 27.3 days to circle the Earth once relative to the stars: the idea works for the Moon as well as for satellites."
+  },
+  "be": {
+    "kicker": "Bonus: escape speed",
+    "title": "Leaving for good",
+    "lead": "In the cannon lab the ellipse grows as you fire faster. At one special speed it never closes: the ball leaves the Earth for ever (with no engine and no other bodies). Deriving it needs gravitational potential energy, which is an S7 topic, so just quote the result: **v_{esc} = √(2·G·M/r) = √2 × √(G·M/r)**.",
+    "question": "How much faster than the circular-orbit speed at the same radius must a rocket go to leave the Earth for good?",
+    "choices": [
+      "10 % faster",
+      "{escMore} % faster",
+      "Twice as fast",
+      "10 times as fast"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Not enough:",
+      "Right. Here's the calculation:",
+      "More than needed:",
+      "Far more than needed:"
+    ],
+    "explain": "The factor is √2 ≈ {escRatio}, so **{escMore} % faster**. At the cannon's height of {issH} km: v_{esc} = {escRatio} × {vcI} = **{escI} km/s**. That is why the slider stops at {capV} km/s. From the ground, the same formula gives about {escS} km/s."
+  },
+  "bb": {
+    "kicker": "Bonus: banked angle",
+    "title": "How steep is the bank?",
+    "lead": "On a bank with angle θ and no friction, two forces act on the car: the weight m·g and the normal force N, perpendicular to the road. Vertically they balance: N·cos θ = m·g. Horizontally, towards the centre, N·sin θ = m·v²/r. Divide the second by the first:\n\n$ tan θ = v² / (r·g)",
+    "question": "A bend has radius **{br} m**. How steep must the bank be so that a car at **{bv} m/s** ({bvk} km/h) needs no friction? (g = {g} m/s²)",
+    "choices": [
+      "about 5°",
+      "about {bdeg0}°",
+      "about 45°",
+      "about 72°"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Too gentle:",
+      "Right. Here's the calculation:",
+      "Too steep:",
+      "Far too steep:"
+    ],
+    "explain": "tan θ = v²/(r·g) = {bv}² / ({br} × {g}) = {bv2} / {brg} = {btan}, so θ = **{bdeg}°**. At any other speed on this bank, friction has to help."
+  },
+  "bm": {
+    "kicker": "Bonus: a faster electron",
+    "title": "A faster electron",
+    "lead": "Step 7 gave r = m·v/(q·B). Now push the numbers: this electron goes more than three times faster than the one in the example.",
+    "question": "An electron (m = {mm} kg, q = {me} C) moves at v = {mv} m/s (about {mc} % of the speed of light) in a uniform field B = {mB} mT. How big is its circle?",
+    "choices": [
+      "about 0.57 mm",
+      "about {mr} cm",
+      "about 57 cm",
+      "about 5.7 m"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Much smaller than that:",
+      "Right. Here's the calculation:",
+      "Much bigger than that:",
+      "Far bigger than that:"
+    ],
+    "explain": "r = m·v/(q·B) = ({mm} × {mv}) / ({me} × {mB} × 10⁻³) = {mnum} / {mden} m ≈ **{mr} cm**, which is {mratio} times the circle in Step 7: r is proportional to v."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "sat": {
+      "aria": "Picture of a satellite on a circular orbit round the Earth. A yellow arrow along the tangent shows the velocity. A red arrow pointing straight to the Earth's centre shows gravity, the only force. A dashed line marks the radius r.",
+      "v": "v",
+      "f": "F_{G}",
+      "r": "r",
+      "earth": "Earth",
+      "centre": "centre",
+      "only": "Only one force: gravity.",
+      "only2": "It points to the centre; v is sideways.",
+      "caption": "**The satellite's free-body picture.** Only **one real force** acts on it: gravity F_{G}, pointing to the **centre** of the Earth (red). The velocity v is along the **tangent**, at right angles to the force (yellow). That is why F_{G} bends the path into a circle without speeding the satellite up or slowing it down. Not to scale: the real orbit is much closer to the Earth."
+    },
+    "mag": {
+      "aria": "Picture of an electron moving on a circle in a uniform magnetic field that points into the page, shown as small crosses. The velocity arrow is along the tangent, and the force arrow points to the centre of the circle, at right angles to the velocity. A dashed line marks the radius r.",
+      "v": "v",
+      "f": "F = B·q·v",
+      "r": "r",
+      "centre": "centre",
+      "b": "B into the page (×)",
+      "caption": "**An electron in a magnetic field.** The field B points into the page (the crosses ×) and the electron moves at right angles to it. The magnetic force F = B·q·v (red) is always **perpendicular to the velocity** (yellow), so it only turns the electron, and it points to the **centre**: it is the centripetal force. (The rule for which way it points comes next year.)"
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Spot the space station",
+    "lead": "The space station is the one satellite you can **see with your own eyes**. It looks like a very bright star that glides steadily across the sky in a few minutes. Time it, and check what you saw against v = √(G·M/r) and T = 2π·r/v.",
+    "safety": "**Safety:** do this with a parent or friend, in a place you know, away from roads, water and steps. Wear warm clothes and take a torch for the way home. You only look at the sky: no binoculars are needed, and never look near the Sun.",
+    "need": "**You need:** a phone or computer, a watch or stopwatch, a clear view of the sky, and a sky that is dark enough. First look up the passes for your town on NASA's **Spot the Station** (the free NASA app, or the page www.nasa.gov/spot-the-station) or on **Heavens-Above** (heavens-above.com). You can see the station when it is sunlit while you stand in darkness, so passes happen in the evening or early morning. The list gives the time, where it rises and sets, and how high it climbs.",
+    "steps": "**Do this:**\n1. Choose a pass that climbs high (the list gives the maximum height) and goes on for a few minutes. Go out a few minutes early.\n2. Look to the rising direction. A bright, steady light appears. It does not blink, and it has no flashing lights like a plane.\n3. Start the stopwatch when you first see it. Stop when it fades out or reaches the horizon.\n4. Write down the pass duration that the list gives, and compare it with the time you measured.",
+    "measure": "**Measure:** the time t of the pass (in s), and the duration the list gives for it.",
+    "compare": "**Compare with the formulas:** the station goes round once in T = {issT} min, so it flies **{exLap} km** per lap at v = {issV} km/s, about {exLapDay} laps a day.\n- A pass of {exMin} min covers v·t = {issVm} m/s × {exT} s = {exDkm} km of its orbit. That is {exT} / {issTs} = {exFrac} % of a lap, or {exArc}° of the 360° round the Earth. (That is an angle at the **centre of the Earth**, not an angle in your sky.)\n- The longest possible pass, straight overhead and horizon to horizon, is **{exMaxArc}°** of the orbit, which takes {exMaxArc}/360 × {issT} = about **{exMax} min**. Most visible passes are shorter, because the station also slips into the Earth's shadow or the sky is hazy low down.\n- Straight overhead the station is only {issH} km up, so it sweeps across your sky at v/h = {issVm} / {issHm} rad/s, which is about **{exAng}° per second**. The angle in the sky is **not** the angle of the orbit at the Earth's centre: you look from the surface, and the station is much closer when it is overhead than when it is low.",
+    "wrong": "**What goes wrong:** trees and buildings hide the low part of the pass. The station often disappears into the Earth's shadow high in the sky, so the time you see is shorter than the geometry says. Your stopwatch start and stop are rough, because the light fades slowly. Planes look similar, but they blink and are slower. The real station flies at about 400 to 420 km, and the numbers here use exactly {issH} km. The list's times are for when the station is above the horizon, so the time you see may be shorter. Use them to check your watch."
+  }
+}

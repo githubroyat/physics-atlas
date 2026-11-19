@@ -1,0 +1,208 @@
+{
+  "app": {
+    "name": "Physics Atlas",
+    "tagline": "Your physics, one island at a time. Predict, play, break things, and find out why they work. Start anywhere.",
+    "yes": "YES!",
+    "nope": "NOPE!",
+    "whynot": "Why the other options are wrong:",
+    "map": "Map",
+    "chapters": "{n} chapters",
+    "explored": "{done} of {n} explored",
+    "soon": "Coming soon",
+    "back_region": "Back to {region}",
+    "next": "Next: {title}",
+    "not_found": "That page doesn't exist. Head back to the map.",
+    "load_error": "Something went wrong loading this page. Check the connection and try again.",
+    "placeholder_art": "Test artwork: the final art style is still to be chosen.",
+    "preview_banner": "Preview mode: everything is unlocked and every answer is shown. Nothing is saved, so her first run stays fresh.",
+    "preview_answer": "Correct answer highlighted.",
+    "saved_track": "Bonus islands: S5 topics →",
+    "saved_title": "Bonus: S5 topics",
+    "saved_intro": "Extra islands from the S5 syllabus: energy, heat, momentum and nuclear physics. One chapter is ready so far.",
+    "crystals": "Energy crystals",
+    "beyond": "Beyond the syllabus"
+  },
+  "regions": {
+    "waves": {
+      "name": "Resonance Reef",
+      "topic": "Oscillations & Waves",
+      "blurb": "Springs, swings, wobbles and waves. Anything that gets pushed back towards the middle starts to oscillate, and oscillations that travel become waves."
+    },
+    "motion": {
+      "name": "Orbit Peaks",
+      "topic": "Motion",
+      "blurb": "Throws, jumps and spins. Position as a function of time, projectiles, circles and orbits."
+    },
+    "fields": {
+      "name": "Storm Fields",
+      "topic": "Fields",
+      "blurb": "Invisible pushes and pulls: electric charge, capacitors, magnets and gravity."
+    },
+    "energy": {
+      "name": "Sky Ridge",
+      "topic": "Work and Energy (S5)",
+      "blurb": "Heights, jumps, crashes and brakes. Energy moving between motion and height."
+    },
+    "heat": {
+      "name": "Frost & Steam",
+      "topic": "Matter and Heat (S5)",
+      "blurb": "Ice, steam and jiggling particles."
+    },
+    "momentum": {
+      "name": "Impact City",
+      "topic": "Momentum (S5)",
+      "blurb": "Collisions, recoil and rockets."
+    },
+    "nuclear": {
+      "name": "The Core",
+      "topic": "Atomic and Nuclear Physics (S5)",
+      "blurb": "Inside the nucleus: decay, half-lives and E = mc²."
+    }
+  },
+  "chapters": {
+    "o1": {
+      "title": "Push back",
+      "tag": "Restoring force, Hooke's law, elastic energy"
+    },
+    "o2": {
+      "title": "The shape of a wobble",
+      "tag": "Simple harmonic motion, y(t), damping"
+    },
+    "o3": {
+      "title": "Swing",
+      "tag": "The simple pendulum"
+    },
+    "o4": {
+      "title": "Where the bounce goes",
+      "tag": "Energy in oscillations, damping"
+    },
+    "o5": {
+      "title": "Shatter the glass",
+      "tag": "Forced oscillations and resonance"
+    },
+    "o6": {
+      "title": "The circuit that rings",
+      "tag": "LC circuits"
+    },
+    "o7": {
+      "title": "Making waves",
+      "tag": "Period, frequency, wavelength, v = f·λ"
+    },
+    "o8": {
+      "title": "A wave in space and time",
+      "tag": "The sinusoidal wave equation"
+    },
+    "o9": {
+      "title": "The siren's trick",
+      "tag": "Doppler effect"
+    },
+    "o10": {
+      "title": "Bend, bounce, overlap",
+      "tag": "Superposition, reflection, refraction"
+    },
+    "i1": {
+      "title": "Position as a function of time",
+      "tag": "s(t), v(t), a(t)"
+    },
+    "i2": {
+      "title": "Throw",
+      "tag": "Projectile motion"
+    },
+    "i3": {
+      "title": "Round and round",
+      "tag": "Uniform circular motion"
+    },
+    "i4": {
+      "title": "Falling forever",
+      "tag": "Orbits"
+    },
+    "f1": {
+      "title": "Spark",
+      "tag": "Electric charge, Coulomb's law"
+    },
+    "f2": {
+      "title": "Stored lightning",
+      "tag": "Electric field, capacitors"
+    },
+    "f3": {
+      "title": "Current makes a magnet",
+      "tag": "Magnetic fields, solenoids"
+    },
+    "f4": {
+      "title": "Weighing the Earth",
+      "tag": "Gravitational field"
+    },
+    "e1": {
+      "title": "Trading height for speed",
+      "tag": "Kinetic and potential energy, conservation"
+    },
+    "e2": {
+      "title": "What a push is worth",
+      "tag": "Work: W = F·s"
+    },
+    "e3": {
+      "title": "The case of the skid marks",
+      "tag": "Stopping distance"
+    },
+    "e4": {
+      "title": "Why there's a top speed",
+      "tag": "Power, friction and maximum speed"
+    },
+    "e5": {
+      "title": "Where does the energy go?",
+      "tag": "Efficiency"
+    },
+    "h1": {
+      "title": "What temperature really is",
+      "tag": "Particles, Kelvin, absolute zero"
+    },
+    "h2": {
+      "title": "Why the sea stays cool",
+      "tag": "Specific heat capacity"
+    },
+    "h3": {
+      "title": "Melt, freeze, vaporise",
+      "tag": "Changes of state, latent heat"
+    },
+    "h4": {
+      "title": "Squeeze it and it heats up",
+      "tag": "Gases"
+    },
+    "m1": {
+      "title": "The quantity of motion",
+      "tag": "Momentum: p = mv"
+    },
+    "m2": {
+      "title": "Every push pushes back",
+      "tag": "Recoil and propulsion"
+    },
+    "m3": {
+      "title": "Crash test",
+      "tag": "Collisions"
+    },
+    "n1": {
+      "title": "Inside the atom",
+      "tag": "Particles and forces"
+    },
+    "n2": {
+      "title": "Same element, different weight",
+      "tag": "Isotopes"
+    },
+    "n3": {
+      "title": "Unstable",
+      "tag": "Alpha, beta and gamma decay"
+    },
+    "n4": {
+      "title": "The case of the ticking sample",
+      "tag": "Half-life"
+    },
+    "n5": {
+      "title": "Rays from the mountain",
+      "tag": "Radiation, cosmic rays"
+    },
+    "n6": {
+      "title": "When mass is energy",
+      "tag": "Fission, fusion, E = mc²"
+    }
+  }
+}

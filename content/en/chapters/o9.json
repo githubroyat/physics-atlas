@@ -1,0 +1,623 @@
+{
+  "hero": {
+    "sfx": "NEEEE-OWWW",
+    "caption": "The pitch of a siren drops as it flies past. Nothing about the siren changed."
+  },
+  "intro": "An ambulance races towards you with the siren on. The pitch is high. It passes, and the pitch **drops**, though the driver never touched the siren. This is the **Doppler effect**. In *Making waves* you learned **v = f·λ**. Now picture the crests spreading out from the source like rings on a pond: each ring is a **wavefront**. Here we use only that to work out exactly how much the pitch changes. You'll derive the two formulas from the booklet yourself. Unless we say otherwise: sound in air at 20 °C, **v = {v} m/s**.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "describe the **Doppler effect** for sound: **approaching means higher** pitch, moving away means lower;",
+      "**derive** the formulas for a **moving source**, f_{o} = f_{s}·v/(v ∓ u_{s}), and a **moving observer**, f_{o} = f_{s}·(v ± u_{o})/v, and use them;",
+      "pick the right sign with one rule, and explain the effect with **wavefronts**;",
+      "name examples in **nature and technology** (radar speed traps, ultrasound of blood flow, bats), and say how it shows up for **light**."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Close your eyes. An ambulance goes past you.",
+    "question": "An ambulance with its siren on drives **straight towards you**, passes, and drives away at the same speed. What do you hear?",
+    "choices": [
+      "The same pitch the whole time, only louder when it is close",
+      "A lower pitch while it comes, a higher pitch once it has gone past",
+      "A higher pitch while it comes, a lower pitch once it has gone past",
+      "A higher pitch both before and after it passes"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Listen again, next time one passes:",
+      "The other way round:",
+      "Yes! You've heard it your whole life.",
+      "Not both:"
+    ],
+    "explain": "**Approaching: higher. Moving away: lower.** The siren itself never changes. The motion changes what *reaches your ear*. Let's find out how, with nothing but wavefronts.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "What your ear says",
+    "body": "**Try it.** Next time a car with a horn or a siren goes by, listen for the moment it passes. The pitch drops, like a sliding **NEEEE-OWWW**.\n\nFrom *Making waves*: a wave has frequency **f**, wavelength **λ** and speed **v**, and they are linked by\n\n$ v = f·λ\n\nA sound source sends out crests like ripples in a pond: **wavefronts**, circles that expand at the speed of sound. In air at 20 °C that speed is **v = {v} m/s**, and it depends on the air, **not on how the source moves**. Your ear counts how many crests arrive per second. That count is the pitch you hear, the **observed frequency f_{o}**. The source's own frequency is **f_{s}**.\n\nThe **Doppler effect** is the change from f_{s} to f_{o} when the source or the observer (or both) moves. One rule tells you the direction:\n\n$ approaching means higher, moving apart means lower\n\nThe next two steps find the sizes, one formula at a time. (f_{o}: o for **observer**. Don't mix it up with f_{0}, zero, the natural frequency in *Shatter the glass*.)",
+    "check": {
+      "q": "A train blows its horn at a steady pitch and moves **away** from you. You hear...",
+      "choices": [
+        "a lower pitch than the horn really has",
+        "a higher pitch than the horn really has",
+        "exactly the pitch of the horn",
+        "a pitch that depends only on how loud the horn is"
+      ],
+      "answer": 0,
+      "why": "Moving apart means **lower**: f_{o} < f_{s}. (The loudness has nothing to do with the pitch.)",
+      "whyNot": [
+        null,
+        "Check the direction: once the train leaves, do the crests reach you more often or less often than before?",
+        "That is only true if the distance between you and the horn stays the same. Here it keeps growing.",
+        "Loudness (the size of the wave) and pitch (its frequency) are different things. Motion changes the frequency that reaches you."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "A moving source",
+    "lead": "The listener stands still. The source (frequency f_{s}, so period **T = 1/f_{s}**) moves towards the listener at speed **u_{s}**. Each crest, once it has left the source, travels at **v** whatever the source does. Tap the right move at each step.\n\n*Example numbers for later: f_{s} = {fs} Hz, so T = {Tms} ms, and u_{s} = {us} m/s.*",
+    "after": "Put the same step behind the source and you get (v + u_{s})·T: the crests there are **stretched**. Both cases in the booklet's notation:\n\n$ f_{o} = f_{s}·v / (v ∓ u_{s})\n\n**Upper sign (−): source approaching. Lower sign (+): source moving away.** With u_{s} = {us} m/s the {fs} Hz siren is heard at **{sA} Hz** in front and **{sB} Hz** behind. The wavelength in front is only {lamF} m instead of {lam0} m. Your formula booklet prints it as f_{o} = f_{s}·v/(v ± u_{s}): you choose the sign. Approaching means higher, so subtract u_{s} when the source comes closer.",
+    "check": {
+      "q": "A source moves towards you. Compared with the same source at rest, the **wavelength** in front of it is...",
+      "choices": [
+        "shorter, because the next crest starts closer to the last one",
+        "longer, because the source pushes the crests",
+        "the same, because v is the same",
+        "zero"
+      ],
+      "answer": 0,
+      "why": "In one period the source moves u_{s}·T towards you, so the crests in front are only **(v − u_{s})·T** apart: a shorter wavelength, so a higher frequency.",
+      "whyNot": [
+        null,
+        "Crests travel at v whatever the source does. But the source chases its own last crest. What does that do to the gap?",
+        "v is the same, but the gap is v·T only for a source at rest. A moving source starts each crest from a new spot.",
+        "Zero would mean all crests on top of each other, which needs u_{s} = v. This source is slower, so there is still a gap."
+      ]
+    }
+  },
+  "derive_s": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "The source emits a crest and then, one period **T** later, the next one. In that time the **first crest** has travelled **v·T**, and the source has moved **u_{s}·T** towards the front. The gap between the two crests in front (the wavelength there) is...",
+        "options": [
+          "v·T + u_{s}·T",
+          "v·T − u_{s}·T",
+          "v·T"
+        ],
+        "answer": 1,
+        "then": "**λ_{front} = (v − u_{s})·T.** The source has \"chased\" its own crest by u_{s}·T. For the numbers: u_{s}·T = {us} m/s × {Tms} ms = {usT} m, so the wavelength shrinks from {lam0} m to {lamF} m."
+      },
+      {
+        "prompt": "The crests travel past the still listener at speed **v**, and the wavelength is (v − u_{s})·T. The frequency heard is f_{o} = v/λ_{front}. With T = 1/f_{s} this gives...",
+        "options": [
+          "f_{s}·(v − u_{s})/v",
+          "f_{s}·v/(v + u_{s})",
+          "f_{s}·v/(v − u_{s})"
+        ],
+        "answer": 2,
+        "then": "f_{o} = v / ((v − u_{s})·T) = **f_{s}·v/(v − u_{s})**. The bottom gets smaller, so f_{o} is **bigger** than f_{s}: approaching means higher."
+      },
+      {
+        "prompt": "Behind a source that moves **away**, the second crest starts u_{s}·T farther away, so the gap is (v + u_{s})·T. The frequency heard there is...",
+        "options": [
+          "f_{s}·v/(v + u_{s})",
+          "f_{s}·(v + u_{s})/v",
+          "f_{s}·v/(v − u_{s})"
+        ],
+        "answer": 0,
+        "then": "f_{o} = **f_{s}·v/(v + u_{s})**, lower than f_{s}. One formula, two signs: **f_{o} = f_{s}·v/(v ∓ u_{s})**."
+      }
+    ]
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "A moving listener",
+    "lead": "Now turn it round. The source is **fixed** (f_{s}, wavelength λ = v/f_{s}) and the **listener** moves at speed **u_{o}**. The crests are not squeezed this time: the wavelength stays λ = v/f_{s}. What changes is how fast the listener meets them.\n\n*Example numbers: f_{s} = {fs} Hz and u_{o} = {uo} m/s.*",
+    "after": "Moving away is the same with v − u_{o}. In the booklet's notation:\n\n$ f_{o} = f_{s}·(v ± u_{o}) / v\n\n**Upper sign (+): listener approaching. Lower sign (−): listener moving away.** For u_{o} = {uo} m/s the {fs} Hz source is heard at **{oA} Hz** going towards it and **{oB} Hz** going away. The same source frequency gives a *different* formula, because the physics is different: a moving source changes the **wavelength**, a moving listener changes the **rate of meeting** crests.",
+    "check": {
+      "q": "You run towards a loudspeaker that stands still. Which formula gives the pitch you hear?",
+      "choices": [
+        "f_{o} = f_{s}·(v + u_{o})/v",
+        "f_{o} = f_{s}·(v − u_{o})/v",
+        "f_{o} = f_{s}·v/(v − u_{o})",
+        "f_{o} = f_{s}, since the speaker doesn't move"
+      ],
+      "answer": 0,
+      "why": "You approach, so the pitch must go **up**. The crests reach you at speed v + u_{o} while λ = v/f_{s} stays the same: f_{o} = (v + u_{o})/λ = **f_{s}·(v + u_{o})/v**.",
+      "whyNot": [
+        null,
+        "That is the formula for running **away** from the speaker. Which sign fits approaching?",
+        "That is the moving-**source** formula. A moving listener changes the rate of meeting crests, not the wavelength: where does that put u_{o}?",
+        "The speaker is at rest, but you are not: the crests meet you at a different rate. A moving observer counts too."
+      ]
+    }
+  },
+  "derive_o": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "The listener walks **towards** the source at u_{o}. The crests move towards the listener at v. Measured by the listener, the crests approach at speed...",
+        "options": [
+          "v − u_{o}",
+          "v + u_{o}",
+          "v"
+        ],
+        "answer": 1,
+        "then": "Relative speed **v + u_{o}**: the listener and the crests are closing in on each other, like two cars driving towards each other."
+      },
+      {
+        "prompt": "The wavelength is still λ = v/f_{s}. The listener meets one crest each time they have closed a distance λ. So the frequency heard is f_{o} = (v + u_{o})/λ, which is...",
+        "options": [
+          "f_{s}·v/(v + u_{o})",
+          "f_{s}·(v + u_{o})/v",
+          "f_{s}·(v − u_{o})/v"
+        ],
+        "answer": 1,
+        "then": "f_{o} = (v + u_{o})/(v/f_{s}) = **f_{s}·(v + u_{o})/v**, bigger than f_{s}."
+      },
+      {
+        "prompt": "If the listener walks **away** from the source, the crests have to catch up with them, at relative speed v − u_{o}. The frequency heard is...",
+        "options": [
+          "f_{s}·(v + u_{o})/v",
+          "f_{s}·(v − u_{o})/v",
+          "f_{s}·v/(v − u_{o})"
+        ],
+        "answer": 1,
+        "then": "f_{o} = **f_{s}·(v − u_{o})/v**, smaller than f_{s}. Together: **f_{o} = f_{s}·(v ± u_{o})/v**."
+      }
+    ]
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "The sign rule, in the lab",
+    "body": "Two formulas, four signs. You don't need to memorise them. **Ask: are they getting closer?**\n\n- Closer: the pitch goes **up**, so choose the sign that makes f_{o} **bigger** (a smaller bottom for a source, a bigger top for a listener).\n- Moving apart: the pitch goes **down**. Choose the other sign.\n\nThe lab below shows the wavefronts from above, in slow motion. The speeds are drawn to scale with the speed of sound, so the wavelengths are right. Pick who moves, and use the slider. The slider stops at **just under 0.9·v ({cap} m/s)**: a source faster than v would outrun its own sound, which this chapter doesn't cover.",
+    "check": {
+      "q": "A source with f_{s} moves towards you at **half the speed of sound**, u_{s} = 0.5·v. You hear...",
+      "choices": [
+        "2·f_{s}",
+        "1.5·f_{s}",
+        "0.5·f_{s}",
+        "0.67·f_{s}"
+      ],
+      "answer": 0,
+      "why": "f_{o} = f_{s}·v/(v − 0.5·v) = f_{s}/0.5 = **2·f_{s}**. (A listener moving at 0.5·v gets only 1.5·f_{s}: the two formulas are **not** the same.)",
+      "whyNot": [
+        null,
+        "1.5·f_{s} is what a **listener** moving at 0.5·v would hear. Check who is moving here, and where that speed goes in the formula.",
+        "0.5·f_{s} is a lower pitch, but approaching means higher. It is what a listener moving **away** at 0.5·v would hear.",
+        "0.67·f_{s} is f_{s}·v/(v + 0.5·v): a lower pitch, from the wrong sign in the bottom. Which sign does approaching need?"
+      ]
+    }
+  },
+  "lab": {
+    "kicker": "Play",
+    "title": "The wavefront lab",
+    "lead": "**Start with the yellow dot (the source) moving.** Slide the speed up and watch the circles bunch up in front of it and spread out behind it. Listener **A** is in front, listener **B** behind. They flash when a crest reaches them.",
+    "scene": "Top view: a source emitting circular wavefronts, with listeners A in front and B behind",
+    "slowmo": "Slow motion. The numbers are for real sound, f_{s} = 440 Hz.",
+    "mode": "Who moves?",
+    "mode_source": "The source moves",
+    "mode_listener": "The listeners move",
+    "speed": "Speed",
+    "pause": "Pause",
+    "play": "Play",
+    "hear": "Hear it",
+    "hear_stop": "Stop",
+    "r_speed_s": "Source speed u_{s}",
+    "r_speed_l": "Listener speed u_{o}",
+    "r_ratio": "Speed ÷ v",
+    "r_fa": "Heard at A, f_{o}",
+    "r_fb": "Heard at B, f_{o}",
+    "r_la_s": "Wavelength at A (front)",
+    "r_la_l": "Wavelength at A",
+    "r_lb_s": "Wavelength at B (behind)",
+    "r_lb_l": "Wavelength at B",
+    "form_src_a": "A (approaching): f_{o} = f_{s}·v/(v − u_{s}) = {fs} × {v} / ({v} − {u}) = {fa} Hz",
+    "form_src_b": "B (moving apart): f_{o} = f_{s}·v/(v + u_{s}) = {fs} × {v} / ({v} + {u}) = {fb} Hz",
+    "form_lis_a": "A (approaching): f_{o} = f_{s}·(v + u_{o})/v = {fs} × ({v} + {u}) / {v} = {fa} Hz",
+    "form_lis_b": "B (moving apart): f_{o} = f_{s}·(v − u_{o})/v = {fs} × ({v} − {u}) / {v} = {fb} Hz",
+    "status_zero": "Speed 0: the circles are concentric, and both listeners hear f_{s} exactly.",
+    "status_cap": "The cap, just under 0.9·v: in front the crests are almost on top of each other, so A hears about ten times f_{s}.",
+    "status_cap_l": "The cap, just under 0.9·v: A meets the crests almost twice as fast as normal, and B hardly meets any (a very low pitch).",
+    "status_src": "The source moves right. The crests are squeezed in front (A) and stretched behind (B).",
+    "status_lis": "The source sits still, the circles stay evenly spaced. The listeners move left: A towards the source, B away from it.",
+    "tasks": "**Try these:**\n- Speed **0**: the circles are concentric and A and B hear the same pitch as the source.\n- Slide to about **{cap} m/s** (the cap). A's pitch is about **{capF} Hz** and the circles in front are packed tight. B hears a low pitch.\n- Compare: switch to **The listeners move** and set about half of v ({halfU} m/s). The listener formula gives **{halfLis} × f_{s}**, the source formula at the same speed gave **{halfSrc} × f_{s}**. Same speed, different effect.\n- Tap **Hear it** (if your device can play sound) to hear A's pitch and then B's pitch. It plays quietly, and tapping again stops it."
+  },
+  "learn5": {
+    "kicker": "Learn · Step 5",
+    "title": "Light and real life",
+    "body": "Everything in the sound derivation used a **medium** (air). **Light** needs no medium, so its Doppler effect works differently in the details (that is for later physics courses). What you need now is the **direction**, and it is the same rule:\n\n- A light source **approaching** you: the light has a **higher frequency**, so it looks slightly **bluer**.\n- A light source **moving away**: **lower frequency**, slightly **redder**.\n\nThe shifts are tiny unless the speeds are huge, so you never see a car turn blue.\n\n**Where the Doppler effect is used:**\n- **Radar speed traps:** radio waves bounce off a car and come back at a shifted frequency that tells the speed.\n- **Doppler ultrasound:** sound bounced off moving blood in an artery changes pitch, so doctors can measure blood flow.\n- **Astronomy:** one edge of the **Sun** turns towards us as it rotates, so its light is shifted slightly blue there and red on the other edge. The same idea measures the speeds of stars.\n- **Bats:** some bats adjust their call so that the echo from a flying insect comes back at the pitch they listen best to.",
+    "check": {
+      "q": "The spectrum of light from a star is shifted towards **red**. What does that tell you?",
+      "choices": [
+        "The star is moving away from us",
+        "The star is moving towards us",
+        "The star is not moving at all",
+        "The star is hotter than the Sun"
+      ],
+      "answer": 0,
+      "why": "Red means **lower frequency**, and lower means moving apart: the star is **moving away**.",
+      "whyNot": [
+        null,
+        "Red is the low-frequency end of the spectrum. Does approaching raise or lower the frequency?",
+        "A star at rest would show its usual colours. Compare it with what you would see from a star that is not moving relative to us.",
+        "Heat changes which colours a star glows brightest in, but that is another effect. Look at what the red shift itself tells you."
+      ]
+    }
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: the passing ambulance",
+        "problem": "An ambulance siren has a frequency of **{w1fs} Hz**. It drives at **{w1u} m/s** along a straight road past a person who stands still. What frequency does the person hear while it **approaches**, and while it **moves away**? (v = {v} m/s)",
+        "steps": [
+          "The source moves, the listener doesn't: f_{o} = f_{s}·v/(v ∓ u_{s}).",
+          "Approaching (upper sign, −, so f_{o} is bigger): f_{o} = {w1fs} × {v} / ({v} − {w1u}) = {w1fs} × {v} / {w1d1}.",
+          "Moving away (lower sign, +): f_{o} = {w1fs} × {v} / ({v} + {w1u}) = {w1fs} × {v} / {w1d2}.",
+          "Check with the rule: the first answer is above {w1fs} Hz, the second below. The pitch drops by {w1drop} Hz as it passes."
+        ],
+        "answer": "Approaching: **{w1A} Hz**. Moving away: **{w1B} Hz**."
+      },
+      {
+        "title": "Example 2: the cyclist",
+        "problem": "A fixed alarm sounds at **{w2fs} Hz**. A cyclist rides at **{w2u} m/s** straight **towards** it, and later straight **away** from it. What does the cyclist hear each time? (v = {v} m/s)",
+        "steps": [
+          "Now the **listener** moves: f_{o} = f_{s}·(v ± u_{o})/v.",
+          "Towards (upper sign, +): f_{o} = {w2fs} × ({v} + {w2u}) / {v} = {w2fs} × {w2n1} / {v}.",
+          "Away (lower sign, −): f_{o} = {w2fs} × ({v} − {w2u}) / {v} = {w2fs} × {w2n2} / {v}.",
+          "Check with the rule: towards gives a higher pitch than {w2fs} Hz, away a lower one."
+        ],
+        "answer": "Towards: **{w2A} Hz**. Away: **{w2B} Hz**."
+      },
+      {
+        "title": "Example 3: finding the speed",
+        "problem": "A police siren has a frequency of **{w3fs} Hz**. A person standing still hears **{w3fo} Hz** while it **approaches** along a straight road. How fast is the car going, in m/s and in km/h? (v = {v} m/s)",
+        "steps": [
+          "The source moves and approaches, so f_{o} = f_{s}·v/(v − u_{s}). We want u_{s}, so we solve for it.",
+          "Multiply both sides by (v − u_{s}), then divide by f_{o}: v − u_{s} = v·f_{s}/f_{o}, so u_{s} = v·(1 − f_{s}/f_{o}).",
+          "Put in the numbers: u_{s} = {v} × (1 − {w3fs}/{w3fo}) = {v} × {w3one}.",
+          "Convert: multiply m/s by 3.6 to get km/h. Check: u_{s} is smaller than v, as it must be, and f_{o} > f_{s} fits an approaching source."
+        ],
+        "answer": "u_{s} = **{w3} m/s**, which is about **{w3kmh} km/h**."
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A source of frequency {p1fs} Hz moves at {p1u} m/s straight **towards** a stationary listener. What frequency is heard? (v = {v} m/s)",
+        "choices": [
+          "{p1} Hz",
+          "{p1w1} Hz",
+          "{p1w2} Hz",
+          "{p1w3} Hz"
+        ],
+        "answer": 0,
+        "hint": "The source moves, and it approaches, so f_{o} must be bigger than f_{s}. Use f_{s}·v/(v − u_{s}).",
+        "solution": "The source moves and approaches, so use f_{o} = f_{s}·v/(v − u_{s}) (upper sign).\n\nf_{o} = {p1fs} × {v} / ({v} − {p1u}) = {p1fs} × {v} / {p1d} = **{p1} Hz**.\n\nSense check: higher than {p1fs} Hz, as \"approaching means higher\" says.",
+        "whyNot": [
+          null,
+          "That is for a source moving **away** (v + u_{s} below). Yours approaches, so the bottom is v − u_{s}: {p1} Hz.",
+          "That is the **listener** formula. Here the source moves, so u_{s} goes in the bottom: f_{s}·v/(v − u_{s}) = {p1} Hz.",
+          "{p1w3} Hz is just the source's own frequency. Approaching means higher, so f_{o} must be above f_{s}."
+        ]
+      },
+      {
+        "q": "A siren of {p2fs} Hz is on a vehicle that moves **away** from you at {p2u} m/s. What do you hear? (v = {v} m/s)",
+        "choices": [
+          "{p2w1} Hz",
+          "{p2} Hz",
+          "{p2w2} Hz",
+          "{p2w3} Hz"
+        ],
+        "answer": 1,
+        "hint": "Moving apart means lower. The source moves, so the speed goes in the bottom of the fraction.",
+        "solution": "The source moves and goes away, so use f_{o} = f_{s}·v/(v + u_{s}) (lower sign).\n\nf_{o} = {p2fs} × {v} / ({v} + {p2u}) = {p2fs} × {v} / {p2d} = **{p2} Hz**.\n\nSense check: lower than {p2fs} Hz, as \"moving apart means lower\" says.",
+        "whyNot": [
+          "That is the answer for a source moving **towards** you. This one moves away, so the bottom is v + u_{s}: {p2} Hz.",
+          null,
+          "That is the **listener** formula, with the speed on top. The source moves here, so u_{s} goes in the bottom.",
+          "You subtracted the speed from the frequency, but m/s minus Hz makes no sense. Use the ratio f_{s}·v/(v + u_{s})."
+        ]
+      },
+      {
+        "q": "A stationary speaker plays {p3fs} Hz. You run **towards** it at {p3u} m/s. What do you hear? (v = {v} m/s)",
+        "choices": [
+          "{p3w1} Hz",
+          "{p3w2} Hz",
+          "{p3w3} Hz",
+          "{p3} Hz"
+        ],
+        "answer": 3,
+        "hint": "Now the listener moves. The speed goes in the top: f_{s}·(v ± u_{o})/v, and approaching makes it bigger.",
+        "solution": "The **listener** moves and approaches, so use f_{o} = f_{s}·(v + u_{o})/v (upper sign).\n\nf_{o} = {p3fs} × ({v} + {p3u}) / {v} = {p3fs} × {p3n} / {v} = **{p3} Hz**.\n\nSense check: higher than {p3fs} Hz, and only a little: you run much slower than the sound.",
+        "whyNot": [
+          "That is the pitch for running **away** (v − u_{o}). You run towards the speaker, so the top is v + u_{o}: {p3} Hz.",
+          "That is the moving-**source** formula. You are the one moving, so u_{o} goes on top, not in the bottom.",
+          "That is the moving-source formula too, with the wrong direction as well. For a running listener use f_{s}·(v + u_{o})/v.",
+          null
+        ]
+      },
+      {
+        "q": "A police car with its siren on drives **straight towards you** and then straight past, at a steady speed. What do you hear?",
+        "choices": [
+          "The siren's own pitch the whole time",
+          "A higher pitch while it comes, then a lower pitch once it has passed",
+          "A lower pitch while it comes, then a higher pitch once it has passed",
+          "A higher pitch both before and after it passes"
+        ],
+        "answer": 1,
+        "hint": "Approaching means higher. Moving apart means lower.",
+        "solution": "Approaching: f_{o} = f_{s}·v/(v − u_{s}), which is bigger than f_{s}: **higher**.\n\nOnce it has passed it moves away: f_{o} = f_{s}·v/(v + u_{s}), smaller than f_{s}: **lower**.\n\nSo the pitch **drops** as the car goes by.",
+        "whyNot": [
+          "That is only true if the siren and you did not move relative to each other. Approaching raises the pitch, moving away lowers it.",
+          null,
+          "Wrong way round: crests bunch up while it approaches (higher) and stretch out after it has passed (lower).",
+          "Not both: once it has passed, it moves away from you, and moving apart means lower."
+        ]
+      },
+      {
+        "q": "A source of {p5fs} Hz approaches you, and you hear **{p5fo} Hz**. How fast does the source move? (v = {v} m/s)",
+        "choices": [
+          "{p5w1} m/s",
+          "{p5w2} m/s",
+          "{p5} m/s",
+          "{p5w3} m/s"
+        ],
+        "answer": 2,
+        "hint": "Start from f_{o} = f_{s}·v/(v − u_{s}) and solve for u_{s}. Multiply by (v − u_{s}), then divide by f_{o}.",
+        "solution": "Start from f_{o} = f_{s}·v/(v − u_{s}). Multiply both sides by (v − u_{s}) and divide by f_{o}: v − u_{s} = v·f_{s}/f_{o}, so u_{s} = v·(1 − f_{s}/f_{o}).\n\nu_{s} = {v} × (1 − {p5fs}/{p5fo}) = {v} × (1 − {p5r}) = {v} × {p5one} = **{p5} m/s**.\n\nSense check: putting {p5} m/s back gives {p5fs} × {v} / ({v} − {p5}) ≈ {p5chk} Hz, and {p5} m/s is about {p5kmh} km/h, a fast car.",
+        "whyNot": [
+          "{p5w1} m/s comes from the moving-**listener** formula, f_{o} = f_{s}·(v + u)/v. Here the source moves, so u_{s} is in the bottom.",
+          "{p5w2} m/s is v·f_{s}/f_{o}, which equals v − u_{s}. You stopped one step early: subtract it from v to get u_{s}.",
+          null,
+          "{p5w3} m/s would be right if the source **and** the listener both moved at that speed. Only the source moves here."
+        ]
+      }
+    ]
+  },
+  "game": {
+    "kicker": "Mini-game",
+    "title": "Tune the siren",
+    "lead": "A {fs} Hz siren drives straight at you. You are told the pitch you hear. **Set the source's speed** until the pitch you'd hear matches the target (within 1%), then press **Check**. Then try the second target.",
+    "speed": "Source speed",
+    "check": "Check",
+    "next": "Next target",
+    "target": "Target pitch",
+    "heard": "You'd hear",
+    "tries": "Checks",
+    "prompt_toward": "The siren is {fs} Hz and it comes **towards** you. You hear **{fo} Hz**. How fast is it going?",
+    "prompt_away": "The siren is {fs} Hz and it moves **away** from you. You hear **{fo} Hz**. How fast is it going?",
+    "ok": "Within 1%. Tuned!",
+    "too_low": "Too low: you need a higher pitch. (Closer to you means higher.)",
+    "too_high": "Too high: you need a lower pitch.",
+    "after": "You can also do it with algebra. For the first target, f_{o} = f_{s}·v/(v − u_{s}) gives **u_{s} = v·(1 − f_{s}/f_{o}) ≈ {tuneU} m/s**. For the second (moving away), u_{s} = v·(f_{s}/f_{o} − 1) ≈ **{tuneU2} m/s**."
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "Horns on a train",
+    "frames": [
+      {
+        "cap": "Prague, 1842",
+        "text": "Christian Doppler, an Austrian physicist, publishes the idea: the frequency you get depends on how the source and the observer move. He is thinking mostly about the light of stars.",
+        "fx": "IDEA"
+      },
+      {
+        "cap": "Utrecht, 1845",
+        "text": "Not everyone believes it. The Dutch scientist **Buys Ballot** tests it with *sound*. A locomotive pulls an open carriage with **trumpeters** who hold one steady note. Musicians standing by the track listen and write down the pitch.",
+        "fx": "TOOT"
+      },
+      {
+        "cap": "The ears agree",
+        "text": "The note sounds **higher** as the train comes and **lower** as it leaves, as Doppler's idea says. Sound is a good first test, because we can hear the pitch with our own ears.",
+        "fx": "NEEE-OWW"
+      },
+      {
+        "cap": "Today",
+        "text": "Radar guns, ultrasound scanners and astronomers' spectra all use the effect. Doppler's guess that star *colours* come from their motion was not right, but shifts in the light of stars do reveal how fast they move.",
+        "fx": "ZAP"
+      }
+    ],
+    "question": "Why did Buys Ballot test the idea with trained musicians?",
+    "choices": [
+      "Because there were no instruments in 1845",
+      "Because nobody could easily measure the pitch of a passing train with an instrument then, so he used musicians' ears",
+      "Because horns are the only instruments that show the effect"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not the reason:",
+      "Right.",
+      "Not the reason:"
+    ],
+    "explain": "A pitch change is a **small** change in frequency, and in 1845 nobody could easily measure the pitch of a passing train with an instrument, so he used musicians' ears. Any instrument or voice would show the effect. The train gave a fast, steady source to test with."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "Draw the sound",
+    "body": "Draw an anime-style hero holding a glowing bell on a speeding train, as a 4-panel strip. **Panel 1:** the sound rings drawn as circles around the bell, **squeezed together in front** of the train and **stretched out behind** it. **Panel 2:** a friend on the platform, ears twitching: the sound is **high** in front. **Panel 3:** the train passes, and the pitch comes down like a slide. **Panel 4:** the hero on the platform now, the train far away, the rings equal-spaced again. Add lines labelled **(v − u_{s})·T** and **(v + u_{s})·T** to the first panel."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Doppler effect:** the pitch (frequency) you hear, **f_{o}**, differs from the source's **f_{s}** when the source or the observer moves. **Approaching means higher, moving apart means lower.**",
+      "**Moving source:** **f_{o} = f_{s}·v/(v ∓ u_{s})**. The wavelength in front is **(v − u_{s})·T**, behind it is **(v + u_{s})·T**. Upper sign (−): approaching. Your formula booklet prints it as f_{o} = f_{s}·v/(v ± u_{s}): you choose the sign. Approaching means higher, so subtract u_{s} when the source comes closer.",
+      "**Moving observer:** **f_{o} = f_{s}·(v ± u_{o})/v**. The wavelength is unchanged, but the listener meets crests at relative speed v ± u_{o}. Upper sign (+): approaching.",
+      "Sound in air at 20 °C: **v = {v} m/s**, set by the air, not by the source.",
+      "The two formulas are **not** the same: at u = 0.5·v a moving source gives 2·f_{s}, a moving observer gives 1.5·f_{s}.",
+      "**Light:** an approaching source looks slightly **bluer** (higher f), a receding one **redder**. Uses: radar speed traps, Doppler ultrasound of blood flow, the Sun's rotation, some bats (such as horseshoe bats)."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A source moves **towards** a listener. The wavelength between its crests in front is...",
+        "choices": [
+          "shorter than at rest",
+          "longer than at rest",
+          "the same as at rest",
+          "equal to v"
+        ],
+        "answer": 0,
+        "why": "In one period the source follows its own crest, so the next crest is only **(v − u_{s})·T** behind it: shorter.",
+        "whyNot": [
+          null,
+          "Longer is what you get **behind** a source that moves away. In front the source follows its own crest, so the gap shrinks.",
+          "The source moves between two crests, so in front they are closer together than for a source at rest.",
+          "v is the wave's **speed** in m/s. The wavelength is a distance between crests: here (v − u_{s})·T."
+        ]
+      },
+      {
+        "q": "Which formula gives the pitch heard from a source that moves **away** from a still listener?",
+        "choices": [
+          "f_{s}·v/(v − u_{s})",
+          "f_{s}·v/(v + u_{s})",
+          "f_{s}·(v + u_{s})/v",
+          "f_{s}·(v − u_{s})/v"
+        ],
+        "answer": 1,
+        "why": "The source moves, so u_{s} goes in the **bottom**. Moving apart means lower, so the bottom must get bigger: **v + u_{s}**.",
+        "whyNot": [
+          "That is the source moving **towards** you (minus in the bottom). Moving away needs the bigger bottom, v + u_{s}.",
+          null,
+          "Speed on top is the **listener** formula, and the plus sign means approaching. Here the source moves, and it moves away.",
+          "Speed on top is the listener formula again, here for a listener moving away. The source moves, so u_{s} belongs in the bottom."
+        ]
+      },
+      {
+        "q": "A light source moves rapidly **towards** you. Its light is...",
+        "choices": [
+          "shifted towards the blue (higher frequency)",
+          "shifted towards the red (lower frequency)",
+          "unchanged",
+          "dimmed to nothing"
+        ],
+        "answer": 0,
+        "why": "Approaching means higher frequency, and for light higher means bluer.",
+        "whyNot": [
+          null,
+          "Red is lower frequency, which goes with moving **away**. Approaching raises the frequency: blue.",
+          "Light has a Doppler effect too, tiny at everyday speeds but real. A rapid approach shifts it towards the blue.",
+          "Dimming is a different matter. The Doppler effect shifts the frequency (colour) of light, it does not make it vanish."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "both": {
+    "kicker": "Bonus: both move",
+    "title": "Two cars, two horns",
+    "lead": "What if the source **and** the listener move? Combine the two ideas: the source changes the wavelength, and the listener's motion changes the rate of meeting crests:\n\n$ f_{o} = f_{s}·(v ± u_{o}) / (v ∓ u_{s})\n\nUse the upper signs when they approach each other. Two cars drive straight **towards each other**, each at **{b1u} m/s**. One sounds a {b1fs} Hz horn. (v = {v} m/s)",
+    "question": "What does the driver of the other car hear?",
+    "choices": [
+      "{b1w1} Hz",
+      "{b1w2} Hz",
+      "{b1} Hz",
+      "{b1w3} Hz"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "That's only the moving source. The listener moves too:",
+      "That's only the moving listener, at double speed. The source moves too:",
+      "Right. Here's the calculation:",
+      "Close, but the effects don't simply add:"
+    ],
+    "explain": "Both approach, so use the upper signs: f_{o} = {b1fs} × ({v} + {b1u}) / ({v} − {b1u}) = {b1fs} × {b1n} / {b1d} = **{b1} Hz**. The two effects *multiply*: a factor (v + u_{o})/v from the listener and v/(v − u_{s}) from the source."
+  },
+  "boom": {
+    "kicker": "Bonus: too fast",
+    "title": "When the source beats its own sound",
+    "lead": "Put u_{s} = v into f_{o} = f_{s}·v/(v − u_{s}). The bottom is **zero**, so the formula blows up: the crests in front pile on top of each other. That's why the lab stops just under 0.9·v. A source faster than the sound, say a jet at **{machK} × v = {machU} m/s**, outruns its crests. They overlap along a cone behind it and make a **shock wave**, heard as the **sonic boom**. The cone's half-angle θ obeys sin θ = v/u_{s}.",
+    "question": "For the jet at {machK}·v, what is that half-angle?",
+    "choices": [
+      "About {machAng}°",
+      "About 90°",
+      "About 0°",
+      "About 15°"
+    ],
+    "answer": 0,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Right. Here's why:",
+      "That's the case u_{s} = v:",
+      "That would need an enormous speed:",
+      "Too narrow for this speed:"
+    ],
+    "explain": "sin θ = v/u_{s} = 1/{machK}, so θ = **{machAng}°**. At u_{s} = v the cone opens to 90° (a flat wall of sound); the faster the jet, the narrower the cone."
+  },
+  "radar": {
+    "kicker": "Bonus: radar and light",
+    "title": "Twice the shift, tiny for light",
+    "body": "**Radar speed gun.** The gun sends radio waves of frequency f. The moving car is first a *listener* (it meets the waves at a shifted rate) and then a *source* (it re-emits at that shifted rate). So the shift happens **twice**. For speeds much smaller than the wave speed c the total shift is about **Δf ≈ 2·u·f/c**. For a gun at **{radarGHz} GHz** and a car at **{radarU} m/s**: Δf ≈ 2 × {radarU} × {radarGHz}×10⁹ / ({cLight}) ≈ **{radarDf} Hz**, about {radarKHz} kHz out of {radarGHz} billion: tiny, but easy to measure.\n\n**Light at small speeds** has Δf/f ≈ u/c. The Earth orbits at about 30 km/s: Δf/f ≈ {earthRatio}. The edge of the rotating Sun moves at about 2 km/s: Δf/f ≈ {sunRatio}.\n\n**Distant galaxies** show their light shifted to the red, and the more distant, the more. It looks like a Doppler shift, but careful: it is mostly space itself stretching while the light travels. We call it **redshift**, and it is not simply the formula above."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "wave": {
+      "aria": "Still picture of circular wavefronts from a source moving right: the circles are packed close together in front of the source and spread out behind it. The gaps between crests in front and behind are marked.",
+      "speed": "u_{s}",
+      "front_word": "in front",
+      "behind_word": "behind",
+      "front": "λ_{front}",
+      "behind": "λ_{behind}",
+      "caption": "**A still picture of the lab's circles.** The yellow dot is the source, moving right at u_{s} = {figRatio}·v. Each circle is a crest it sent out earlier, centred on the white dot where the source was at that moment. In front the crests are **close together**, behind them they are **far apart**. All the circles grow at the same speed v, which is why they stay nested."
+    },
+    "pitch": {
+      "aria": "Graph of the pitch heard from a siren passing along a road beside you. On the left, while it approaches, the pitch is high. It slides down through the siren's own frequency when the siren is level with you, and ends low on the right.",
+      "hi": "approaching: {w1A} Hz",
+      "lo": "moving away: {w1B} Hz",
+      "mid": "f_{s} = {w1fs} Hz",
+      "level": "level with you",
+      "before": "coming",
+      "after": "going",
+      "axis_y": "pitch heard",
+      "axis_x": "time",
+      "caption": "**The NEEEE-OWWW as a graph.** A {w1fs} Hz siren drives at {w1u} m/s along a straight road, {figD} m from you. Far away, coming, you hear about **{w1A} Hz** (the moving-source formula). Far away, going, about **{w1B} Hz**. In between the pitch **slides** down, and passes {w1fs} Hz at the moment it is level with you. Close to the road the slide is quick. A car driving straight at you and through you would give a sudden step instead."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Hear the shift with two phones",
+    "lead": "A siren flashes by too fast to measure. Here is a **slow-motion version** for a hall, a garden or a quiet path. You hear the shift as a **wobble** in the sound. Two tones that are almost the same make the loudness rise and fall, and the wobbles per second equal the **difference of the two frequencies**.",
+    "safety": "**Safety:** stay indoors or in a garden, away from roads, stairs and water. Walk slowly and look where you are going (or let your friend steer). Keep the volume low for your ears. Never swing a phone on a string and never throw it.",
+    "need": "**You need:** two phones, a friend, a stopwatch (a third phone is fine), and a {expD} m path marked with tape or a measured stride. On both phones, a steady-tone app. Any free tone-generator app works. To check a phone's pitch you can use the **Audio Spectrum** experiment in the free **phyphox** app (RWTH Aachen University, Android and iOS) on a third phone: check each phone's pitch is the same to within a few hertz; the wobble tells you the finer difference.",
+    "steps": "**Do this:**\n1. Set both phones to the same steady tone of **{expFs} Hz**, quiet. Put them side by side: the sound should be smooth, or wobble very slowly. That is your baseline.\n2. Put phone A on a table and stand next to it. Your friend stands {expD} m away with phone B, speaker pointing at you. Set phone B a little louder than A, so both sound about equally loud: the wobble is clearest then.\n3. Your friend walks **slowly towards you**, about {expU} m/s: {expD} m should take about {expT} s. Count the **wobbles** you hear. Your friend times the walk.\n4. Do it again walking **away**. Then once at a brisk walk.",
+    "measure": "**Measure:** the walking time t and the number of wobbles N. Then the speed is u = {expD} m / t, and the wobble rate is N / t.",
+    "compare": "**Compare with the formula:** for a source walking at u = {expU} m/s towards you, f_{o} = f_{s}·v/(v − u_{s}) = **{expA} Hz**. That is {expDf} Hz above A's tone, so you should hear about **{expDf} wobbles per second**, about **{expN}** in {expT} s. Walking away gives {expB} Hz and the same wobble rate: the wobble tells you the *size* of the shift, not its sign. A brisk walk of {expU2} m/s gives about {expDf2} per second, hard to count: it sounds like a fast flutter.",
+    "wrong": "**What goes wrong:** the speakers point one way and the room makes echoes, so you also get wobbles that don't come from walking. Walk once with phone A switched **off**: any wobble left comes from the room, not from the two tones. The two phones' tones may differ by a fraction of a hertz: subtract that baseline. Expect to be off by a wobble or two; start and stop are hard to time."
+  }
+}

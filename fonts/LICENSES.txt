@@ -1,0 +1,8 @@
+Fonts in this folder (Latin subsets, woff2), downloaded from Google Fonts (fonts.gstatic.com) on 2026-11-16.
+All are licensed under the SIL Open Font License 1.1 (https://openfontlicense.org).
+
+- Dela Gothic One       (dela-gothic-one-400.woff2)   display / titles
+- Bangers               (bangers-400.woff2)           comic labels and sound effects
+- M PLUS Rounded 1c     (mplus-rounded-1c-400/700/800.woff2)  body text
+
+The Latin subset has no maths symbols such as the square-root sign; text marked as maths uses system fonts.

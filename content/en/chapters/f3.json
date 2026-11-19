@@ -1,0 +1,635 @@
+{
+  "hero": {
+    "sfx": "ZZZT!",
+    "caption": "Switch on the current. The compass needle moves."
+  },
+  "intro": "A copper wire isn't magnetic: a fridge magnet ignores it. Connect a battery, though, and a compass beside the wire swings away from north. **A current makes a magnetic field.** Wind the wire into a coil and you get a magnet you can switch on, switch off and flip round. That is what a scrapyard crane, a relay and an MRI scanner are built on.\n\n**Recap from *Spark* and *Stored lightning*:** a field is what charges do to the space around them, and we draw it with field lines. That fits electric fields, which charges make. A **magnetic** field is made by **moving** charges (currents). This chapter is about the **magnetic** field. Notation: **B** is the magnetic flux density (field strength, in tesla, T), **I** the current, **N** the number of turns, **n = N/l** the turns per metre, and **μ0 = 4π × 10⁻⁷ V s A⁻¹ m⁻¹**.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "describe with **field lines** the magnetic field of a bar magnet, of a **straight current-carrying wire** and of a **solenoid** (a long coil);",
+      "use the **right-hand grip rule** for the direction of the field round a wire and for the **N and S ends** of a coil;",
+      "use **B = μ·n·I** with **n = N/l** (and μ = μ0 in air), with B in **tesla**;",
+      "say what changes the field inside a coil (**current**, **turns per metre**, an **iron core**, but not the coil's width) and compare **Earth's field**, a lab coil and an **MRI** magnet."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "A copper wire isn't magnetic. A fridge magnet doesn't stick to it. You connect the wire to a battery, so a **current** flows, and hold a **compass** close beside it.\n\nWhat does the needle do?",
+    "choices": [
+      "Nothing: copper isn't magnetic",
+      "It swings away, as if the wire were a magnet",
+      "It points straight at the wire",
+      "It spins round and round forever"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Copper isn't magnetic, true. But there's more to it:",
+      "Yes! And that surprised everyone in 1820.",
+      "Close, but the needle doesn't point at the wire:",
+      "A bit dramatic:"
+    ],
+    "explain": "**It swings away.** The wire itself isn't magnetic. It is the **current** (moving charges) that makes a magnetic field around the wire, and the needle feels that field. Let's work out its shape step by step.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Magnets and moving charges",
+    "body": "**Recap (bar magnets):** a bar magnet has a **north** and a **south** pole. Like poles repel, unlike poles attract. Its **field lines** leave the N pole, curve round outside and enter the S pole (inside the magnet they continue from S back to N: every line is a closed loop). A small **compass needle** lines up along the field: its N tip points the way the field points.\n\n**The surprise of 1820.** Ørsted, a Danish physicist, found that a compass next to a wire **swings** when a current flows. So a **current makes a magnetic field**. More exactly, **moving charges** make a magnetic field. A charge that sits still doesn't. A beam of electrons in a vacuum tube is a current too, so it makes a field as well. (We always use the **conventional current**, which points opposite to the way electrons move.)\n\n**Strength.** The strength of a magnetic field is given by **B**, the **magnetic flux density**. Its unit is the **tesla (T)**. Earth's field is about **{earth} μT** (a typical size: it varies from place to place). An MRI scanner uses **{mriLow} to {mriHigh} T**, about {mriR15} to {mriR3} times Earth's field.",
+    "check": {
+      "q": "Which of these makes a magnetic field?",
+      "choices": [
+        "A charge sitting still on a balloon",
+        "Charges moving along a wire (a current)",
+        "Any piece of metal",
+        "A cold wire with no current in it"
+      ],
+      "answer": 1,
+      "why": "**Moving charges** (a current) make a magnetic field. A charge at rest makes only an electric field, and a plain wire with no current makes none.",
+      "whyNot": [
+        "A still charge has only an electric field. Think about what the charges would have to be doing to make a magnetic one.",
+        null,
+        "Copper, aluminium and most metals make no magnetic field by themselves. What matters is what the charges are doing, not the material.",
+        "With no current there are no moving charges, so no magnetic field. Ørsted's compass only twitched when the current was on."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "The grip rule",
+    "body": "**Look along a straight wire.** Imagine it coming out of the screen towards you. The field lines are **circles** round the wire, in flat planes at right angles to it. Nothing points along the wire, and nothing points away from it.\n\n**Which way round?** Use the **right-hand grip rule**: grip the wire with your **right hand**, thumb pointing the way the (conventional) current flows. Your **fingers curl the way the field goes**.\n\nIn drawings, a current coming **out of the screen** (towards you) is shown as a **dot**, like the tip of an arrow flying at you. A current going **into** the screen is a **cross**, like the feathers of an arrow flying away. So:\n\n- current **out of the screen**: the field goes **anticlockwise**;\n- current **into the screen**: the field goes **clockwise**.\n\n**Strength.** More current gives a stronger field, and the field is **weaker further from the wire**. For now you only need the shape and the direction. (The lab in Step 3 has a straight-wire tab with a ring of compasses.)",
+    "check": {
+      "q": "A straight wire carries a current **towards you** (out of the screen). Seen from the front, which way do the circular field lines go round the wire?",
+      "choices": [
+        "Anticlockwise",
+        "Clockwise",
+        "Straight out along the wire",
+        "Away from the wire, like spokes"
+      ],
+      "answer": 0,
+      "why": "Right thumb **towards you**, along the current. Your fingers curl **anticlockwise** as you look at them from the front. The lines are circles, never spokes.",
+      "whyNot": [
+        null,
+        "Check with your right hand: thumb towards you, along the current. Which way do your fingers curl as you look at them?",
+        "The field never points along the wire. Grip the wire: your fingers curl **round** it.",
+        "Spokes would point away from the wire. The lines are closed circles round it: fingers curl, they don't poke out."
+      ]
+    }
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "A coil is a bar magnet",
+    "body": "**Wind the wire into a coil.** The circles of neighbouring turns add up. A long, tightly wound coil is called a **solenoid**. Its field:\n\n- **Inside:** the field lines are nearly **parallel and evenly spaced**, all along the axis: a nearly **uniform** field.\n- **Outside:** the lines spread out and come round to the other end, just like the field of a **bar magnet**.\n- The end where the lines **come out** is the **north (N)** end, the other is **S**. The lines are closed loops: outside they run from N to S, and inside from S to N.\n\n**Grip rule for a coil.** Curl the fingers of your **right hand** the way the current goes round the coil. Your **thumb** points the way the field goes inside the coil, towards the **N end**. Seen end-on, current going **anticlockwise** means that end is **N**, and **clockwise** means **S**.\n\n**Flip it, switch it off.** Reverse the current and N and S swap places. Switch it off and the magnetism is gone. A bar magnet can't do that.",
+    "check": {
+      "q": "The current in a coil is **reversed**, with the same size as before. What happens to the field inside?",
+      "choices": [
+        "Same strength, opposite direction (N and S swap)",
+        "It doubles",
+        "It becomes zero",
+        "Nothing changes"
+      ],
+      "answer": 0,
+      "why": "Reversing the current reverses the grip-rule thumb, so the field points the other way and N and S **swap ends**. The size, **B = μ·n·I** in magnitude, stays the same.",
+      "whyNot": [
+        null,
+        "Look at B = μ·n·I. Does it give a bigger value when the current has the same size but runs the other way round?",
+        "The current still flows, just the other way round, so there is still a current making a field.",
+        "Try it with your right hand: fingers round one way, then the other way round. Does your thumb point the same way both times?"
+      ]
+    }
+  },
+  "lab": {
+    "lead": "**Start on the Wire tab**: slide the current, press Reverse and watch the ring of compasses (the red tip is N). Then tap **Coil**. The yellow lines are the field lines, and the small compasses show which way B points where they sit. In the picture the **bright strands are the ones nearest to you**, and the white arrows on them show the current. The lab draws a few turns to stand for the N turns you set.",
+    "scene_wire": "A straight wire seen end-on, with circular field lines and a ring of compasses",
+    "scene_coil": "A coil seen from the side, with field lines and small compasses",
+    "view_wire": "Wire",
+    "view_coil": "Coil",
+    "turns": "Number of turns N",
+    "length": "Coil length l",
+    "width": "Coil width (diameter)",
+    "current": "Current I",
+    "ring": "Compass ring distance",
+    "reverse": "Reverse the current",
+    "core": "Iron core",
+    "earth": "Earth's field (50 μT)",
+    "earth_tag": "Earth's field: 50 μT",
+    "short_note": "This coil is short and fat, so it is not 'long' any more. The lab keeps using the long-coil formula (so B does not change with the width), but for a real short coil it is only a rough guide.",
+    "n_per_m": "Turns per metre n",
+    "per_m": "per m",
+    "b_inside": "Field B inside (formula)",
+    "vs_earth": "B compared with Earth",
+    "north_end": "North end",
+    "left_end": "left end",
+    "right_end": "right end",
+    "core_b": "much bigger",
+    "core_vs": "much bigger",
+    "core_formula": "B = μ·n·I with an iron core: μ is much bigger than μ0, so B is much bigger.",
+    "s_zero": "I = 0: no current, no field. The needles have nothing to follow.",
+    "s_right": "The current makes the field point to the right inside the coil, so the right end is N.",
+    "s_left": "The current makes the field point to the left inside the coil, so the left end is N.",
+    "s_core": "Iron core: the same current now makes a much stronger field (the lines are drawn thicker).",
+    "w_dir": "Current direction",
+    "w_strength": "Strength at the ring (just a bar)",
+    "w_out": "out of the screen (dot)",
+    "w_in": "into the screen (cross)",
+    "w_none": "no field",
+    "w_strong": "strong",
+    "w_medium": "medium",
+    "w_weak": "weak",
+    "ws_zero": "I = 0: no current, no circles. The needles are faded.",
+    "ws_out": "Thumb towards you: the field goes anticlockwise. Every needle lies along a circle.",
+    "ws_in": "Thumb away from you: the field goes clockwise. Every needle lies along a circle.",
+    "tasks": "**Wire tab, try these:**\n- I = +3.0 A (a dot: the current comes towards you): the needles lie along the circles, **anticlockwise**.\n- Press **Reverse**: now a cross, and every needle turns right round: **clockwise**.\n- Move the ring from 5 cm in to 2 cm: the strength bar goes from weak to medium. Closer means stronger.\n- Slide I to 0: no circles, faded needles. No current, no field.\n\n**Coil tab, try these:**\n- Start with N = 200, l = 20 cm and I = +1.0 A. Then n = N/l = {lt_n} turns per metre and B = μ0·n·I = {lt_B1}. Where is N? (The right end. Press Reverse and it jumps to the left end.)\n- Double the current to 2.0 A: B = {lt_B2}. Or keep I = 1.0 A and double N to 400: also {lt_B3}.\n- Stretch the coil to l = 40 cm (N = 200, I = 1.0 A): n halves to {lt_n4} and B falls to {lt_B4}.\n- Slide the **width** from 2 cm to 10 cm: B does not change. (The formula has no width in it. When the coil gets short and fat, a note appears: the formula is then only a guide.)\n- Tap **Iron core**: the same current now gives a **much stronger** field.\n- Tap **Earth's field** and set N = 10, l = 50 cm, I = 0.1 A. B = {lt_Bmin}, much weaker than Earth's 50 μT, so the needles just point where Earth says (up the screen). Turn the current up until the coil wins.\n- The biggest the lab allows: N = 500, l = 5 cm and I = 5.0 A give B = {lt_Bmax}, about {lt_Bx} times Earth's field. At that length the coil is not 'long', so the lab shows a note: the formula is only a rough guide there."
+  },
+  "ends": {
+    "title": "Which end is north?",
+    "lead": "Four coils. In each picture the **bright strands face you** and the white arrows show the current in them. Use your right hand and the grip rule. Get at least 3 of 4.",
+    "scene": "A coil with the current on the front strands flowing {dir}",
+    "prompt": "The current on the side of the coil that faces you flows {dir}. Which end of the coil is the north end?",
+    "dir_up": "up the screen",
+    "dir_down": "down the screen",
+    "dir_left": "to the left",
+    "dir_right": "to the right",
+    "left": "Left end",
+    "right": "Right end",
+    "top": "Top end",
+    "bottom": "Bottom end",
+    "ok_label": "Right!",
+    "no_label": "Not quite.",
+    "grip": "Fingers follow the current ({dir}) on the front strands, round the coil. Your thumb then points to the **{end}**: that is the north end.",
+    "next": "Next",
+    "finish": "Finish",
+    "perfect": "All four! Your right hand knows the rule.",
+    "done": "You got {n} of 4. Go again for 3 or more?",
+    "again": "Play again"
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "How strong is the field?",
+    "body": "For a long, tightly wound coil with air inside (the booklet's notation):\n\n$ B = μ·n·I\n\n$ n = N/l\n\n**n** is the number of turns **per metre** (N turns on a length l, in metres), **I** is the current in amperes, and **μ** is a constant that depends on what is inside. In **air**, μ = **μ0 = 4π × 10⁻⁷ V s A⁻¹ m⁻¹** (about {mu0n} in the same units). The unit of B is the tesla: **1 T = 1 V s m⁻²**.\n\n**Example.** N = 200 turns on a length l = 0.20 m with I = 1.0 A. Then n = 200 / 0.20 = {lt_n} turns per metre, and B = 4π × 10⁻⁷ × {lt_n} × 1.0 = {ex4B} T, about {ex4x} times Earth's field.\n\n**What does B depend on?** Read the formula: **B ∝ I** and **B ∝ n**. There is no coil width in it. The formula is for a **long** coil, where l is much bigger than the width.",
+    "sort_lead": "In a real investigation you change **one thing at a time**. Tap each card: does this change make the field **inside** a long coil stronger? (The other things stay the same.)",
+    "build_lead": "**Game: build a 2.0 mT electromagnet.** Choose N, l and I so that B = μ0·n·I is **2.0 mT**, give or take 5 % (that is 1.90 to 2.10 mT). Air core. Your power supply gives at most 3.0 A, and a tester reads B only when you press **Test**.",
+    "check": {
+      "q": "A long coil has N = {c4N} turns on a length of {c4l} cm and carries I = {c4I} A (air inside). What is B inside it?",
+      "choices": [
+        "{c4B} mT",
+        "{c4w1} mT",
+        "{c4w2} mT",
+        "{c4w3} mT"
+      ],
+      "answer": 0,
+      "why": "Change cm to m first: l = {c4lm} m. Then n = N/l = {c4N} / {c4lm} = {c4n} turns per metre, and **B = μ0·n·I** = 4π × 10⁻⁷ × {c4n} × {c4I} = **{c4B} mT**.",
+      "whyNot": [
+        null,
+        "That is μ0·N·I: the division by the length is missing. B needs n = N/l, turns per **metre**.",
+        "That treats l = {c4l} as if it were metres (n = N/{c4l}). Change cm to m first.",
+        "That is ten times too big: 15 cm was written as 0.015 m instead of 0.15 m. Redo n = N/l with l = {c4lm} m."
+      ]
+    }
+  },
+  "sort": {
+    "pending": "Stronger?",
+    "yes": "Stronger!",
+    "no": "Not stronger",
+    "cards": [
+      {
+        "label": "More current I",
+        "yes": true,
+        "why": "**B ∝ I**: twice the current, twice the field."
+      },
+      {
+        "label": "More turns on the same length",
+        "yes": true,
+        "why": "More turns on the same length means a bigger n = N/l, and **B ∝ n**."
+      },
+      {
+        "label": "An iron core inside",
+        "yes": true,
+        "why": "Iron makes the field **much stronger** for the same current."
+      },
+      {
+        "label": "A wider coil (same N, l, I)",
+        "yes": false,
+        "why": "There is no width in **B = μ·n·I**. For a long coil, the width does not change B."
+      },
+      {
+        "label": "The same turns spread over twice the length",
+        "yes": false,
+        "why": "n = N/l is halved, so B is **halved**: weaker, not stronger."
+      },
+      {
+        "label": "Reversing the current",
+        "yes": false,
+        "why": "The size of B stays the same. Only the direction flips, and N and S swap."
+      }
+    ]
+  },
+  "build": {
+    "turns": "Number of turns N",
+    "length": "Coil length l",
+    "current": "Current I",
+    "n_per_m": "Turns per metre n",
+    "per_m": "per m",
+    "target": "Target",
+    "target_val": "2.0 mT",
+    "measured": "Measured B",
+    "tests": "Tests",
+    "test": "Test",
+    "hint_btn": "Hint",
+    "hint": "B = μ0·n·I, so n·I = B / μ0 = 2.0 × 10⁻³ / (4π × 10⁻⁷) = {bnI} A/m (turns per metre times amperes). Pick N and l to get n, then choose I.",
+    "ok": "Within 5 %. Built it!",
+    "too_weak": "Too weak. More turns per metre or more current.",
+    "too_strong": "Too strong. Fewer turns per metre or less current.",
+    "win": "**Built it!** From B = μ0·n·I: n·I = {bnI} A/m. One answer: N = 160 turns on l = 20 cm gives n = 800 per metre; with I = 2.0 A, B = {bEx}. Many coils work: a coil with twice the turns per metre needs half the current."
+  },
+  "learn5": {
+    "kicker": "Learn · Step 5",
+    "title": "Iron, electromagnets and the real world",
+    "body": "**Iron makes it much stronger.** Put an **iron core** inside the coil, keep the same current, and B becomes **much stronger**. The iron becomes magnetised and adds its own field. (In the formula, μ is then much bigger than μ0. In this chapter we only need \"much stronger\".)\n\n**Where it is used:**\n- **Scrapyard crane:** an electromagnet lifts scrap iron, and drops it when the current is switched off.\n- **Relay:** a small current in a coil pulls an iron arm that closes a second circuit, so a weak circuit switches a strong one.\n- **MRI scanner:** strong coils make a field of {mriLow} to {mriHigh} T.\n\n**Permanent magnet or current?** The field outside a coil looks just like a bar magnet's, but you can switch it, flip it and turn it up. (A bar magnet's field also comes from its electrons: their motion and their spin inside the atoms.)\n\n**A ladder of strengths:**\n- Earth: about **{earth} μT**.\n- The biggest coil in the lab: **{lt_Bmax}**, about {lt_Bx} times Earth.\n- An MRI scanner: **{mriLow} to {mriHigh} T**, tens of thousands of times Earth.",
+    "check": {
+      "q": "A coil carries a constant current. An iron rod is slid inside it, and the current stays the same. The field inside the coil becomes...",
+      "choices": [
+        "much stronger",
+        "a little weaker",
+        "exactly the same",
+        "zero, because iron blocks the field"
+      ],
+      "answer": 0,
+      "why": "The iron becomes magnetised and adds its own field, so the field gets **much stronger**. That is why electromagnets almost always have an iron core.",
+      "whyNot": [
+        null,
+        "Think about what the iron does when it sits inside the coil's field. Does it take field away?",
+        "Think of the crane: would anyone wind a coil round iron if it changed nothing?",
+        "A field doesn't just vanish. Re-read what happens to the iron when it sits inside the coil."
+      ]
+    }
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: the field in a coil",
+        "problem": "A long coil has **{we1N} turns** on a length of **{we1l} m** and carries **{we1I} A**. Find the field inside it. (Air inside, μ0 = 4π × 10⁻⁷ V s A⁻¹ m⁻¹)",
+        "steps": [
+          "Turns per metre: n = N/l = {we1N} / {we1l} = {we1n} turns per metre.",
+          "Use B = μ0·n·I = 4π × 10⁻⁷ × {we1n} × {we1I}.",
+          "B = {we1B} T, which is {we1mT} mT.",
+          "Compare with Earth: {we1mT} mT ÷ 0.050 mT is about {we1x} times Earth's field."
+        ],
+        "answer": "B ≈ **{we1mT} mT** ({we1B} T), about {we1x} times Earth's field"
+      },
+      {
+        "title": "Example 2: find the current",
+        "problem": "A coil has **{we2N} turns** on a length of **{we2l} m**. What current gives a field of **{we2B} mT** inside? (Air inside.)",
+        "steps": [
+          "Turns per metre: n = N/l = {we2N} / {we2l} = {we2n} turns per metre.",
+          "Solve B = μ0·n·I for the current: I = B / (μ0·n).",
+          "μ0·n = 4π × 10⁻⁷ × {we2n} = {we2den} T/A, and B = {we2B} mT = {we2Bt} T.",
+          "I = {we2Bt} / {we2den} ≈ {we2I} A."
+        ],
+        "answer": "I ≈ **{we2I} A**"
+      },
+      {
+        "title": "Example 3: which way, and which pole?",
+        "problem": "(a) A long straight wire lies along the page and the current flows **up the page**. Which way does the field point at a point just to the **right** of the wire? (b) You look at one end of a coil and the current goes round **anticlockwise**. Is it a north or a south pole?",
+        "steps": [
+          "(a) Right-hand grip rule: thumb up the page, along the current. The fingers curl round the wire.",
+          "On the **right** of the wire the fingers move **away from you** (into the page). On the left they come towards you. So at the point to the right, B points **into the page**.",
+          "(b) Curl the fingers of your right hand anticlockwise, the way the current goes. The thumb then points **towards you**.",
+          "The thumb points to the N end, and it points at you, so the end you are looking at is the **north** pole."
+        ],
+        "answer": "(a) **into the page**  (b) a **north** pole"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A long coil has N = {p1N} turns on a length of {p1l} m and carries I = {p1I} A. What is B inside it? (Air inside, μ0 = 4π × 10⁻⁷ V s A⁻¹ m⁻¹)",
+        "choices": [
+          "{p1B} mT",
+          "{p1w1} mT",
+          "{p1w2} mT",
+          "{p1w3} mT"
+        ],
+        "answer": 0,
+        "hint": "First n = N/l, in turns per metre. Then B = μ0·n·I.",
+        "solution": "Formula first: **B = μ0·n·I**, with n = N/l.\n\nn = {p1N} / {p1l} m = {p1n} turns per metre. B = 4π × 10⁻⁷ × {p1n} × {p1I} A = **{p1B} mT**.\n\nSense check: about {p1x} times Earth's {earth} μT: a sensible size for a big lab coil.",
+        "whyNot": [
+          null,
+          "That is μ0·N·I: you forgot to divide by l. n = N/l = {p1n} per m, so B = {p1B} mT.",
+          "That is n = N/{p1lcm}: l = {p1l} m was turned into {p1lcm} (cm) and then used as metres. Keep l in metres: so n = {p1n} per m and B = {p1B} mT.",
+          "That is ten times too big: l = {p1l} m was copied as 0.04 m (decimal point in the wrong place). With l = {p1l} m, n = {p1n} per m and B = {p1B} mT."
+        ]
+      },
+      {
+        "q": "A long coil carries a current I. It is replaced by a coil of the **same number of turns**, stretched to **twice the length**, carrying **twice the current**. What happens to B inside?",
+        "choices": [
+          "It stays the same",
+          "It doubles",
+          "It becomes four times bigger",
+          "It halves"
+        ],
+        "answer": 0,
+        "hint": "B = μ0·n·I with n = N/l. What happens to n? What happens to I?",
+        "solution": "B = μ0·n·I with n = N/l.\n\nSame N on twice the length: n becomes ½·n. Twice the current: I becomes 2·I. New B = μ0·(½·n)·(2·I) = μ0·n·I.\n\nSo **B stays the same**: the halved n and the doubled I cancel.",
+        "whyNot": [
+          null,
+          "You counted only the current. Twice the length also halves n = N/l, and that cancels the doubled I.",
+          "Doubling I and doubling n would give four times. But stretching the coil makes n **smaller**: it halves, so ×2 × ½ = ×1.",
+          "Halving n is right, but the current is also doubled. B ∝ n·I, so ½ × 2 = 1: B stays the same."
+        ]
+      },
+      {
+        "q": "You look at one end of a coil and see the current going round **clockwise**. Is that end a north or a south pole?",
+        "choices": [
+          "A south pole",
+          "A north pole",
+          "Neither: only the middle is magnetic",
+          "It depends on the number of turns"
+        ],
+        "answer": 0,
+        "hint": "Right-hand grip rule: curl the fingers the way the current goes. Where does the thumb point?",
+        "solution": "Right-hand grip rule: curl the fingers of your right hand the way the current goes round the coil. The thumb then points the way the field goes inside, towards the N end.\n\nLooking at the end, **clockwise** current puts the thumb pointing **away** from you, so N is the far end and **your** end is a **south** pole. (Anticlockwise would put the thumb towards you: a north pole.)",
+        "whyNot": [
+          null,
+          "North is for **anticlockwise**. Clockwise: right thumb points away from you, so your end is where the field comes in, a south pole.",
+          "Every current-carrying coil is a magnet with a pole at each end, not just in the middle. The grip rule gives the pole.",
+          "The turns change how **strong** the field is. Which end is N depends only on the way the current goes round."
+        ]
+      },
+      {
+        "q": "An MRI magnet gives {mriHigh} T. Earth's field is {earth} μT. About how many times bigger is the MRI field?",
+        "choices": [
+          "{p4a}",
+          "{p4w1}",
+          "{p4w2}",
+          "{p4w3}"
+        ],
+        "answer": 0,
+        "hint": "Change μT to T first: 1 μT = 10⁻⁶ T.",
+        "solution": "Same units first: Earth {earth} μT = {earth}×10⁻⁶ T.\n\nRatio = MRI field ÷ Earth's field = {mriHigh} T / ({earth}×10⁻⁶ T) = **{p4a}**.\n\nSense check: tens of thousands of times Earth's field, as the ladder of strengths in Step 5 says.",
+        "whyNot": [
+          null,
+          "That is 3.0 ÷ 50: the μT were never changed to T, so tesla was divided by microtesla. The ratio is {p4a}.",
+          "That treats 50 μT as 50 mT (micro mistaken for milli): 3.0 T ÷ 0.050 T. Use 1 μT = 10⁻⁶ T. The ratio is {p4a}.",
+          "That is Earth ÷ MRI, upside down. The MRI field is the bigger one, so MRI ÷ Earth = {p4a}."
+        ]
+      },
+      {
+        "q": "A long straight wire lies along the page, with the current flowing to the **right**. At a point just **above** the wire (in the page), which way does the magnetic field point?",
+        "choices": [
+          "Out of the page, towards you",
+          "Into the page, away from you",
+          "To the right, along the wire",
+          "To the left, against the current"
+        ],
+        "answer": 0,
+        "hint": "Right-hand grip rule: thumb to the right. Which way do your fingers go on top of the wire?",
+        "solution": "Right-hand grip rule: thumb along the current, to the **right**. The fingers curl round the wire.\n\nOn the **top** of the wire the fingers move **towards you**, so the field points **out of the page** there. Below the wire they move away from you: into the page.\n\nSense check: reverse the current and every one of these directions flips.",
+        "whyNot": [
+          null,
+          "That is the field **below** the wire. Thumb to the right: the fingers come towards you on top and go away from you below.",
+          "The field is never along the wire. It circles round it, so at a point above the wire it points out of or into the page.",
+          "The field is never along or against the current. It circles round the wire: out of the page above it, into the page below."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "Explore · the story",
+    "title": "The twitching needle",
+    "frames": [
+      {
+        "cap": "Copenhagen, 1820",
+        "text": "Hans Christian Ørsted, a Danish physicist, works with a battery, a wire and a compass. The story goes he was getting ready for a lecture on electricity and magnetism.",
+        "fx": "HMM"
+      },
+      {
+        "cap": "The moment",
+        "text": "He switches the current on. The compass needle **twitches** away from north, though nothing has touched it. A current is acting on a magnet.",
+        "fx": "TWITCH"
+      },
+      {
+        "cap": "Summer, 1820",
+        "text": "He tests it more. That year he publishes a short paper and sends it to scientists around Europe. In France, Ampère repeats it within weeks and starts a flood of new experiments.",
+        "fx": "NEWS"
+      },
+      {
+        "cap": "Result",
+        "text": "Electricity and magnetism turn out to be linked: **a current makes a magnetic field**. A few years later come the first **electromagnets**: a coil of wire that is a magnet only while the current flows.",
+        "fx": "CLICK"
+      }
+    ],
+    "question": "What did the twitching compass needle show?",
+    "choices": [
+      "A magnet makes a current flow in a wire",
+      "A current in a wire makes a magnetic effect",
+      "A compass needle can carry a current"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "That's not what the needle showed:",
+      "Exactly.",
+      "No:"
+    ],
+    "explain": "The needle moved **when a current flowed** in the wire, so **a current makes a magnetic field** around the wire. That is the idea behind this whole chapter. (Details of the lecture scene come from later retellings, so treat them as the story goes.)"
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Magnets and Electromagnets",
+    "body": "Explore bar magnets and electromagnets. Build an electromagnet from a battery and a coil, make its field stronger and reverse it, and watch the compass and the sim's field meter. Predict first, then check. Use the sim's own measuring tools.\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The magnet that listens",
+    "body": "Draw an anime-style hero who commands an electromagnet as a 4-panel strip. **Panel 1:** a wire coming out of the page, with a dot in the middle and anticlockwise circles round it, her right hand gripping it. **Panel 2:** a coil with a clearly marked N end and S end, and the field lines looping outside like a bar magnet. **Panel 3:** she flips the switch and N and S swap places. **Panel 4:** an iron core slides in, the field gets huge, and a giant crane lifts a robot. Then the current stops, and the robot drops."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "A **current** (moving charges) makes a **magnetic field**. Its strength is **B**, the **magnetic flux density**, in **tesla (T)**. Ørsted, 1820: a compass next to a wire swings when a current flows.",
+      "**Straight wire:** field lines are **circles** round the wire, weaker further away. **Right-hand grip rule:** thumb along the current, fingers curl the way B goes. Current out of the screen: anticlockwise; into the screen: clockwise.",
+      "**Solenoid:** nearly **uniform inside**, like a **bar magnet outside**. **Grip rule:** fingers along the current, thumb points to the **N end**. Seen end-on, anticlockwise = N, clockwise = S. Reverse the current and N and S swap.",
+      "**B = μ·n·I**, with **n = N/l** turns per metre. In air μ = μ0 = 4π × 10⁻⁷ V s A⁻¹ m⁻¹. **B ∝ I** and **B ∝ n**, but B does **not** depend on the coil's width (long coil).",
+      "An **iron core** makes the field **much stronger**.",
+      "Sizes: Earth ≈ {earth} μT, a big lab coil about {lt_Bmax}, an MRI scanner {mriLow} to {mriHigh} T.",
+      "Uses: electromagnets (crane), relays, MRI scanners. An electron beam is a current too, so it makes a field."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "Which change does **not** change the size of B inside a long coil?",
+        "choices": [
+          "More current",
+          "More turns per metre",
+          "A wider coil, with the same N, l and I",
+          "An iron core"
+        ],
+        "answer": 2,
+        "why": "**B = μ·n·I** has no width in it. The current, the turns per metre and the core all change B.",
+        "whyNot": [
+          "More current does change B: B ∝ I. Twice the current, twice the field.",
+          "n is in the formula, so more turns per metre changes B: B ∝ n.",
+          null,
+          "Iron changes B a lot: μ is then much bigger than μ0."
+        ]
+      },
+      {
+        "q": "The current in a coil is reversed. The north end of the coil...",
+        "choices": [
+          "stays where it was",
+          "moves to the other end",
+          "disappears",
+          "gets twice as strong"
+        ],
+        "answer": 1,
+        "why": "The grip-rule thumb flips, so **N and S swap ends**. The strength stays the same.",
+        "whyNot": [
+          "It could only stay if the current's direction stayed. Reversing the current flips the grip-rule thumb.",
+          null,
+          "The current still flows, so it is still a magnet. It just has its N end at the other end now.",
+          "Reversing doesn't change the size of B. It has the same I in size, so the same strength."
+        ]
+      },
+      {
+        "q": "A long coil has n = {q3n} turns per metre and carries I = {q3I} A (air inside). B is about...",
+        "choices": [
+          "{q3w1} mT",
+          "{q3B} mT",
+          "{q3w2} mT",
+          "{q3w3} T"
+        ],
+        "answer": 1,
+        "why": "**B = μ0·n·I** = 4π × 10⁻⁷ × {q3n} × {q3I} = **{q3B} mT**.",
+        "whyNot": [
+          "A factor 10 too small: μ0 was used as 4π × 10⁻⁸ instead of 4π × 10⁻⁷. The answer is {q3B} mT.",
+          null,
+          "A factor 10 too big: μ0 was used as 4π × 10⁻⁶ instead of 4π × 10⁻⁷. The answer is {q3B} mT.",
+          "Right digits, wrong unit: {q3w3} T would be an MRI-size field. The answer is {q3B} mT, and 1 mT = 10⁻³ T."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "wire": {
+    "kicker": "Bonus: the wire's field in numbers",
+    "title": "How strong is a wire's field?",
+    "say": "A wire with 10 A. Does a compass even notice?",
+    "lead": "Beyond the syllabus: the field of a long straight wire at distance r is **B = μ0·I/(2π·r)**. Notice the **1/r**: double the distance and the field halves. Take I = {bwI} A and r = {bwR} cm, and compare with Earth's {earth} μT.",
+    "question": "How big is B at {bwR} cm from the wire?",
+    "choices": [
+      "About {bwW1}",
+      "About {bwB}, close to Earth's field",
+      "About {bwW2}",
+      "About {bwW3}"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Far too small:",
+      "Right. Here's the calculation:",
+      "Far too big:",
+      "Absurdly big:"
+    ],
+    "steps": [
+      "**Formula:** B = μ0·I / (2π·r), with r in metres: r = {bwR} cm = {bwRm} m.",
+      "**Numbers:** B = 4π × 10⁻⁷ × {bwI} / (2π × {bwRm}) = **{bwB}**.",
+      "**Compare:** that is {bwX} times Earth's {earth} μT, so a compass notices it.",
+      "**Twice as far** (10 cm): the field halves to {bwB2}."
+    ],
+    "after": "So a wire with a decent current does make a field comparable to Earth's, close to the wire. That is the kind of effect Ørsted's compass showed."
+  },
+  "mri": {
+    "kicker": "Bonus: could it really happen?",
+    "title": "An MRI field from a bedroom coil",
+    "say": "Could I wind my own MRI magnet?",
+    "lead": "Take the lab's tightest coil: N = {mriN} turns on l = {mriL} cm, so n = {mriNm} turns per metre. With I = 5.0 A it gave {lt_Bmax}. An MRI scanner needs about **{mriHigh} T**, with an air core.",
+    "question": "What current would you need?",
+    "choices": [
+      "About {mriI1} A",
+      "About {mriI2} A",
+      "About {mriI3} A",
+      "About {mriI4} A"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": [
+      "Far too small:",
+      "Too small still:",
+      "Right. Here's the calculation:",
+      "Far too big:"
+    ],
+    "steps": [
+      "**Solve for the current:** B = μ0·n·I, so I = B / (μ0·n).",
+      "**Numbers:** μ0·n = 4π × 10⁻⁷ × {mriNm} = {mriMn} T/A, so I = {mriHigh} / {mriMn} ≈ **{mriI3} A**.",
+      "**Compare:** that is about {mriRatio} times the 5.0 A that gave {lt_Bmax}."
+    ],
+    "after": "Hundreds of amperes through thin copper wire would overheat it very quickly. Real MRI magnets use special wire that carries current without resistance (superconducting coils), which is a topic for later."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "wire": {
+      "aria": "Two end-on pictures of a straight wire with circular field lines round it. On the left the current comes out of the screen, drawn as a dot, and the field circles anticlockwise. On the right the current goes into the screen, drawn as a cross, and the field circles clockwise.",
+      "out_title": "Current out of the screen",
+      "out_note": "thumb towards you: anticlockwise",
+      "in_title": "Current into the screen",
+      "in_note": "thumb away from you: clockwise",
+      "caption": "**The grip rule, end-on.** Look straight along the wire. A **dot** means the current comes at you (the tip of an arrow); a **cross** means it goes away (the feathers). Point your right thumb along the current and your fingers curl the way the field goes. The lines are drawn thicker near the wire, where the field is stronger."
+    },
+    "loops": {
+      "aria": "A solenoid and a bar magnet drawn side by side with the same field lines. Inside, the lines run from the south end to the north end, on the right. Outside, they leave the north end, curve round and come back to the south end. Every line is a closed loop.",
+      "coil": "Solenoid",
+      "bar": "Bar magnet",
+      "n": "N",
+      "s": "S",
+      "current": "current in the front strands",
+      "magnet": "magnet",
+      "caption": "**Same field, two sources.** Outside, the lines leave the **N** end and curve round to the **S** end. Inside, they carry on from S to N, so **every line is a closed loop**. In the coil, the right-hand grip rule puts N on the right: the current in the strands facing you goes **down** the screen, your fingers follow it, and your thumb points right. The picture is a sketch of the pattern, not an exact plot."
+    }
+  },
+  "try": {
+    "kicker": "Try it for real",
+    "title": "Feel a magnet with your phone",
+    "lead": "Your phone has a tiny **magnetometer** inside: a sensor that measures **B**, the magnetic flux density, in μT. It is how the compass app knows where north is. Use it to see a magnet's field grow as it gets closer, and to see a current make a field.",
+    "safety": "**Safety:** use only a small **fridge magnet**, nothing stronger, and keep it away from bank cards. For the coil, use an ordinary alkaline AA cell (not a rechargeable or lithium one) and thin insulated wire, and **never a phone charger, a power supply or mains**. Touch the wire ends to the cell for **1 to 2 seconds at most**: the wire, nail and cell get hot. Never hold the contact, and don't wrap the wire round your fingers. If anything feels warm, stop and let it cool. Ask an adult if you are unsure.",
+    "need": "**You need:** your phone with the free **phyphox** app (RWTH Aachen University, Android and iOS), a fridge magnet, a ruler, a **nail** (or a pencil), about 1 m of thin **insulated** wire with the ends stripped, one 1.5 V AA battery, and a small compass if you have one. In phyphox, open the experiment called **Magnetic field** (it reads the phone's magnetometer; some versions label it \"Magnetometer\").",
+    "steps": "**Do this:**\n1. Lay the phone flat on the table, away from metal and other magnets. Start **Magnetic field** and watch the total field |B| in μT. It should read roughly Earth's field, about {earth} μT, give or take: phones and tables add their own fields. That is your **baseline**.\n2. Slowly bring the fridge magnet towards the phone from 20 cm away, then 10 cm, 5 cm, 2 cm. Write |B| at each distance. Try moving it from the side and from above: the sensor sits at one spot inside the phone, so the reading depends on where the magnet is.\n3. Turn the magnet round, so the other pole faces the phone. In the readout, one of the components (x, y or z) changes **sign**.\n4. Now the coil. Wind about {exN} turns of wire close together round the nail, in a row about {exL} cm long, leaving the two ends free. Keep the coil about 2 cm from the phone's edge (or from the compass).\n5. Touch the two wire ends to the two ends of the AA battery for **1 to 2 seconds at most**. Watch the reading, or the compass needle, jump. Then let go.\n6. Turn the battery round and repeat, again for only a second or two. The jump goes the **other way**.",
+    "measure": "**Measure:** |B| from the magnet at each distance (and the baseline), and the jump in |B| (or in one component) with the coil, in both directions.",
+    "compare": "**Compare with this chapter:** the field falls fast as the magnet moves away. Doubling the distance cuts it by much more than half. For the coil, B = μ0·n·I: with N = {exN} turns on l = {exL} cm, n = {exn} turns per metre, and if the battery pushes about {exI} A (a guess: the real value depends on your wire and battery), B = {exB} inside the coil with air, about {exX} times Earth's field. With the **nail inside** it is much stronger, but your phone sits some distance away and the sensor sees only a part of it. Any clear jump above the wobble of the baseline counts as a success. Reversing the battery reverses I, so the field **flips direction**: that is the grip rule at work.",
+    "wrong": "**What goes wrong:** the phone's own electronics and speaker magnets add fields, so the baseline is not exactly {earth} μT. The sensor is not at the edge of the phone, so the distance you measure is only approximate. The current depends on your wire and battery and may be more than {exI} A: that is why the wire and battery warm up fast, and why the contact must be brief. Don't wait for a bigger signal by holding the contact longer: more turns, a nail and a smaller gap to the sensor help far more than more seconds."
+  }
+}

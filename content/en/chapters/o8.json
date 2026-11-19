@@ -1,0 +1,572 @@
+{
+  "hero": {
+    "sfx": "RIPPLE RIPPLE",
+    "caption": "The wave runs. The bead only bobs."
+  },
+  "intro": "Think of a stadium wave. It races round the stands, but no fan runs anywhere: each one just stands up and sits down. This chapter writes that picture as **one formula**, draws it as **two graphs**, and shows why the speed of the wave and the speed of one fan are **two different things**. Recaps: from *Making waves* you know the period T, f = 1/T, the wavelength λ and v = f·λ. From *The shape of a wobble* you know y = A·sin(ω·t) for one oscillator.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "draw and read the two graphs of a wave: the **snapshot y(x)** (repeats every λ) and the **history y(t)** of one point (repeats every T);",
+      "use the booklet equation **y(x, t) = A·sin(2π(t/T − x/λ))** and read A, T, f, λ and v off it;",
+      "**calculate y** at a given x and t, with the calculator in **radians**, and say which points move in step or in opposite directions;",
+      "tell the **wave speed v = λ/T** from the **bead's own velocity**, which keeps changing and has the maximum A·ω = 2π·A/T."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "A wave runs along a long rope at **{exV} m/s**. A red ribbon is tied to one spot of the rope.\n\nWhat does the ribbon do?",
+    "choices": [
+      "It travels along with the wave at {exV} m/s",
+      "It goes up and down in place, and its velocity keeps changing",
+      "It stays completely still",
+      "It goes up and down at a steady {exV} m/s"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "That would carry the ribbon away:",
+      "Yes! That is the whole chapter in one line.",
+      "The wave has to move it:",
+      "Careful with that speed:"
+    ],
+    "explain": "**The ribbon only bobs up and down**, and it slows down and speeds up as it goes (it stops at the top and the bottom). The wave pattern runs along at {exV} m/s, but the rope itself stays where it is. Two speeds, two different things. Let's learn to write both down.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Two pictures of one wave",
+    "body": "**Do this:** picture a stadium wave on a video. Pause the video: you see a row of fans, some standing, some sitting. Now ignore everyone except **one fan** and watch her over time: up, down, up, down.\n\nThose are the two pictures of any wave:\n\n- **Snapshot y(x):** the displacement y of every point, at one moment. The horizontal axis is **position x** (m). The picture repeats every **wavelength λ**.\n- **History y(t):** the displacement y of one point, as time goes by. The horizontal axis is **time t** (s). The picture repeats every **period T**.\n\nSame wave, two graphs. Always check the horizontal axis: if it says x you read λ off it, if it says t you read T. The **amplitude A** shows on both, as the highest y.\n\nRecap: T is the time for one oscillation, f = 1/T is how many per second, λ is the distance between neighbouring crests, and v = f·λ.",
+    "check": {
+      "q": "In the y–t graph of one bead, two neighbouring peaks are {exT} s apart. What is {exT} s?",
+      "choices": [
+        "The wavelength λ",
+        "The wave speed v",
+        "The period T",
+        "The amplitude A"
+      ],
+      "answer": 2,
+      "why": "A graph against **time** repeats every **period T**: the time for one full oscillation. (λ would come from a graph against position x.)",
+      "whyNot": [
+        "A length like λ would be read off a graph against x. {exT} s is a time.",
+        "v is a speed, in m/s. A gap of {exT} s along the time axis is not a speed.",
+        null,
+        "A is a height (a y-value). A gap along the **time** axis is not a height."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "One formula for both",
+    "body": "**Do this:** put t = 0 into the formula below and sketch what you get as a graph of y against x. Then read on to check.\n\nThe booklet writes the sinusoidal wave as:\n\n$ y(x, t) = A·sin(2π(t/T − x/λ))\n\n*y* is the displacement of the point at position *x* at time *t*. A is the amplitude, T the period, λ the wavelength.\n\nOne formula, two pictures. Freeze one of the two variables:\n\n- **Fix t = 0 (a snapshot).** Then y(x, 0) = A·sin(−2π·x/λ), which is\n\n$ y(x, 0) = −A·sin(2π·x/λ)\n\nIt starts at 0 and then goes **down first**: the minus sign matters. It repeats every λ.\n- **Fix x = 0 (one bead).** Then y(0, t) = A·sin(2π·t/T) = A·sin(ω·t), with ω = 2π/T. This is the oscillator you already know.\n\nA bead at a larger x does the same wobble **later**. That is what the −x/λ does: it holds the phase back. So the pattern moves **towards +x**, to the right. (This form always goes right.)\n\n**Calculator: radians!** The bracket 2π(t/T − x/λ) is an angle in **radians**. Set your calculator to **RAD**, not DEG. With DEG you get nonsense.",
+    "check": {
+      "q": "At t = 0 the snapshot is y = −A·sin(2π·x/λ). Just to the right of x = 0, the rope goes...",
+      "choices": [
+        "up first",
+        "down first",
+        "nowhere, it stays at 0",
+        "up to +A at once"
+      ],
+      "answer": 1,
+      "why": "For a small positive x, sin(2π·x/λ) is positive, and the **minus sign** makes y negative. So the snapshot starts by going **down** (a trough is a quarter of a wavelength further along, the next crest three quarters).",
+      "whyNot": [
+        "Check the sign. At t = 0 the bracket is −x/λ, so the sine gets a minus. What does that do for a small positive x?",
+        null,
+        "The snapshot is 0 at x = 0 itself, but for a small x > 0 the sine is not zero, so the rope moves away from 0.",
+        "At x = 0 the formula gives y = A·sin(0) = 0, so there is no jump to A: the curve starts smoothly."
+      ]
+    }
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "Read the equation",
+    "body": "**Do this:** here is a wave, in SI units (y and x in metres, t in seconds):\n\n$ y = {exA}·sin(2π(t/{exT} − x/{exLam}))\n\nLay it on top of the booklet form y = A·sin(2π(t/T − x/λ)) and match the numbers:\n\n- the number **in front** is the amplitude: **A = {exA} m**;\n- the number **under t** is the period: **T = {exT} s**, so **f = 1/T = {exF} Hz**;\n- the number **under x** is the wavelength: **λ = {exLam} m**;\n- the **wave speed** follows: **v = λ/T = f·λ = {exV} m/s**.\n\nThat is all the information in the wave. Now try it the other way round.",
+    "check": {
+      "q": "A wave is y = {c3A}·sin(2π(t/{c3T} − x/{c3L})) in SI units. What is its frequency?",
+      "choices": [
+        "{c3w1} Hz",
+        "{c3w2} Hz",
+        "{c3f} Hz",
+        "{c3w3} Hz"
+      ],
+      "answer": 2,
+      "why": "The number under t is T = {c3T} s, so f = 1/T = 1/{c3T} = **{c3f} Hz**. ({c3w1} is T itself, {c3w2} is 1/λ, and {c3w3} is the wave speed λ/T.)",
+      "whyNot": [
+        "{c3w1} is the number under t, which is T. The question asks for a different quantity.",
+        "{c3w2} is 1/λ, which is not a frequency: a frequency counts oscillations per second, so look at the time part.",
+        null,
+        "{c3w3} m/s is λ/T, the wave speed. The question asks for the frequency."
+      ]
+    }
+  },
+  "game": {
+    "kicker": "Mini-game",
+    "title": "Decode the graphs",
+    "lead": "A hidden wave y(x, t) = A·sin(2π(t/T − x/λ)) is drawn in **white**. Left: its **snapshot** at t = 0. Right: the **history** of the bead at x = 0. Read A, λ and T off the grids, set the three sliders, and press **Check**. Your **yellow** curves must lie on top of the white ones. Hint: the snapshot starts by going down.",
+    "scene": "Two graphs of a hidden wave with a grid, and your own yellow curves",
+    "title_x": "Snapshot at t = 0: y against x",
+    "title_t": "Bead at x = 0: y against t",
+    "axis_x": "x (m)",
+    "axis_t": "t (s)",
+    "amp": "Amplitude A",
+    "period": "Period T",
+    "wavelength": "Wavelength λ",
+    "check": "Check",
+    "next": "Another wave",
+    "ok": "All three right. Decoded!",
+    "not_yet": "Not yet. A tick means that one is right.",
+    "win_head": "WAVE DECODED!",
+    "win": "You read A from the height of the peaks, λ from the distance between crests on the **x** graph, and T from the time between peaks on the **t** graph. Then v = λ/T follows. A wave is just three numbers: **A, T and λ**."
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Who moves together?",
+    "body": "**Do this:** pick two beads on the rope, a distance Δx apart, and compare what they do at the same moment. The phase of the bead at x is 2π(t/T − x/λ). So the two beads differ in phase by: subtract the two phases, the t/T parts cancel, and what is left is\n\n$ Δphase = 2π·Δx/λ\n\n- **Δx = λ** (one whole wavelength): the phases differ by 2π, a full turn. They are always at the same height, moving the same way: **in step**.\n- **Δx = λ/2** (half a wavelength): the phases differ by π. When one is as high as it goes, the other is as low: **opposite directions**, always.\n- Anything in between: they are out of step by that fraction of a cycle.\n\nFor the wave y = {exA}·sin(2π(t/{exT} − x/{exLam})), with λ = {exLam} m: beads {exLam} m apart move in step, beads {exHalf} m apart move oppositely, and beads {exQuarter} m apart are a quarter cycle apart.\n\n**To calculate y at a given x and t:**\n\n1. work out t/T and x/λ, and subtract: t/T − x/λ;\n2. multiply by 2π (this is an angle in **radians**);\n3. take the sine with the calculator in **RAD**;\n4. multiply by A.\n\nYou will do this in the worked examples. First the lab (Step 5) lets you see the in-step and opposite beads move.",
+    "check": {
+      "q": "On a wave with λ = {exLam} m, two beads are {exHalf} m apart. When one bead is at its highest point, the other is...",
+      "choices": [
+        "also at its highest point",
+        "at its lowest point",
+        "at the middle, moving up",
+        "at the middle, moving down"
+      ],
+      "answer": 1,
+      "why": "{exHalf} m is half a wavelength, so the phases differ by π. The beads move in **opposite** directions: one at its highest, the other at its lowest.",
+      "whyNot": [
+        "Equal heights at all times need beads a whole λ apart. {exHalf} m is only half of λ = {exLam} m.",
+        null,
+        "One bead on top and the other in the middle is a **quarter** cycle apart, which is {exQuarter} m here. {exHalf} m is a different fraction of λ.",
+        "One bead on top and the other in the middle is a **quarter** cycle apart, which is {exQuarter} m here. {exHalf} m is a different fraction of λ."
+      ]
+    }
+  },
+  "learn5": {
+    "kicker": "Learn · Step 5",
+    "title": "Two speeds, not one",
+    "body": "**Do this:** open the lab below and **drag the yellow bead**. Watch the cyan triangles (the crests) and the yellow bead at the same time.\n\nThere are **two different speeds** in a wave, and mixing them up is the classic mistake:\n\n- The **wave speed** is how fast the pattern (a crest) travels along x: **v = λ/T = f·λ**. It is the same for the whole wave and it never changes while the wave runs.\n- The **bead's own velocity** is how fast one bead moves up and down. It **changes all the time**: zero at the top and bottom of its motion, largest as it passes y = 0. Its largest value is **A·ω = 2π·A/T**.",
+    "after": "For the example wave, v = λ/T = {exLam} / {exT} = **{exV} m/s**. The beads' maximum is A·ω = {exA} × {exOm} = **{exVmax} m/s**, where ω = 2π/{exT} = {exOm} rad/s. Here the wave is {exRatio} times faster than the bead, but there is **no rule that links them**: v depends on λ and T, the bead's maximum depends on A and T.\n\n$ wave speed v = λ/T      bead's maximum v_{max} = A·ω = 2π·A/T",
+    "check": {
+      "q": "A wave travels at {exV} m/s. At the instant a bead passes through y = 0, how fast is that bead itself moving? The wave has A = {exA} m and T = {exT} s.",
+      "choices": [
+        "{exV} m/s, the wave speed",
+        "{exVmax} m/s, its maximum A·ω (for this wave)",
+        "Zero, it is at the middle",
+        "It depends only on its position x"
+      ],
+      "answer": 1,
+      "why": "A bead passes **through the middle at its fastest**, which is A·ω = {exVmax} m/s here (A = {exA} m, T = {exT} s). It is only **zero at the top and bottom**. The wave speed {exV} m/s is a different quantity.",
+      "whyNot": [
+        "{exV} m/s is how fast the pattern runs along x. The bead has its own, different velocity.",
+        null,
+        "A bead stops only at the top and bottom of its motion. y = 0 is a different place in the cycle.",
+        "The question already fixes the moment: every bead that crosses y = 0 moves at the same speed, wherever it is on the rope."
+      ]
+    }
+  },
+  "lab": {
+    "lead": "**The two-graph lab.** The rope is drawn from y = A·sin(2π(t/T − x/λ)), with the sliders as A, T and λ. Top: the beads (heights are stretched so you can see them). Bottom left: the snapshot y(x) now. Bottom right: the history y(t) of the **yellow bead**. Move the yellow bead by dragging it, by tapping the rope, or with the arrow keys once its yellow frame is selected.",
+    "scene": "A rope of beads carrying a wave, with a snapshot graph and a history graph of one marked bead",
+    "handle": "Position x of the marked bead, in metres. Arrow keys move it.",
+    "strip_note": "heights stretched",
+    "title_x": "Snapshot: y against x",
+    "title_t": "Marked bead: y against t",
+    "axis_x": "x (m)",
+    "axis_t": "t (s)",
+    "amp": "Amplitude A",
+    "period": "Period T",
+    "wavelength": "Wavelength λ",
+    "time": "Time t (drag to scrub)",
+    "play": "Play",
+    "pause": "Pause",
+    "slow": "Slow motion",
+    "zero": "Back to t = 0",
+    "legend": "Yellow = your marked bead. Pink arrow = its own velocity. Cyan triangles = crests. Dashed white curve on the right = the bead at x = 0.",
+    "r_v": "Wave speed v = λ/T",
+    "r_y": "Marked bead: y now",
+    "r_vb": "Marked bead: velocity now (+ up)",
+    "r_vmax": "Largest bead velocity A·ω",
+    "status": "The wave moves along at {v} m/s. The yellow bead is {dir} at {vb} m/s right now, and never faster than {vmax} m/s.",
+    "up": "moving up",
+    "down": "moving down",
+    "turning": "turning round (stopped)",
+    "tasks": "**Try these** (pause first to look closely):\n- Park the bead at **x = {exLam} m** (one wavelength). Its yellow curve lies on the dashed one: **in step**. Park it at **x = {exHalf} m** (half a wavelength): a **mirror image**, opposite.\n- The **cyan triangles** (crests) sweep along at v = {exV} m/s. The yellow bead never leaves its x; it only goes up and down.\n- Look at the **bead velocity** box: it swings between +{exVmax} and −{exVmax} m/s, zero at the top and bottom, largest as the bead crosses y = 0. The **wave speed** box does not move.\n- Make **T smaller**: both v = λ/T and A·ω grow. Make **A bigger**: A·ω grows but v doesn't. Make **λ bigger**: v grows but A·ω doesn't."
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: read the equation",
+        "problem": "A wave on a rope is y = {w1A}·sin(2π(t/{w1T} − x/{w1L})), with x and y in metres and t in seconds. Find A, T, f, λ, v and the largest velocity of a bead.",
+        "steps": [
+          "Compare with y = A·sin(2π(t/T − x/λ)). The number in front is the amplitude: A = {w1A} m.",
+          "The number under t is the period: T = {w1T} s. Then f = 1/T = 1/{w1T} = {w1f} Hz.",
+          "The number under x is the wavelength: λ = {w1L} m.",
+          "Wave speed: v = λ/T = {w1L} / {w1T} = {w1v} m/s (check: f·λ = {w1f} × {w1L} = {w1v} m/s).",
+          "The bead's largest velocity is A·ω. First ω = 2π/T = 2π/{w1T} = {w1om} rad/s, so A·ω = {w1A} × {w1om} = {w1vmax} m/s. This is not the wave speed."
+        ],
+        "answer": "A = **{w1A} m**, T = **{w1T} s**, f = **{w1f} Hz**, λ = **{w1L} m**, v = **{w1v} m/s**; bead's largest velocity **{w1vmax} m/s**"
+      },
+      {
+        "title": "Example 2: calculate y",
+        "problem": "For the wave y = {w2A}·sin(2π(t/{w2T} − x/{w2L})) (SI units), find the displacement of the bead at x = {w2x} m at time t = {w2t} s. Calculator in radians.",
+        "steps": [
+          "Work out the two fractions: t/T = {w2t} / {w2T} = {w2tT}, and x/λ = {w2x} / {w2L} = {w2xL}.",
+          "Subtract: t/T − x/λ = {w2tT} − {w2xL} = {w2dif}.",
+          "Multiply by 2π to get the angle: 2π × {w2dif5} = {w2ph} rad (that is about {w2deg}°; the calculator must be in **RAD**).",
+          "Take the sine: sin({w2ph}) = {w2sin}.",
+          "Multiply by the amplitude: y = {w2A} × {w2sin} = {w2y} m."
+        ],
+        "answer": "y ≈ **{w2y} m** (a little above the rest position)"
+      },
+      {
+        "title": "Example 3: from the two graphs",
+        "problem": "A snapshot y(x) of a wave shows crests {w3lam} m apart. The y–t graph of one bead shows {w3n} complete oscillations in {w3t} s. Find T, f and the wave speed v. Then find how far apart two beads must be to always move in opposite directions (the nearest such pair).",
+        "steps": [
+          "The x graph gives the wavelength: λ = {w3lam} m (crest to crest). The t graph gives the timing.",
+          "{w3n} oscillations in {w3t} s: f = {w3n}/{w3t} = {w3f} Hz, so T = 1/f = 1/{w3f} = {w3T} s.",
+          "Wave speed: v = f·λ = {w3f} × {w3lam} = {w3v} m/s. Check: λ/T = {w3lam}/{w3T} = {w3v} m/s.",
+          "Opposite beads differ in phase by π, so 2π·Δx/λ = π, which gives Δx = λ/2 = {w3lam}/2 = {w3half} m."
+        ],
+        "answer": "T = **{w3T} s**, f = **{w3f} Hz**, v = **{w3v} m/s**; beads **{w3half} m** apart move oppositely."
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A wave is described by y = {p1A}·sin(2π(t/{p1T} − x/{p1L})), with x and y in metres and t in seconds. What is the wave speed?",
+        "choices": [
+          "{p1v} m/s",
+          "{p1w1} m/s",
+          "{p1w2} m/s",
+          "{p1w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "Read T (under t) and λ (under x). Then v = λ/T.",
+        "solution": "Compare with y = A·sin(2π(t/T − x/λ)): the number under t is T = {p1T} s and the number under x is λ = {p1L} m.\n\nv = λ/T = {p1L} m / {p1T} s = **{p1v} m/s**.\n\nSense check: the pattern moves one wavelength ({p1L} m) in one period ({p1T} s). The amplitude {p1A} m plays no part.",
+        "whyNot": [
+          null,
+          "{p1w1} is λ·T: multiplied instead of divided. A speed is distance per time, so v = λ/T = {p1v} m/s.",
+          "{p1w2} is 1/T, the frequency in Hz. You still need λ: v = f·λ = {p1v} m/s.",
+          "{p1w3} is A/T, which uses the amplitude. Wave speed depends on λ and T only: {p1v} m/s."
+        ]
+      },
+      {
+        "q": "For the wave y = {p2A}·sin(2π(t/{p2T} − x/{p2L})) (SI units), what is y at x = {p2x} m and t = {p2t} s? Use radians.",
+        "choices": [
+          "{p2y} m",
+          "{p2deg} m",
+          "{p2no2pi} m",
+          "{p2sign} m"
+        ],
+        "answer": 0,
+        "hint": "t/T − x/λ first, then multiply by 2π, then sine in RAD, then multiply by A.",
+        "solution": "Use y = A·sin(2π(t/T − x/λ)) with the calculator in **RAD**.\n\nt/T = {p2t}/{p2T} = {p2tT} and x/λ = {p2x}/{p2L} = {p2xL}, so the angle is 2π × ({p2tT} − {p2xL}) = {p2ph} rad.\n\ny = {p2A} × sin({p2ph}) = **{p2y} m**. Sense check: |y| is smaller than the amplitude {p2A} m, as it must be.",
+        "whyNot": [
+          null,
+          "{p2deg} m comes from a calculator left in **degrees**. The angle is in radians (RAD): y = {p2y} m.",
+          "{p2no2pi} m forgets the 2π in the bracket. The angle is 2π(t/T − x/λ) = {p2ph} rad, giving {p2y} m.",
+          "{p2sign} m adds x/λ instead of subtracting it. The booklet has t/T **−** x/λ, which gives {p2y} m."
+        ]
+      },
+      {
+        "q": "On a sinusoidal wave with λ = {p3L} m, two beads are {p3d} m apart. How do they move?",
+        "choices": [
+          "In step, always at the same height",
+          "Always in opposite directions, one up when the other is down",
+          "A quarter of a cycle out of step: when one is at the top, the other is in the middle",
+          "It depends on the amplitude"
+        ],
+        "answer": 1,
+        "hint": "What fraction of a wavelength is {p3d} m? Half a wavelength changes the phase by π.",
+        "solution": "Phase difference = 2π·Δx/λ = 2π × {p3d}/{p3L} = 2π × {p3frac} = π.\n\n{p3d} m is **half a wavelength**, so the phases differ by π: the beads always move in **opposite directions**, one up while the other goes down.",
+        "whyNot": [
+          "In step needs beads a whole λ apart (phases 2π apart). {p3d} m is only half of λ = {p3L} m.",
+          null,
+          "That comes from dropping the 2 in the phase: π·Δx/λ = π/2 (a quarter cycle). The booklet phase is 2π·Δx/λ = π, which is half a cycle, not a quarter.",
+          "The amplitude sets how high the beads go (and their own velocity), not their phase difference. The phase difference is 2π·Δx/λ: only the distance and the wavelength matter."
+        ]
+      },
+      {
+        "q": "A snapshot y(x) of a wave shows crests {p4lam} m apart. The y–t graph of one bead shows {p4n} complete oscillations in {p4t} s. What is the wave speed?",
+        "choices": [
+          "{p4w1} m/s",
+          "{p4v} m/s",
+          "{p4w2} m/s",
+          "{p4w3} m/s"
+        ],
+        "answer": 1,
+        "hint": "Crests apart is λ. {p4n} oscillations in {p4t} s gives f. Then v = f·λ.",
+        "solution": "The snapshot (x graph) gives λ = {p4lam} m. The history (t graph) gives f = {p4n}/{p4t} s = {p4f} Hz, so T = 1/f = {p4T} s.\n\nv = f·λ = {p4f} Hz × {p4lam} m = **{p4v} m/s**. Check with v = λ/T = {p4lam}/{p4T} = {p4v} m/s.",
+        "whyNot": [
+          "{p4w1} m/s is {p4n} × {p4lam}: it multiplies the count of oscillations by λ and ignores the time. First f = {p4n}/{p4t} = {p4f} Hz, then v = f·λ = {p4v} m/s.",
+          null,
+          "{p4w2} divides λ by f. The booklet has v = f·λ, a product: {p4v} m/s.",
+          "{p4w3} is t·λ, which has units m·s, not m/s. Use f = {p4n}/{p4t} s, then v = f·λ = {p4v} m/s."
+        ]
+      },
+      {
+        "q": "A wave has amplitude {p5A} m, period {p5T} s and wavelength {p5L} m. What is the largest velocity of a bead of the rope?",
+        "choices": [
+          "{p5v} m/s",
+          "{p5w1} m/s",
+          "{p5vmax} m/s",
+          "{p5w2} m/s"
+        ],
+        "answer": 2,
+        "hint": "The bead's own largest velocity is A·ω = 2π·A/T. The wave speed λ/T is a different thing.",
+        "solution": "The bead's own largest velocity is v_{max} = A·ω, with ω = 2π/T = 2π/{p5T} = {p5om} rad/s.\n\nv_{max} = {p5A} m × {p5om} rad/s = **{p5vmax} m/s**.\n\nThe wave speed λ/T = {p5v} m/s is a different quantity: it was not asked for.",
+        "whyNot": [
+          "{p5v} m/s is the wave speed λ/T, how fast the pattern runs. The question asks for the **bead's** own largest velocity: A·ω = {p5vmax} m/s.",
+          "{p5w1} m/s is A/T and leaves out the 2π. With ω = 2π/T: v_{max} = A·ω = {p5vmax} m/s.",
+          null,
+          "{p5w2} m/s uses π where ω = 2π/T needs 2π. Then v_{max} = A·ω = {p5vmax} m/s."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "The wave that outruns a jet",
+    "frames": [
+      {
+        "cap": "Deep ocean",
+        "text": "An earthquake under the sea shoves the water. The disturbance spreads out as a wave: a **tsunami**. In water about 4 km deep it travels at roughly **{tsV} m/s**, about {tsKmh} km/h, about as fast as a jet plane. *(Its speed depends on the depth. These numbers are typical, to show the idea.)*",
+        "fx": "WHOOSH"
+      },
+      {
+        "cap": "Out at sea",
+        "text": "The wave has an amplitude of only about **{tsA} m**, and a crest takes about {tsTmin} minutes to pass: T = {tsT} s. Its wavelength is λ = v·T = {tsV} × {tsT} = **{tsLam} km**. A ship out there hardly notices it."
+      },
+      {
+        "cap": "The water",
+        "text": "How fast does the water itself move? Up and down, at most A·ω = 2π·A/T, which is only about **{tsVmaxMm} mm/s**. The wave is about {tsRatio} times faster than the water moves up and down. *(It also sloshes sideways a little, a few centimetres per second: still tiny next to the wave. The pattern runs, the water stays.)*",
+        "fx": "..."
+      },
+      {
+        "cap": "The shore",
+        "text": "The wave carries **energy**, not water, across the ocean. Near the coast the water gets shallow, the wave slows and grows tall. In 2004 the Indian Ocean tsunami needed several hours to cross the ocean and reach East Africa.",
+        "fx": "CRASH"
+      }
+    ],
+    "question": "The news says a tsunami travels at {tsKmh} km/h. Which speed is that?",
+    "choices": [
+      "The speed of the water itself",
+      "The speed of the wave pattern, λ/T",
+      "The speed of the fastest ship"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "No, the water hardly moves along:",
+      "Exactly.",
+      "Not that one:"
+    ],
+    "explain": "It is the **wave speed**, v = λ/T = {tsV} m/s. The water at one spot only moves up and down at most about {tsVmaxMm} mm/s. Wave speed and the medium's own velocity are different things, just like the bead in the lab."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Waves Intro",
+    "body": "Make waves and use the measuring tools in the sim (the measuring tape and the stopwatch) to find the **wavelength** and the **period**, then check v = λ/T. Predict first, then measure. In Side View, watch one spot on the surface, or tick Graph. Does it travel along with the wave, or just move up and down?\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The scarf that runs",
+    "body": "Draw an anime-style hero with a very long scarf rippling in the wind, as a 4-panel strip. **Panel 1:** the snapshot: the scarf as a wavy line, with λ and A marked. **Panel 2:** a moment later: the whole ripple has moved along, but a red dot on the scarf has only moved **up**. **Panel 3:** the dot's own story as a graph of y against t, with T marked. **Panel 4:** two speed lines: a long arrow for the wave speed v = λ/T, and a short arrow for the dot's velocity that you colour in two shades, because it keeps changing."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Two graphs of one wave:** the snapshot **y(x)** repeats every **λ**; the history **y(t)** of one point repeats every **T**. Check the horizontal axis.",
+      "**Booklet form:** **y(x, t) = A·sin(2π(t/T − x/λ))**. Number in front = A, under t = T, under x = λ. f = 1/T. This form travels towards **+x**.",
+      "At **t = 0** the snapshot is **y = −A·sin(2π·x/λ)**: it starts by going down. At **x = 0** the history is y = A·sin(ω·t), with ω = 2π/T.",
+      "**Phase 2π(t/T − x/λ):** beads **λ apart** move **in step**; beads **λ/2 apart** move in **opposite directions**.",
+      "To calculate y: t/T − x/λ, times 2π, sine with the calculator in **radians**, times A.",
+      "**Wave speed** **v = λ/T = f·λ** (same for the whole wave). The **bead's own velocity** keeps changing: zero at the top and bottom, largest at y = 0, and its largest value is **A·ω = 2π·A/T**. They are different things."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A wave runs along a rope at {qV} m/s. A bead on the rope...",
+        "choices": [
+          "travels along the rope at {qV} m/s",
+          "goes up and down, with a velocity that keeps changing",
+          "goes up and down at a steady {qV} m/s",
+          "stays perfectly still"
+        ],
+        "answer": 1,
+        "why": "The bead only **bobs up and down**. Its velocity changes all the time. The {qV} m/s belongs to the **pattern**.",
+        "whyNot": [
+          "The bead stays at its place on the rope and only bobs. The {qV} m/s belongs to the pattern.",
+          null,
+          "A bead speeds up and slows down (zero at the top and bottom, largest at y = 0). {qV} m/s is the wave speed, not the bead's velocity.",
+          "The wave has to move it: each bead goes up and down as the wave passes."
+        ]
+      },
+      {
+        "q": "A wave is y = {exA}·sin(2π(t/{exT} − x/{exLam})) in SI units. Its frequency is...",
+        "choices": [
+          "{exT} Hz",
+          "{exF} Hz",
+          "{exLam} Hz",
+          "{exV} Hz"
+        ],
+        "answer": 1,
+        "why": "The number under t is T = {exT} s, so f = 1/T = **{exF} Hz**. ({exV} is the wave speed in m/s, not a frequency.)",
+        "whyNot": [
+          "{exT} is the period T in seconds. f = 1/T = {exF} Hz.",
+          null,
+          "{exLam} is the wavelength λ in metres, not a frequency. f = 1/T = {exF} Hz.",
+          "{exV} is λ/T, the wave speed in m/s. f = 1/T = {exF} Hz."
+        ]
+      },
+      {
+        "q": "Two beads on a wave are exactly one wavelength λ apart. Their motions are...",
+        "choices": [
+          "opposite to each other",
+          "a quarter of a cycle apart",
+          "identical, in step",
+          "at the same height right now, but moving in opposite directions"
+        ],
+        "answer": 2,
+        "why": "One wavelength is a phase difference of 2π, a full turn. The two beads are always at the same height, moving the same way: **in step**.",
+        "whyNot": [
+          "Opposite motion needs half a wavelength (phase π). One whole λ is a phase of 2π: in step.",
+          "A quarter of a cycle is λ/4 apart. One whole λ is 2π: a full cycle, so in step.",
+          null,
+          "Two beads can be at the same height at one instant while moving in opposite directions (for example both at y = 0 when they are λ/2 apart). But beads exactly λ apart are in step at **every** instant: the same height **and** the same direction."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "bspeed": {
+    "kicker": "Bonus: where does the speed come from?",
+    "title": "Follow a crest",
+    "lead": "Where does the wave speed v = λ/T come from? Follow one crest. A crest is a point with a fixed phase, so the bracket t/T − x/λ stays **constant** as the crest moves. Say the crest moves a distance Δx in a time Δt. For the bracket to stay the same, the t-part and the x-part must grow together: Δt/T = Δx/λ.",
+    "question": "So the crest speed Δx/Δt is...",
+    "choices": [
+      "T/λ",
+      "λ·T",
+      "λ/T",
+      "A·ω"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": [
+      "Upside down:",
+      "Wrong units for a speed:",
+      "Yes!",
+      "That is the bead, not the crest:"
+    ],
+    "explain": "From Δt/T = Δx/λ we get **Δx/Δt = λ/T**. A crest moves a whole λ in one period T. It is the same f·λ you met in *Making waves*, now derived from the formula."
+  },
+  "bleft": {
+    "kicker": "Bonus: the other direction",
+    "title": "A wave towards −x",
+    "lead": "Change one sign: y = A·sin(2π(t/T + x/λ)). Use the crest trick again: the bracket t/T + x/λ stays constant for a crest.",
+    "question": "Which way does this wave travel?",
+    "choices": [
+      "Towards +x",
+      "Towards −x",
+      "It does not travel",
+      "It depends on A"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Look at the sign again:",
+      "Yes!",
+      "It does travel:",
+      "A does not decide the direction:"
+    ],
+    "explain": "If t grows, x/λ must **shrink** to keep t/T + x/λ constant, so x **decreases**: the wave travels towards **−x** with the same speed λ/T. A minus between t/T and x/λ means +x, a plus means −x."
+  },
+  "benergy": {
+    "kicker": "Bonus: energy and A squared",
+    "title": "Double the amplitude",
+    "lead": "Each bead is a little oscillator with largest velocity A·ω = 2π·A/T. At T = {bT} s, a wave with A = {bA1} m has a bead maximum of {bV1} m/s. Doubling A to {bA2} m gives {bV2} m/s: **{bRatio} times** as big. (This A·ω comes from differentiating y(x, t) with respect to t at fixed x.) A bead's movement energy at the middle is ½·m·v².",
+    "question": "With the same T and λ, doubling the amplitude makes the energy of each bead...",
+    "choices": [
+      "stay the same",
+      "double",
+      "quadruple",
+      "go up 8 times"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": [
+      "Amplitude matters a lot:",
+      "Think: energy has a velocity squared in it:",
+      "Yes!",
+      "Too much:"
+    ],
+    "explain": "The energy goes with v², and v_{max} = A·ω doubles, so the energy grows **{bE} times**. The energy of a wave goes with **A²**. That is why a big wave is so much more powerful than a small one."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "phase": {
+      "aria": "Snapshot of a wave at t = 0, two wavelengths long. Beads 1 and 3, one wavelength apart, both sit at a trough, at the same height. Bead 2, half a wavelength from bead 1, sits at a crest, at the opposite height.",
+      "top": "+A",
+      "bottom": "−A",
+      "axis_x": "x",
+      "whole": "λ apart: same height",
+      "half": "λ/2 apart: opposite",
+      "caption": "**The in-step and opposite beads, drawn.** This is the snapshot of the example wave at t = 0 (λ = {exLam} m), two wavelengths long. Beads **1 and 3** are {exLam} m (one λ) apart: both at a trough, same height, and they move in step all the time. Beads **1 and 2** are {exHalf} m (λ/2) apart: one at a trough, one at a crest, and they move in opposite directions all the time."
+    },
+    "graphs": {
+      "aria": "Two graphs of the same wave. Top: the snapshot y against x at t = 0, which starts by going down and repeats every wavelength. Bottom: the history of one bead y against t, which starts by going up and repeats every period.",
+      "title_x": "Snapshot at t = 0: y against x",
+      "title_t": "One bead at x = 0: y against t",
+      "axis_x": "x (m)",
+      "axis_t": "t (s)",
+      "lam": "λ",
+      "per": "T",
+      "down": "starts down",
+      "up": "starts up",
+      "caption": "**Both graphs from the one formula.** Top: put t = 0 in and you get y = −A·sin(2π·x/λ): it **starts by going down** and repeats every **λ**. Bottom: put x = 0 in and you get y = A·sin(2π·t/T): it **starts by going up** and repeats every **T**. Read λ off the x graph and T off the t graph. Both graphs reach the same height A."
+    }
+  },
+  "try": {
+    "kicker": "Try it for real",
+    "title": "Film a wave, then step through it",
+    "lead": "A wave is too quick to measure by eye, but a video isn't. Every frame is a **snapshot** (the y–x picture), and following one spot over many frames gives its **history** (the y–t picture). So you get λ from one frame, T from many frames, and v = λ/T.",
+    "safety": "**Safety:** use a soft rope, a skipping rope or a slinky, in a room or garden away from stairs, roads and water. Shake gently, never pull it tight enough to snap back, and never wrap it round a hand or neck. Don't stand on furniture to film. If a slinky tangles, stop and undo it slowly.",
+    "need": "**You need:** a soft rope or a slinky about {expLen} m long when stretched out, a friend to hold the far end, masking tape in two colours, a tape measure, and a phone that films video. Many phones film at 30 or 60 frames per second, and some have slow motion at 120 or 240: look in the camera settings. You also need a video player that can step **frame by frame** (many phone galleries and computer players can).",
+    "steps": "**Do this:**\n1. Stick a strip of tape on the rope every {expMark} m, measured with the tape measure. These are your **x ruler**: they move up and down only a little, but never along the rope. On the middle strip use the other colour: this is your **bead**.\n2. Your friend holds one end, you hold the other, the rope almost straight at hip height and only just tight. Lean the phone on a pile of books a few metres away, looking sideways at the whole rope.\n3. Start filming. Shake your end **up and down at a steady beat**, about two shakes per second, for a few seconds. Stop filming.\n4. Play the video frame by frame. Pick one clean frame from the **first** moments of the shaking and find the distance from one crest to the next, using the tape strips as a ruler. That is **λ**.\n5. Follow the coloured bead. Count the frames from one highest position to the next highest position. Then **T = frames / frames per second**.",
+    "measure": "**Measure:** λ in metres, the number of frames N between two top positions, and the frames per second of your video. Then T = N / fps, f = 1/T, v = λ/T.",
+    "compare": "**Compare with the formula:** say you measure λ = {expLam} m, and the bead goes from top to top in N = {expN} frames at {expFps} frames per second. Then T = {expN}/{expFps} = {expT} s, f = {expF} Hz and v = λ/T = {expLam}/{expT} = **{expV} m/s**. Check it a second way: in 3 frames ({expDt} s) a crest should move about v × {expDt} = **{expD3} m** along the rope. Your numbers will differ (if λ comes out longer than the rope allows, shake faster); the test is that the two ways of finding v agree. Also look at the bead: it only goes up and down, its x never changes. Shake faster and T gets smaller and λ shrinks, while v stays about the same: the rope sets v, you set f.",
+    "wrong": "**What goes wrong:** one frame lasts {expFr30} s at 30 frames per second, so reading T within one frame is about **{expErr} %** off on a {expT} s period. Slow motion at 240 frames per second (one frame {expFr240} s of real time, even though it plays slowly) shrinks this a lot. Shaking by hand is not a perfect sine. The wave also bounces back from the far end and mixes with the new one, so measure in the **first moments**. Near the phone, parts of the rope look bigger (perspective), so film from further away."
+  }
+}

@@ -1,0 +1,627 @@
+{
+  "hero": {
+    "sfx": "BOING BOING",
+    "caption": "The bounce gets smaller. But the energy never just vanishes."
+  },
+  "intro": "Pull a mass on a spring and let go. It bounces back and forth. But where is the **energy** while it moves? In the spring? In the movement? This chapter lets you watch the energy slosh back and forth, play two energy games, and finally see where the bounce goes when it dies away. Unless we say otherwise: the spring lies **horizontal** on a **frictionless** track, so gravity plays no part, and the displacement **y** is measured from the middle (the equilibrium).",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "describe **energy conservation** in an oscillating system: elastic energy and kinetic energy swap, the total stays the same;",
+      "use **W = ½·k·A²** and **½·k·A² = ½·k·y² + ½·m·v²** to find the speed or the energy at any position, and **v_{max} = A·ω** from energy;",
+      "read the **energy–time graphs**: kinetic and elastic energy each swing between 0 and W, twice per period, while the total is a flat line;",
+      "explain in words how **damping** turns the oscillation's energy into heat, so the amplitude shrinks."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "A mass slides on a **frictionless** table, joined to a spring. You pull it out and let go. At the very moment it reaches the far end and **stops for an instant**, where is the energy?",
+    "choices": [
+      "All of it is movement energy",
+      "All of it is stored in the spring",
+      "Half in the spring, half in the movement",
+      "Nowhere: it has run out"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "It isn't moving at that moment:",
+      "Yes! The spring is stretched the most.",
+      "That happens at one special place, but not here:",
+      "Energy doesn't just run out:"
+    ],
+    "explain": "At the end the mass has **zero speed**, so no movement energy, but the spring is stretched as far as it goes, so **all the energy is stored in the spring**. A moment later the spring pushes the mass and the energy moves into the movement. Let's follow it step by step.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Two kinds of energy",
+    "body": "Pull the mass out to **y = A** and let go. (A is the **amplitude**, the largest displacement.) Two kinds of energy are on stage.\n\n*Recap from Push back:* a spring stretched or squeezed by y stores **elastic energy** ½·k·y². *Recap:* a moving mass has **kinetic energy**:\n\n$ E_{kin} = ½·m·v²\n\nLook at the two special places:\n\n- At the **ends** (y = ±A) the mass stops for an instant, so v = 0. **All the energy is elastic**: ½·k·A².\n- In the **middle** (y = 0) the spring is relaxed, so it stores nothing. **All the energy is kinetic**, and the mass is fastest.\n\nThe track is frictionless and nothing else takes energy away, so the total never changes. It is the energy at the end, where it is all elastic:\n\n$ W = ½·k·A²\n\nThat is **energy conservation**: the energy only moves from one kind to the other.",
+    "pendulum": "**A pendulum does the same trick.** *Recap from Swing:* at the top of the swing the bob is higher, and the height energy is ΔE_{p} = m·g·Δh. At the lowest point that energy has become movement energy, ½·m·v². Example: a {pM} kg bob released {pH} m above its lowest point has ΔE_{p} = m·g·Δh = {pM} × {g} × {pH} = {pE} J, so it passes the bottom at v = √(2·g·Δh) = {pV} m/s. (g = {g} m/s², no air resistance.)",
+    "check": {
+      "q": "The mass is passing through the **middle** (y = 0) of a frictionless horizontal spring. Where is the energy?",
+      "choices": [
+        "All of it is kinetic energy",
+        "All of it is elastic energy",
+        "Half of each",
+        "None: the mass is at equilibrium"
+      ],
+      "answer": 0,
+      "why": "At y = 0 the spring stores **½·k·0² = 0**. So all the energy W is kinetic, and the mass moves at its top speed. Equilibrium doesn't mean no energy, it means no spring force.",
+      "whyNot": [
+        null,
+        "That is the picture at the **ends**, where the mass stops for an instant. Is the spring stretched when the mass is in the middle?",
+        "Half-and-half happens at one place in between, y = A/√2, not in the middle. What does the spring store at y = 0?",
+        "Equilibrium means the spring **force** is zero, not that the energy is. On a frictionless track the energy cannot vanish."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "The energy swap",
+    "body": "Time to watch it happen. Elastic energy turns into kinetic energy and back again, all the time. Watch the bars, the graph, and the mass together.",
+    "after": "**What you should have seen** (with damping at **None**):\n\n- Kinetic energy and elastic energy each swing between **0 and W**.\n- They do it **twice per period**: the mass is fastest twice (once going each way) and the spring is fullest twice (once at each end).\n- When one goes up the other goes down by exactly the same amount, so the **total is a flat line** at W.",
+    "check": {
+      "q": "In one **full period** of the oscillation, how many times does the **kinetic energy** reach its maximum?",
+      "choices": [
+        "Once",
+        "Twice",
+        "Four times",
+        "Never: it stays constant"
+      ],
+      "answer": 1,
+      "why": "The mass passes the middle **twice** per period (once to the right, once to the left), and it is fastest there both times. The elastic energy peaks twice per period as well, at the two ends.",
+      "whyNot": [
+        "Think about how many times the mass passes the middle in one full there-and-back.",
+        null,
+        "That adds up the peaks of both kinds of energy (2 + 2). The question asks only about the kinetic energy: where is the mass fastest, and how often does it get there in one there-and-back?",
+        "The **total** stays constant. The kinetic energy alone swings between 0 and W."
+      ]
+    }
+  },
+  "lab": {
+    "lead": "**The energy lab.** The mass starts pulled out to y = A and is let go. The bars show the energy **right now**. The graph shows the energy **over time**: **cyan** kinetic, **pink** elastic, **yellow** the total. The faint dotted lines mark one period T each. Use **Scrub** to freeze time and look at any moment.",
+    "scene": "A mass on a horizontal spring, on a frictionless track, with marks at the middle and at plus and minus A",
+    "graph": "Energy against time: kinetic in cyan, elastic in pink, total in yellow",
+    "kinetic": "Kinetic",
+    "elastic": "Elastic",
+    "total": "Total",
+    "heat": "Heat",
+    "play": "Play",
+    "pause": "Pause",
+    "again": "Let go again",
+    "slow": "Slow motion",
+    "scrub": "Scrub through time",
+    "mass": "Mass m",
+    "k": "Spring constant k",
+    "amp": "Amplitude A",
+    "damping": "Damping",
+    "levels": [
+      "None",
+      "Very light",
+      "Light",
+      "Medium",
+      "Strong",
+      "Heavy"
+    ],
+    "energy_axis": "energy",
+    "time_axis": "time",
+    "period_note": "Dotted vertical lines: one period T of the spring each. W is the starting energy, ½·k·A².",
+    "r_kin": "Kinetic energy now",
+    "r_el": "Elastic energy now",
+    "r_tot": "Total of the two",
+    "r_heat": "Turned into heat so far",
+    "r_w0": "Starting energy W",
+    "period": "Period T",
+    "vmax": "Top speed v_{max}",
+    "tasks": "**Try these** (keep damping at **None** for now; it starts at k = {demoK} N/m, m = {demoM} kg, A = {demoA} cm, so W = ½·k·A² = {demoW} J):\n- Watch the bars. When the mass is at an end, which bar is full? In the middle?\n- **Pause** and **scrub** to find a moment where the cyan and pink bars are **equally long**. Where is the mass then? Remember it for the next step.\n- Look at the yellow line. Does it ever move?\n- Double the amplitude from {demoA} cm to 20 cm. What does the starting energy W become? Compare with {demoW} J: it is **{x4} times** as much.\n- Last, slide **Damping** up a notch at a time. We come back to this in Step 5."
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "Where is the energy right now?",
+    "body": "You don't have to be at an end or in the middle. At **any** displacement y, the energy is shared between the two kinds, and the total is always W:\n\n$ ½·k·A² = ½·k·y² + ½·m·v²\n\nThe spring's share is ½·k·y² out of ½·k·A², so it is **y² / A²**. Halfway out (y = A/2) that is (½)² = ¼ of the energy, and the other ¾ is movement. Predict it before you see it.",
+    "spot": "**Where do the two kinds match?** They are equal when each is **half** of W:\n\n$ ½·k·y² = ½ × ½·k·A²\n\nso y² = A²/2 and **y = A/√2 ≈ {spot}·A** (about {spotPct}% of the way out). That's true for **every** spring and every amplitude, because k and m cancel. Now catch it in action.",
+    "check": {
+      "q": "The mass is at **y = A/2**. What share of the total energy is **elastic**?",
+      "choices": [
+        "½",
+        "¼",
+        "¾",
+        "⅛"
+      ],
+      "answer": 1,
+      "why": "The elastic share is y²/A² = (A/2)² / A² = **¼**. The other ¾ is kinetic. Elastic energy depends on y², so halving the distance cuts the stored energy to a quarter.",
+      "whyNot": [
+        "That would be right if the stored energy went in step with y (A/2 is half of A). Does ½·k·y² go in step with y?",
+        null,
+        "¾ is not the elastic share. Check which kind of energy the question asks about, and use y²/A².",
+        "That is (½)³. Elastic energy goes with y squared, so square the ratio y/A, not cube it."
+      ]
+    }
+  },
+  "split": {
+    "lead": "**Game 1: predict the split.** The mass is frozen at some place. Drag the slider to guess **what percentage of the total energy is stored in the spring**, then press Check. Five rounds, get **3 within 6 points** to win.",
+    "scene": "A mass frozen at a position on a horizontal spring",
+    "kinetic": "Kinetic",
+    "elastic": "Elastic",
+    "position": "Position",
+    "score": "Right so far",
+    "guess": "Share of the energy in the spring",
+    "check": "Check",
+    "next": "Next round",
+    "again": "Play again",
+    "hint_btn": "Hint",
+    "hint": "The spring's share is y² / A². Half the way out gives (½)² = 25%.",
+    "right": "Close enough! Elastic {U}%, kinetic {K}%. Since y = {f}·A, the elastic share is {f}² = {U}%.",
+    "wrong": "Not quite. The elastic share is y²/A² = {f}² = {U}%, so kinetic is {K}%.",
+    "win": "**Three or more right.** You can now say where the energy is at any position, not just at the ends and the middle."
+  },
+  "catch": {
+    "lead": "**Game 2: catch the moment kinetic = elastic.** The mass swings in **slow motion**, and the energy bars are hidden. Press **NOW!** at the instant you think the kinetic and elastic energy are **equal**. It counts if each is between 35% and 65% of W. **Catch it 3 times.** Think about where the mass must be, and tap as it passes that spot.",
+    "scene": "A mass swinging in slow motion on a horizontal spring",
+    "kinetic": "Kinetic",
+    "elastic": "Elastic",
+    "now": "NOW!",
+    "check": "Check this spot",
+    "pos": "Position y, as a percentage of A",
+    "easy": "Show the energy bars (easy mode)",
+    "caught": "Caught",
+    "tries": "Tries",
+    "speed": "Slow-motion factor",
+    "caught_msg": "CAUGHT IT! Kinetic {K}%, elastic {U}%. The mass was at {y}·A.",
+    "too_out": "Too far out: kinetic {K}%, elastic {U}%. The mass was at {y}·A, and the spring still held more.",
+    "too_mid": "Too close to the middle: kinetic {K}%, elastic {U}%. The mass was at {y}·A, already mostly movement.",
+    "win": "**Three catches!** The yellow marks show the spot, y = ±A/√2. The swing gets faster each round, but the spot never moves: the same {spotPct}% of A for every spring."
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Speed from energy",
+    "lead": "*Recap from The shape of a wobble:* T = 2π√(m/k), and the top speed is v_{max} = A·ω with ω = 2π/T = √(k/m). Energy gives the same answer. Tap the right move at each step.",
+    "after": "**One more thing: W grows with A².** Since W = ½·k·A², doubling the amplitude gives **4 times** the energy, and tripling it gives 9 times. In the lab, A = {demoA} cm gave W = {demoW} J, and A = 20 cm gave {demoW2} J. A bigger swing is not just a bit more energy, it is a **lot** more.",
+    "check": {
+      "q": "A mass on a spring is pulled out **3 times** as far as before. The energy of the oscillation is now...",
+      "choices": [
+        "3 times as big",
+        "6 times as big",
+        "9 times as big",
+        "the same"
+      ],
+      "answer": 2,
+      "why": "W = ½·k·A² depends on A², and 3² = **9**.",
+      "whyNot": [
+        "That would be true if W went with A. Look at how A appears in W = ½·k·A².",
+        "6 = 3 × 2: the 2 in A² was used as a multiplier instead of a power. Check what the 2 does in W = ½·k·A².",
+        null,
+        "A changed, and W = ½·k·A² depends on A, so W changes too."
+      ]
+    }
+  },
+  "derive": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "The mass passes the middle at its top speed v_{max}. The spring stores nothing there. So the whole energy W = ½·k·A² is now...",
+        "options": [
+          "kinetic: ½·m·v_{max}²",
+          "elastic: ½·k·v_{max}²",
+          "heat"
+        ],
+        "answer": 0,
+        "then": "All the energy is kinetic:\n\n$ ½·m·v_{max}² = ½·k·A²"
+      },
+      {
+        "prompt": "Cancel the ½ and divide by m. Then v_{max}² is...",
+        "options": [
+          "k·A² / m",
+          "m·A² / k",
+          "A² / (k·m)"
+        ],
+        "answer": 0,
+        "then": "v_{max}² = (k/m)·A², so taking the square root:\n\n$ v_{max} = A·√(k/m)"
+      },
+      {
+        "prompt": "In The shape of a wobble you found v_{max} = A·ω. For these to agree, ω must be...",
+        "options": [
+          "√(k/m)",
+          "√(m/k)",
+          "k/m"
+        ],
+        "answer": 0,
+        "then": "**ω = √(k/m)**, exactly what T = 2π√(m/k) gives (ω = 2π/T). Two different routes, one answer. For the lab's spring: v_{max} = {demoA} cm × √({demoK} / {demoM}) = **{demoV} m/s**, which is what the lab shows."
+      }
+    ]
+  },
+  "learn5": {
+    "kicker": "Learn · Step 5",
+    "title": "Where the bounce goes",
+    "body": "Real oscillations don't go on forever. A real mass on a real spring slows down, and each swing is a bit smaller than the last. Where did the energy go? Not nowhere.\n\nFriction and air resistance push against the motion. They **turn the oscillation's energy into heat**: the spring, the air and the surface all warm up by a tiny amount. That is **damping**. What you see:\n\n- the **amplitude shrinks** a little each swing;\n- the **kinetic + elastic total slopes down**, and the **heat bar** in the lab grows by exactly what the total loses;\n- **light damping**: many swings before it stops;\n- **heavy damping**: the mass just creeps back to the middle without really swinging.\n\nIn the lab, move the **Damping** slider and watch the yellow line. Damping is sometimes wanted: a **car's shock absorbers** damp the springs strongly on purpose, so after a bump the bounce fades after one or two swings instead of going on and on. And in a tall skyscraper a huge **tuned mass damper** soaks up the sway of the wind (see the story below).",
+    "after": "**The big picture:** energy is **conserved**. Without damping the total stays in the spring-and-movement swap. With damping, the mechanical energy shrinks, but the lost part shows up as **heat**, so the total of everything is still the same.",
+    "check": {
+      "q": "A car's shock absorber stops the car bouncing after a bump. Where does the bounce energy go?",
+      "choices": [
+        "Into heat, warming the shock absorber",
+        "It is destroyed",
+        "It stays in the spring for good",
+        "It makes the car go faster"
+      ],
+      "answer": 0,
+      "why": "The shock absorber is a deliberate form of damping. It forces oil through narrow gaps, which **turns the bounce energy into heat**. Energy is never destroyed, only changed into another form.",
+      "whyNot": [
+        null,
+        "Energy is never destroyed, only changed from one form into another. Think of what a shock absorber feels like after a bumpy ride.",
+        "If it stayed in the spring, the car would keep bouncing. The bounce dies away, so the energy has gone somewhere else.",
+        "The shock absorber slows the bounce, so the car does not gain movement. The energy must end up in some other form."
+      ]
+    }
+  },
+  "detect": {
+    "lead": "**Game 3: damping detective.** Each graph shows the energy of one bouncing mass over time. Cyan is kinetic, pink is elastic, yellow is the total, and the orange area is the energy turned into **heat**. Decide how strong the damping was.",
+    "graph": "Energy against time for a damped spring: kinetic in cyan, elastic in pink, total in yellow, heat in orange",
+    "energy_axis": "energy",
+    "time_axis": "time",
+    "options": [
+      "Light damping",
+      "Medium damping",
+      "Heavy damping"
+    ],
+    "note": "The window shows 6 seconds. Dotted lines: one period of the undamped spring each.",
+    "round": "Round",
+    "next": "Next graph",
+    "again": "Play again",
+    "right": "Right.",
+    "wrong": "Not that one.",
+    "why": [
+      "Many swings before the energy runs out: the total line comes down slowly.",
+      "A few swings, then it settles: the total line comes down at a medium pace.",
+      "The mass never really swings: the total line plunges, and no second peak appears."
+    ]
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: total energy and top speed",
+        "problem": "A mass of **0.20 kg** is on a horizontal frictionless spring with **k = 80 N/m**. It is pulled out **A = 0.050 m** and let go. Find the total energy W and the top speed.",
+        "steps": [
+          "The total energy is all elastic at the start: W = ½·k·A².",
+          "W = ½ × 80 × 0.050² = {we1W} J.",
+          "At the middle it is all kinetic: ½·m·v_{max}² = W, so v_{max} = √(2·W/m).",
+          "v_{max} = √(2 × {we1W} / 0.20) = √{we1r} = {we1v} m/s.",
+          "Check with v_{max} = A·ω: ω = √(k/m) = √(80/0.20) = {we1w} rad/s, and A·ω = 0.050 × {we1w} = {we1Aw} m/s. Same."
+        ],
+        "answer": "W = **{we1W} J**, v_{max} = **{we1v} m/s**"
+      },
+      {
+        "title": "Example 2: speed at one position",
+        "problem": "The same system (m = 0.20 kg, k = 80 N/m, A = 0.050 m). What is the speed of the mass when it is **0.030 m** from the middle?",
+        "steps": [
+          "Use energy conservation: ½·k·A² = ½·k·y² + ½·m·v². We know W = {we1W} J from example 1.",
+          "Elastic energy at y = 0.030 m: ½ × 80 × 0.030² = {we2U} J.",
+          "Kinetic energy: W − {we2U} = {we2K} J.",
+          "½·m·v² = {we2K}, so v = √(2 × {we2K} / 0.20) = √{we2r}."
+        ],
+        "answer": "v = **{we2v} m/s** (less than the top speed {we1v} m/s, as it should be)"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A mass on a horizontal frictionless spring (k = 40 N/m) is pulled out by A = 0.10 m and released. What is the total energy of the oscillation?",
+        "choices": [
+          "{p1W} J",
+          "{p1w1} J",
+          "{p1w2} J",
+          "{p1w3} J"
+        ],
+        "answer": 0,
+        "hint": "W = ½·k·A². Don't forget the ½ and square the A.",
+        "solution": "The total energy of the oscillation is the elastic energy at the end: W = ½·k·A².\n\nW = ½ × 40 N/m × (0.10 m)² = ½ × 40 × 0.010 = **{p1W} J**.\n\nSense check: the spring stores energy through A², so a small swing means only a few tenths of a joule.",
+        "whyNot": [
+          null,
+          "That is k·A² = {p1w1} J: you left out the ½. W = ½·k·A² = {p1W} J.",
+          "That is ½·k·A = {p1w2} with A not squared. Square the amplitude: ½ × 40 × 0.10² = {p1W} J.",
+          "k·A = {p1w3} is the spring **force** at the end (in N), not an energy. Use ½·k·A² = {p1W} J."
+        ]
+      },
+      {
+        "q": "The mass in the last question is 0.50 kg. What is its top speed?",
+        "choices": [
+          "{p2v} m/s",
+          "{p2w1} m/s",
+          "{p2w2} m/s",
+          "{p2w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "At the middle all the energy is kinetic: ½·m·v² = W.",
+        "solution": "All the energy is kinetic in the middle: ½·m·v_{max}² = W, so v_{max} = √(2·W/m).\n\nv_{max} = √(2 × {p1W} J / 0.50 kg) = √{p2w2} = **{p2v} m/s**.\n\nCheck: A·√(k/m) = 0.10 × √(40/0.50) = {p2v} m/s. Same.",
+        "whyNot": [
+          null,
+          "{p2w1} m/s is √(W/m): the 2 is missing. ½·m·v² = W gives v = √(2·W/m) = {p2v} m/s.",
+          "{p2w2} is 2·W/m = v², and you stopped before the square root. v = √{p2w2} = {p2v} m/s.",
+          "{p2w3} is ω = √(k/m) = √(40/0.50) in rad/s: you forgot to multiply by A. The top speed is v_{max} = A·ω = 0.10 × {p2w3} = {p2v} m/s."
+        ]
+      },
+      {
+        "q": "The amplitude of an oscillating mass on a spring is doubled. What happens to the total energy?",
+        "choices": [
+          "It becomes 4 times as big",
+          "It becomes 2 times as big",
+          "It becomes 8 times as big",
+          "It stays the same"
+        ],
+        "answer": 0,
+        "hint": "W = ½·k·A²: look at how A appears.",
+        "solution": "W = ½·k·A². With A replaced by 2A: W' = ½·k·(2A)² = ½·k·4·A² = 4 × (½·k·A²).\n\nSo the energy becomes **4 times** as big. (Doubling A gives 2² = 4, tripling gives 9.)",
+        "whyNot": [
+          null,
+          "That would be true if W went with A. W = ½·k·A² has A **squared**, so doubling A gives 4 times.",
+          "8 = 2³ cubes the amplitude. W goes with A², and 2² = 4.",
+          "The amplitude changed, and W = ½·k·A² depends on A². So W changes: it becomes 4 times as big."
+        ]
+      },
+      {
+        "q": "A mass of 0.20 kg on a spring with k = 50 N/m has amplitude A = 0.060 m. What is its speed when it is 0.030 m from the middle?",
+        "choices": [
+          "{p4v} m/s",
+          "{p4w1} m/s",
+          "{p4w2} m/s",
+          "{p4w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "½·k·A² = ½·k·y² + ½·m·v². Solve for v.",
+        "solution": "Total energy: W = ½·k·A² = ½ × 50 × 0.060² = {p4W} J. Elastic at y = 0.030 m: ½ × 50 × 0.030² = {p4U} J. Kinetic: {p4W} − {p4U} = {p4K} J.\n\n½·m·v² = {p4K}, so v = √(2 × {p4K} / 0.20) = **{p4v} m/s**.\n\nSense check: less than the top speed A·ω = {p4w1} m/s, as it must be away from the middle.",
+        "whyNot": [
+          null,
+          "{p4w1} m/s is the **top** speed A·ω, reached in the middle. At 0.030 m from the middle the mass is slower: {p4v} m/s.",
+          "{p4w2} m/s is ω·y, which treats the displacement like an amplitude. Use energy: ½·k·A² = ½·k·y² + ½·m·v², giving {p4v} m/s.",
+          "{p4w3} m/s is √(K/m): you dropped the 2 when solving ½·m·v² = {p4K} J. It is v = √(2 × {p4K} / 0.20) = {p4v} m/s."
+        ]
+      },
+      {
+        "q": "A pendulum bob of 0.30 kg is released at rest 0.20 m above its lowest point. Ignoring air resistance, how fast does it pass the lowest point? (g = {g} m/s²)",
+        "choices": [
+          "{p5v} m/s",
+          "{p5w1} m/s",
+          "{p5w2} m/s",
+          "{p5w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "ΔE_{p} = m·g·Δh turns into ½·m·v². The mass cancels.",
+        "solution": "The height energy turns into movement energy: m·g·Δh = ½·m·v². The mass cancels, so v = √(2·g·Δh).\n\nv = √(2 × {g} m/s² × 0.20 m) = √{p5w1} = **{p5v} m/s**.\n\nSense check: the bob has {p5E} J of height energy (0.30 × {g} × 0.20), and ½ × 0.30 × {p5v}² gives the same {p5E} J.",
+        "whyNot": [
+          null,
+          "{p5w1} is 2·g·Δh = v², and you stopped before the square root. v = √{p5w1} = {p5v} m/s.",
+          "{p5w2} m/s is √(g·Δh): the 2 is missing. m·g·Δh = ½·m·v² gives v = √(2·g·Δh) = {p5v} m/s.",
+          "{p5w3} is √(2·Δh/g), a **time** in s (how long a free fall of Δh takes), not a speed. Here v = √(2·g·Δh) = {p5v} m/s."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "The giant ball in the tower",
+    "frames": [
+      {
+        "cap": "Taipei, 2004",
+        "text": "Taipei 101 is finished: a tower about **508 m** tall, in a region with typhoons. Strong wind makes a tall building **sway** slowly back and forth, like a giant spring.",
+        "fx": "WHOOSH"
+      },
+      {
+        "cap": "Inside the top",
+        "text": "From the 92nd floor, down through the top few floors, hangs a **steel ball of about 660 tonnes**, on thick steel cables. It is a **tuned mass damper**."
+      },
+      {
+        "cap": "How it works",
+        "text": "When the tower sways, the ball swings too, a little out of step, so it pulls against the sway. Viscous dampers (pistons pushing through thick oil) turn the swaying **energy into heat**.",
+        "fx": "SWISH"
+      },
+      {
+        "cap": "The test",
+        "text": "In Typhoon Soudelor in 2015 the ball is reported to have swung by about a metre, and the tower came through undamaged. *(Figures as reported in the news; check for yourself.)*",
+        "fx": "BOOM"
+      }
+    ],
+    "question": "Where does the swaying energy of the tower end up?",
+    "choices": [
+      "As heat in the dampers",
+      "Stored in the ball for ever",
+      "It simply disappears"
+    ],
+    "answer": 0,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Yes!",
+      "The ball keeps swinging, but it can't store it for ever:",
+      "Energy never disappears:"
+    ],
+    "explain": "A damper is **damping on purpose**. The sway energy of the building goes into the ball, and the dampers change it into **heat**. Same idea as the shock absorber of a car, just much bigger. The ball is also *tuned*: its swing is set to match the tower's own sway so that it works well."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Masses & Springs",
+    "body": "Open the **Energy** screen. It shows bars for kinetic, elastic, gravitational and thermal (heat) energy while a mass bounces. Careful: in this sim the mass **hangs**, so gravity gets an energy bar too. That's why our spring lay flat. Then turn the **damping** up and watch the heat bar grow as the bounce shrinks.\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The bounce, in four panels",
+    "body": "Draw an anime-style hero bouncing on a giant spring as a 4-panel strip. **Panel 1:** the spring squeezed to the end, the hero frozen, all the energy stored (draw a glowing coil). **Panel 2:** the hero shoots through the middle with speed lines, all movement energy. **Panel 3:** the far end, stored again. **Panel 4:** much later, the bounces are tiny and little puffs of warm steam rise from the spring: the energy became **heat**."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "Kinetic energy **E_{kin} = ½·m·v²**, elastic energy **½·k·y²**. On a frictionless horizontal spring they swap, and the **total stays the same**.",
+      "**Total energy: W = ½·k·A²**. At the ends it is all elastic (v = 0), in the middle all kinetic.",
+      "At any place: **½·k·A² = ½·k·y² + ½·m·v²**. The elastic share is y²/A². Kinetic = elastic at y = A/√2 ≈ {spot}·A.",
+      "**v_{max} = A·√(k/m) = A·ω** (from ½·m·v_{max}² = ½·k·A²).",
+      "**W ∝ A²**: double the amplitude, 4 times the energy.",
+      "Energy graphs: kinetic and elastic each swing between 0 and W, **twice per period**; the total is a flat line.",
+      "Pendulum: **ΔE_{p} = m·g·Δh** turns into **½·m·v²**.",
+      "**Damping** (friction, air resistance) turns the oscillation's energy into **heat**: the amplitude shrinks and the kinetic + elastic total slopes down. Light damping: many swings; heavy damping: it creeps back. Examples: car shock absorbers, a tuned mass damper in a skyscraper."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A frictionless spring oscillator. The graph of its total energy against time is...",
+        "choices": [
+          "a flat line",
+          "a wave that goes up and down",
+          "a line that slopes down",
+          "a line that slopes up"
+        ],
+        "answer": 0,
+        "why": "With no friction, energy only swaps between elastic and kinetic. The **total stays at W = ½·k·A²**, a flat line.",
+        "whyNot": [
+          null,
+          "That is the shape of the kinetic energy and of the elastic energy, one at a time. Their **total** is steady.",
+          "That needs friction or air resistance to take energy away, and this oscillator has none.",
+          "Energy can't grow by itself: nothing pushes the mass. With no friction the total stays put."
+        ]
+      },
+      {
+        "q": "Kinetic and elastic energy are equal when the mass is at...",
+        "choices": [
+          "y = A/2",
+          "y = A/√2, about {spot}·A",
+          "y = 0",
+          "y = A"
+        ],
+        "answer": 1,
+        "why": "Each is half of W: ½·k·y² = ¼·k·A², so y² = A²/2 and **y = A/√2 ≈ {spot}·A**.",
+        "whyNot": [
+          "At A/2 the spring holds only (½)² = ¼ of W, so kinetic is ¾. They are not equal yet.",
+          null,
+          "In the middle all of the energy is kinetic and the spring stores 0. They are far from equal.",
+          "At the end the mass stops, so all the energy is elastic and the kinetic part is 0."
+        ]
+      },
+      {
+        "q": "A swing slowly comes to rest because of air resistance. Where did its energy go?",
+        "choices": [
+          "Into heat",
+          "It was destroyed",
+          "Into a bigger amplitude",
+          "Gravity took it away"
+        ],
+        "answer": 0,
+        "why": "Friction and air resistance **turn the oscillation's energy into heat**. The amplitude shrinks, and the kinetic + elastic total slopes down.",
+        "whyNot": [
+          null,
+          "Energy is never destroyed. It was changed into heat.",
+          "The opposite: the amplitude gets **smaller** as the swing loses energy.",
+          "Gravity gives the height energy back on the way down, so it takes nothing away for good. Friction and air resistance turn it into heat."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "decay": {
+    "kicker": "Bonus: fraction lost per swing",
+    "title": "How fast does it fade?",
+    "say": "A swing loses the same fraction each time!",
+    "lead": "For many real oscillators the damping takes away the **same fraction** of the energy on every full swing. Say a mass loses **{decLoss}%** of its energy each swing. Vote first.",
+    "question": "After **{decN} swings**, how much of the original energy is left?",
+    "choices": [
+      "50%",
+      "{dec5}%",
+      "90%",
+      "{decLost}%"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "That would take {decLoss}% of the **original** each swing. But each swing takes {decLoss}% of what is **left**:",
+      "Right. Here's why:",
+      "That is only one swing's worth:",
+      "That is how much is **lost**:"
+    ],
+    "after": "Each swing keeps **{decKeep}** of the energy, so after {decN} swings you have multiplied {decN} times: {decKeep} to the power {decN} is about **{dec5}%** left. Repeated multiplying like this is called **exponential decay**. The energy halves after about **{decHalf} swings**.\n\nSince W ∝ A², the amplitude fraction is the **square root** of the energy fraction: √({dec5}/100) ≈ **{decAmp}%** of the starting amplitude.\n\nEngineers rate how slowly an oscillator fades with the **quality factor** Q ≈ 2π × (energy stored) ÷ (energy lost per swing) = 2π / {decLossF} ≈ **{decQ}**. A big Q means many swings. A tuning fork has a big Q, a car's shock absorber a tiny one."
+  },
+  "crit": {
+    "kicker": "Bonus: the door closer",
+    "title": "Not too light, not too heavy",
+    "lead": "A door closer should bring the door shut and stop, with no bang. Too little damping and the door swings past and bounces back. Too much and it creeps shut very slowly. In between there is one special amount, called **critical damping**: the **fastest** return to the middle **without swinging past**. For a mass m on a spring k, with a damping force −b·v, it needs **b = 2·√(m·k)**. For m = {critM} kg and k = {critK} N/m, that is b = **{bcrit} kg/s**.",
+    "question": "Which damping closes the door **fastest without banging**?",
+    "choices": [
+      "Light damping: it swings past and returns",
+      "Critical damping",
+      "Heavy damping: it creeps back"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "It overshoots, and has to come back:",
+      "Yes! The fastest return with no overshoot.",
+      "It never overshoots, but it's slow:"
+    ],
+    "explain": "Critical damping is the sweet spot for door closers, and for many measuring instruments, whose pointer should settle on the reading quickly and stay there."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "energy": {
+      "aria": "Graph of energy against position for a frictionless spring, from minus A to plus A. A flat yellow line shows the total energy W. A pink U-shaped curve shows the elastic energy, zero in the middle and equal to W at both ends. The cyan gap between the curve and the flat line is the kinetic energy, largest in the middle. The curve reaches half of W at y = plus and minus A over root 2.",
+      "total": "total W = ½·k·A²",
+      "elastic": "elastic ½·k·y²",
+      "kinetic": "kinetic ½·m·v² = the gap",
+      "equal": "equal at y = ±A/√2",
+      "minusA": "−A",
+      "zero": "0",
+      "plusA": "+A",
+      "axis_x": "position y",
+      "axis_y": "energy",
+      "caption": "**Energy against position.** The pink curve is the elastic energy ½·k·y²: zero in the middle, W at the ends. The yellow line is the total W. What is left between them is the **kinetic energy** ½·m·v², by ½·k·A² = ½·k·y² + ½·m·v². It is biggest in the middle and zero at the ends. The pink curve reaches half of W at the white dots, where kinetic and elastic are equal: y = ±A/√2 ≈ ±{spot}·A. (This is energy against **position**; the lab above plotted it against **time**.)"
+    },
+    "damp": {
+      "aria": "Graph of displacement against time for a lightly damped oscillator. The swings get smaller each time, inside a dashed yellow envelope that slopes down towards zero. A dotted line marks where the amplitude has dropped to half of the first one.",
+      "amp0": "A",
+      "amp1": "A/2",
+      "half": "amplitude halved after {figHalf} swings",
+      "envelope": "the amplitude shrinks",
+      "axis_y": "displacement y",
+      "axis_x": "time",
+      "caption": "**Damping, drawn.** Displacement y against time for a lightly damped mass. Every swing is a bit smaller than the one before, and the dashed yellow line (the **envelope**) shows the amplitude shrinking. In this sketch the amplitude halves after {figHalf} swings. Because W ∝ A², half the amplitude means **a quarter of the energy** is left in the swing: the rest has become heat. (A schematic sketch, not a measurement.)"
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Watch the bounce die away",
+    "lead": "Damping is easy to see with a **swinging weight**. It is a pendulum, so the same energy swap as the spring (height energy and movement energy). You will count how many swings it takes for the amplitude to **halve**, once in plain air and once with a piece of card acting as an **air brake**.",
+    "safety": "**Safety:** keep the weight light (keys or a few coins in a small bag, not a heavy object) and keep faces and windows out of its path. Hang it somewhere low and stable, away from roads, stairs, heights and glass. Don't swing it near other people.",
+    "need": "**You need:** a string about {expL} m long, a small weight such as a bunch of keys or a bag of coins, tape, a piece of stiff card about the size of a postcard, a ruler, a stopwatch (any phone), and a table edge or the back of a chair to tape the string to, high enough that the weight can swing freely.",
+    "steps": "**Do this:**\n1. Tape the string to the table edge so the weight hangs {expL} m below the tape. Put the ruler on the floor under the swing with its zero at the rest position, and stand a metre to the side and look at the swing from the side (at right angles to the way it swings), with the ruler along the swing.\n2. Pull the weight **{expA0} cm** sideways, hold it still, and let go without pushing.\n3. Count the swings (one swing = there and back) until the weight only reaches **{expA1} cm** from the middle. Write down this number as N_{1}. Repeat 3 times and take the typical value.\n4. Tape the card flat to the weight, with its **face pointing along the swing**, like a sail. Repeat steps 2 and 3. Write down N_{2}.\n5. Optional: time {expTen} swings with the stopwatch.",
+    "measure": "**Measure:** the number of swings N_{1} (air only) and N_{2} (with card) until the amplitude has halved, and the time for {expTen} swings.",
+    "compare": "**Compare with the chapter:** for small swings a pendulum of length {expL} m has T = 2π√(L/g) = **{expT} s** per swing, so {expTen} swings should take about **{expTenT} s**. Time that to check your setup. Then compare N_{1} and N_{2}: **air alone** usually lets a compact weight swing many times before the amplitude halves, while the **card** gives far fewer swings. The card pushes a lot of air out of the way, so the swing's energy turns into heat in the air much faster. Half the amplitude means **{expQ}%** of the energy is left (W ∝ A²). In words only: more drag, quicker fade, which is what a car's shock absorber does on purpose.",
+    "wrong": "**What goes wrong:** judging {expA1} cm by eye is hard, so ask a friend, or film the swing with your phone next to the ruler. Let the weight swing in a straight line, not in a circle. The card adds a little mass and can twist, so keep it flat and make the string the same length both times. A stretchy string or a loose bit of tape also wastes energy and adds to the damping. Expect your counts to be off by a swing or two. The **difference** between N_{1} and N_{2} is the result."
+  }
+}

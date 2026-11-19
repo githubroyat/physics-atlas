@@ -1,0 +1,611 @@
+{
+  "hero": {
+    "sfx": "WHOOSH",
+    "caption": "Sideways and down: two motions that never talk to each other."
+  },
+  "intro": "Throw a ball and it flies in a curve. That curve hides a beautiful trick: the **sideways** motion and the **up-and-down** motion don't affect each other at all. This chapter teaches you, step by step, to split a throw into two simple motions and solve it with the booklet's formulas. We use **x** for the horizontal direction and **y** for the vertical one (up is positive). Unless we say otherwise: g = {g} m/s², no air resistance, and the field is the same everywhere.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "explain the **independence of motion** in two perpendicular directions in a uniform field;",
+      "**split a launch velocity** into components, v_{x} = v_{0}·cos θ and v_{y0} = v_{0}·sin θ;",
+      "use **s(t) = s_{0} + v_{0}·t + ½·a·t²** and **v(t) = v_{0} + a·t** in each direction (sideways a_{x} = 0, vertical a_{y} = −g);",
+      "solve a **horizontal launch** from a height: time to fall, distance and landing speed;",
+      "find the **time of flight, maximum height and range** of a projectile launched from the ground;",
+      "use **energy conservation** to find the speed on landing;",
+      "treat an **electron between charged plates** like a horizontal throw, with a = q·E/m instead of g."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Two balls, one table edge!",
+    "question": "From the same height, at the same moment, you **drop** one ball and **throw** another one **horizontally** (hard!).\n\nWhich lands first?",
+    "choices": [
+      "The dropped ball",
+      "The thrown ball",
+      "They land at the same time",
+      "It depends on how hard you throw"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Many people say that, but no:",
+      "Tempting, it's the one that goes further! But no:",
+      "Yes! And it surprises almost everyone.",
+      "A fast throw feels different, but no:"
+    ],
+    "explain": "Sideways speed doesn't change how fast you fall. In the vertical direction both balls start with 0 m/s and feel the same pull, so both follow y = h − ½·g·t². From {dropH} m that is t = √(2·{dropH}/{g}) = **{t20} s** for both, however hard you throw.\n\nYou'll watch this happen in step 1.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Two motions, no talking",
+    "body": "A thrown ball does **two things at once**: it moves sideways **and** it falls. The big rule is this:\n\n**In a uniform field, motion in two perpendicular directions is independent.** What happens along x does not change what happens along y.\n\n- **Sideways (x):** nothing pushes sideways, so a_{x} = 0. The velocity v_{x} stays the same: x = v_{x}·t.\n- **Vertical (y):** gravity pulls down, so with up as positive **a_{y} = −g** (magnitude g, direction down). The vertical velocity changes steadily, as in a falling ball.\n\n$ x(t) = x_{0} + v_{x}·t     y(t) = y_{0} + v_{y0}·t − ½·g·t²\n\nThe booklet formula s(t) = s_{0} + v_{0}·t + ½·a·t² is used once for x and once for y. In it, **s_{0}** is the starting position along that direction, **v_{0}** is the starting velocity along that direction, and **a** is the (constant) acceleration along it. For one direction on its own, see *Position as a function of time*. Time t is the only thing the two directions share.\n\n**Try it:** both balls start {dropH} m up. One is dropped, the other is thrown sideways. Press release.",
+    "check": {
+      "q": "A ball rolls off a table edge at 2 m/s and falls. Ignore air. What is its **sideways** speed 0.3 s later?",
+      "choices": [
+        "2 m/s",
+        "0 m/s",
+        "{c1g} m/s",
+        "{c1sum} m/s"
+      ],
+      "answer": 0,
+      "why": "Nothing pushes sideways (a = 0), so **v_{x} stays 2 m/s**. Only the vertical speed changes: after 0.3 s it is {c1g} m/s downward.",
+      "whyNot": [
+        null,
+        "Leaving the table doesn't switch the sideways motion off. What force would act sideways to slow the ball?",
+        "{c1g} m/s is g·t, the **vertical** speed after 0.3 s. The question asks about the sideways one.",
+        "{c1sum} m/s adds the sideways and vertical speeds as plain numbers. They point in different directions, so they don't add like that."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Splitting the launch",
+    "body": "Most throws are not horizontal. You launch at speed v_{0} at an angle θ above the horizontal. The launch velocity is an arrow, and an arrow can be split into a **sideways part** and an **up part**, the two sides of a right-angled triangle:",
+    "formula": "$ v_{x} = v_{0}·cos θ     v_{y0} = v_{0}·sin θ",
+    "after": "At 0° the arrow is all sideways (v_{y0} = 0). At 90° it is all upward (v_{x} = 0). After the launch:\n\n- **x:** v_{x} stays constant: x(t) = v_{x}·t.\n- **y:** v_{y}(t) = v_{y0} − g·t, and y(t) = y_{0} + v_{y0}·t − ½·g·t² (this is s(t) and v(t) with a_{y} = −g).\n\n**Try it in the lab:** drag the arrow tip in the dial (direction = angle, length = speed) and press **Launch**. The yellow dashed line is the predicted path. The two small shadow balls show each motion alone: along the floor (sideways) and up the left wall (vertical).",
+    "check": {
+      "q": "A ball is launched at 30 m/s and 60° above the horizontal. What is the **vertical** component of its launch velocity?",
+      "choices": [
+        "{c2vy} m/s",
+        "{c2vx} m/s",
+        "30 m/s",
+        "0 m/s"
+      ],
+      "answer": 0,
+      "why": "v_{y0} = v_{0}·sin θ = 30 × sin 60° = **{c2vy} m/s**. (The sideways part is v_{0}·cos 60° = {c2vx} m/s.)",
+      "whyNot": [
+        null,
+        "{c2vx} m/s is v_{0}·cos 60°, the **sideways** part. The vertical part uses the other trig function.",
+        "30 m/s is the whole launch speed: the arrow's length, not one side of the triangle.",
+        "Vertical speed is zero only for a horizontal launch (or at the top). At 60° the ball clearly climbs."
+      ]
+    }
+  },
+  "lab": {
+    "scene": "Side view of a ball flying in a curve, with its shadow along the floor and along the left wall",
+    "dial": "Aiming dial for launch angle and speed",
+    "drag": "Launch arrow: its direction is the angle, its length is the speed",
+    "drag_hint": "Drag the round handle. Arrow keys: up and down change the angle, left and right change the speed. Enter launches.",
+    "legend": "White dots mark equal time steps. Look at the floor: the shadow's dots are evenly spaced. On the wall they spread out.",
+    "angle": "Launch angle",
+    "speed": "Launch speed",
+    "height": "Launch height",
+    "launch": "Launch",
+    "t_flight": "Flight time",
+    "range": "Range",
+    "top": "Highest point",
+    "v_land": "Landing speed",
+    "vx": "Sideways speed vx",
+    "vy": "Vertical speed vy",
+    "t_now": "Time now",
+    "ready": "Ready. The dashed path is the prediction. Press Launch.",
+    "flying": "In the air...",
+    "landed": "Landed after {t} s, {x} m away.",
+    "noflight": "No flight! At 0° from height 0 the ball starts on the floor, moving sideways along it. Raise the angle or the launch height.",
+    "straight_up": "Straight up: it goes up and comes straight back down. Range 0 m, because there is no sideways speed.",
+    "tasks": "**Try these:**\n- Start at **20 m/s** and launch from the ground at **30°**, then at **60°**. Both land about **{r30} m** away. Then try **45°**: {r45} m. That's the longest throw on flat ground.\n- Watch the readouts while flying: **v_{x} never changes**, while **v_{y}** drops from positive through 0 at the top to negative.\n- Extremes: **0° at height 0** (no flight), **90°** (range 0), and a launch from a height such as 20 m (the view zooms out to fit)."
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "Horizontal launch",
+    "body": "The simplest throw: **horizontal**, from a height h. Then v_{0} is all sideways: v_{x} = v_{0} and v_{y0} = 0. Take y = 0 at the ground and the launch point at y = h.\n\n- **Time to fall:** y(t) = h − ½·g·t² = 0, so t = √(2h/g). The sideways speed plays **no part** in the fall time.\n- **Distance:** x = v_{x}·t, using that t.\n- **Landing speed:** the vertical velocity at landing is v_{y} = −g·t (negative means downward), and the speed is the length of the velocity arrow. The easy way is **energy conservation**: with ΔE_{p} = m·g·Δh (Δh = the height fallen), the kinetic energy gained equals the potential energy lost: ½·m·v² = ½·m·v_{0}² + m·g·Δh.",
+    "formula": "$ t = √(2·h / g)     x = v_{0}·t     v = √(v_{0}² + 2·g·Δh)",
+    "after": "The landing speed does not depend on the **direction** of the launch, only on v_{0} and the height fallen Δh. This also works for a launch at an angle, as long as the ball lands Δh lower than it started.",
+    "check": {
+      "q": "A stone is thrown horizontally from a cliff {c3h} m high. How long does it take to hit the sea? (g = {g} m/s²)",
+      "choices": [
+        "{c3t} s",
+        "{c3w1} s",
+        "{c3w2} s",
+        "{c3w3} s"
+      ],
+      "answer": 0,
+      "why": "t = √(2h/g) = √(2 × {c3h} / {g}) = **{c3t} s**, whatever the sideways speed.",
+      "whyNot": [
+        null,
+        "{c3w1} s is h/g: no factor 2 and no square root. Look again at how t sits in h = ½·g·t².",
+        "{c3w2} s is √(h/g): the factor 2 got lost on the way.",
+        "{c3w3} s is 2h/g, which is t². The square root is still missing."
+      ]
+    }
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Time of flight, height, range",
+    "body": "Launch from the **ground** at speed v_{0} and angle θ. Use the two components v_{x} = v_{0}·cos θ and v_{y0} = v_{0}·sin θ and apply the booklet formulas to y:\n\n- **Top of the flight:** at the highest point v_{y} = 0, so v_{y0} − g·t = 0 and the time to the top is t_{top} = v_{y0}/g. Put this in y(t) = v_{y0}·t − ½·g·t²:\n\n$ H = v_{y0}·(v_{y0}/g) − ½·g·(v_{y0}/g)² = v_{y0}²/g − v_{y0}²/(2g) = v_{y0}² / (2g)\n\n- **Time of flight:** the ball lands when y = 0 again. By symmetry that takes **twice** the time to the top: t_{flight} = 2·v_{y0} / g. Check: y(2·v_{y0}/g) = v_{y0}·(2·v_{y0}/g) − ½·g·(2·v_{y0}/g)² = 2·v_{y0}²/g − 2·v_{y0}²/g = 0.\n- **Range:** during t_{flight} the sideways speed is constant, so R = v_{x}·t_{flight}.\n- **Landing speed:** it lands at launch height, so Δh = 0 and ΔE_{p} = m·g·Δh = 0. Then ½·m·v² = ½·m·v_{0}²: the ball lands with the **same speed it was launched with** (only the direction differs).",
+    "formula": "$ H = v_{y0}² / (2g)     t_{flight} = 2·v_{y0} / g     R = v_{x}·t_{flight}",
+    "after": "At the top the ball is **not** at rest: v_{y} = 0, but v_{x} is still there, so the speed is v_{0}·cos θ. The acceleration is a_{y} = −g (magnitude g, pointing down) all the time.\n\n**Best angle:** on flat ground the range is largest at **45°**, and two angles that add up to 90° (like **30° and 60°**) give the **same range**. Try it in the lab.\n\n**Charged particles, 2-D.** The same \"constant sideways + constant acceleration\" maths describes an **electron entering the uniform field between two parallel plates, horizontally**. The plates are a distance d apart with a voltage U across them, so the field is **E = U/d** (see *Stored lightning*). The electron feels the force F = q·E, so its acceleration is **a = q·E/m**, across the plates, and it is deflected just like a horizontal throw, with a in place of g. Constants: e = {eStr} C and mₑ = {meStr} kg. Compare the two forces: gravity on the electron is m·g, and q·E is about {fRatioStr} times bigger (see example 3), so **gravity is negligible** here. For the 1-D case (a charge speeding up along the field) see *Position as a function of time*.\n\nThe lab shows these as readouts. The target game below lets you use the whole picture: choose angle and speed, then fire.",
+    "check": {
+      "q": "A ball on flat ground is in the air for {c4T} s in total. At what time after launch does it reach its highest point?",
+      "choices": [
+        "{c4half} s",
+        "{c4T} s",
+        "{c4w} s",
+        "{c4w2} s"
+      ],
+      "answer": 0,
+      "why": "The path is symmetric: the way up takes as long as the way down, so the top is at {c4T} / 2 = **{c4half} s**.",
+      "whyNot": [
+        null,
+        "{c4T} s is the **landing** time. Where is the ball at that moment?",
+        "{c4w} s is the flight time halved twice (a quarter). Halving is the right idea for a symmetric path, but it is used one time too many.",
+        "{c4w2} s is double the flight time. The top comes **during** the flight, not after it."
+      ]
+    }
+  },
+  "game": {
+    "kicker": "Mini-game",
+    "title": "Hit the target",
+    "lead": "Three rounds. Aim with the dial, press **Fire**, and pass through the orange target. The dashed line shows your last shot, so you can adjust. There is no time limit and no penalty.",
+    "scene": "Side view with an orange target ring and a launcher",
+    "dial": "Aiming dial for launch angle and speed",
+    "drag": "Launch arrow: its direction is the angle, its length is the speed",
+    "drag_hint": "Drag the round handle. Arrow keys: up and down change the angle, left and right change the speed. Enter fires.",
+    "angle": "Launch angle",
+    "speed": "Launch speed",
+    "r_round": "Round",
+    "r_shots": "Shots this round",
+    "r_closest": "Closest pass",
+    "r_tol": "Target radius",
+    "round_info": "Round {n} of {total}. Target: {x} m away and {y} m up. You launch from {h} m. Pass within {r} m of its centre.",
+    "fire": "Fire",
+    "next": "Next round",
+    "again": "Play again",
+    "hit": "HIT! On to the next one.",
+    "hit_last": "HIT! That was the last round.",
+    "short": "Fell short: it landed {d} m before the target's distance.",
+    "over": "Missed: it flew {d} m above the target.",
+    "under": "Missed: it passed {d} m below the target.",
+    "noflight": "No flight! At 0° from height 0 the ball never leaves the floor. Raise the angle.",
+    "win_head": "THREE FOR THREE!",
+    "win": "Notice that **many** different angle and speed pairs work. The path through a point is not unique, and that's why aiming feels like a puzzle."
+  },
+  "bigidea": {
+    "scene": "A dropped ball and a ball thrown sideways, falling side by side, with horizontal rungs at equal times",
+    "release": "Release both",
+    "vx": "Sideways speed of the thrown ball",
+    "lbl_drop": "dropped",
+    "lbl_throw": "thrown",
+    "t_drop": "Dropped lands after",
+    "t_throw": "Thrown lands after",
+    "dist": "Thrown ball's distance",
+    "note": "Every rung is perfectly horizontal: at each moment both balls are at the same height.",
+    "after": "Whatever the sideways speed, the rungs stay level. Sideways, x = v_{x}·t (steady speed); vertically, y = h − ½·g·t² (steady acceleration). At 8 m/s sideways the thrown ball lands {d8} m away, but still after {t20} s.\n\nCombine the two and you get the curve: x = v_{x}·t and y = v_{y0}·t − ½·g·t² together draw a **parabola**."
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: the rooftop leap",
+        "problem": "An anime-style hero runs straight off a rooftop edge at **{heroV} m/s**. The next roof is **{heroGap} m** away sideways and **{heroDrop} m** lower. No air resistance, g = {g} m/s². (a) Does she reach the roof? (b) How fast is she going once she has dropped the 2 m to the level of the lower roof (whether or not she lands on it)?",
+        "steps": [
+          "Horizontal launch: v_{x} = {heroV} m/s, v_{y0} = 0. Take the fall as {heroDrop} m.",
+          "**Time to fall:** {heroDrop} = ½·g·t², so t = √(2 × {heroDrop} / {g}) = **{heroT} s**.",
+          "**Sideways distance in that time:** x = v_{x}·t = {heroV} × {heroT} = {heroX4} ≈ **{heroX} m**. The roof is {heroGap} m away, so she is **{heroShort} m short**.",
+          "**Arrival speed by energy conservation:** v = √(v_{0}² + 2·g·Δh) = √({heroV2} + {heroGh}) = √{heroSum} = **{heroLand} m/s**.",
+          "**Check with components:** |v_{y}| = g·t = {g} × {heroT} = {heroVy} m/s (downward), and √({heroV}² + {heroVy}²) = {heroLand} m/s, the same speed."
+        ],
+        "answer": "(a) No: she lands **{heroX} m** from the edge, **{heroShort} m short**. (b) She arrives at **{heroLand} m/s**. (These are two different speeds: to cross the {heroGap} m in {heroT} s she would have needed a **run-up** of {heroGap} m ÷ {heroT} s ≈ {heroNeed} m/s, while a top sprinter reaches about {sprint} m/s.)"
+      },
+      {
+        "title": "Example 2: the kicked ball",
+        "problem": "A ball is kicked from flat ground at **{kV} m/s** at **{kA}°** above the horizontal. Find (a) the time of flight, (b) the maximum height and (c) the range. No air resistance, g = {g} m/s².",
+        "steps": [
+          "**Split the velocity:** v_{x} = {kV} × cos {kA}° = {kvx} m/s and v_{y0} = {kV} × sin {kA}° = {kvy} m/s.",
+          "**Time to the top:** v_{y} = 0 at t = v_{y0} / g = {kvy} / {g} = {kTtop} s. **Time of flight** is twice that: t_{flight} = **{kT} s**.",
+          "**Maximum height:** H = v_{y0}² / (2g) = {kvy}² / (2 × {g}) = **{kH} m**.",
+          "**Range:** R = v_{x}·t_{flight} = {kvx} × {kT} = **{kR} m**."
+        ],
+        "answer": "t_{flight} ≈ **{kT} s**, H ≈ **{kH} m**, R ≈ **{kR} m**. (It lands at the same height it started, so Δh = 0 and by energy conservation the landing speed is again {kV} m/s.)"
+      },
+      {
+        "title": "Example 3: the electron between the plates",
+        "problem": "An electron enters horizontally, along the middle of the gap between two horizontal parallel plates, at **{eV0} m/s**. The plates are **{eL} cm** long and **{ed} cm** apart, with **{eU} V** across them. Ignore gravity (check this below). (a) How long is the electron between the plates? (b) How far is it deflected across the gap (perpendicular to its original direction) by the time it leaves the plates?",
+        "steps": [
+          "**Field:** E = U/d = {eU} / {edm} = **{eEStr} V/m**. **Force on the electron:** F = q·E = {eStr} × {eEStr} = **{eFStr} N**.",
+          "**Gravity is negligible:** m·g = {meStr} × {g} = {mgStr} N, so q·E is about **{fRatioStr}** times bigger.",
+          "**Acceleration across the gap:** a = q·E/m = ({eFStr}) / ({meStr}) = **{eaStr} m/s²**. Along the plates a = 0, so v_{x} = {eV0} m/s stays constant.",
+          "**(a) Time between the plates** (horizontal motion, x = v_{x}·t): t = L/v_{x} = {eLm} / ({eV0}) = **{etStr} s**.",
+          "**(b) Deflection** (like the fall of a horizontal throw, y = ½·a·t²): y = ½ × {eaStr} × ({etStr})² = {eyM} m = **{eyMm} mm**. That is less than d/2 = {eHalfMm} mm, so the electron leaves the plates without touching them."
+        ],
+        "answer": "(a) t ≈ **{etStr} s**. (b) The electron is deflected **{eyMm} mm** toward the positive plate. It is a throw again: constant speed along the plates, constant acceleration across them."
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A ball is thrown horizontally at {p1v} m/s from the edge of a {p1h} m high cliff. No air resistance, g = {g} m/s². How far from the foot of the cliff does it land?",
+        "choices": [
+          "{p1x} m",
+          "{p1w1} m",
+          "{p1w2} m",
+          "{p1w3} m"
+        ],
+        "answer": 0,
+        "hint": "First the time to fall {p1h} m from rest, then x = v_{x}·t.",
+        "solution": "Time to fall from rest: t = √(2h/g) = √(2 × {p1h} / {g}) = {p1t3} s. The sideways speed plays no part in it. Then x = v_{x}·t = {p1v} × {p1t3} = **{p1x} m**.",
+        "whyNot": [
+          null,
+          "That is v·√(h/g): the 2 in t = √(2h/g) is missing, so the time and the distance are too small. Right: {p1x} m.",
+          "That is v·h/g: no 2 and no square root. First t = √(2h/g) = {p1t3} s, then x = {p1x} m.",
+          "That is v·2h/g: the square root is missing, so 2h/g (which is t², in s²) is used as if it were the time. First t = √(2h/g) = {p1t3} s, then x = {p1x} m."
+        ]
+      },
+      {
+        "q": "A ball is kicked at {p2v} m/s at {p2a}° above the horizontal. What is the **horizontal** component of its velocity?",
+        "choices": [
+          "{p2x} m/s",
+          "{p2w1} m/s",
+          "{p2v} m/s",
+          "{p2w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "The sideways part uses cos θ.",
+        "solution": "Split the launch arrow: v_{x} is the side next to the angle, so v_{x} = v_{0}·cos θ = {p2v} × cos {p2a}° = **{p2x} m/s**. It stays constant, because a_{x} = 0. Sense check: smaller than {p2v} m/s, as a side of the triangle must be. (The vertical part is {p2w1} m/s.)",
+        "whyNot": [
+          null,
+          "That is v·sin θ, the **vertical** component. The sideways one uses cos: {p2x} m/s.",
+          "{p2v} m/s is the whole launch speed. A component is shorter than the arrow: v_{x} = {p2x} m/s.",
+          "That is v·tan θ, which is not a side of the velocity triangle. v_{x} = v·cos θ = {p2x} m/s."
+        ]
+      },
+      {
+        "q": "A ball is launched from the ground at {p3v} m/s at {p3a}° above the horizontal. What is the maximum height it reaches? (g = {g} m/s²)",
+        "choices": [
+          "{p3H} m",
+          "{p3w1} m",
+          "{p3w2} m",
+          "{p3w3} m"
+        ],
+        "answer": 0,
+        "hint": "Only the vertical component matters for the height: H = v_{y0}² / (2g).",
+        "solution": "v_{y0} = {p3v} × sin {p3a}° = {p3vy} m/s. At the top v_{y} = 0, so H = v_{y0}² / (2g) = {p3vy}² / (2 × {g}) = **{p3H} m**. Sense check: less than {p3w1} m, the height if all the speed were vertical.",
+        "whyNot": [
+          null,
+          "That uses the full speed in v_{0}²/(2g). Only the vertical part v_{y0} = {p3vy} m/s lifts the ball: H = {p3H} m.",
+          "That is v_{y0}²/g: the 2 in 2g is missing, so the height is double. Right: {p3H} m.",
+          "That uses the **horizontal** component. Height comes from v_{y0} = {p3vy} m/s: H = {p3H} m."
+        ]
+      },
+      {
+        "q": "A ball is launched at an angle to the horizontal, with no air resistance. At the **highest point** of its path, which statement is true?",
+        "choices": [
+          "Its vertical velocity is zero and its acceleration is g downward",
+          "Its vertical velocity is zero and its acceleration is zero",
+          "Its speed is zero",
+          "Its horizontal velocity is zero and its acceleration is g downward"
+        ],
+        "answer": 0,
+        "hint": "Gravity never switches off, and nothing acts sideways.",
+        "solution": "At the top **v_{y} = 0** for an instant, but a_{y} = −g (g downward) the whole time, because gravity never switches off. Nothing acts sideways, so v_{x} is unchanged and the speed is v_{0}·cos θ, **not** zero.",
+        "whyNot": [
+          null,
+          "Zero vertical **velocity** is not zero acceleration. Gravity never switches off: a = g downward the whole flight.",
+          "At the top the ball still moves sideways at v_{x}, so its speed is v_{0}·cos θ, not zero.",
+          "Nothing pushes sideways, so v_{x} never changes. It is the **vertical** velocity that is zero at the top."
+        ]
+      },
+      {
+        "q": "A stone is thrown from the top of a {p5h} m high cliff at {p5v} m/s, in any direction. What is its speed when it reaches the ground at the foot of the cliff? (g = {g} m/s²)",
+        "choices": [
+          "{p5L} m/s",
+          "{p5w1} m/s",
+          "{p5w2} m/s",
+          "{p5w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "Use energy conservation: ½·v² = ½·v_{0}² + g·Δh, with Δh the height fallen. The direction doesn't matter.",
+        "solution": "Energy conservation: ½·m·v² = ½·m·v_{0}² + m·g·Δh, so v = √(v_{0}² + 2·g·Δh) = √({p5v}² + 2 × {g} × {p5h}) = √{p5sum} = **{p5L} m/s**. Sense check: faster than the launch speed {p5v} m/s, because it fell {p5h} m. The direction of the throw does not matter.",
+        "whyNot": [
+          null,
+          "That adds two speeds. Energy adds, not speeds: v² = v_{0}² + 2·g·Δh = {p5sum}, so v = {p5L} m/s.",
+          "That is the speed of a stone simply dropped from {p5h} m. The {p5v} m/s start counts too: v = {p5L} m/s.",
+          "That adds a speed to a height (m/s plus m). Use v² = v_{0}² + 2·g·Δh = {p5sum}, so v = {p5L} m/s."
+        ]
+      },
+      {
+        "q": "On flat ground, a ball launched at {r45v} m/s and 30° lands {r30} m away. Which **other** launch angle, at the same speed, gives the same range?",
+        "choices": [
+          "45°",
+          "60°",
+          "75°",
+          "150°"
+        ],
+        "answer": 1,
+        "hint": "Angles that add up to 90° are partners.",
+        "solution": "At 30°: v_{x} = {r45v} × cos 30° = {p6x} m/s and v_{y0} = {r45v} × sin 30° = {p6y} m/s, so R = v_{x}·t_{flight} = v_{x}·2·v_{y0}/g = {r30} m. At 60° the two components swap (v_{x} = {p6y} m/s, v_{y0} = {p6x} m/s): the product v_{x}·v_{y0} is the same, so R is the same. Partner angle: 90° − 30° = **60°**. The longest range of all is at 45° ({r45} m at {r45v} m/s).",
+        "whyNot": [
+          "45° gives the **longest** range ({r45} m), not the same range as 30° ({r30} m). Partners add up to 90°.",
+          null,
+          "75° adds the launch angle to the best angle (45° + 30°). Equal ranges need two angles that add up to 90°, and 30° + 75° does not.",
+          "150° is 180° − 30°: the partner taken from a straight line instead of from a right angle. Launch angles above the horizontal lie between 0° and 90°, and partners add up to 90°."
+        ]
+      },
+      {
+        "q": "An electron enters horizontally at {p7v} m/s between two horizontal plates {p7L} cm long and {p7d} cm apart, with {p7U} V across them. How far is it deflected across the gap (perpendicular to its original direction) by the time it leaves the plates? (e = {eStr} C, mₑ = {meStr} kg; ignore gravity)",
+        "choices": [
+          "{p7y} mm",
+          "{p7w1} mm",
+          "{p7w2} mm",
+          "{p7w3} mm"
+        ],
+        "answer": 0,
+        "hint": "E = U/d, then a = q·E/m. The time is the length divided by the horizontal speed, and y = ½·a·t².",
+        "solution": "E = U/d = {p7U} / {p7dm} = {p7EStr} V/m. a = q·E/m = ({eStr} × {p7EStr}) / ({meStr}) = {p7aStr} m/s². t = L/v_{x} = {p7Lm} / ({p7v}) = {p7tStr} s. y = ½·a·t² = ½ × {p7aStr} × ({p7tStr})² = {p7yM} m = **{p7y} mm**.",
+        "whyNot": [
+          null,
+          "That is double the right value: the ½ in y = ½·a·t² was left out. Right: {p7y} mm.",
+          "That is half the right value: the ½ was used twice. y = ½·a·t² = {p7y} mm.",
+          "That takes the time as plate gap ÷ speed. The time between the plates is length ÷ speed, {p7tStr} s, so y = {p7y} mm."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "The curve in the book",
+    "frames": [
+      {
+        "cap": "The 1500s",
+        "text": "How does a cannonball fly? Early drawings, like Tartaglia's, showed a **straight line, then a bend, then a straight drop**. It looked sensible. It was wrong.",
+        "fx": "BOOM"
+      },
+      {
+        "cap": "Galileo's idea",
+        "text": "Galileo said: split the flight in two. **Sideways** the ball keeps its speed. **Downward** it speeds up steadily, just like a falling ball. Put them together."
+      },
+      {
+        "cap": "1638",
+        "text": "He published it in his book about **two new sciences**, printed in Leiden. Galileo was old and under house arrest near Florence by then, and had gone blind.",
+        "fx": "INK"
+      },
+      {
+        "cap": "Result",
+        "text": "The path is a **parabola**. He also showed that the longest throw on level ground is at **45°**, and that angles equally far above and below 45° reach the same distance.",
+        "fx": "ARC"
+      }
+    ],
+    "question": "Why does the flight path come out as a parabola?",
+    "choices": [
+      "Sideways distance grows steadily with time, but fall distance grows with time squared",
+      "Air pushes the ball into a curve",
+      "Gravity switches on after the ball has flown a while"
+    ],
+    "answer": 0,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Yes, that's the idea:",
+      "No, there is no air in this model:",
+      "No, gravity pulls all the time:"
+    ],
+    "explain": "x = v_{x}·t grows in step with t, but the fall ½·g·t² grows with t². Swap t = x/v_{x} into the fall and you get y = h − (g / (2·v_{x}²))·x²: a **parabola**. Real balls bend a little away from it because air slows them down."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Projectile Motion",
+    "body": "Fire a cannon, a ball or even a pumpkin. Change the angle, the speed and the height, then measure the range and the time and compare them with your calculations. **Leave air resistance switched off**, so the sim matches our no-air model.\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The two motions",
+    "body": "Draw a 4-panel strip about the leap. **Panel 1:** the hero sprinting off a roof edge, with speed lines pointing sideways. **Panel 2:** mid-air, with two arrows on her: a **steady** sideways one and a **growing** downward one. **Panel 3:** a faint line of ghost images showing the curve (equal time gaps: sideways gaps equal, downward gaps growing). **Panel 4:** she lands short, and a friend holds up the number she needed instead."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Independence:** in a uniform field, x and y motions don't affect each other. Only the time t is shared.",
+      "**Booklet:** s(t) = s_{0} + v_{0}·t + ½·a·t² and v(t) = v_{0} + a·t, used separately in x (a_{x} = 0) and y (a_{y} = −g). Here s_{0} = starting position, v_{0} = starting velocity, a = acceleration along that direction.",
+      "**Split the launch:** v_{x} = v_{0}·cos θ (constant) and v_{y0} = v_{0}·sin θ.",
+      "**Horizontal launch from height h:** t = √(2h/g), x = v_{0}·t. Fall time doesn't depend on the sideways speed.",
+      "**Ground launch:** time to top = v_{y0}/g, t_{flight} = 2·v_{y0}/g, H = v_{y0}²/(2g), R = v_{x}·t_{flight}.",
+      "**At the top:** v_{y} = 0, a_{y} = −g (magnitude g, pointing down), speed = v_{x}.",
+      "**Best angle:** on flat ground the range is largest at 45°, and angles adding up to 90° (30° and 60°) reach the same distance.",
+      "**Landing speed:** v = √(v_{0}² + 2·g·Δh) from energy conservation (ΔE_{p} = m·g·Δh, Δh = height fallen). At launch height Δh = 0, so the landing speed equals the launch speed.",
+      "**Charged particle between plates:** E = U/d, a = q·E/m across the plates; it is a horizontal throw with a in place of g (gravity is negligible)."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A ball is thrown horizontally at 10 m/s from a cliff. One second later, with no air, its sideways speed is...",
+        "choices": [
+          "10 m/s",
+          "{q1tot} m/s",
+          "0 m/s",
+          "{g} m/s"
+        ],
+        "answer": 0,
+        "why": "Nothing pushes sideways, so **v_{x} stays 10 m/s**. Only the vertical speed changes: it is {g} m/s downward after 1 s.",
+        "whyNot": [
+          null,
+          "{q1tot} m/s is the **total** speed after 1 s, √(10² + {g}²): sideways and vertical together. The question asks for the sideways part only, and that never changes.",
+          "Leaving the cliff doesn't stop the sideways motion. Nothing pushes sideways, so v_{x} stays 10 m/s.",
+          "{g} m/s is the **vertical** speed after 1 s (g·t), not the sideways one."
+        ]
+      },
+      {
+        "q": "At the very top of a ball's flight (no air), its acceleration is...",
+        "choices": [
+          "zero",
+          "{g} m/s² downward",
+          "{g} m/s² upward",
+          "{g} m/s² sideways"
+        ],
+        "answer": 1,
+        "why": "Gravity never switches off. At the top the **vertical speed** is zero for an instant, but the **acceleration** is still {g} m/s² downward.",
+        "whyNot": [
+          "The vertical **velocity** is zero at the top, but the acceleration is still {g} m/s² downward. They are different things.",
+          null,
+          "Upward was the direction of motion on the way up, but gravity always pulls down: a = {g} m/s² downward all the time.",
+          "Nothing pushes sideways, so a_{x} = 0. The only acceleration is gravity, pointing down."
+        ]
+      },
+      {
+        "q": "A ball is thrown horizontally at 10 m/s from a cliff. After {q3t} s (no air), its **vertical** speed is...",
+        "choices": [
+          "{q3vy} m/s",
+          "10 m/s",
+          "{q3vxy} m/s",
+          "0 m/s"
+        ],
+        "answer": 0,
+        "why": "|v_{y}| = g·t = {g} × {q3t} = **{q3vy} m/s** downward. (The total speed is {q3vxy} m/s, from v_{x} = 10 m/s and v_{y} together.)",
+        "whyNot": [
+          null,
+          "10 m/s is the sideways speed, which never changes. The vertical speed is g·t = {q3vy} m/s.",
+          "That is the **total** speed (sideways and vertical together). The question asks for the vertical part only: {q3vy} m/s.",
+          "The vertical speed starts at 0 but grows by {g} m/s every second. After {q3t} s it is {q3vy} m/s."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: derivations and puzzles for when you want a challenge. Not needed for your tests."
+  },
+  "derive": {
+    "kicker": "Bonus derivation",
+    "title": "Why 45 degrees is the best",
+    "lead": "On flat ground, which angle sends the ball furthest? Let's find out by building the range formula. Tap the right move.",
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "You launch at speed v_{0} and angle θ above the horizontal. The starting speeds along x and y are...",
+        "options": [
+          "v_{x} = v_{0}·cos θ and v_{y} = v_{0}·sin θ",
+          "v_{x} = v_{0}·sin θ and v_{y} = v_{0}·cos θ",
+          "v_{x} = v_{0} and v_{y} = v_{0}"
+        ],
+        "answer": 0,
+        "then": "Split the arrow into its two sides: **v_{x} = v_{0}·cos θ**, **v_{y} = v_{0}·sin θ**. Now use s(t) = s_{0} + v_{0}·t + ½·a·t² in each direction:\n\n$ x = v_{0}·cos θ · t     y = v_{0}·sin θ · t − ½·g·t²"
+      },
+      {
+        "prompt": "It lands when y is 0 again: 0 = v_{0}·sin θ · t − ½·g·t². Besides t = 0, the flight time is...",
+        "options": [
+          "t = 2·v_{0}·sin θ / g",
+          "t = v_{0}·sin θ / g",
+          "t = 2·v_{0}·cos θ / g"
+        ],
+        "answer": 0,
+        "then": "Take out a factor t: t·(v_{0}·sin θ − ½·g·t) = 0, so **t = 2·v_{0}·sin θ / g**. (That's twice the time to reach the top, where v_{y} = 0.)"
+      },
+      {
+        "prompt": "Range = v_{x} × t = v_{0}·cos θ × 2·v_{0}·sin θ / g. Using 2·sin θ·cos θ = sin 2θ, this is R = v_{0}²·sin 2θ / g. For a fixed speed, R is biggest when sin 2θ is biggest. That happens when...",
+        "options": [
+          "2θ = 90°, so θ = 45°",
+          "θ = 90°",
+          "θ = 0°"
+        ],
+        "answer": 0,
+        "then": "sin 2θ reaches its maximum value of 1 at 2θ = 90°. So **θ = 45°** and the best range is\n\n$ R = v_{0}² / g = 20² / {g} ≈ {rmax20} m   (for v_{0} = 20 m/s)\n\nAlso, sin 2θ is the same for 2θ and 180° − 2θ, so **30° and 60°** reach the same distance ({r30} m): complementary angles just swap the roles of v_{x} and v_{y}, and the range depends on the product v_{x}·v_{y0}. This holds on flat ground."
+      }
+    ],
+    "height": "**From a height it changes.** In the lab, launch at 20 m/s from 10 m up: at 45° the range is {r45h} m, but at **{optA}°** it is **{rOpt} m**. The best angle from a height is **lower than 45°**, given by tan θ = v_{0} / √(v_{0}² + 2·g·h)."
+  },
+  "challenge": {
+    "kicker": "Bonus challenge",
+    "title": "The falling lantern",
+    "lead": "A paper lantern hangs {chD} m away and {chH} m up. You throw a snowball **straight at the lantern** at {chV} m/s. At the very instant you let go of the snowball, someone cuts the lantern's string and it **falls straight down**. (Physicists call this the monkey-and-hunter problem.) No air resistance.",
+    "question": "Does the snowball hit the falling lantern?",
+    "choices": [
+      "No: it flies over the lantern",
+      "No: it passes below the lantern",
+      "Yes: it hits it"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Tempting, the lantern drops away. But no:",
+      "Gravity drags the snowball down too. But no:",
+      "Yes! Isn't it neat?"
+    ],
+    "explain": "Without gravity the snowball would fly straight along the line of sight and reach the lantern after {chT} s. With gravity, **both** fall the same ½·g·t² below where they would have been: in {chT} s that's {chDrop} m for each. The lantern drops from its spot and the snowball drops from the line, so they still meet. It works as long as the lantern is still in the air then: it would take {chFall} s to reach the ground, much longer than {chT} s. Apart from that, the answer doesn't depend on the speed or on the angle."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "comp": {
+      "aria": "Parabola of a ball launched from the ground, with its velocity arrows at launch, at the top and at landing. The horizontal arrow is the same length at all three points. The vertical arrow points up at launch, is zero at the top and points down at landing, as long as at launch.",
+      "vx": "v_{x}",
+      "vy": "v_{y}",
+      "v": "v",
+      "top": "v_{y} = 0",
+      "start": "launch",
+      "topword": "top",
+      "land": "landing",
+      "caption": "**The two components along one flight** ({fv0} m/s at {fa}°, so v_{x} = {fvx} m/s and v_{y0} = {fvy} m/s). The **horizontal** arrow, v_{x}, is **identical** at launch, at the top and at landing: nothing acts sideways. The **vertical** arrow, v_{y}, starts at {fvy} m/s up, is **zero** at the top and is {fvy} m/s **down** at landing, because a_{y} = −g all the time. The white arrow is the actual velocity, the sum of the two: the same length at launch and landing, but pointing differently. Peak height H = {fH} m, range R = {fR} m."
+    },
+    "plates": {
+      "aria": "Side view of two horizontal charged plates, the lower one positive. An electron enters from the left in the middle of the gap, moving right, and curves down toward the positive plate along a parabola. The plate length, the gap and the deflection are marked.",
+      "plus": "+",
+      "minus": "−",
+      "field": "E",
+      "electron": "electron",
+      "vx": "v_{x}",
+      "force": "F",
+      "len": "L",
+      "gap": "d",
+      "defl": "y",
+      "caption": "**Example 3 as a picture.** The electron enters at v_{x} = {eV0} m/s, steady along the plates. Between the plates E = U/d points from + to −, so the force F = q·E on the (negative) electron points toward the **+** plate: it is pulled down, like a ball falling. The path is a parabola, y = ½·a·t². Here L = {eL} cm, d = {ed} cm and the deflection is y = {eyMm} mm. After the plates there is no field, so it moves straight on along the dashed line."
+    }
+  },
+  "try": {
+    "kicker": "Try it for real",
+    "title": "Roll a marble off a table",
+    "lead": "A ball rolling off a table edge is a **horizontal launch** you can run in your own room. You will **predict** the fall time from the table height alone, then check it, and see that rolling faster changes the distance but **not** the time.",
+    "safety": "**Safety:** indoors, on a floor with nothing breakable nearby and no stairs close. Use a stable table. Lay a folded towel where the marble lands, so it doesn't bounce away. Marbles on a hard floor are slippery to step on and small enough to swallow: pick up every one afterwards and keep them away from small children. Keep your face away from the landing spot.",
+    "need": "**You need:** a marble (or any small ball), a table with a smooth straight edge, 3 or 4 books and a ruler to make a short ramp, a tape measure, a folded towel with a sheet of paper on top, a string with a coin on the end (a plumb line), tape, a pen and a stopwatch. Optional: a phone that records video at 30 or 60 frames per second.",
+    "steps": "**Do this:**\n1. Measure the table height **h** from the floor to the tabletop. A normal table is about {expH} m.\n2. Build a ramp of books and a ruler that ends in a short flat stretch at the table edge, so the marble leaves the table **horizontally**. Tape the ramp down.\n3. Hang the plumb line from the table edge. The floor spot under the coin is your zero. Put the towel and paper where the marble will land.\n4. Release the marble from the **same mark** on the ramp five times. Each time, mark where it first touches the paper. Measure the distance **x** from zero to the mark and average the five.\n5. Raise the ramp with one more book and do it again.",
+    "measure": "**Measure:** h, and the average x for each ramp. Then work out t = √(2·h/g) from h, and v_{x} = x/t for each ramp. Optional: film the fall from the side and count the frames from leaving the edge to landing, then t = frames ÷ frames per second.",
+    "compare": "**Compare with the formula:** t = √(2·h/g) = √(2 × {expH} / {g}) = **{expT} s** for h = {expH} m. Tables between {expHlo} m and {expHhi} m give {expTlo} to {expThi} s. On video that is about {expF30} frames at 30 per second. The time depends **only on h**, so **both ramps should give the same t**. Only x changes: for example, a marble leaving at {expV1} m/s lands x = v_{x}·t = {expV1} × {expT} = {expX1} m away, and one leaving at {expV2} m/s lands {expX2} m away. (Your speeds will differ: you find yours from v_{x} = x/t.)",
+    "wrong": "**What goes wrong:** if the ramp ends with a bump or a tilt, the marble does not leave horizontally, and the fall time changes. The first bounce is easy to confuse with the second: use the towel and watch the first touch. Release from exactly the same mark, or v_{x} changes between runs. Expect x to vary by a few centimetres between runs, which is why you average five. Air resistance on a marble is negligible, but timing a {expT} s fall by hand is not: trust the formula for t and use the stopwatch only as a rough check."
+  }
+}

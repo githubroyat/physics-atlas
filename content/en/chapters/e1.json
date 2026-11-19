@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "alt": "An anime-style girl with silver hair and orange headphones leaps through the air between night-time skyscrapers.",
+    "caption": "Could anyone really jump onto that roof?",
+    "sfx": "WHOOSH!"
+  },
+  "intro": "Anime heroes leap onto rooftops, fall off cliffs and land like nothing happened. This chapter gives you one tool that answers all of it in a single line: **energy**.",
+
+  "predict": {
+    "kicker": "Predict first",
+    "question": "You drop a ball from a wall **5 m** high. It hits the ground at about **{vDrop5} m/s**.\n\nNow you drop the same ball from **10 m**, twice as high. How fast is it going when it hits the ground?",
+    "choices": [
+      "The same, about {vDrop5} m/s",
+      "About 1.4 times as fast",
+      "Twice as fast",
+      "Four times as fast"
+    ],
+    "answer": 1,
+    "lock": "Lock in my answer",
+    "verdicts": [
+      "Not quite: a higher drop does mean a faster landing. Here's how much faster:",
+      "Spot on. Most people don't get this one.",
+      "Most people pick that. Here's the surprise:",
+      "Too far the other way. Here's why:"
+    ],
+    "explain": "From 10 m the ball lands at **{vDrop10} m/s**, only about **{ratio} times** as fast, not twice.\n\nDoubling the height doubles the **energy** the ball picks up. But motion energy grows with speed **squared**: going twice as fast takes four times the energy. So twice the energy only buys about 1.41 times the speed. That's √2.\n\nFlip it around: to hit the ground **twice as fast**, you'd have to drop it from **four times as high**, {h4x} m.",
+    "gate": "Answer the question above to unlock the rest of the chapter."
+  },
+
+  "lab": {
+    "kicker": "Try it",
+    "title": "The rooftop leap",
+    "lead": "Pick a building and a jumper. How fast would they have to take off to land on the roof? Press **Jump** and watch the energy change form.",
+    "storeys": "Building",
+    "storeys_val": "{n} storeys ≈ {h} m",
+    "mass": "Jumper's mass",
+    "mass_val": "{m} kg",
+    "jump": "Jump",
+    "reset": "Reset",
+    "speed": "Take-off speed",
+    "speed_unit": "= {kmh} km/h",
+    "energy": "Energy needed",
+    "energy_unit": "for {m} kg",
+    "ke": "Motion energy",
+    "pe": "Height energy",
+    "total": "Total (never changes)",
+    "compare_title": "How does that compare?",
+    "cmp_needed": "Needed: {v} m/s",
+    "cmp_sprint": "Fastest sprint ever measured: about {sprint} m/s",
+    "cmp_jump": "A good standing jump: about {jumpV} m/s at take-off",
+    "notice": "**Notice:** change the mass. The **energy** needed changes, but the **take-off speed doesn't**. Mass cancels out, so heavy and light jumpers need exactly the same speed.",
+    "assume": "Assumptions: {storey} m per storey, the jumper's body rises the full height, no air resistance, g = {g} m/s².",
+    "sfx": "WHOOSH!"
+  },
+
+  "anime": {
+    "kicker": "Could it really happen?",
+    "title": "The ten-storey leap",
+    "setup": "It's a classic action-anime move: the hero crouches in the street, then leaps straight onto the roof of a ten-storey building. Let's check it the way a physicist would.",
+    "steps": [
+      "**Estimate the height.** One storey is about {storey} m, so ten storeys is about **{hTen} m**.",
+      "**Energy needed.** Lifting each kilogram by {hTen} m takes g × h = {g} × {hTen} ≈ **{ePerKg} J**. A 50 kg hero needs about **{e50} kJ** of motion energy at take-off.",
+      "**Turn energy into speed.** All of that height energy has to come from motion energy at take-off: ½v² = g·h, so v = √(2gh) ≈ **{vTen} m/s**. That's **{vTenKmh} km/h**, straight up.",
+      "**Compare.** The fastest sprint ever measured is about {sprint} m/s, running flat out *horizontally*. A good standing jump launches you at about {jumpV} m/s. The hero needs about **{times} times** the world's fastest sprinter's top speed, pointed straight up, from a crouch."
+    ],
+    "verdict": "**Verdict: anime physics.** And if they missed the roof, they'd come back down to the street at the same {vTenKmh} km/h.",
+    "your_turn": "**Your turn:** next time you watch a scene like this, estimate the height and use v = √(2gh). Possible, or anime physics?"
+  },
+
+  "bigidea": {
+    "kicker": "The big idea",
+    "title": "Energy is bookkeeping",
+    "body": "The physicist Richard Feynman explained energy with a story about a child who has a set of blocks that can never be destroyed. Every evening his mother counts them, and the total is always the same, even when some are hidden in a box or under the bath water. She just has to be clever about where to look.\n\nEnergy works like that, except there are no blocks. It's a **number** that nature keeps constant. It moves between forms (height energy, motion energy, heat), but the **total never changes**.\n\nIn the rooftop leap, every joule of motion energy at take-off becomes height energy at the top. Nothing lost, nothing created. That one rule let us skip all the forces and timing and get the answer in a single line.\n\nBut **why** does nature keep this number constant? In 1918 the mathematician **Emmy Noether** published an astonishing answer: energy is conserved **because the laws of physics are the same today as they were yesterday**. Conservation laws come from symmetry. It's one of the most beautiful ideas in all of science."
+  },
+
+  "derive": {
+    "kicker": "Derive it yourself",
+    "title": "Where ½mv² comes from",
+    "lead": "Your syllabus hands you KE = ½mv². You can build it yourself from things you already know from S4. Try each step before you reveal it.",
+    "steps": [
+      { "prompt": "A constant net force F pushes a mass m, starting from rest, over a distance s. How much energy does the force hand over?", "answer": "The work done: **W = F·s**." },
+      { "prompt": "Use Newton's second law to replace F.", "answer": "F = m·a, so **W = m·a·s**." },
+      { "prompt": "From S4 kinematics, starting from rest: s = ½at² and v = at. Combine them to write a·s in terms of v.", "answer": "t = v/a, so s = ½a(v/a)² = v²/(2a). That means **a·s = ½v²**." },
+      { "prompt": "Put that into W = m·(a·s).", "answer": "W = m·½v² = ½mv². All of that work is now motion energy:\n\n$ KE = ½mv²" }
+    ],
+    "reveal": "Reveal",
+    "bonus": "**Bonus:** the same trick gives height energy. Lifting a mass steadily takes a force equal to its weight, m·g, over a height h. So W = m·g·h, which is **PE = mgh**. And the speed formula from the rooftop leap is just the two set equal: ½mv² = mgh, so v = √(2gh). The m cancels, which is why mass didn't matter."
+  },
+
+  "story": {
+    "kicker": "The story",
+    "title": "Émilie du Châtelet and the dents in the clay",
+    "body": "About 300 years ago, scientists argued fiercely about how to measure the 'force' of a moving object. Followers of Newton said it was mass × speed. Followers of Leibniz said mass × speed **squared**.\n\nIn the 1720s the Dutch scientist **Willem 's Gravesande** tried a simple experiment: he dropped brass balls into soft clay from different heights and compared the dents. A heavy ball dropped from low down made the same dent as a light ball dropped from higher up, as long as **mass × height** was the same. And the height a ball falls from grows with its landing speed **squared**.\n\nThe French scientist **Émilie du Châtelet** took up this result in her book *Institutions de physique* in the 1740s and argued powerfully for the speed-squared view, against many of the most famous scientists of her day. She was right: the quantity she defended is what we now call kinetic energy, ½mv².\n\nShe also translated Newton's great *Principia* into French and added her own commentary. She finished it in 1749, the year she died, and it was published in full ten years later."
+  },
+
+  "challenge": {
+    "kicker": "Challenge",
+    "title": "Three balls off a cliff",
+    "question": "From the top of a **{H} m** cliff you throw three identical balls at the same speed, **{u} m/s**: one straight **up**, one straight **down**, and one **horizontally**. Which one is moving fastest when it hits the ground below? (Ignore air.)",
+    "hint_label": "Hint",
+    "hint": "Don't think about paths or times. Think about the energy at the start and at the end.",
+    "answer_label": "Show the answer",
+    "answer": "**All three hit the ground at exactly the same speed: {vLand} m/s.**\n\nEach ball starts with the same motion energy (same speed) and the same height energy (same cliff). At the bottom, all of it has become motion energy. Same total, so same speed. Energy doesn't care which way you're going.\n\nThe ball thrown down lands first and the one thrown up lands last, at different angles, but every one of them lands at the same speed.\n\n$ ½v² = ½u² + gH   →   v = √(u² + 2gH)"
+  },
+
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Energy Skate Park",
+    "body": "Build a ramp, drop a skater and watch the energy bars. Try this: how high do you have to start to make it over a loop? Then turn on friction. Where does the 'lost' energy go?\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "Explain it in one page",
+    "body": "Draw a one-page manga where one character explains to another why falling from **twice the height** does **not** mean hitting the ground **twice as fast**. Tell it with energy, not formulas. Bonus: show where the energy goes when they land.\n\nIf you can make it clear to a friend in one page, you really understand it."
+  },
+
+  "recap": {
+    "kicker": "Remember",
+    "items": [
+      "Energy is a number whose total never changes. It only changes form.",
+      "Height energy: PE = mgh. Motion energy: KE = ½mv².",
+      "Because of the square, going twice as fast takes four times the energy, and four times the height.",
+      "When something rises or falls, mass cancels: the speed doesn't depend on how heavy it is."
+    ]
+  }
+}

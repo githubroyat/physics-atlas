@@ -1,0 +1,619 @@
+{
+  "hero": {
+    "sfx": "BOING BOING",
+    "caption": "Every bounce draws the same curve. Let's find out which one."
+  },
+  "intro": "Let a mass bounce on a spring and plot its position over time. You get a perfect wave: **y = A·sin(ωt)**, exactly as on your formula sheet. This chapter teaches you, step by step, to read that curve, to use it, and to see why it has exactly that shape.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "describe an oscillation with **amplitude A, period T, frequency f** and **angular frequency ω**, using **f = 1/T** and **ω = 2πf**, and read A and T from a y(t) graph;",
+      "use the equation of SHM, **y = A·sin(ωt)**, and compare the graphs of **displacement, velocity and acceleration**;",
+      "use **a = −ω²·y**, and find the **maximum speed A·ω** and **maximum acceleration A·ω²**;",
+      "explain SHM as the **projection of uniform circular motion** and derive **T = 2π√(m/k)** for a mass on a spring;",
+      "describe **damping** qualitatively: the amplitude shrinks and the energy turns into heat."
+    ]
+  },
+  "predict": {
+    "gate": "Answer to unlock the chapter"
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "A mass bounces on a spring. Each bounce takes 1 second.\n\nNow you pull it down **twice as far** before letting go. How long does each bounce take?",
+    "choices": [
+      "Half as long",
+      "The same, 1 second",
+      "About 1.4 s",
+      "Twice as long"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Interesting guess, but no:",
+      "Yes! This surprises almost everyone.",
+      "Clever guess, but no:",
+      "That's what most people think. But:"
+    ],
+    "explain": "**The period doesn't change.** Pulled further, the mass has further to go, but the spring also pulls **twice as hard**, so it reaches twice the top speed. The two effects cancel exactly. You'll see why in this chapter."
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Describing an oscillation",
+    "body": "An oscillation repeats again and again. Four numbers describe it:\n\n- **Amplitude A**: the biggest displacement from the middle, in metres (m).\n- **Period T**: the time for one full wave (one complete back-and-forth), in seconds (s).\n- **Frequency f**: how many full waves per second, in hertz (Hz).\n- **Angular frequency ω**: how fast the phase advances, in radians per second (rad/s). One wave is 2π radians.\n\n$ f = 1/T\n\n$ ω = 2πf = 2π/T\n\n**Reading a graph:** A is the height of a peak above the middle line. T is the time between two matching points, for example two neighbouring peaks. Here is the y(t) graph of a bouncing mass. Find A and T for yourself.",
+    "graph_label": "Position against time: amplitude 8 cm, period 0.5 s",
+    "check": {
+      "q": "Read the period from the graph above. How many full waves happen **per second** (the frequency f)?",
+      "choices": [
+        "{l1w1} Hz",
+        "{l1f} Hz",
+        "{l1w2} Hz",
+        "{l1w3} Hz"
+      ],
+      "answer": 1,
+      "why": "One wave takes T = {gT} s, so f = 1/T = 1 / {gT} = **{l1f} Hz**.",
+      "whyNot": [
+        "That is the wrong quantity: f and T are inverses of each other.",
+        null,
+        "That looks like 1/(2T): you divided by 2 somewhere. One full wave takes T, not 2T.",
+        "That is 2/T: twice too big, as if each half-wave counted as a full wave. One period is one full wave."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "The equation y = A·sin(ωt)",
+    "body": "A mass on a spring, let go from the middle with a push, has a displacement that follows a sine wave. The formula sheet writes it as:\n\n$ y = A·sin(ωt)\n\nWith ω = 2π/T, the sine repeats after one period. (Use your calculator in **radians** mode.) This is the curve for a mass let go from the middle with a push. If you let it go from the top instead, you get the same curve shifted by a quarter period; at S6 you only need **y = A·sin(ωt)**.\n\nTwo more facts, which you will derive in step 3:\n\n$ a = −ω²·y\n\n- **Speed** is biggest in the **middle** (y = 0), where it is **A·ω**, and zero at the ends.\n- **Acceleration** is biggest at the **ends**, where it is **A·ω²**, and zero in the middle. The minus sign: it always points back towards the middle.",
+    "after": "**Try it in the lab.** Turn on **velocity** and **acceleration** and compare the three curves. When the position is at a peak, the velocity is zero. When the position crosses the middle, the velocity is at its biggest in size (a peak or a dip of the v curve) and the acceleration is zero. The velocity curve is the position curve shifted a quarter period earlier (v is a quarter period ahead of y). The acceleration curve is the position curve flipped upside down.",
+    "check": {
+      "q": "A mass oscillates at f = 2.0 Hz. What is its angular frequency ω?",
+      "choices": [
+        "{l2w1} rad/s",
+        "{l2w} rad/s",
+        "{l2w2} rad/s",
+        "{l2w3} rad/s"
+      ],
+      "answer": 1,
+      "why": "ω = 2πf = 2π × 2.0 = **{l2w} rad/s**.",
+      "whyNot": [
+        "That is just f again. ω counts radians per second, and one full wave is 2π radians, not 1.",
+        null,
+        "That is 1/(2π·f): you divided 1 by 2πf. ω = 2πf is bigger than f, because one full wave is 2π radians.",
+        "That is π·f. One full wave is 2π radians; π is only half a wave."
+      ]
+    }
+  },
+  "lab": {
+    "kicker": "Play",
+    "title": "The bounce lab",
+    "lead": "The pink curve is the mass's **position over time**, drawn live. Play with the sliders and watch what the curve does.",
+    "scene": "A mass bouncing on a spring",
+    "graph": "Live graph of displacement y against time",
+    "time_axis": "time →",
+    "mass": "Mass m",
+    "k": "Stiffness k",
+    "amp": "Amplitude A",
+    "damping": "Damping",
+    "damp_levels": [
+      "none",
+      "light",
+      "medium",
+      "strong"
+    ],
+    "show_v": "Show velocity",
+    "show_a": "Show acceleration",
+    "circle": "Circle view",
+    "play": "Play",
+    "pause": "Pause",
+    "period": "Period T",
+    "freq": "Frequency f",
+    "vmax": "Top speed",
+    "amax": "Top acceleration",
+    "overdamped": "Very heavy damping (bonus): no wobble at all, it just creeps back to the middle.",
+    "damped": "Damped: each swing is a bit smaller than the last, and the energy turns into heat.",
+    "tasks": "**Try these:**\n- Make the **mass 4 times bigger**. What happens to the period?\n- Turn on **velocity**. Where is the mass fastest? Where does it stop?\n- Turn on **acceleration**. It is always the *mirror image* of position: a = −ω²y.\n\n*(Velocity and acceleration are scaled to fit the graph; their real sizes are in the boxes below, for the undamped oscillation. With damping on, the two boxes show — because the sizes shrink with every swing.)*"
+  },
+  "lab2": {
+    "title": "Damping lab",
+    "lead": "Same lab again. This time pull the **Damping** slider up a little, and also try changing the amplitude. Watch the wave shrink inside the dashed envelope, and check what happens to the period.",
+    "tasks": "**Try these:**\n- Turn the damping from *none* to *strong*. Does the wave shrink faster or slower?\n- With light damping on, does the period change a lot?"
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "Circle and shadow",
+    "lead": "Why a sine, and where does T = 2π√(m/k) come from? Press play. The yellow dot goes round a circle at a steady speed. Its **shadow** (pink) just moves up and down, and traces a perfect sine wave.",
+    "play": "Play",
+    "title2": "Circle and shadow",
+    "after": "**SHM is the projection of uniform circular motion.** A point going round a circle of radius A with angular speed ω has a shadow at height **y = A·sin(ωt)**. The point moves at speed A·ω. When the shadow passes the middle, the point is moving straight up or down there, so the shadow moves just as fast: that is the **maximum speed v_{max} = A·ω**. At the ends the shadow stops.\n\nIn circular motion the acceleration is a_{cent} = ω²·r towards the centre (formula sheet), here with r = A. Its up-down part gives **a = −ω²·y**. At the ends y = ±A, so its size there is ω²·A: that is the **maximum acceleration a_{max} = A·ω²**.\n\nA hanging mass has the same period. Measure y from the new middle, where it hangs at rest (the trap from *Push back*): there the weight cancels the spring's pull at the new middle, so only the change −k·y is left: F = −k·y still holds. Gravity only shifts the middle.\n\nRecap from *Push back*: F = −k·y, the restoring force towards the middle.\n\nNow derive the period. Tap the right move at each step.",
+    "check": {
+      "q": "A mass of {l3m} kg hangs on a spring with k = {l3k} N/m. What is the period?",
+      "choices": [
+        "{l3w1} s",
+        "{l3T} s",
+        "{l3w2} s",
+        "{l3w3} s"
+      ],
+      "answer": 1,
+      "why": "T = 2π√(m/k) = 2π√({l3m} / {l3k}) = **{l3T} s**.",
+      "whyNot": [
+        "That leaves out the 2π. √(m/k) is only the reciprocal of ω, not the period.",
+        null,
+        "The ratio is upside down. √(k/m) is ω; for the period you need √(m/k), and the 2π too.",
+        "That has π instead of 2π. One full wave is 2π radians, so the factor is 2π."
+      ]
+    }
+  },
+  "derive": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "A point goes round a circle of radius A at angular speed ω, starting level with the centre. Its shadow's height after time t is...",
+        "options": [
+          "y = A·sin(ωt)",
+          "y = A·ω·t",
+          "y = A + ωt"
+        ],
+        "answer": 0,
+        "then": "**y = A·sin(ωt)**: the up-down part of going round a circle. Same as your formula sheet."
+      },
+      {
+        "prompt": "In circular motion, acceleration points to the centre with size ω²A. Its up-down part is ω²A·sin(ωt) = ω²·y in size, and it points down when y > 0. So, with up = +, the up-down part of the acceleration is...",
+        "options": [
+          "+ω²y",
+          "−ω²y",
+          "−ωy"
+        ],
+        "answer": 1,
+        "then": "**a = −ω²y**: always pointing back towards the middle, and proportional to y. Sound familiar?"
+      },
+      {
+        "prompt": "For the spring, Newton's 2nd law with F = −k·y gives a = −(k/m)·y. Match it to a = −ω²y: so ω² = ?",
+        "options": [
+          "k/m",
+          "m/k",
+          "k·m"
+        ],
+        "answer": 0,
+        "then": "ω² = k/m, so **ω = √(k/m)**. One lap takes T = 2π/ω:\n\n$ T = 2π√(m/k)\n\nThere's **no A** in it. That's why the period doesn't depend on the amplitude: your prediction at the start."
+      }
+    ]
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Damping",
+    "body": "A real oscillation doesn't last forever. Friction and air resistance take energy away. This is called **damping**:\n\n- The **amplitude shrinks** a little more on every swing.\n- The oscillation's energy is **turned into heat** (and a little sound) in the surroundings.\n- For light damping the period hardly changes.\n\nSometimes damping is wanted. **Shock absorbers** in a car damp the springs, so the car settles after a bump instead of bouncing on and on.",
+    "check": {
+      "q": "A damped oscillator slowly stops. Where has its energy gone?",
+      "choices": [
+        "It was destroyed",
+        "It became heat in the surroundings",
+        "It went into the spring's stiffness k",
+        "It became extra mass"
+      ],
+      "answer": 1,
+      "why": "Energy is never destroyed. Friction and air resistance turn it into **heat** (thermal energy) in the surroundings.",
+      "whyNot": [
+        "Energy is never destroyed, it only changes form. Where else could it go?",
+        null,
+        "k is a fixed property of the spring. It does not soak up energy. Ask what else warms up or changes when a bounce dies away.",
+        "Nothing is added to the oscillator's mass: its mass stays the same. Think about where the lost energy shows up."
+      ]
+    }
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: from the graph to the spring",
+        "problem": "The graph in step 1 belongs to a **{wm} kg** mass on a spring. Read A = {gA} cm and T = {gT} s. Find f, ω and the spring constant k.",
+        "steps": [
+          "Frequency: f = 1/T = 1 / {gT} = **{wf} Hz**.",
+          "Angular frequency: ω = 2π/T = 2π / {gT} = **{ww} rad/s**.",
+          "For a mass on a spring ω² = k/m, so k = m·ω² = {wm} × {ww2}² (with ω unrounded, {ww2} rad/s). The same as k = 4π²m/T² = 4π² × {wm} / {gT}²."
+        ],
+        "answer": "f = **{wf} Hz**, ω ≈ **{ww} rad/s**, k ≈ **{gk} N/m**. The amplitude isn't needed for k."
+      },
+      {
+        "title": "Example 2: speed and acceleration",
+        "problem": "A **{xm} kg** mass on a spring with k = {xk} N/m oscillates with amplitude A = {xA} cm. Find ω, T, f, the maximum speed and the maximum acceleration.",
+        "steps": [
+          "SI units: A = {xA} cm = {xAm} m.",
+          "ω = √(k/m) = √({xk} / {xm}) = **{xw} rad/s**.",
+          "T = 2π/ω = **{xT} s**, and f = 1/T = **{xf} Hz**.",
+          "Max speed (in the middle): v_{max} = A·ω = {xAm} × {xw}.",
+          "Max acceleration (at the ends): a_{max} = A·ω² = {xAm} × {xw}²."
+        ],
+        "answer": "ω ≈ **{xw} rad/s**, T ≈ **{xT} s**, f ≈ **{xf} Hz**, v_{max} ≈ **{xv} m/s**, a_{max} ≈ **{xa} m/s²**"
+      },
+      {
+        "title": "Example 3: where is it at time t?",
+        "problem": "A mass oscillates with y = A·sin(ωt), amplitude A = {e3A} m and period T = {e3T} s. Find its displacement y at t = {e3t1} s and at t = {e3t2} s. (Calculator in radians.)",
+        "steps": [
+          "Angular frequency: ω = 2π/T = 2π / {e3T} = **{e3w} rad/s**.",
+          "First time: ω·t = {e3w} × {e3t1} = {e3p1} rad. Then y = {e3A} × sin({e3p1}) = **{e3y1} m**, above the middle.",
+          "Second time: ω·t = {e3w} × {e3t2} = {e3p2} rad. Then y = {e3A} × sin({e3p2}) = **{e3y2} m**: the lowest point, one full amplitude below the middle.",
+          "Sense check: t = {e3t2} s is three quarters of T = {e3T} s, and three quarters of a lap round the circle ends at the bottom."
+        ],
+        "answer": "y({e3t1} s) ≈ **{e3y1} m**, y({e3t2} s) = **{e3y2} m**. The sign tells you above (+) or below (−) the middle."
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "An oscillation has an amplitude of 5.0 cm and a period of 0.80 s. What is the frequency?",
+        "choices": [
+          "{p1f} Hz",
+          "{p1w1} Hz",
+          "{p1w2} Hz",
+          "{p1w3} Hz"
+        ],
+        "answer": 0,
+        "hint": "f = 1/T.",
+        "solution": "f = 1/T (formula sheet). With T = 0.80 s: f = 1 / 0.80 s = **{p1f} Hz**. The amplitude isn't needed. Sense check: one wave takes a bit less than a second, so there is a bit more than one wave per second.",
+        "whyNot": [
+          null,
+          "{p1w1} Hz is the period 0.80 s with Hz written after it. Frequency and period are inverses: f = 1/T = {p1f} Hz.",
+          "{p1w2} is 2π/T, which is ω in rad/s, not f. f = 1/T = {p1f} Hz.",
+          "{p1w3} is the amplitude (5.0 cm), which plays no part here. f = 1/T = {p1f} Hz."
+        ]
+      },
+      {
+        "q": "An oscillator has a frequency of 3.0 Hz. What is its angular frequency ω?",
+        "choices": [
+          "{p2w} rad/s",
+          "{p2w1} rad/s",
+          "{p2w2} rad/s",
+          "{p2w3} rad/s"
+        ],
+        "answer": 0,
+        "hint": "ω = 2πf.",
+        "solution": "ω = 2πf (formula sheet). With f = 3.0 Hz: ω = 2π × 3.0 Hz = **{p2w} rad/s**. Sense check: ω is about 6 times f, because one wave is about 6 radians.",
+        "whyNot": [
+          null,
+          "{p2w1} is f itself. ω = 2πf is in rad/s and is bigger: {p2w} rad/s.",
+          "{p2w2} is π·f. One full wave is 2π radians, not π: {p2w} rad/s.",
+          "{p2w3} is 1/(2π·f): you divided by 2π instead of multiplying. ω = {p2w} rad/s."
+        ]
+      },
+      {
+        "q": "An oscillation is y = A·sin(ωt) with A = 0.12 m and ω = 5.0 rad/s. What is y at t = 0.20 s? (Calculator in radians.)",
+        "choices": [
+          "{p3y} m",
+          "{p3w1} m",
+          "{p3w2} m",
+          "{p3w3} m"
+        ],
+        "answer": 0,
+        "hint": "ω·t = 5.0 × 0.20 = 1.0 rad.",
+        "solution": "y = A·sin(ωt) (formula sheet). Phase: ω·t = 5.0 rad/s × 0.20 s = 1.0 rad. Then y = 0.12 m × sin(1.0 rad) = **{p3y} m**, above the middle. In degree mode you would get {p3w1} m, which is wrong.",
+        "whyNot": [
+          null,
+          "{p3w1} m is what the calculator gives in **degree** mode. Switch it to radians: ω·t = 1.0 rad, y = {p3y} m.",
+          "{p3w2} m is just A, the biggest value, at a peak. But sin(1.0 rad) is less than 1: y = {p3y} m.",
+          "{p3w3} m puts t = 0.20 inside the sine without ω. You need ω·t = 1.0 rad: y = {p3y} m."
+        ]
+      },
+      {
+        "q": "A {p4m} kg mass hangs on a spring with k = {p4k} N/m. What is the period?",
+        "choices": [
+          "{p4T} s",
+          "{p4w1} s",
+          "{p4w2} s",
+          "{p4w3} s"
+        ],
+        "answer": 0,
+        "hint": "T = 2π√(m/k).",
+        "solution": "T = 2π√(m/k) (from ω² = k/m). Numbers: T = 2π × √({p4m} kg / {p4k} N/m) = **{p4T} s**. Sense check: a fairly heavy mass on a medium spring bounces about once a second, so a bit under a second fits.",
+        "whyNot": [
+          null,
+          "{p4w1} is 2π√(k/m), which is ω in rad/s with the ratio upside down. T = 2π√(m/k) = {p4T} s.",
+          "{p4w2} s is √(m/k) without the 2π. T = 2π√(m/k) = {p4T} s.",
+          "{p4w3} s has π instead of 2π. One wave is 2π radians: T = {p4T} s."
+        ]
+      },
+      {
+        "q": "A mass oscillates with amplitude 5.0 cm and ω = 20 rad/s. What is its maximum speed?",
+        "choices": [
+          "{p6v} m/s",
+          "{p6w1} m/s",
+          "{p6w2} m/s",
+          "{p6w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "v_{max} = A·ω, with A in metres.",
+        "solution": "v_{max} = A·ω. Convert first: A = 5.0 cm = 0.050 m. Then v_{max} = 0.050 m × 20 rad/s = **{p6v} m/s**, as it passes the middle. Sense check: about a slow walking pace, for a fast bounce.",
+        "whyNot": [
+          null,
+          "{p6w1} is A·ω²: you squared ω, which gives the maximum acceleration (m/s²), not the speed. v_{max} = A·ω = {p6v} m/s.",
+          "{p6w2} comes from using A = 5.0 **cm** instead of 0.050 m. Convert to metres first: v_{max} = {p6v} m/s.",
+          "{p6w3} is A/ω: you divided instead of multiplying. v_{max} = A·ω = {p6v} m/s."
+        ]
+      },
+      {
+        "q": "A mass oscillates with amplitude 4.0 cm and ω = 15 rad/s. What is its maximum acceleration?",
+        "choices": [
+          "{p5a} m/s²",
+          "{p5w1} m/s²",
+          "{p5w2} m/s²",
+          "{p5w3} m/s²"
+        ],
+        "answer": 0,
+        "hint": "a_{max} = A·ω², with A in metres.",
+        "solution": "a_{max} = A·ω² (from a = −ω²·y at y = A). Convert first: A = 4.0 cm = 0.040 m. Then a_{max} = 0.040 m × (15 rad/s)² = **{p5a} m/s²**, at the ends, pointing to the middle. Sense check: close to g, which is plausible for a quick bounce.",
+        "whyNot": [
+          null,
+          "{p5w1} is A·ω: you forgot to square ω. That is the maximum **speed** (m/s). a_{max} = A·ω² = {p5a} m/s².",
+          "{p5w2} comes from using A = 4.0 **cm** instead of 0.040 m. Convert first: a_{max} = {p5a} m/s².",
+          "{p5w3} is A·ω³: ω is cubed. It is squared: a_{max} = A·ω² = {p5a} m/s²."
+        ]
+      }
+    ]
+  },
+  "game": {
+    "kicker": "Mini-game",
+    "title": "Match the wave",
+    "lead": "Tune the amplitude, mass and stiffness until your **pink** curve lands on the **yellow** target. Three rounds.",
+    "amp": "Amplitude A",
+    "mass": "Mass m",
+    "k": "Stiffness k",
+    "round": "Round",
+    "your_period": "Your period",
+    "legend": "Yellow dashed: target. Pink: yours. Grid lines every second.",
+    "hint": "Tip: count how many waves fit in a second, and remember T = 2π√(m/k).",
+    "match": "MATCH!",
+    "target": "Target",
+    "next": "Next round",
+    "finish": "Finish",
+    "champion": "WAVE MASTER",
+    "done": "All three matched. You just read and tuned y(t) like a physicist."
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "The spring that fixed the watch",
+    "frames": [
+      {
+        "cap": "Late 1600s",
+        "text": "Clocks are big pendulum machines. Watches are pretty, but **terrible**: they drift by many minutes a day."
+      },
+      {
+        "cap": "1675",
+        "text": "Christiaan Huygens puts a tiny **spiral spring** on the wheel that controls the watch's ticking: the balance spring.",
+        "fx": "TICK"
+      },
+      {
+        "cap": "The fight",
+        "text": "Robert Hooke, yes, the F = −k·y Hooke, insists **he** had the idea years earlier. A bitter dispute follows."
+      },
+      {
+        "cap": "Result",
+        "text": "Spring-regulated watches suddenly become **far more accurate**. Pocket watches as we know them are born.",
+        "fx": "TOCK"
+      }
+    ],
+    "question": "Why did a spring make watches so much more accurate?",
+    "choices": [
+      "Springs are very strong",
+      "Its period doesn't depend on how big the swing is",
+      "A spring never loses energy"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Strength isn't the point:",
+      "Exactly.",
+      "It does lose energy, which is why watches need winding:"
+    ],
+    "explain": "Whether the balance wheel swings big or small, as it does when the watch winds down or gets bumped, **every tick takes the same time**, because T doesn't depend on the amplitude. That's your prediction again, keeping time in everyone's pocket."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Masses and Springs",
+    "body": "Hang masses, change the gravity (try the Moon!), switch on friction and watch the energy graphs. Does the period change on the Moon? Predict first, then check.\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The life of a bounce",
+    "body": "Draw one bounce as a 4-panel strip, with the y(t) graph running along the bottom: **top** (stopped, net force biggest), **middle going down** (fastest, net force zero), **bottom** (stopped again, net force biggest again), **back to the middle**. Show where the speed and the net force are biggest in each panel."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**A** = largest displacement from the middle (m). **T** = time for one wave (s). **f** = waves per second (Hz). **f = 1/T**, **ω = 2πf = 2π/T** (rad/s).",
+      "**SHM:** **y = A·sin(ωt)** and **a = −ω²·y** (always towards the middle).",
+      "**Speed** is biggest in the middle, **A·ω**, and zero at the ends. **Acceleration** is biggest at the ends, **A·ω²**, and zero in the middle.",
+      "SHM is **uniform circular motion seen from the side**. For a mass on a spring ω² = k/m, so **T = 2π√(m/k)**.",
+      "**T doesn't depend on the amplitude A.** Heavier mass: longer T. Stiffer spring: shorter T.",
+      "**Damping:** friction takes energy away (it becomes heat), so the amplitude shrinks. Shock absorbers use it."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Four in a row",
+    "items": [
+      {
+        "q": "m = 0.5 kg on a spring with k = 50 N/m. Period?",
+        "choices": [
+          "0.10 s",
+          "{qT} s",
+          "{qW1} s",
+          "{qW2} s"
+        ],
+        "answer": 1,
+        "why": "T = 2π√(0.5/50) = 2π × 0.1 ≈ **{qT} s**.",
+        "whyNot": [
+          "0.10 s is √(m/k) without the factor 2π. T = 2π√(m/k) = {qT} s.",
+          null,
+          "{qW1} s is π√(m/k): it uses π instead of 2π. One full wave is 2π radians, so T = 2π × 0.10 = {qT} s.",
+          "{qW2} s is 2π√(k/m): the ratio is upside down. √(k/m) is ω; the period needs √(m/k) = 0.10, then × 2π = {qT} s."
+        ]
+      },
+      {
+        "q": "You put a mass 4 times heavier on the same spring. The period...",
+        "choices": [
+          "stays the same",
+          "doubles",
+          "quadruples",
+          "halves"
+        ],
+        "answer": 1,
+        "why": "T ∝ √m, and √4 = 2, so it **doubles**.",
+        "whyNot": [
+          "The period doesn't depend on the amplitude, but it does depend on the mass: T ∝ √m. Four times the mass doubles T.",
+          null,
+          "That forgets the square root. T ∝ √m, so 4 times the mass gives only √4 = 2 times the period.",
+          "That is upside down: a bigger mass is harder to turn round, so T gets longer, not shorter."
+        ]
+      },
+      {
+        "q": "At the very top of the bounce (maximum y), the mass has...",
+        "choices": [
+          "max speed, zero acceleration",
+          "zero speed, max acceleration",
+          "zero speed, zero acceleration",
+          "max speed, max acceleration"
+        ],
+        "answer": 1,
+        "why": "It stops for an instant (**v = 0**) while the net force on it is biggest (**a = −ω²y is biggest**).",
+        "whyNot": [
+          "Max speed, zero acceleration is the middle of the bounce. At the top the mass has just stopped.",
+          null,
+          "Acceleration is not zero at the ends: the net force there on the mass is biggest, so a = ω²A is biggest.",
+          "The two never peak together. When y is biggest the mass is turning round, so v = 0."
+        ]
+      },
+      {
+        "q": "A mass oscillates up and down. Where is its **speed** largest, and where is its **acceleration** largest?",
+        "choices": [
+          "Both largest in the middle",
+          "Speed largest in the middle, acceleration largest at the ends",
+          "Speed largest at the ends, acceleration largest in the middle",
+          "Both largest at the ends"
+        ],
+        "answer": 1,
+        "why": "In the middle v = A·ω is biggest and a = −ω²·y is zero. At the ends v = 0 and a = ω²·A is biggest. The velocity curve is a quarter period ahead of the position curve; the acceleration curve is the position curve flipped.",
+        "whyNot": [
+          "In the middle only the speed is biggest. There y = 0, so a = −ω²·y = 0.",
+          null,
+          "That is swapped. At the ends the mass stops (v = 0) while a = −ω²·y is biggest; in the middle it is the other way round.",
+          "Speed is zero at the ends, since the mass turns round there. Only the acceleration is biggest at the ends."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extras for when you want a challenge. Not needed for your tests."
+  },
+  "over": {
+    "kicker": "Bonus: very strong damping",
+    "title": "No wobble at all",
+    "question": "A mass on a spring sits in thick honey (very strong damping). You pull it down and let go. What happens?",
+    "choices": [
+      "It wobbles, with a shorter period",
+      "It oscillates exactly as before",
+      "It creeps slowly back to the middle with no wobble at all"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not with that much damping:",
+      "No, the honey matters:",
+      "Yes. This is called overdamping."
+    ],
+    "explain": "If the damping is strong enough, the damping force beats the spring and the mass never overshoots the middle: it just **creeps back**. (The lab's damping slider stops before this point, so you can't reach it there.)"
+  },
+  "check": {
+    "kicker": "Bonus: could it really happen?",
+    "title": "Why cars have shock absorbers",
+    "say": "A car sits on four springs. If you push down on it and let go, roughly how many times per second does it bounce?",
+    "choices": [
+      "About once every 10 s",
+      "About once or twice a second",
+      "About 10 times a second",
+      "About 100 times a second"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Much faster than that:",
+      "Right. Here's the calculation:",
+      "Slower than that:",
+      "Way slower than that:"
+    ],
+    "steps": [
+      "**Mass:** a {carM} kg car on **4 springs**, each with k = {carK} N/m. Side by side they add up: k = **{carKtot} N/m**.",
+      "**Period:** T = 2π√(m/k) = 2π√({carM} / {carKtot}) ≈ **{carT} s**, so about **{carF} bounces per second**.",
+      "**Load it up:** add {carExtra} kg of passengers and T grows to about {carTfull} s. Heavier means slower, because of the √m."
+    ],
+    "after": "Without anything to stop it, the car would keep bouncing after every bump. **Shock absorbers add damping:** they turn the oscillation's energy into heat, so the car settles after one or two bounces."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "phase": {
+      "aria": "Three graphs one above the other, over two periods, sharing one time axis. Displacement y starts at zero and rises to a peak. Velocity v is the same wave shifted a quarter period earlier, so it peaks when y crosses zero. Acceleration a is the displacement curve flipped upside down. Two dashed lines mark a quarter period and half a period.",
+      "y": "y",
+      "v": "v",
+      "a": "a",
+      "g1": "T/4",
+      "g2": "T/2",
+      "ticks": [
+        "0",
+        "T/2",
+        "T",
+        "3T/2",
+        "2T"
+      ],
+      "axis": "time t",
+      "caption": "**y, v and a together** for y = A·sin(ωt). Each curve is drawn at its own scale (A, A·ω and A·ω² are different sizes), so compare only the **shapes and timing**. At T/4 the mass is at the top: y is at its peak, v = 0, and a is at its most negative value (pointing down). At T/2 it is back in the middle: y = 0, a = 0, and v is at its biggest in size (its most negative value, because the mass is going down). The v curve peaks a quarter period **before** y does. The a curve is y turned upside down."
+    },
+    "bounce": {
+      "aria": "A mass on a spring drawn three times: at the top, in the middle and at the bottom of its bounce. At the top the velocity is zero and the acceleration arrow points down, to the middle. In the middle the velocity arrow is long and points down, and the acceleration is zero. At the bottom the velocity is zero and the acceleration arrow points up, to the middle.",
+      "top": "top",
+      "middle": "middle",
+      "bottom": "bottom",
+      "v_zero": "v = 0",
+      "v_big": "v biggest",
+      "a_zero": "a = 0",
+      "a_big": "a biggest",
+      "up": "y",
+      "caption": "**Three snapshots of one bounce.** Cyan arrow: velocity. Yellow arrow: acceleration. At the **ends** the mass stops for an instant (v = 0) and the **net force** (resultant) is biggest, always **towards the middle**. In the **middle** the spring's pull and the weight balance, so the net force is zero and a = 0, but the mass is moving fastest (here moving down)."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Time the bounces of a sock",
+    "lead": "A stopwatch can't time one bounce well, but it can time **{exN} bounces**. Dividing by {exN} then gives you T with a small error. You will check the prediction that **T ∝ √m**: four times the mass should make each bounce take **twice** as long.",
+    "safety": "**Safety:** a rubber band or spring can snap or slip, so keep your face away from it and don't stretch it past about double its length. Keep the load light (under 1 kg) and work over a bed, a sofa or a soft floor: never over people, never from a height, never on a stool or ladder. Nothing breakable underneath.",
+    "need": "**You need:** a stopwatch, a kitchen scale, a long sock, some coins, and a soft spring or a strong rubber band (or a loop of elastic) to hang the sock from. Hold it, or tie it to a hook or door handle that is firmly fixed.",
+    "steps": "**Do this:**\n1. Put some coins in the sock and weigh it on the scale (m in kg). Hang it from the spring or band. Wait until it hangs at rest.\n2. Pull it **straight down** about 5 cm and let go. Don't let it swing sideways. Start the stopwatch as it passes the **lowest point** and call that 0. Stop it at the lowest point of bounce number {exN}. Write down the time.\n3. Repeat three times and average. T = time ÷ {exN}.\n4. Now make the mass **4 times bigger** (add coins until the scale shows four times as much). Time {exN} bounces again.\n5. Optional: use 9 times the mass, and see if T triples.",
+    "measure": "**Measure:** the mass m, and the time of {exN} bounces for each mass. Then T = time/{exN}. If you plot T² against m, the points should lie on a **straight line**, because T² = 4π²·m/k.",
+    "compare": "**Compare with the formula:** it depends on your spring, but the **ratio** doesn't. Example for a soft spring with k = {exK} N/m (yours will differ): a sock of {exM1} kg gives T = {exT1} s, so {exN} bounces take about **{exN1} s**. With 4 times the mass ({exM2} kg) it is T = {exT2} s: **{exN2} s** for {exN} bounces, twice as long. With 9 times the mass ({exM3} kg), T = {exT3} s ({exN3} s for {exN}), three times as long. From your own T you can even find your spring: k = 4π²m/T² (about {exK2} N/m here).",
+    "phone": "**Optional with a phone (phyphox):** the free **phyphox** app (RWTH Aachen University, Android and iOS) has a raw-sensor experiment called **Acceleration (without g)**. Put the phone in a pouch tied shut inside a thick sock so it can't slip out, and hang it from a wide elastic strap about 30 cm above a bed, holding the top of the strap with both hands. Keep the strap short and do it over a bed. Press play and bounce **gently**, a few cm up and down. The graph of the up-down acceleration should look like a **sine wave** with the same period as the bounce. Example: for T = {exPT} s and A = {exPA} cm, ω = 2π/T = {exPw} rad/s and a_{max} = A·ω² ≈ {exPa} m/s². Read T off the graph as the time between two peaks.",
+    "wrong": "**What goes wrong:** a rubber band isn't a perfect spring: it stretches unevenly and warms up, so the period changes a little with the size of the pull. The sock and the band have mass too, so even with no coins you get a period (T² against m then misses the origin). The bounce dies away (damping), so count while it is still clearly moving. Starting the stopwatch late by a fraction of a second is why you time several bounces. Expect the ratio of periods to be right to within about 5%."
+  }
+}

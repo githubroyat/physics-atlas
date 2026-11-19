@@ -1,0 +1,689 @@
+{
+  "hero": {
+    "sfx": "DING-DONG!",
+    "caption": "A capacitor and a coil pass the energy back and forth, again and again."
+  },
+  "intro": "Flick a tuning fork and it rings: its energy sloshes back and forth inside it. An electric circuit can ring too. A **capacitor** and a **coil** pass energy to and fro, hundreds to millions of times per second. That idea is at the heart of radio tuning. Unless we say otherwise: the circuit has **no resistance** (we add it in Step 6), and the lab runs in **slow motion** so you can see it. Notation: **U** is voltage, **Q** is charge, **I** is current, **W** is energy.\n\n**Recap from *Stored lightning*:** a capacitor holds charge and energy: **Q = C·U** and **W = ½·C·U²**.\n\n**Recap from *Where the bounce goes*:** a mass on a spring swaps energy between elastic energy ½·k·y² and kinetic energy ½·m·v², and the total stays the same.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "describe how energy is exchanged between the **electric field of a capacitor** and the **magnetic field of a coil**;",
+      "use the energy in a coil, **W = ½·L·I²**, together with W = ½·C·U² for a capacitor;",
+      "use the **analogy with a mass on a spring** to arrive at the natural frequency **ω_{0} = 1/√(L·C)**, and f_{0} = ω_{0}/2π;",
+      "explain that voltage and current are sine-like curves a **quarter of a period apart**, and that resistance **damps** the ringing;",
+      "explain how an **AC supply** keeps the circuit going, and why the current is largest when its frequency equals f_{0}: **radio tuning**."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Quick guess before we start!",
+    "question": "A capacitor is charged up, then connected to a **coil** (a spiral of wire). Ignore any resistance. What happens?",
+    "choices": [
+      "It discharges once, and then nothing more happens",
+      "The current surges back and forth: first one way, then the other, again and again",
+      "Nothing at all: the coil blocks the current",
+      "The capacitor charges up even more"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "That is what a plain wire with some resistance would do. A coil is different: it keeps the current going past \"empty\".",
+      "Yes! The circuit rings.",
+      "A coil does not block a current, it resists a **change** in the current. It slows the start and keeps it going.",
+      "Energy can't appear from nowhere. It only moves around."
+    ],
+    "explain": "The capacitor empties through the coil. The coil won't let the current stop at once, so it keeps pushing charge until the capacitor is charged the **other way round**. Then everything runs backwards. Back and forth, back and forth: an **electric oscillation**. Let's see why.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "The capacitor: energy in an electric field",
+    "body": "**Do this:** picture the capacitor in a camera flash, fully charged: **+Q** on one plate, **−Q** on the other, an electric field in the gap between them.\n\nCharge and voltage go together, and the energy sits in the **electric field**:\n\n$ Q = C·U\n\n$ W = ½·C·U²\n\nC is in farad (F), U in volt (V), W in joule (J). In the lab later, the **pink** bar is this energy. Remember: the more charge on the plates, the bigger U and the stronger the field.",
+    "check": {
+      "q": "A capacitor of 50 µF is charged to 6.0 V. How much energy does it store?",
+      "choices": [
+        "{c1w1} mJ",
+        "{c1W} mJ",
+        "{c1w2} mJ",
+        "{c1w3} mJ"
+      ],
+      "answer": 1,
+      "why": "W = ½·C·U² = ½ × 50×10⁻⁶ × 6.0² = **{c1W} mJ**. Don't forget to square U and keep the ½.",
+      "whyNot": [
+        "That is C·U² with the ½ left out. The energy formula has a factor ½.",
+        null,
+        "That is ½·C·U with U not squared. In the energy the voltage appears squared.",
+        "That is C·U, which is the charge Q, not an energy. Use W = ½·C·U²."
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "The coil: energy in a magnetic field",
+    "body": "**Do this:** imagine pushing a heavy sled: hard to get moving, and hard to stop again. A **coil** (also called an **inductor**) does the same thing with an electric current.\n\n**Recap from *Current makes a magnet*:** a current in a coil makes a **magnetic field**.\n\n**New:** the coil's special trait is that it **resists changes in the current**. The current can't jump up or drop to zero instantly; it builds up and dies away gradually. Its stubbornness is called the **inductance L**, measured in **henry (H)**; mH is common.\n\n**New:** the energy sits in the **magnetic field** of the coil, and it looks just like kinetic energy:\n\n$ W = ½·L·I²\n\nCompare with ½·m·v²: the coil's L plays the role of the mass, and the current I plays the role of the speed. In the lab, the **blue** bar is this energy.",
+    "check": {
+      "q": "A coil with L = 20 mH carries a current of 0.50 A. How much energy is stored in its magnetic field?",
+      "choices": [
+        "{c2W} mJ",
+        "{c2w1} mJ",
+        "{c2w2} mJ",
+        "{c2w3} mJ"
+      ],
+      "answer": 0,
+      "why": "W = ½·L·I² = ½ × 0.020 × 0.50² = **{c2W} mJ**.",
+      "whyNot": [
+        null,
+        "That is L·I² with the ½ left out. Like kinetic energy ½·m·v², the coil's energy has the ½.",
+        "That is L·I: no ½ and I not squared. Compare ½·m·v²: the speed is squared.",
+        "That is ½·I² with L forgotten. L plays the role of the mass, so it must be in there."
+      ]
+    }
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "Watch the energy slosh",
+    "body": "**Do this:** press *Close the switch* in the lab below and watch the bars. The capacitor starts fully charged. Here is the cycle, one quarter at a time:\n\n1. **Full capacitor, no current.** All the energy is in the electric field: W = ½·C·U².\n2. **The capacitor empties, the current builds.** The coil resists, so the current grows gradually. Energy moves from the electric field into the magnetic field.\n3. **Capacitor empty (U = 0), current largest.** All the energy is in the magnetic field: W = ½·L·I².\n4. **The coil keeps the current going.** It charges the capacitor the **other way round**: the plate that was + is now −. Now the energy is back in the electric field.\n\nThen the whole thing runs backwards, and back again. With no resistance the total energy stays constant, exactly like the frictionless spring.",
+    "lab_lead": "**The lab:** the circuit (left) and its **spring twin** (right) move in step. Bars show where the energy is. With these parts, one ring in real life takes about {labT} milliseconds. The lab runs **{slow} times slower**, so the same ring takes {labT} seconds here.",
+    "tasks": "**Tasks:**\n1. Close the switch and wait until the capacitor has recharged the other way round (the + and − signs swap).\n2. Make the ring slower: **quadruple L** (from 10 to 40 mH). The natural frequency drops from {f0def} Hz to {f0x4} Hz, **half** as big. Quadrupling C does the same.\n3. Turn the resistance up and watch the heat bar. (More in Step 6.)\n\nL and C can't change while it rings, so the lab recharges the capacitor each time you move a slider.",
+    "check": {
+      "q": "In an ideal LC circuit, at the instant the capacitor is completely empty (U = 0), where is the energy?",
+      "choices": [
+        "In the capacitor's electric field",
+        "In the coil's magnetic field",
+        "Half in each",
+        "It has been lost as heat"
+      ],
+      "answer": 1,
+      "why": "With U = 0 there is no electric-field energy, and the current is at its **largest**, so **all** the energy is in the coil's magnetic field: W = ½·L·I².",
+      "whyNot": [
+        "That is true when the capacitor is full. Empty means U = 0, and then the electric-field energy ½·C·U² is zero.",
+        null,
+        "Equal shares happen at other moments, not when the capacitor is empty.",
+        "With no resistance there is no heat. The energy only moves between the two fields."
+      ]
+    }
+  },
+  "lab": {
+    "switch_aria": "Switch: tap to close or open",
+    "circuit_aria": "An LC circuit: a capacitor on the left, a coil on the right, a switch on top and a resistor at the bottom. Dots show the current.",
+    "twin_aria": "The spring twin: a mass on a horizontal spring moving in step with the circuit",
+    "cap_circuit": "The circuit: C and L",
+    "cap_twin": "The twin: a mass on a spring",
+    "bar_e": "E-field",
+    "bar_b": "B-field",
+    "bar_tot": "Total",
+    "bar_heat": "Heat",
+    "bars_note": "E-field = the capacitor's ½·C·U² = the spring's ½·k·y². B-field = the coil's ½·L·I² = the spring's ½·m·v². Heat = energy lost in the resistor. All shown as a share of the starting energy W.",
+    "graph": "Voltage U and current I against time. Dashed lines mark every quarter period.",
+    "graph_legend": "voltage U, current I. Dashed lines: T/4",
+    "time_axis": "time →",
+    "close_sw": "Close the switch",
+    "open_sw": "Open the switch and recharge",
+    "pause": "Pause",
+    "play": "Play",
+    "slow": "Slower still",
+    "scrub": "Scrub through time",
+    "l": "Inductance L",
+    "c": "Capacitance C",
+    "res": "Resistance (damping)",
+    "levels": [
+      "none",
+      "very light",
+      "light",
+      "medium",
+      "strong",
+      "heavy"
+    ],
+    "slow_note": "Slow motion: shown time runs {slow} times slower than real time. The capacitor starts at U = 10 V.",
+    "r_f0": "Natural frequency f_{0}",
+    "r_w0": "ω_{0} = 1/√(L·C)",
+    "r_t": "Period T = 1/f_{0}",
+    "r_u": "Voltage U",
+    "r_i": "Current I",
+    "r_w": "Starting energy W",
+    "r_e": "In the capacitor",
+    "r_b": "In the coil",
+    "r_m": "Twin mass m = L",
+    "r_k": "Twin spring k = 1/C"
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Voltage and current: a quarter turn apart",
+    "body": "**Do this:** in the lab's graph, find a moment where the **pink** line (voltage U) is at a peak. Look at the **blue** line (current I) at that same moment. Then jump one dashed line to the right.\n\nBoth curves are **sine-like waves**, but they are **shifted by a quarter of a period (T/4)**:\n\n- When U is largest (capacitor full), the current is **zero**.\n- A quarter period later U is **zero** and the current is **largest**.\n- Half a period after the start U is at its most negative: the capacitor is full again, the other way round.\n\nThe dashed lines are the quarters. It is the same as the spring: the displacement is largest when the speed is zero, and the speed is largest when the mass passes the middle.\n\nThe energy bars show it too: the pink bar follows U², the blue bar follows I², so each bar peaks **twice** per period.",
+    "check": {
+      "q": "An ideal LC circuit rings with period T = 8.0 ms. The capacitor is full (U largest) at t = 0. What is the capacitor's voltage at t = 2.0 ms?",
+      "choices": [
+        "The largest value, as at t = 0",
+        "Zero",
+        "Half the largest value",
+        "The largest value, but with reversed sign"
+      ],
+      "answer": 1,
+      "why": "2.0 ms is **T/4**. A quarter period after the full capacitor, it is empty (U = 0) and the current is at its largest.",
+      "whyNot": [
+        "That is where it was at t = 0. A quarter of the cycle has gone by since then.",
+        null,
+        "Half the largest voltage happens at another time (T/6, not T/4). Where in the cycle is a quarter period?",
+        "Largest but reversed means full the other way round, and that takes half a period (T/2), not a quarter."
+      ]
+    }
+  },
+  "learn5": {
+    "kicker": "Learn · Step 5",
+    "title": "Twins: a spring and a circuit",
+    "lead": "The lab showed it already: the circuit and the spring move in step. **Do this:** match each spring quantity with its circuit twin.",
+    "body": "The twin pairs:\n\n$ y ↔ Q   v ↔ I   m ↔ L   k ↔ 1/C\n\nWhy do they match? The speed is v = Δy/Δt, and the current is I = ΔQ/Δt: both are \"how fast it changes\". The mass resists a change in speed, the coil resists a change in current. A stiff spring snaps back harder (big k), a **small** capacitor gets a big voltage from a little charge (big 1/C). The energies match too: ½·k·y² ↔ ½·C·U² (= Q²/(2C)) and ½·m·v² ↔ ½·L·I².\n\n**Recap from *Shatter the glass*:** the spring's natural frequency is f_{0} = (1/2π)·√(k/m), so ω = √(k/m). Now swap the twins: k becomes 1/C and m becomes L:\n\n$ ω_{0} = 1/√(L·C)\n\nThat is the booklet formula. The frequency and the period follow as always:\n\n$ f_{0} = ω_{0}/(2π) = 1/(2π·√(L·C))     T = 1/f_{0}\n\nUnits: L in H, C in F, ω_{0} in rad/s, f_{0} in Hz. **Bigger L** (heavier mass) or **bigger C** (softer spring) means **slower** ringing. In the lab, the twin's m and k use the same numbers as L and 1/C, so √(k/m) is exactly ω_{0}.",
+    "check": {
+      "q": "An LC circuit has L = 10 mH and C = 10 µF. What is its natural frequency f_{0}?",
+      "choices": [
+        "{c5w1} Hz",
+        "{c5f} Hz",
+        "{c5w2} Hz",
+        "{c5w3} Hz"
+      ],
+      "answer": 1,
+      "why": "ω_{0} = 1/√(L·C) = 1/√(0.010 × 10×10⁻⁶) = {c5w} rad/s. Then f_{0} = ω_{0}/2π = **{c5f} Hz**. Careful: {c5w1} is ω_{0} in rad/s, not a frequency in Hz.",
+      "whyNot": [
+        "That is ω_{0} in rad/s, the 1/√(L·C) part. The question asks for a frequency in Hz: is rad/s the right unit?",
+        null,
+        "That is ω_{0} × 2π. Check which way the conversion between ω and f goes: one cycle is 2π radians.",
+        "That has no square root. The formula has √(L·C), not L·C."
+      ]
+    }
+  },
+  "twins": {
+    "prompt": "In the spring: {spring}. Which circuit quantity is its twin?",
+    "options": [
+      "The charge Q",
+      "The current I",
+      "The inductance L",
+      "The inverse capacitance 1/C"
+    ],
+    "items": [
+      {
+        "spring": "the displacement y",
+        "answer": 0,
+        "why": "y ↔ Q. Stretching the spring is piling up charge on the plates."
+      },
+      {
+        "spring": "the speed v",
+        "answer": 1,
+        "why": "v ↔ I. v = Δy/Δt and I = ΔQ/Δt: both measure how fast something changes."
+      },
+      {
+        "spring": "the mass m",
+        "answer": 2,
+        "why": "m ↔ L. Both resist a change: the mass in speed, the coil in current."
+      },
+      {
+        "spring": "the spring constant k",
+        "answer": 3,
+        "why": "k ↔ 1/C. A stiff spring is like a small capacitor: a big push back for a small displacement."
+      }
+    ],
+    "wrong": "Not that one. Try another!",
+    "next": "Next pair",
+    "finish": "Finish",
+    "done_head": "All four twins matched!",
+    "done": "y ↔ Q, v ↔ I, m ↔ L, k ↔ 1/C. Now ω = √(k/m) turns into ω_{0} = 1/√(L·C)."
+  },
+  "learn6": {
+    "kicker": "Learn · Step 6",
+    "title": "Resistance: the ringing dies away",
+    "body": "**Do this:** go back to the lab, close the switch, and slide the resistance from *none* to *heavy*, one step at a time.\n\nReal wires always have some **resistance R**. Current through a resistance turns electric energy into **heat**, just like friction does for the spring (**Recap from *Where the bounce goes***). So:\n\n- The ringing gets smaller and smaller: the **total-energy** line sinks and the **heat** bar grows. This is **damping**.\n- **Light damping:** it rings many times, and the ring still has almost the same frequency.\n- **Heavy damping:** no ringing at all. The capacitor just drains away slowly.\n\nSo a real LC circuit does not ring forever. To keep it going, you need to give energy back. That is next.",
+    "check": {
+      "q": "A real LC circuit has a little resistance. What happens to the energy that the oscillation loses?",
+      "choices": [
+        "It stays in the capacitor forever",
+        "It leaves as extra charge",
+        "It turns into heat in the resistance",
+        "It turns into more current"
+      ],
+      "answer": 2,
+      "why": "Current through a resistance heats it, so the energy of the oscillation turns into **heat** and the amplitude shrinks.",
+      "whyNot": [
+        "Energy lost in the resistance is not stored any more: the ringing dies down, so the capacitor does not keep it.",
+        "Energy does not turn into charge. Think of what a current does to a wire: what would you feel?",
+        null,
+        "More current would make the ringing grow. Damping makes it shrink, so the energy must go somewhere else."
+      ]
+    }
+  },
+  "learn7": {
+    "kicker": "Learn · Step 7",
+    "title": "Keep it ringing: tune the radio",
+    "body": "**Do this:** play the radio game below, then read the idea behind it.\n\nTo keep an LC circuit going you connect an **AC supply**: a source whose voltage swings back and forth at a frequency of its own, the **driving frequency**.\n\n**Recap from *Shatter the glass*:** a system that is driven at its natural frequency resonates, and the response is largest. It works for the circuit too: **the current is largest when the supply's frequency equals f_{0}**. Slightly above or below, the current is much smaller.\n\nThat is **radio tuning**. Every station sends out its own frequency, and the antenna receives all of them at once. A classic radio's tuning circuit has a coil and a **variable capacitor**. Turning the knob changes C, so it changes f_{0}. When f_{0} matches a station, the current from that station is large and the others barely get through. (The AC supply keeps replacing the energy the circuit loses as heat.)",
+    "game_lead": "**The game:** the radio has a fixed coil, L = 250 µH. Pick a station (the names are made up). Slide C until the pink hump sits on the station's dashed line, then tap *Lock the dial* when the meter passes the white mark. The dial covers about {rMinR} to {rMaxR} kHz (1 kHz = 1000 Hz).",
+    "check": {
+      "q": "A radio's antenna receives many stations at once, but you hear only one. Why?",
+      "choices": [
+        "The other stations are switched off while you listen",
+        "Only one station reaches the antenna at a time",
+        "The coil blocks all stations except one for good",
+        "Only the station whose frequency equals f_{0} makes a large current in the tuning circuit"
+      ],
+      "answer": 3,
+      "why": "The tuning circuit has one natural frequency f_{0}. A station driving it at that frequency causes a **large current**; the others hardly do. Changing C moves f_{0} to another station.",
+      "whyNot": [
+        "Nobody switches them off: all stations keep sending. The tuning circuit does the choosing.",
+        "They all reach the antenna at the same time. It is the circuit after the antenna that picks one.",
+        "The coil does not block stations for good: turning the knob changes C and picks another one. What does the picking?",
+        null
+      ]
+    }
+  },
+  "radio": {
+    "stations": [
+      "Paper Crane",
+      "Moon Cafe",
+      "Night Owl"
+    ],
+    "scene_aria": "Radio dial from 450 to 1800 kilohertz. Three station lines, and a pink hump showing how strongly the circuit answers each frequency.",
+    "axis": "frequency in kHz →",
+    "legend": "blue line = f_{0} of your circuit",
+    "meter_aria": "Reception meter for the chosen station",
+    "c": "Capacitance C",
+    "c_minus": "Decrease C by one picofarad",
+    "c_plus": "Increase C by one picofarad",
+    "lock": "Lock the dial",
+    "pick": "Choose a station",
+    "r_f0": "Your f_{0}",
+    "r_target": "Station",
+    "r_sig": "Reception",
+    "ok": "{name} on {f} kHz: clear as a bell!",
+    "all": "All three found! Check: for 1000 kHz you need C = 1/(4π²·f²·L) ≈ {rC1000} pF, the same as you found.",
+    "close": "Getting close: slide C a little more.",
+    "static": "Static only. Slide C until the pink hump covers the station's line."
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: the natural frequency",
+        "problem": "An LC circuit has L = 2.0 mH and C = 8.0 µF. Find ω_{0}, f_{0}.",
+        "steps": [
+          "Convert to SI units: L = 2.0×10⁻³ H and C = 8.0×10⁻⁶ F.",
+          "L·C = 2.0×10⁻³ × 8.0×10⁻⁶ = **{ex1LC}** s², and √(L·C) = {ex1root} s.",
+          "ω_{0} = 1/√(L·C) = 1/({ex1root5}) = **{ex1w} rad/s**.",
+          "f_{0} = ω_{0}/(2π) = {ex1w}/(2π) = {ex1f} Hz."
+        ],
+        "answer": "ω_{0} ≈ **{ex1w} rad/s**, f_{0} ≈ **{ex1f} Hz**"
+      },
+      {
+        "title": "Example 2: energy, largest current and timing",
+        "problem": "A 20 µF capacitor is charged to 12 V and then connected to a coil with L = 30 mH. Ignore resistance. (a) Find the largest current. (b) How long after closing the switch is the current largest?",
+        "steps": [
+          "Energy at the start, all in the capacitor: W = ½·C·U² = ½ × 20×10⁻⁶ × 12² = **{ex2W} mJ**.",
+          "When the current is largest, all of it is in the coil: ½·L·I² = W, so I² = 2·W/L = 2 × {ex2W}×10⁻³ / 0.030 = {ex2I2} A².",
+          "I = √{ex2I2} = **{ex2I} A**.",
+          "(b) First find f_{0}: L·C = 0.030 × 20×10⁻⁶ = {ex2LC} s², √(L·C) = {ex2root} s, ω_{0} = 1/({ex2root5}) = {ex2w} rad/s, f_{0} = ω_{0}/2π = {ex2f} Hz.",
+          "T = 1/f_{0} = {ex2T} ms. The current is largest a quarter period after closing: T/4."
+        ],
+        "answer": "largest current ≈ **{ex2I} A**, reached **{ex2T4} ms** after closing the switch"
+      },
+      {
+        "title": "Example 3: working backwards, which C?",
+        "problem": "A radio's tuning coil has L = 0.10 mH. Which capacitance C tunes it to a station at 1.5 MHz?",
+        "steps": [
+          "Convert to SI units: L = 0.10×10⁻³ H = 1.0×10⁻⁴ H and f_{0} = 1.5 MHz = 1.5×10⁶ Hz.",
+          "From f_{0} to ω_{0}: ω_{0} = 2π·f_{0} = 2π × 1.5×10⁶ = {ex3w} rad/s.",
+          "Turn ω_{0} = 1/√(L·C) around. Square both sides: ω_{0}² = 1/(L·C), so **C = 1/(ω_{0}²·L)**.",
+          "ω_{0}² = ({ex3w})² = {ex3w2} s⁻². Then C = 1/({ex3w2} × 1.0×10⁻⁴) = **{ex3C} pF** (1 pF = 10⁻¹² F)."
+        ],
+        "answer": "C ≈ **{ex3C} pF**"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "An LC circuit has L = 5.0 mH and C = 2.0 µF. What is its natural frequency f_{0}?",
+        "choices": [
+          "{p1f} Hz",
+          "{p1w1} Hz",
+          "{p1w2} Hz",
+          "{p1w3} Hz"
+        ],
+        "answer": 0,
+        "hint": "ω_{0} = 1/√(L·C) first, then f_{0} = ω_{0}/2π. Use henry and farad.",
+        "solution": "L·C = 5.0×10⁻³ × 2.0×10⁻⁶ = 1.0×10⁻⁸ s², so ω_{0} = 1/√(1.0×10⁻⁸) = {p1w1} rad/s and f_{0} = {p1w1}/(2π) = **{p1f} Hz**.",
+        "whyNot": [
+          null,
+          "{p1w1} is ω_{0} in rad/s. Divide by 2π to get the frequency: {p1f} Hz.",
+          "You multiplied ω_{0} by 2π. Divide instead: f_{0} = {p1w1}/(2π) = {p1f} Hz.",
+          "That is what you get with L = 5 and C = 2 put straight into the formula. Convert first: mH to 10⁻³ H and µF to 10⁻⁶ F. Right value: {p1f} Hz."
+        ]
+      },
+      {
+        "q": "An ideal LC circuit has f_{0} = 500 Hz. The capacitor is fully charged and the switch is closed at t = 0. At what time is the capacitor first completely empty?",
+        "choices": [
+          "{p2a} ms",
+          "{p2b} ms",
+          "{p2c} ms",
+          "{p2d} ms"
+        ],
+        "answer": 0,
+        "hint": "Empty capacitor means U = 0. How far into a period is that?",
+        "solution": "Formula: T = 1/f_{0}, so T = 1/500 Hz = {p2c} ms. U falls from its largest value to 0 in a quarter period: t = T/4 = {p2c} ms / 4 = **{p2a} ms**. Sense check: four such quarters (full, empty, full reversed, empty) make one ring of {p2c} ms.",
+        "whyNot": [
+          null,
+          "{p2b} ms is T/2: the capacitor is full again, charged the other way round. First empty is earlier: T/4 = {p2a} ms.",
+          "{p2c} ms is a whole period T: back to the start, full again. Empty comes a quarter of the way: {p2a} ms.",
+          "{p2d} ms is T/8, where the energy is shared equally and U is still not zero. U = 0 at T/4 = {p2a} ms."
+        ]
+      },
+      {
+        "q": "A spring with a larger spring constant k oscillates faster. Which change to an LC circuit is the twin of a **stiffer** spring?",
+        "choices": [
+          "A smaller capacitance C",
+          "A larger capacitance C",
+          "A larger inductance L",
+          "A larger voltage U"
+        ],
+        "answer": 0,
+        "hint": "Twins: k ↔ 1/C. A bigger k means a bigger 1/C.",
+        "solution": "Twins: k ↔ 1/C, so a bigger k is a bigger 1/C, which is a **smaller C**. Check with the formula: ω_{0} = 1/√(L·C). A smaller C makes L·C smaller, so ω_{0} gets bigger, just as √(k/m) gets bigger with k. A larger L (a heavier mass) or a larger C (a softer spring) would slow the ringing, not speed it up.",
+        "whyNot": [
+          null,
+          "A larger C is a softer spring (k ↔ 1/C gets smaller), so the ringing gets slower.",
+          "A larger L is a heavier mass (m ↔ L): slower ringing, the opposite of a stiffer spring.",
+          "The voltage sets how much energy there is, not how fast it rings. f_{0} does not depend on U."
+        ]
+      },
+      {
+        "q": "A radio coil has L = 0.20 mH. To receive a station at 900 kHz, what capacitance C must the radio's tuning circuit have?",
+        "choices": [
+          "{p4C} pF",
+          "{p4w1} pF",
+          "{p4w2} pF",
+          "{p4w3} pF"
+        ],
+        "answer": 0,
+        "hint": "Turn f_{0} = 1/(2π·√(L·C)) around: square it and solve for C. 1 pF = 10⁻¹² F.",
+        "solution": "ω_{0} = 2π·f_{0} = 2π × 900×10³ = {p4w} rad/s. From ω_{0}² = 1/(L·C): C = 1/(ω_{0}²·L) = 1/(({p4w})² × 0.20×10⁻³) ≈ **{p4C} pF**.",
+        "whyNot": [
+          null,
+          "That leaves out the 2π: you used f² where ω² = (2π·f)² is needed. Right value: {p4C} pF.",
+          "That used L = 0.20 H instead of 0.20 mH = 0.20×10⁻³ H, so it is 1000 times too small. Right value: {p4C} pF.",
+          "You wrote (2π)² as 2π², squaring only the π. That is 2 instead of 4 in 4π², so C comes out exactly twice as big. Right value: {p4C} pF."
+        ]
+      },
+      {
+        "q": "An AC supply drives a circuit with L = 0.10 H and C = 1.0 µF. Which supply frequency gives the largest current?",
+        "choices": [
+          "{p5w4} Hz",
+          "{p5f} Hz",
+          "{p5w5} Hz",
+          "{p5w} Hz"
+        ],
+        "answer": 1,
+        "hint": "The current is largest when the supply frequency equals f_{0}.",
+        "solution": "The current is largest when the supply's frequency equals f_{0} (resonance). L·C = 0.10 × 1.0×10⁻⁶ = {p5LC} s², √(L·C) = {p5root} s. ω_{0} = 1/√(L·C) = 1/({p5root5}) = {p5w} rad/s. f_{0} = ω_{0}/(2π) = {p5w}/(2π) = **{p5f} Hz**. ({p5w} is ω_{0} in rad/s, not a frequency in Hz.)",
+        "whyNot": [
+          "You multiplied ω_{0} by 2π ({p5w} × 2π = {p5w4}). To get hertz you go the other way: divide by 2π. Right value: {p5f} Hz.",
+          null,
+          "That has no square root: {p5w5} Hz is 1/(2π·L·C). The formula has √(L·C). Right value: {p5f} Hz.",
+          "{p5w} is ω_{0} in rad/s, not a frequency in Hz. Divide by 2π: {p5f} Hz."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "Sparks across the room",
+    "frames": [
+      {
+        "cap": "Karlsruhe, late 1880s",
+        "text": "German physicist Heinrich Hertz builds a spark machine. Charge builds up on two metal pieces, then leaps across a tiny gap."
+      },
+      {
+        "cap": "A circuit that rings",
+        "text": "Each spark is charge **sloshing back and forth** like in your LC circuit, millions of times per second.",
+        "fx": "ZZZT!"
+      },
+      {
+        "cap": "No wire between them",
+        "text": "A few metres away he holds a loop of wire with a tiny gap in it, connected to nothing. **Tiny sparks jump in its gap, in step with the first ones.**",
+        "fx": "!!"
+      },
+      {
+        "cap": "The name lives on",
+        "text": "The energy had crossed the room as waves. The story goes that Hertz saw no practical use for them. He died young, in 1894, and radio followed a few years later. The unit of frequency, **hertz (Hz)**, is named after him: one ring per second."
+      }
+    ]
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Circuit Construction Kit: AC",
+    "body": "Build circuits from the sim's parts and use its measuring tools to look at the current and the voltage. Look for a capacitor and an inductor (the coil) among the parts. Predict first, then check: what changes when you swap a part for a bigger one?\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The tag team that never stops",
+    "body": "Draw a one-page manga with two characters: **Capacitor**, who stores energy in an electric field, and **Coil**, who stores it in a magnetic field. They pass a glowing ball of energy to each other, back and forth, **four beats per ring**: full, empty, full the other way, empty. A bored **Resistor** in the corner turns a little of the ball into heat each time. Bonus: draw the **spring twin** as their cousin."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Capacitor:** Q = C·U; energy in its **electric field** W = ½·C·U².",
+      "**Coil (inductor):** a current makes a **magnetic field**, and the coil resists changes in the current. L in henry (H). Energy W = ½·L·I².",
+      "**The LC cycle:** full capacitor (all energy in the E-field, I = 0) → empty capacitor (all energy in the B-field, I largest) → full the other way round → back. Energy sloshes between the two fields; with no resistance the total stays constant.",
+      "U and I are sine-like curves **a quarter of a period (T/4) apart**: U is largest when I = 0, and I is largest when U = 0.",
+      "**Spring twin:** Q ↔ y, I ↔ v, L ↔ m, 1/C ↔ k. So **ω_{0} = 1/√(L·C)**, f_{0} = ω_{0}/(2π) = 1/(2π·√(L·C)) and T = 1/f_{0}. Bigger L or C: slower.",
+      "**Resistance** turns energy into **heat**: the ringing dies away (damping). Heavy damping: no ringing at all.",
+      "An **AC supply** keeps the circuit going. The current is **largest when the supply frequency equals f_{0}** (resonance). **Radio tuning:** change C to move f_{0} onto the station."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "To make an LC circuit's natural frequency **twice as big** (L unchanged), the capacitance C must be...",
+        "choices": [
+          "2 times smaller",
+          "2 times bigger",
+          "4 times smaller",
+          "4 times bigger"
+        ],
+        "answer": 2,
+        "why": "f_{0} ∝ 1/√C. To double f_{0}, √C must halve, so **C becomes 4 times smaller**.",
+        "whyNot": [
+          "Halving C raises f_{0} only by a factor √2 ≈ 1.4, since f_{0} goes as 1/√C. You need a bigger cut.",
+          "A bigger C makes the ringing slower (bigger C is a softer spring), not faster.",
+          null,
+          "A bigger C lowers f_{0}: 4 times bigger C halves it. To double f_{0}, C must shrink."
+        ]
+      },
+      {
+        "q": "In the spring twin, which quantity is the twin of the **current** I?",
+        "choices": [
+          "The displacement y",
+          "The speed v",
+          "The mass m",
+          "The spring constant k"
+        ],
+        "answer": 1,
+        "why": "I = ΔQ/Δt ↔ v = Δy/Δt. The current is the **speed** of the charge.",
+        "whyNot": [
+          "y is the displacement; its twin is the charge Q. The current is how fast the charge moves: the speed.",
+          null,
+          "m ↔ L: the mass resists a change in speed like the coil resists a change in current. The current itself is a flow, a speed.",
+          "k ↔ 1/C is the stiffness. The current is about how fast something moves, so look for the speed."
+        ]
+      },
+      {
+        "q": "In one full period of an ideal LC circuit, how many times is **all** the energy in the coil's magnetic field?",
+        "choices": [
+          "Once",
+          "Four times",
+          "Twice",
+          "Never"
+        ],
+        "answer": 2,
+        "why": "The current is largest (and U = 0) **twice** per period: once with the current flowing one way, once the other way.",
+        "whyNot": [
+          "Once misses the second pass: the current peaks again, flowing the other way, half a period later.",
+          "Four is the number of quarter periods, but only two of them have the energy in the coil. At the other two the capacitor is full.",
+          null,
+          "Never would mean the energy stays in the capacitor. Twice per period the capacitor is empty and the coil has it all."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Try again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: puzzles and extras for when you want a challenge. Not needed for your tests."
+  },
+  "bsum": {
+    "kicker": "Bonus derivation",
+    "title": "The energy sum route",
+    "lead": "The twin idea gave ω_{0}. Here is the energy route. Tap the right move at each step.",
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "The capacitor's energy is ½·C·U². Write it with the charge Q instead of U, using U = Q/C.",
+        "options": [
+          "Q²/(2·C)",
+          "Q²·C/2",
+          "Q/(2·C)"
+        ],
+        "answer": 0,
+        "then": "½·C·(Q/C)² = **Q²/(2·C)**."
+      },
+      {
+        "prompt": "With no resistance no energy is lost. What stays constant while it rings?",
+        "options": [
+          "Q²/(2·C) alone",
+          "Q²/(2·C) + ½·L·I²",
+          "½·L·I² alone"
+        ],
+        "answer": 1,
+        "then": "The sum of the electric-field and magnetic-field energy stays constant:\n\n$ ½·L·I² + Q²/(2·C) = constant"
+      },
+      {
+        "prompt": "The spring's sum is ½·m·v² + ½·k·y² = constant. Which swap turns it into the circuit's sum?",
+        "options": [
+          "m → C, k → L",
+          "m → L, k → 1/C, v → I, y → Q",
+          "m → 1/L, k → C"
+        ],
+        "answer": 1,
+        "then": "The two equations are **identical** after the swap, so they have the same solutions: the spring's ω = √(k/m) becomes **ω_{0} = 1/√(L·C)**. Same answer as the twin table, now proved from the energy."
+      }
+    ]
+  },
+  "bhalf": {
+    "kicker": "Bonus puzzle",
+    "title": "Half the voltage",
+    "question": "In an ideal LC circuit the capacitor's voltage is exactly **half** its largest value. What fraction of the total energy is in the **coil**?",
+    "choices": [
+      "25 %",
+      "50 %",
+      "75 %",
+      "100 %"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "That is the share in the capacitor. The coil gets the rest:",
+      "Close, but the energy depends on the square of U:",
+      "Yes! Here is the reasoning:",
+      "Then the capacitor would have none, but U is not zero:"
+    ],
+    "explain": "W = ½·C·U², so half the voltage means **¼ of the energy** in the capacitor (½² = ¼). The rest, **¾ = 75 %**, is in the coil. Then ½·L·I² = ¾·W, so I = √(¾) × I_{max} ≈ **{bhI} %** of the largest current."
+  },
+  "brange": {
+    "kicker": "Bonus puzzle",
+    "title": "How much must the knob turn?",
+    "question": "A radio must tune from {rMin} kHz to {rMax} kHz with the coil kept fixed. By roughly what factor must the capacitance change between the two ends?",
+    "choices": [
+      "about {br1} times",
+      "about {br2} times",
+      "about {br3} times",
+      "about {br4} times"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "That is the square root of the frequency ratio. You need the square, not the root:",
+      "That is the frequency ratio itself, but you must square the frequency ratio:",
+      "Right. Here is why:",
+      "Too much. The frequency ratio is only about three:"
+    ],
+    "explain": "f_{0} = 1/(2π·√(L·C)), so **C = 1/(4π²·f_{0}²·L)**: C goes as 1/f_{0}². The frequency ratio is {rMax}/{rMin} ≈ {brRatio}, so C must change by ({rMax}/{rMin})² ≈ **{br3} times**. That is why a radio's tuning capacitor has to change by about ten times."
+  },
+  "bimp": {
+    "kicker": "Bonus: why the peak?",
+    "title": "Impedance in one paragraph",
+    "body": "Why is the current largest at f_{0}? A coil and a capacitor each \"resist\" an AC current by an amount that depends on the frequency. The coil resists more at high frequency; the capacitor resists more at low frequency. Together they make an **impedance** Z, and for a coil, capacitor and resistor in a row:\n\n$ Z = √(R² + (ω·L − 1/(ω·C))²)\n\nAt ω = 1/√(L·C) the two frequency-dependent parts cancel exactly, Z is as small as it can get (just R), and the current is largest. A bigger R makes the peak lower, like more damping. You do not need this for the syllabus: your course only asks you to reach ω_{0} by the spring analogy."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "stages": {
+      "aria": "Four pictures of one ring of an LC circuit, each with the circuit above and its spring twin below. At the start the capacitor is full and the current is zero, and the spring is stretched. A quarter period later the capacitor is empty, the current is largest and the mass passes the middle. Then the capacitor is full the other way round and the spring is compressed. Then the current is largest the other way and the mass passes the middle again.",
+      "stage": [
+        {
+          "t": "1 · start, t = 0",
+          "l": "U largest · I = 0"
+        },
+        {
+          "t": "2 · t = T/4",
+          "l": "U = 0 · I largest"
+        },
+        {
+          "t": "3 · t = T/2",
+          "l": "U largest, flipped · I = 0"
+        },
+        {
+          "t": "4 · t = 3T/4",
+          "l": "U = 0 · I largest, flipped"
+        }
+      ],
+      "caption": "**One ring in four snapshots.** In each, the circuit is on top and its **spring twin** below: stretch y ↔ charge Q on the capacitor, speed v ↔ current I. In 1 the capacitor is full (U largest) and the spring is stretched furthest: nothing moves yet, all the energy is in the electric field. In 2 the capacitor is empty, the current is largest and the mass rushes through the middle: all the energy is in the magnetic field. In 3 the capacitor is full the other way round (the signs have swapped) and the spring is squeezed. In 4 the current is largest the other way round. Then it is back to 1. Yellow arrows show the direction of the current and of the mass."
+    },
+    "damp": {
+      "aria": "Graph of the capacitor voltage against time, starting at its largest value. With light damping the voltage swings up and down but every swing is smaller, inside a shrinking dashed envelope. With heavy damping the voltage just falls to zero without swinging.",
+      "axis_y": "voltage U",
+      "axis_x": "time",
+      "light": "light damping: rings, fading",
+      "heavy": "heavy damping: no ringing",
+      "caption": "**What resistance does to the ringing.** Both curves start with a full capacitor. With **light damping** the voltage still swings back and forth at almost the same rhythm, one ring per period T, but every swing is smaller: the dashed lines show the shrinking size. With **heavy damping** it never gets round to swinging at all; the capacitor just drains. The graph shows the shape only, not exact values. This is what the lab's graph draws when you turn the resistance up."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "The spring twin, with your own hands",
+    "lead": "We can't safely build an LC circuit at home (see the safety line), but the circuit has a **twin**, and the twin you can hold. A mass on a spring (or a rubber band) obeys the same equation, so what you measure on the spring tells you what the circuit does. Remember the twin pairs: **m ↔ L**, **k ↔ 1/C**.",
+    "safety": "**Safety:** this is a spring-and-mass experiment only. **Do not** build circuits with capacitors or coils at home, and never connect anything to a wall socket. Use a light mass (a small bag of coins or keys, under 300 g), hang it over a table or the floor, never over your face, keep your face and eyes away from the band or spring, and keep your hands out of the way if a rubber band snaps.",
+    "need": "**You need:** a soft spring (from a pen, or a slinky piece) or two or three identical rubber bands, a small bag with some coins or keys as the mass, a hook or a door handle to hang it from, and a stopwatch (a phone is fine).",
+    "steps": "**Do this:**\n1. Hang the mass from the spring (or from one rubber band). Pull it down a few centimetres and let go. Keep the swings small and straight up and down.\n2. Time **10 oscillations** with the stopwatch and divide by 10: that is the period T. Do it three times and take the average.\n3. **Double the mass** (twice the coins, same bag), pull down the same few centimetres, and time 10 oscillations again.\n4. Back to the first mass, but make the spring **twice as stiff**: hang it from **two identical springs or rubber bands side by side** (they share the load, so k is about doubled). Time again.\n5. Optional: use **four times** the mass.",
+    "measure": "**Measure:** T for the three set-ups (the first mass, the double mass, and the double stiffness). Then work out T(double mass) / T(first mass) and T(double stiffness) / T(first mass).",
+    "compare": "**Compare with the formula:** T = 2π·√(m/k). For example, with m = {trM} kg and k = {trK} N/m this gives T = {trT0} s, so 10 oscillations take about {trT10} s. Your spring will differ, so **look at the ratios, not the numbers.** Doubling m should make T **√2 ≈ {trSqrt2} times longer** (here {trT1} s). Doubling k should make T **{trSqrt2} times shorter** (here {trT2} s). Four times the mass should make T **twice** as long ({trT4} s).\n\n**Now map it to the circuit:** m ↔ L, so doubling L makes the ringing slower by √2. With C = 10 µF, going from L = 10 mH to 20 mH takes f_{0} from {f0def} Hz to {trfL} Hz. A **stiffer** spring is a **smaller C** (k ↔ 1/C): halving C (twice the stiffness) takes f_{0} from {f0def} Hz up to {trfC} Hz, √2 times higher. It is the same √2 each time, just as ω_{0} = 1/√(L·C) says.",
+    "wrong": "**What goes wrong:** a rubber band is not a perfect spring (it stretches unevenly and is slower to rebound), so expect a ratio somewhere between about 1.2 and 1.5, not exactly {trSqrt2}. Big swings or a mass swinging sideways spoil it: keep it small and vertical. Timing one swing is too hard, which is why we time 10. The bag adds a little mass too, so count it in. If a ratio comes out far from 1.4, check that you changed only one thing (the mass or the stiffness, not both)."
+  }
+}

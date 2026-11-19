@@ -1,0 +1,628 @@
+{
+  "hero": {
+    "sfx": "PULL!",
+    "caption": "Everything pulls on everything. Nobody noticed, until someone weighed the world."
+  },
+  "intro": "Why do you stay on the floor? Because the whole Earth is pulling you down. Newton's idea: **every mass pulls every other mass**, with a force **F_{G} = G·m₁·m₂/r²**. This chapter teaches it step by step: the law, the field strength g, how g changes with height, and how a tiny constant G lets you **weigh the whole Earth**. Unless we say otherwise: planets are uniform spheres, the booklet's Earth has M = {Msci} kg and R = {Rsci} m, and nothing else is pulling.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "state and use **Newton's law of gravitation**, F_{G} = G·m₁·m₂/r², and say what every symbol means (r is measured **centre to centre**);",
+      "define the **gravitational field strength**, g = F_{G}/m, and use **g = G·M/r²** for a point or spherical mass;",
+      "explain why g changes with **height**, and why it is about 9.8 m/s² at the surface;",
+      "calculate the **mass of the Earth** from g, R and G, and say why measuring G made this possible;",
+      "compare the **radial field** around a planet with the **uniform field** near its surface."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "You climb to the top of Mount Everest, about **{everestH} km** above sea level. Compared with standing at sea level, your weight is...",
+    "choices": [
+      "Much less (a Moon-like feeling)",
+      "Slightly less",
+      "Exactly the same: gravity is the same everywhere on Earth",
+      "Zero: you're nearly in space"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not that dramatic:",
+      "Yes! Barely, but it's real.",
+      "Close, but the distance does matter a little:",
+      "Not even close. The summit is still very near the ground, as the Earth sees it:"
+    ],
+    "explain": "Weight is the pull of the Earth, and the pull gets weaker with distance from the Earth's **centre**. The summit is only {everestH} km further out than sea level, but the centre is {rKm} km away, so the distance grows by just {everestFrac} %. Gravity follows an inverse-square law (you'll learn it in step 1), so g drops by about twice that, 2 × {everestFrac} % = {everestTwice} %, which is about **{everestPct} %**. Using g = {g} m/s², that is from {g} to {everestG} m/s². A 50 kg person weighs {w50} N at sea level and about {everestLoss} N less on top. (We treat the Earth as a uniform sphere and ignore the mountain's own pull and the Earth's spin.)",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Every mass pulls every mass",
+    "body": "Newton realised that the force that pulls an apple down is the same kind of force that holds the Moon in orbit. **Any two masses attract each other.** For two point masses (or two uniform spheres) the size of the force is:",
+    "formula": "$ F_{G} = G·m₁·m₂/r²",
+    "after": "**m₁ and m₂** are the two masses, in kg.\n**r** is the distance **between their centres**, in m. For you standing on the Earth, r is the distance to the Earth's *centre*, not to the ground.\n**G** is the **gravitational constant**, {Gsci} N m²/kg² (the booklet has 6.674 30 × 10⁻¹¹; we round to 6.674). It is tiny, so the pull between everyday objects is far too small to notice.\n\nThe force is always an **attraction** (masses never repel) and nothing can shield it. By Newton's third law the two masses pull on each other with **equal** forces.\n\n**Compare with electric fields** (*Spark*, *Stored lightning*): both forces follow an inverse-square law and both can be drawn as field lines. But electric charges come in **two kinds**, so electric forces can attract **or repel**, field lines start on + and end on −, and a metal box can **screen** a field. There is only **one kind of mass**: gravity only ever attracts, its field lines only point inwards, and nothing can screen it.\n\n**Inverse square:** double r and the force drops to **a quarter**. Triple r: a ninth. Drag the slider to see why: the same field lines spread over an area that grows as r², so each bit of area gets fewer lines.",
+    "check": {
+      "q": "Two masses attract each other with a force of **{c1F} N**. You move them to **twice** the distance. The force becomes...",
+      "choices": [
+        "{c1b} N",
+        "{c1a} N",
+        "{c1c} N",
+        "{c1F} N"
+      ],
+      "answer": 1,
+      "why": "F_{G} ∝ 1/r². Double r means 1/2² = 1/4 of the force: {c1F} ÷ 4 = **{c1a} N**.",
+      "whyNot": [
+        "Halving would be a 1/r rule. Check the exponent of r in the law: how does the force depend on r?",
+        null,
+        "Further apart means a weaker pull, not a stronger one. Gravity always gets weaker with distance.",
+        "The force does depend on distance: F ∝ 1/r². Moving the masses apart changes the pull."
+      ]
+    }
+  },
+  "bigidea": {
+    "scene": "Five field lines from a point source crossing a patch on spheres of growing size",
+    "dist": "Distance from the source",
+    "unit": "first ring",
+    "r_dist": "Distance",
+    "r_area": "Area of the patch",
+    "r_dens": "Lines per patch area",
+    "r_g": "Field strength",
+    "note": "A sphere's area is 4π·r², so double the distance means **4 times** the area. The same field lines spread over 4 times the area, so the field is 4 times weaker."
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Field strength g",
+    "body": "A bigger mass feels a bigger pull, so to describe the **planet** rather than the object we divide by the object's mass. The **gravitational field strength** g is the force **per kilogram** at a point:",
+    "formula": "$ g = F_{G}/m\n$ g = G·M/r²",
+    "after": "Put F_{G} = G·M·m/r² into g = F_{G}/m: the object's mass **m cancels**. So g depends only on the planet's mass **M** and the distance **r** from its centre, not on what you put there. That's why a heavy stone and a light one fall together.\n\ng is measured in **N/kg**, which is the same as **m/s²**. At the Earth's surface (r = R) the booklet values give\n\n$ g = {Gsci} × {Msci} / ({Rsci})² ≈ {gB} m/s²\n\nThat is the origin of the number 9.8 you've been using. The booklet's 9.81 is the measured value; G·M/R² with the rounded M and R gives {gB} (the Earth also spins and isn't a perfect uniform sphere). So {gB} shows up when we calculate from M and R, and everywhere else we use g = {g} m/s².\n\n**Try it in the lab:** make a planet and drag the yellow probe away from it. The probe can sit on the surface but never inside, because g = G·M/r² is for points outside a uniform sphere (or on its surface). The yellow arrow is the field: it always points to the centre.",
+    "check": {
+      "q": "A **{c2m} kg** object feels a gravitational force of **{c2F} N** at a point near a planet. What is the field strength g there?",
+      "choices": [
+        "{c2w1} N/kg",
+        "{c2g} N/kg",
+        "{c2w2} N/kg",
+        "{c2w3} N/kg"
+      ],
+      "answer": 1,
+      "why": "g = F_{G}/m = {c2F} / {c2m} = **{c2g} N/kg** (that's {c2g} m/s²).",
+      "whyNot": [
+        "That multiplies the force by the mass. Look at the unit: N/kg is not N·kg.",
+        null,
+        "That is the mass divided by the force, which has the unit kg/N, not N/kg.",
+        "Adding doesn't work: newtons plus kilograms mean nothing. g is a force **per** kilogram, so which operation do you need?"
+      ]
+    }
+  },
+  "lab": {
+    "scene": "A planet with field lines pointing in, and a probe you can drag outwards along a line",
+    "drag": "Distance of the probe from the planet's centre, in Earth radii",
+    "drag_hint": "Drag the yellow probe (or use the arrow keys). The yellow arrow shows the field there.",
+    "graph_label": "Graph of the field strength against distance",
+    "graph_x": "distance from the centre",
+    "graph_y": "g",
+    "graph_inside": "inside",
+    "axis_unit": "Earth radii from the centre",
+    "mass": "Planet mass",
+    "radius": "Planet radius",
+    "earth_mass": "Earth masses",
+    "earth_radius": "Earth radii",
+    "planet_radius": "planet radii",
+    "earth_btn": "Make it the Earth",
+    "r_mass": "Mass M",
+    "r_radius": "Radius R",
+    "r_dist": "Probe distance r",
+    "r_gsurf": "g on the surface",
+    "r_gprobe": "g at the probe",
+    "r_force": "Force on a 1 kg probe",
+    "r_ratio": "g at probe ÷ g at surface",
+    "r_patch": "Direction change across 1 km",
+    "tasks": "**Try these:**\n- Press **Make it the Earth**. The surface value is {gB} m/s², what G·M/R² gives with the booklet's M and R. (The measured g on the ground varies a bit over the globe, roughly {gLo} to {gHi} m/s², because the Earth spins and is not a perfect ball.)\n- Slide the **mass** to double: at the surface, g doubles. Now keep the mass and make the **radius** twice as big. What happens to g at the surface?\n- Try a heavy planet (10 Earth masses) with a tiny radius, and a light one with a huge radius. Where is it hardest to jump?"
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "g changes with height",
+    "body": "Because r is measured from the **centre**, climbing makes r bigger and g smaller. Use the lab above again, or this second copy: drag the probe outwards and watch the graph fall.\n\nTwo things to remember: **1)** the fall is gentle near the ground (a mountain is tiny compared with {rKm} km), and **2)** it never reaches zero. At the station, {issH} km up, g is still about {issPct} % of its ground value of {g} m/s² (Example 2 below does the calculation). The astronauts only float because they are falling around the Earth (see *Falling forever*; the bonus at the end gives the numbers).",
+    "formula": "$ g = G·M/r²,   r = R + height",
+    "after": "**Two models of the same field**\n\n**Radial field:** around a whole planet the field lines point towards its centre. They are closer together near the planet (stronger field) and spread out further away. Use **g = G·M/r²** whenever the height matters.\n\n**Uniform field:** in a small region near the surface (a room, a building, even a mountain) the lines look **parallel and equally spaced**, so g is almost the same everywhere there. The force on a mass is then simply the weight, **F_{G} = m·g**.\n\nThey are the **same field**, seen from far away and zoomed in. The last readout of the lab shows why: across a whole kilometre of the ground the field direction changes by only a tiny fraction of a degree.",
+    "tasks": "**Try these:**\n- Press **Make it the Earth** in this second lab and drag the probe to **2 radii**. The field drops to a **quarter**. Out to 3 radii: a ninth.\n- Watch **g at probe ÷ g at surface** as you drag. Does it ever reach 0 %?\n- Look at the **last readout**: it stays tiny even for a big planet. That's why a constant g is a good model near the ground.",
+    "check": {
+      "q": "A satellite orbits **400 km above** the Earth's surface. Which distance do you put in g = G·M/r²?",
+      "choices": [
+        "r = 400 km",
+        "r = R + 400 km, measured from the Earth's centre",
+        "r = R − 400 km",
+        "r = 400 km + 2R"
+      ],
+      "answer": 1,
+      "why": "r is always the distance from the **centre**: the Earth's radius plus the height above the ground.",
+      "whyNot": [
+        "That is only how high the satellite is above the ground, and the ground is not where r is measured from.",
+        null,
+        "R − 400 km is a point **inside** the Earth, and the satellite is not there.",
+        "That puts the satellite more than a whole Earth radius above the ground, but it is only 400 km up."
+      ]
+    }
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Weighing the Earth",
+    "lead": "Nobody can put the Earth on scales. But you can write one equation that gives its mass. Tap the right move at each step.",
+    "game_lead": "Now do it for real. Pick the right number for each slot, then press the button. Wrong picks give silly masses, and a hint.",
+    "check": {
+      "q": "To find the Earth's mass from M = g·R²/G, which quantity had to be **measured in a laboratory** (with Cavendish's twisting balance)?",
+      "choices": [
+        "g, the field strength at the surface",
+        "R, the Earth's radius",
+        "G, the gravitational constant",
+        "The mass of the Moon"
+      ],
+      "answer": 2,
+      "why": "g can be found with a falling stone and R by surveying the globe. Before the lab measurement of **G**, the formula couldn't give a number for M.",
+      "whyNot": [
+        "A falling stone is enough to find g. No special apparatus is needed.",
+        "R can be found by surveying distances on the Earth's surface.",
+        null,
+        "The Moon's mass does not appear in M = g·R²/G."
+      ]
+    }
+  },
+  "derive": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "A small mass m sits at distance r from the centre of the Earth (mass M). Newton's law gives the pull on it:",
+        "options": [
+          "F_{G} = G·M·m/r²",
+          "F_{G} = G·M·m/r",
+          "F_{G} = G·(M + m)/r²"
+        ],
+        "answer": 0,
+        "then": "**F_{G} = G·M·m/r².** Twice as far means a quarter of the force."
+      },
+      {
+        "prompt": "The **gravitational field strength** is the force per kilogram, g = F_{G}/m. Divide the law by m:",
+        "options": [
+          "g = G·M/r²",
+          "g = G·M·m/r²",
+          "g = G·M/r"
+        ],
+        "answer": 0,
+        "then": "**g = G·M/r².** The probe's mass **cancels**. The field belongs to the planet, whatever you put in it."
+      },
+      {
+        "prompt": "On the ground r = R, and g can be measured. Solve for the Earth's mass M:",
+        "options": [
+          "M = g·R²/G",
+          "M = g·G/R²",
+          "M = G·R²/g"
+        ],
+        "answer": 0,
+        "then": "**M = g·R²/G.** Put in g = {g}, R = {Rsci} m and G = {Gsci}:\n\n$ M = {g} × ({Rsci})² / ({Gsci}) ≈ {mCalc} kg\n\nThe Earth's mass from a falling stone, a tape measure around the planet, and one number from a lab."
+      }
+    ]
+  },
+  "game": {
+    "go": "Weigh the Earth",
+    "rows": [
+      {
+        "label": "1. The field strength at the Earth's surface, g",
+        "unit": "m/s²",
+        "hints": [
+          "That is the Moon's g, not the Earth's.",
+          "",
+          "That is Mars's g, not the Earth's."
+        ]
+      },
+      {
+        "label": "2. The Earth's radius, R (in metres!)",
+        "unit": "m",
+        "hints": [
+          "That is the radius in kilometres. The formula needs metres.",
+          "That is the Earth's diameter. The formula wants the radius.",
+          ""
+        ]
+      },
+      {
+        "label": "3. Newton's constant of gravitation, G",
+        "unit": "N m²/kg²",
+        "hints": [
+          "",
+          "The power of ten is off. G is a very tiny number.",
+          "The sign of the exponent is wrong. G is a very tiny number."
+        ]
+      }
+    ],
+    "res_mass": "Your Earth mass",
+    "res_booklet": "Booklet value",
+    "res_ratio": "Yours ÷ booklet",
+    "ok": "Done! Your Earth is the right size.",
+    "wrong": "Not quite. Check these:",
+    "win_head": "EARTH WEIGHED!",
+    "win": "M = g·R²/G = {g} × ({Rsci} m)² / ({Gsci}) ≈ **{mCalc} kg**, only about {mDiff} % away from the booklet's {mBook} kg. We used g = {g} m/s²; the booklet's M and R give {gB} m/s² instead, and that small difference is the gap.\n\nThe clever part: g and R were known long ago, and the whole puzzle was **G**. Once someone measured G in a laboratory, the mass of the whole planet dropped out."
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: the Earth pulls a person",
+        "problem": "Find the gravitational force between the Earth and a **{w1m} kg** person standing on the ground, and compare it with the person's weight m·g. Use the booklet values M = {Msci} kg, R = {Rsci} m, G = {Gsci} N m²/kg².",
+        "steps": [
+          "The person stands on the ground, so the distance from the Earth's centre is r = R = {Rsci} m. (Centre to centre: the person is tiny, so we use the Earth's centre.)",
+          "F_{G} = G·M·m / R². First G·M = {Gsci} × {Msci} = {w1GM} N m²/kg, and R² = ({Rsci})² = {w1R2} m².",
+          "F_{G} = {w1GM} × {w1m} / {w1R2} = **{w1F} N**.",
+          "Check with the field: g = G·M/R² = {gB} m/s², so m·g = {w1m} × {gB} = **{w1mg} N**. The same number: your **weight is the gravitational force** of the Earth on you. (With the measured g = {g} m/s² you would get {w1mg81} N. The weight you *feel* is a different thing; it comes in *Falling forever*.)"
+        ],
+        "answer": "F_{G} ≈ **{w1F} N**, equal to m·g with g = {gB} m/s²"
+      },
+      {
+        "title": "Example 2: g at 400 km",
+        "problem": "A space station orbits **{issH} km** above the Earth's surface. Find the gravitational field strength there, and compare it with the ground value g = {g} m/s². (Booklet values for M and R.)",
+        "steps": [
+          "Distance from the **centre**: r = R + h = {Rsci} + {issHm} = **{w2r} m**.",
+          "r² = ({w2r})² = {w2r2} m², so g = G·M/r² = {w1GM} / {w2r2} ≈ {w2g} m/s².",
+          "Compare with the ground value {g} m/s²: {w2g} / {g} ≈ **{w2pct} %**."
+        ],
+        "answer": "g ≈ **{w2g} m/s²**, about {w2pct} % of the ground value ({g} m/s²)"
+      },
+      {
+        "title": "Example 3: the mass of the Moon",
+        "problem": "The field strength at the surface of the Moon is **{w3g} m/s²** and the Moon's radius is **{w3R} m**. Find the Moon's mass, and compare it with the Earth's. (G = {Gsci} N m²/kg², Earth's mass {Msci} kg.)",
+        "steps": [
+          "We know g and R and want M, so rearrange g = G·M/R² for M: M = g·R²/G.",
+          "R² = ({w3R} m)² = {w3R2} m². Then g·R² = {w3g} × {w3R2} = {w3gR2} m³/s².",
+          "M = {w3gR2} / ({Gsci}) = **{w3M} kg**.",
+          "Compare: {w3M} / {Msci} ≈ {w3pct} %. The Moon has about 1/80 of the Earth's mass, a sensible size."
+        ],
+        "answer": "M ≈ **{w3M} kg**, about {w3pct} % of the Earth's mass"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "Two students of mass 60 kg and 80 kg stand with their centres 2.0 m apart. What is the gravitational force between them? (G = {Gsci} N m²/kg²)",
+        "choices": [
+          "{p1F} N",
+          "{p1w1} N",
+          "{p1w2} N",
+          "{p1w3} N"
+        ],
+        "answer": 0,
+        "hint": "F_{G} = G·m₁·m₂/r². Square the distance and multiply both masses.",
+        "solution": "F_{G} = G·m₁·m₂/r², with r the distance centre to centre.\n\nF_{G} = {Gsci} × 60 × 80 / (2.0)² = {Gsci} × 4,800 / 4.0 = **{p1F} N**.\n\nSense check: less than a ten-millionth of a newton, far too small to feel.",
+        "whyNot": [
+          null,
+          "{p1w1} N divides by r instead of r². Square the distance (2.0² = 4). The right value is {p1F} N.",
+          "{p1w2} N divides by r³ (2.0³ = 8). The law has r², so divide by 4: {p1F} N.",
+          "{p1w3} N adds the masses (60 + 80). The law multiplies them, m₁·m₂: {p1F} N."
+        ]
+      },
+      {
+        "q": "A planet has mass {pM} kg and radius {pR} m. What is g at its surface? (G = {Gsci} N m²/kg²)",
+        "choices": [
+          "{pg} m/s²",
+          "{pgW1} m/s²",
+          "{pgW2} m/s²",
+          "{pgW3} m/s²"
+        ],
+        "answer": 0,
+        "hint": "g = G·M/r² with r = R at the surface. Don't forget to square.",
+        "solution": "At the surface r = R, so g = G·M/R².\n\ng = {Gsci} × {pM} / ({pR})² = **{pg} m/s²**.\n\nSense check: smaller than the Earth's {g} m/s², as it should be for a planet with about a tenth of the Earth's mass and about half its radius.",
+        "whyNot": [
+          null,
+          "{pgW1} m/s² uses 2R, the planet's **diameter**. r is the distance to the centre, which at the surface is R. Right: {pg} m/s².",
+          "{pgW2} divides by R but doesn't square it. The law has R²: g = G·M/R² = {pg} m/s².",
+          "{pgW3} m/s² is M/R² with G left out. G is part of the law: g = G·M/R² = {pg} m/s²."
+        ]
+      },
+      {
+        "q": "A probe is at a height above the ground equal to the Earth's radius, so its distance from the centre is 2R. How big is g there? (Use g = {g} m/s² at the surface.)",
+        "choices": [
+          "{p3g} m/s²",
+          "{p3w1} m/s²",
+          "{p3w2} m/s²",
+          "{p3w3} m/s²"
+        ],
+        "answer": 0,
+        "hint": "r is measured from the centre. Twice the distance gives how much of the field?",
+        "solution": "r is measured from the centre: r = R + R = 2R.\n\ng = G·M/r² = G·M/(2R)² = (G·M/R²)/4 = {g} / 4 = **{p3g} m/s²**.\n\nSense check: twice as far from the centre means a quarter of the field, not half.",
+        "whyNot": [
+          null,
+          "{p3w1} m/s² halves g, as if g ∝ 1/r. It is 1/r², so twice the distance gives a quarter: {p3g} m/s².",
+          "{p3w2} m/s² divides by 9, which means r = 3R. Here r = R + R = 2R, so divide by 4: {p3g} m/s².",
+          "{p3w3} m/s² is g at the ground. At r = 2R the field is weaker: {p3g} m/s²."
+        ]
+      },
+      {
+        "q": "On the surface of a planet of radius {pR} m the field strength is {p4g} m/s². What is the planet's mass? (G = {Gsci} N m²/kg²)",
+        "choices": [
+          "{p4M} kg",
+          "{p4w1} kg",
+          "{p4w2} kg",
+          "{p4w3} kg"
+        ],
+        "answer": 0,
+        "hint": "Rearrange g = G·M/R² for M: M = g·R²/G.",
+        "solution": "Solve g = G·M/R² for the mass: M = g·R²/G.\n\nM = {p4g} m/s² × ({pR} m)² / ({Gsci} N m²/kg²) = **{p4M} kg**.\n\nSense check: about a tenth of the Earth's mass ({Msci} kg), which is plausible for a small rocky planet.",
+        "whyNot": [
+          null,
+          "{p4w1} kg uses R instead of R². The radius must be squared: M = g·R²/G = {p4M} kg.",
+          "{p4w2} kg squares 2R, the diameter, which makes M 4 times too big. Use the radius: {p4M} kg.",
+          "{p4w3} kg multiplies by G. Solving g = G·M/R² for M gives M = g·R²/**G**: divide by G, {p4M} kg."
+        ]
+      },
+      {
+        "q": "In a classroom, the gravitational field of the Earth is best modelled as...",
+        "choices": [
+          "uniform: parallel, equally spaced field lines, constant g",
+          "radial, with g changing a lot between floor and ceiling",
+          "zero, because the Earth is too far away",
+          "pointing away from the Earth's centre"
+        ],
+        "answer": 0,
+        "hint": "Over a few metres the lines of the radial field are almost parallel.",
+        "solution": "From floor to ceiling you move a few metres, while the Earth's centre is {rKm} km away. The radial field lines are then **parallel and equally spaced** to a very good approximation.\n\nSo g is constant, and the force on a mass is F_{G} = m·g.",
+        "whyNot": [
+          null,
+          "Floor to ceiling is a few metres, against {rKm} km to the Earth's centre. So g hardly changes: the field is very nearly uniform.",
+          "Gravity never reaches zero. The centre is {rKm} km away, yet g is still about {g} m/s² in the classroom.",
+          "Gravity only attracts. The field points **towards** the Earth's centre (down), never away from it."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "Weighing the world",
+    "frames": [
+      {
+        "cap": "Before 1798",
+        "text": "Newton's law says the pull is proportional to m₁·m₂/r², but nobody knows the constant that turns it into newtons (today we call it **G**). Without G you can't turn g into the Earth's mass. The pull between everyday objects is far too tiny to notice.",
+        "fx": "?"
+      },
+      {
+        "cap": "The tiny twist",
+        "text": "The English scientist **Henry Cavendish** builds an apparatus (the design came from his friend John Michell, who died before using it): two small lead balls on a light rod hanging from a thin wire, and two big lead balls beside them. The big balls tug the small ones, so the wire **twists** a tiny bit.",
+        "fx": "TWIST"
+      },
+      {
+        "cap": "No drafts, please",
+        "text": "Air currents or body heat would swamp the tiny force. So Cavendish keeps the apparatus in a closed room and reads its tiny movement through a **telescope** from outside.",
+        "fx": "SHH"
+      },
+      {
+        "cap": "The result",
+        "text": "In 1798 he publishes the result as the **density of the Earth**: about {cavRho} times the density of water (his published figure was {cavRho2}; with his arithmetic corrected it is {cavRhoFix}). With the Earth's size, that gives its mass. People later called it \"weighing the Earth\", and from his numbers G works out to about {GcavE}×10⁻¹¹.",
+        "fx": "WOW"
+      }
+    ],
+    "question": "Why did Cavendish watch his apparatus through a telescope from outside the room?",
+    "choices": [
+      "Body heat and moving air near the apparatus would push the balls around more than gravity does",
+      "The lead balls were radioactive",
+      "He was afraid the big balls would fall on him"
+    ],
+    "answer": 0,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Exactly.",
+      "No. Nobody knew about radioactivity in 1798:",
+      "No, the balls were fixed in place:"
+    ],
+    "explain": "The pull between the lead balls is **extremely** small (the numbers are in the Cavendish bonus at the end). Any breath of air is a much bigger force, so the experiment had to be shielded."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Gravity Force Lab",
+    "body": "Two masses on a ruler. Change the masses and the distance between them, and watch the pull on each. Does the force follow F_{G} = G·m₁·m₂/r²? Predict first: double the distance, then check. Try changing only one mass: do both forces change?\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The girl who weighed the Earth",
+    "body": "Draw a one-page manga. **Panel 1:** an anime-style heroine drops a stone and wonders how heavy the ground beneath her is. **Panel 2:** two small lead balls twisting on a thread, pulled by two big ones. **Panel 3:** her tape measure around the globe, plus g written on the stone. **Panel 4:** a huge Earth on kitchen scales, with the number M = g·R²/G. Add speed lines to the falling stone, and field lines pointing at the planet."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Law of gravitation:** F_{G} = G·m₁·m₂/r², for point or uniform spherical masses. r is the distance **centre to centre**. G = 6.674 × 10⁻¹¹ N m²/kg².",
+      "Gravity is **always attractive**, cannot be screened, and follows an **inverse-square law**: double r, a quarter of the force.",
+      "**Field strength:** g = F_{G}/m (N/kg = m/s²), and g = G·M/r² for a point or spherical mass. The mass m cancels.",
+      "**Weighing the Earth:** M = g·R²/G, using the booklet's R = {Rsci} m. It works because G was measured in a laboratory (Cavendish).",
+      "**Height:** use r = R + height. g gets weaker, but never reaches zero: {issPct} % of the ground value at 400 km.",
+      "**Models:** around a planet the field is **radial** (lines to the centre). Near the surface it is **uniform** (parallel, equal spacing), with F_{G} = m·g.",
+      "**Orbits** (*Falling forever*) need sideways (tangential) speed: the satellite keeps falling but keeps missing the Earth."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "You move to twice the distance from the Earth's centre. The pull on you becomes...",
+        "choices": [
+          "half",
+          "a quarter",
+          "double",
+          "the same"
+        ],
+        "answer": 1,
+        "why": "F_{G} ∝ 1/r², and 1/2² = **1/4**.",
+        "whyNot": [
+          "Half would be a 1/r rule. Gravity falls as 1/r², so doubling r does more than halve the pull: it is **1/4**.",
+          null,
+          "Gravity gets weaker with distance, not stronger. Doubling r divides the pull by 2² = 4.",
+          "The pull depends on r: F ∝ 1/r². At twice the distance it is a quarter."
+        ]
+      },
+      {
+        "q": "Can you build a shield that blocks gravity, like a metal sheet blocks light?",
+        "choices": [
+          "Yes, with a very heavy metal",
+          "Yes, with a magnet",
+          "No: gravity can't be screened, and it only ever attracts",
+          "Yes, but only on the Moon"
+        ],
+        "answer": 2,
+        "why": "Unlike electric charges, masses come in only one kind, so there is no repulsion and no shielding. And nothing in between stops the pull: a mass between you and the Earth adds its own pull; it doesn't cancel the Earth's.",
+        "whyNot": [
+          "A mass between you and the Earth adds its own pull; it doesn't cancel the Earth's. No material screens gravity.",
+          "A magnet acts only through magnetic forces, and only on some materials. Gravity acts on all mass and ignores magnets.",
+          null,
+          "Gravity can't be screened on the Moon either. Electric fields can be shielded, because charges come in two kinds; masses come in only one."
+        ]
+      },
+      {
+        "q": "What keeps a satellite from falling straight down to the Earth?",
+        "choices": [
+          "There's no gravity up there",
+          "Its sideways speed: it keeps falling but keeps missing the planet",
+          "Its engines push it up all the time",
+          "The Moon holds it up"
+        ],
+        "answer": 1,
+        "why": "Gravity is what bends its path into a circle. Without the **tangential velocity**, it would fall straight down.",
+        "whyNot": [
+          "At 400 km, g is still about {issPct} % of the ground value. Gravity is there: it is what bends the orbit.",
+          null,
+          "Satellites coast for years with the engines off. Gravity alone keeps them going round.",
+          "The Moon's pull on a satellite is tiny next to the Earth's. What holds it up is its sideways speed."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: puzzles for when you want a challenge. Not needed for your tests."
+  },
+  "challenge": {
+    "kicker": "Bonus puzzle",
+    "title": "Twice the radius",
+    "lead": "A rocky planet has exactly the **same density** as the Earth, but is **twice as wide**. (Same material, a bigger ball.)",
+    "question": "How does g at its surface compare with the Earth's 9.8 m/s²?",
+    "choices": [
+      "The same",
+      "Twice as big",
+      "4 times as big",
+      "8 times as big"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Tempting, but the mass changes a lot:",
+      "Yes!",
+      "4 times is the R² factor alone, but the mass is 8 times bigger too, so g only doubles.",
+      "That's the mass, but the surface is also further from the centre:"
+    ],
+    "explain": "Twice the radius gives **8 times the volume**, so 8 times the mass (same density). Gravity is g = G·M/R², with 8 times the M and 4 times the R². Net: 8/4 = **2 times**, about {chalG} m/s² (with the booklet's Earth values). In general g = (4/3)·π·G·ρ·R, so for a fixed density g grows in proportion to R."
+  },
+  "check": {
+    "kicker": "Bonus: could it really happen?",
+    "title": "Floating on the station",
+    "say": "\"They float because there's no gravity up there!\"",
+    "lead": "The space station circles the Earth about **{issH} km** up, and astronauts float around inside. Is gravity switched off up there? Vote first. Assumptions: the Earth is a uniform sphere, the orbit is a circle at exactly {issH} km, the booklet's M and R.",
+    "question": "How strong is the Earth's field at the station, compared with the ground?",
+    "choices": [
+      "Zero: space has no gravity",
+      "Still about {issPct} % of the ground value",
+      "About half",
+      "About 10 %"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "No. If gravity were zero, the station would fly off in a straight line:",
+      "Yes! Here's the calculation:",
+      "Less of a drop than that:",
+      "Much less of a drop than that:"
+    ],
+    "steps": [
+      "**Distance from the centre:** r = R + height = {Rsci} m + {issHm} m = **{issR} m**. You measure r from the centre, not from the ground.",
+      "**The field there:** g = G·M/r² = ({Gsci} × {Msci}) / ({issR})² = **{issG} m/s²**.",
+      "**Compared with the ground:** {issG} ÷ {g} gives about **{issPct} %**. Gravity at the station is nearly as strong as on the ground!",
+      "**So why float?** The station is falling, all the time, and it is moving sideways fast enough that the ground curves away beneath it. The needed speed comes from a_{cent} = v²/r with a_{cent} = g: v = √(g·r) ≈ **{issV} km/s**, which is one lap in about **{issT} minutes**. The astronauts and the station fall together, so nothing pushes on them: that's why they float."
+    ],
+    "after": "A stable orbit needs **sideways speed**. With no sideways speed, a satellite would drop straight down. At the right speed for a circle, it keeps falling and keeps missing the Earth. With a bit more speed it follows a stretched-out orbit; only at escape speed (about 11 km/s) does it leave for good."
+  },
+  "cav": {
+    "kicker": "Bonus: the size of the pull",
+    "title": "How small is the Cavendish force?",
+    "lead": "Take our own approximate numbers: a big lead ball of **{cavBig} kg** and a small one of **{cavSmall} kg**, centres **{cavSep} m** apart.",
+    "question": "How does the pull between a big and a small ball compare with the small ball's own weight?",
+    "choices": [
+      "About as large",
+      "About a thousand times smaller",
+      "Tens of millions of times smaller",
+      "Bigger"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not even close:",
+      "Much smaller than that:",
+      "Yes!",
+      "Then the balls would crash together:"
+    ],
+    "explain": "F = G·m₁·m₂/r² ≈ **{cavF} N**. The small ball's own weight is about **{cavRatio}** times larger. Any breath of air is a much bigger force, so the experiment had to be shielded."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "models": {
+      "aria": "Two drawings of the same gravitational field. Left: the whole Earth with twelve field lines all pointing at its centre, closer together near the surface. A small patch on top is zoomed in on the right, where the field lines are parallel and equally spaced, pointing down at the ground.",
+      "earth": "Earth",
+      "radial": "Radial field",
+      "uniform": "Uniform field",
+      "ground": "ground",
+      "zoom": "zoom in",
+      "radial_note": "lines point at the centre",
+      "uniform_note": "parallel, equally spaced",
+      "caption": "**One field, two models.** Far from the Earth (left) the lines all point at the centre, so they are closer together near the surface. Zoom in on a tiny patch (yellow box) and the lines look **parallel and equally spaced** (right): g is the same everywhere in the patch. (The patch is drawn much larger than a real room.)"
+    },
+    "radius": {
+      "aria": "Drawing of the Earth with a satellite above it. A line runs from the Earth's centre through the ground to the satellite. The part inside the Earth is the radius R, the part above the ground is the height h, and the whole line is the distance r = R + h.",
+      "R": "R",
+      "h": "h",
+      "r": "r = R + h",
+      "centre": "centre",
+      "earth": "Earth",
+      "sat": "satellite",
+      "ground": "ground",
+      "note": "not to scale",
+      "caption": "**r starts at the centre.** Add the Earth's radius R and the height h above the ground. For the station, R = {Rsci} m and h = {issHm} m, so r = {issR} m. (In a true-to-scale drawing, 400 km would be a thin sliver above the ground.)"
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Measure g at home, two ways",
+    "lead": "You have used g = {g} m/s² all chapter. Now check it yourself, with a stopwatch, a tape measure and a phone. Two different methods, one answer: if both give about {g} m/s², the number is real.",
+    "safety": "**Safety:** drop only small, light things (a coin, a key) from **table or shoulder height**, onto a floor with nobody's feet near it, and never anything breakable. No stairs, balconies or windows. For the pendulum use a light weight on a string, small swings, and keep your face out of its path. Never throw or swing a phone.",
+    "need": "**You need:** a tape measure, a small heavy object (a coin or a key), a phone that can film, a stopwatch (a second phone works), string about 1 m long, a small weight for it (a bunch of keys or a few coins in a bag), and a hook or a doorframe to hang it from.",
+    "steps": "**Do this, method 1 (the drop):**\n1. Measure the height from the bottom of your hand to the floor: about {dropH} m. Write it down.\n2. Film from the side, with the tape measure and the floor in the picture. Let go of the coin (don't throw it).\n3. Play the video **one frame at a time**. Count the frames from the last one where it is still in your hand to the first one where it touches the floor. Divide by the frames per second (check your camera settings) to get t.\n\n**Method 2 (the pendulum, see *Swing*):**\n1. Hang the weight on the string so that the distance from the pivot to the centre of the weight is exactly **{pL} m**.\n2. Pull it back a little (under 10°), let go, and time **10 complete swings**. Divide by 10 to get the period T.",
+    "measure": "**Measure:** for the drop, the height h and the time t, so g = 2·h/t². For the pendulum, the length L and the period T, so g = 4π²·L/T².",
+    "compare": "**Compare with the chapter:** with g = {g} m/s², the coin takes t = √(2·h/g) = **{dropT} s**, which is about {dropFr} frames at 30 frames per second. The pendulum has T = 2π·√(L/g) = **{pT} s**, so ten swings take about **{pT10} s**.\nSee how sensitive it is: at 30 frames per second, 16 frames gives g = {dropG16} m/s² and 17 frames gives {dropG17} m/s². One frame already shifts g by about 1 m/s². (Slow-motion mode, with many more frames per second, does much better.) The pendulum is gentler: a slip of {pSlip} s on the 10-swing total shifts g to about {pGlo} or {pGhi} m/s², roughly {pPct} %.\n**A third check:** the free **phyphox** app (RWTH Aachen University, Android and iOS) has an experiment called **Acceleration with g**. Lay the phone flat and still on the table: it should read about **{g} m/s²** (a few tenths off is normal). It measures the push of the table on the phone per kilogram, which equals g only because the phone is at rest. Never drop the phone to test it.",
+    "wrong": "**What goes wrong:** reaction time (start and stop of a hand-held stopwatch can cost 0.2 s, which is why you time ten swings and not one); air drag (use a coin, not a sheet of paper); a pendulum that swings in an ellipse or has the string stretch; a length measured to the top of the weight instead of its centre. Also, the real g varies a little over the Earth ({gLo} to {gHi} m/s²), but that is far smaller than your measurement errors."
+  }
+}

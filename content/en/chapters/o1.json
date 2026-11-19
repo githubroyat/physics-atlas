@@ -1,0 +1,574 @@
+{
+  "hero": {
+    "sfx": "BOING!",
+    "caption": "Pull it, push it: it always fights back towards the middle."
+  },
+  "intro": "Springs, swings and wobbles all start from one simple rule: **pull something away from the middle, and it pushes back.** This chapter teaches that rule step by step. The force law F = −k·y is exactly as your formula sheet writes it; the spring's energy W = ½·k·y² is **not** on the sheet, so you will learn to derive it.",
+  "predict": {
+    "kicker": "Bonus puzzle",
+    "say": "A sneaky one, olympiad-style.",
+    "question": "An apple hanging on one spring stretches it by **{s1} cm**.\n\nNow hook a second, identical spring **below** the first one and hang the same apple from the bottom. How far does the apple drop now?",
+    "choices": [
+      "{sPar} cm",
+      "{s1} cm, the same",
+      "{s2} cm",
+      "16 cm"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "That's what happens with the springs side by side, sharing the weight. One below the other is different:",
+      "Close, but each spring feels the whole apple:",
+      "Exactly. Each spring feels the whole weight of the apple.",
+      "Too much. Here's why:"
+    ],
+    "explain": "**Both springs carry the full weight of the apple**, so each one stretches {s1} cm, and the drops add up to **{s2} cm**. Two springs in a line are only half as stiff as one.\n\nSide by side it's the other way round: the two springs share the weight, each stretches only {sPar} cm, and the pair is twice as stiff.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "lab": {
+    "kicker": "Play",
+    "title": "Stretch it and squash it",
+    "lead": "A **0.50 kg** mass hangs on a spring whose stiffness k you can set from 10 to 100 N/m. **Drag the pink mass** up or down. Watch the yellow arrow: which way does the spring push? Then watch the graph.",
+    "drag": "Mass position: drag up or down",
+    "drag_hint": "Drag the mass up or down. Keyboard: arrow keys.",
+    "middle": "middle",
+    "k": "Spring stiffness k",
+    "stretch": "Displacement y",
+    "force": "Restoring force",
+    "energy": "Energy above the middle, ½·k·y²",
+    "graph_title": "Restoring force F against displacement y",
+    "axis_x": "y →",
+    "axis_f": "F",
+    "let_go": "Let go!",
+    "reset": "New spring",
+    "sfx_break": "SNAP!",
+    "broke": "Past its elastic limit the spring stays bent and the force is no longer proportional to the stretch.",
+    "cant_let_go": "This spring is bent. Get a new spring first.",
+    "pull_first": "Pull the mass away from the middle first.",
+    "oscillating": "It overshoots, comes back, overshoots again: an oscillation. Next chapter: what shape that motion has.",
+    "energy_note": "Here y is measured from the middle, where the hanging mass is balanced. So this number is the change in the spring's elastic energy plus the mass's gravitational energy together, not the spring's elastic energy alone."
+  },
+  "check": {
+    "kicker": "Bonus: could it really happen?",
+    "title": "Spring boots",
+    "say": "Game characters bounce off spring pads all the time. Could spring boots that squash by only {bx} cm launch me {bh} m up?",
+    "choices": [
+      "Yes, easily: nothing to worry about",
+      "Yes, the energy is possible, but the acceleration would hurt",
+      "No, a spring cannot store that much energy"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "The spring could do it, but \"nothing to worry about\" ignores what the push does to the rider:",
+      "Right. The energy is possible; it is the huge acceleration that hurts.",
+      "A spring can store that much energy, and the maths shows how:"
+    ],
+    "steps": [
+      "**Energy needed:** to rise {bh} m, a {bm} kg person needs m·g·h = {bm} × 9.81 × {bh} ≈ **{bEnergy} J** (a little more if h is counted from the squashed position).",
+      "**The spring has to store it:** W = ½·k·y² = {bEnergy} J with a squash of y = {bx} cm. Solving for k gives **k ≈ {kBoots} N/m**, about as stiff as a firm car suspension spring.",
+      "**The push at full squash:** F = k·y ≈ **{fBoots} N**. That's like having about {fTonnes} tonnes standing on you.",
+      "**The ride:** at full squash that force (minus your weight) accelerates you upwards at about **{aG} g**. Even trained fighter pilots, with g-suits and special breathing, can only take about 9 g for a few seconds."
+    ],
+    "after": "**Verdict:** the energy is possible, but the acceleration would injure you. The fix? A spring that squashes **further**: the same energy spread over a bigger squash y needs a much smaller force (F = 2W/y)."
+  },
+  "bigidea": {
+    "kicker": "The big idea",
+    "title": "What makes things oscillate?",
+    "lead": "Tap each card. Which ones will wobble back and forth if you nudge them?",
+    "yes": "Oscillates",
+    "no": "Won't oscillate",
+    "cards": [
+      {
+        "icon": "bowl",
+        "label": "Ball in a bowl",
+        "tagline": "nudge it",
+        "yes": true,
+        "why": "the sides push it back towards the bottom, so it rolls back and forth."
+      },
+      {
+        "icon": "hill",
+        "label": "Ball on a hilltop",
+        "tagline": "nudge it",
+        "yes": false,
+        "why": "gravity pushes it further away from the top. The force points away from the middle, so it rolls off."
+      },
+      {
+        "icon": "spring",
+        "label": "Block on a spring",
+        "tagline": "pull it",
+        "yes": true,
+        "why": "the spring pulls it back whichever way you move it."
+      },
+      {
+        "icon": "pendulum",
+        "label": "Pendulum",
+        "tagline": "swing it",
+        "yes": true,
+        "why": "the part of the weight along the arc always pulls the bob back towards the lowest point."
+      },
+      {
+        "icon": "floor",
+        "label": "Ball on a flat floor",
+        "tagline": "nudge it",
+        "yes": false,
+        "why": "nothing pushes it back. It just rolls away and stops."
+      },
+      {
+        "icon": "board",
+        "label": "Diving board",
+        "tagline": "jump on it",
+        "yes": true,
+        "why": "the bent board springs back, overshoots and bounces."
+      }
+    ],
+    "rule": "The pattern: **oscillation needs a restoring force, one that always points back towards the middle.** And if that force is **proportional** to how far you've moved (F = −k·y, as on your formula sheet), you get the simplest oscillation: a sine-wave motion called *simple harmonic motion* (SHM). The minus sign just means \"back towards the middle\"."
+  },
+  "derive": {
+    "kicker": "Derive it yourself",
+    "title": "Where ½·k·y² comes from",
+    "lead": "Energy stored = work you did stretching it. But the force grows as you stretch. Tap the right move at each step. (This formula is **not** in your formula booklet: remember it or derive it.)",
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "Work = force × distance only works when the force is constant. Here the force you pull with is +k·y (the spring's own force is −k·y, equal in size and opposite), and it grows from 0 to k·y. On the F–y graph, what gives the work?",
+        "options": [
+          "The slope of the line",
+          "The area under the line",
+          "The highest point"
+        ],
+        "answer": 1,
+        "then": "The **area under the force–distance graph** is the work. We use the size of the force, k·y, so the area is a triangle with base y and height k·y."
+      },
+      {
+        "prompt": "What's the area of that triangle?",
+        "options": [
+          "y · k·y",
+          "½ · y · k·y",
+          "k·y ÷ y"
+        ],
+        "answer": 1,
+        "then": "½ × base × height = ½ · y · k·y, so the stored energy is:\n\n$ W = ½·k·y²"
+      },
+      {
+        "prompt": "So if you stretch the spring twice as far, how much more energy does it store?",
+        "options": [
+          "Twice as much",
+          "Four times as much",
+          "The same"
+        ],
+        "answer": 1,
+        "then": "**Four times** (2² = 4). The same squared pattern as kinetic energy ½mv². Physics loves squares."
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "The secret code of Robert Hooke",
+    "frames": [
+      {
+        "cap": "London, 1676",
+        "text": "Robert Hooke has discovered a law about springs. But he's worried rivals will steal it..."
+      },
+      {
+        "cap": "His trick",
+        "text": "...so at the end of a book about telescope instruments, he prints **a scrambled set of letters**: an anagram.",
+        "fx": "?!"
+      },
+      {
+        "cap": "The code",
+        "text": "**ceiiinosssttuv**\n\nNobody can read it. But if anyone later claims the idea, he can prove he had it first."
+      },
+      {
+        "cap": "1678",
+        "text": "He finally reveals the answer: a Latin sentence. Today we write it as **F = −k·y**, and it's in your syllabus.",
+        "fx": "TA-DA!"
+      }
+    ],
+    "game_title": "Crack Hooke's code",
+    "game_lead": "These are Hooke's actual letters. Tap them in order to rebuild his Latin sentence: four words of 2, 6, 3 and 3 letters.",
+    "anagram_letters": "ceiiinosssttuv",
+    "anagram_answer": "ut tensio sic vis",
+    "anagram_meaning": "\"as the stretch, so the force\"",
+    "anagram_solved": "UT TENSIO SIC VIS: \"as the stretch, so the force\". Double the stretch, double the force.",
+    "anagram_wrong": "Not quite Latin. Tap \"Start again\" and try another order.",
+    "anagram_hint_label": "Hint",
+    "anagram_hint": "It means \"as the stretch, so the force\". The first word is UT (\"as\"); the second, TENSIO, means \"stretching\".",
+    "anagram_reset": "Start again",
+    "anagram_burst_ok": "SOLVED!",
+    "anagram_burst_bad": "HMM..."
+  },
+  "challenge": {
+    "kicker": "Bonus puzzle",
+    "title": "Cut it in half",
+    "question": "A spring has k = {kWhole} N/m. You cut it exactly in half. What's the stiffness of one half?",
+    "choices": [
+      "25 N/m: softer",
+      "50 N/m: the same",
+      "100 N/m: stiffer"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Feels logical, but it's the opposite:",
+      "Most people say that. But:",
+      "Nice. Here's the reasoning:"
+    ],
+    "explain": "Pull a whole spring with some force: **every coil** stretches a little, and the stretches add up. Half the spring has half the coils, so under the same force it stretches only **half as far**. Same force, half the stretch: k doubles to **{kHalf} N/m**.\n\nIt's the apple puzzle from the start, run backwards."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Hooke's Law lab",
+    "body": "Pull springs, put two of them in a line or side by side, and check the two-spring puzzle for yourself (Systems screen).\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The spring that fights back",
+    "body": "Draw a one-page manga where a spring is a character that **always** tries to get back to the middle: stretched, it pulls; squashed, it pushes; and the further you take it, the angrier it gets (F = −k·y)."
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A spring with k = {kQ} N/m is stretched by {xQ} cm. Restoring force?",
+        "choices": [
+          "{qW} N",
+          "10 N",
+          "1000 N",
+          "40 N"
+        ],
+        "answer": 1,
+        "why": "F = k·y = {kQ} × {xM} = **{fQ} N**. Remember to turn cm into m ({xQ} cm = {xM} m).",
+        "whyNot": [
+          "{qW} N comes from turning {xQ} cm into 0.5 m (dividing by 10 instead of 100). {xQ} cm is {xM} m, so F = {kQ} × {xM} = {fQ} N.",
+          null,
+          "1000 N is k × {xQ}, with y left in cm. Change to metres first: {xQ} cm = {xM} m.",
+          "40 N is k ÷ {xQ}. Hooke's law multiplies, with y in metres: {fQ} N."
+        ]
+      },
+      {
+        "q": "You stretch a spring three times as far. The stored energy becomes...",
+        "choices": [
+          "3×",
+          "6×",
+          "9×",
+          "the same"
+        ],
+        "answer": 2,
+        "why": "W = ½·k·y², so 3² = **9 times** the energy.",
+        "whyNot": [
+          "3× would be right if W ∝ y. But W = ½·k·y², so three times the stretch gives 3² = 9 times the energy.",
+          "6× is 3 × 2: it reads y² as \"y times 2\" instead of \"y times y\". Squaring three gives 3 × 3 = 9, so 9 times the energy.",
+          null,
+          "The same would mean the stretch does not matter. Since y is squared, 3 times the stretch gives 9 times the energy."
+        ]
+      },
+      {
+        "q": "Which one has NO restoring force?",
+        "choices": [
+          "Ball in a bowl",
+          "Ball on a flat floor",
+          "Pendulum",
+          "Guitar string"
+        ],
+        "answer": 1,
+        "why": "On a flat floor nothing pushes the ball back, so **no oscillation**.",
+        "whyNot": [
+          "A bowl pushes the ball back towards the bottom: it does have a restoring force.",
+          null,
+          "The part of the weight along the arc pulls the bob back to the lowest point: a restoring force.",
+          "A plucked string is pulled back towards its straight position: a restoring force."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Try again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "explain what a **restoring force** is and why it always points back to the **equilibrium** (the middle);",
+      "use **Hooke's law, F = −k·y**, and know what k means and its unit (N/m);",
+      "state the condition for **simple harmonic motion**: the restoring force is proportional to the displacement;",
+      "calculate the **energy stored** in a stretched spring, W = ½·k·y² (not in the formula booklet: remember or derive it)."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Quick guess before we start!",
+    "question": "You pull a spring **twice as far** from its middle position. How hard does it pull back now?",
+    "choices": [
+      "Just as hard",
+      "Twice as hard",
+      "Four times as hard",
+      "Half as hard"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not quite: the further you pull, the harder it pulls back.",
+      "Yes! Twice the stretch, twice the force. That's Hooke's law.",
+      "That's what happens to the stored energy, not the force (you'll see why later).",
+      "Other way round: more stretch, more pull."
+    ],
+    "explain": "For a spring (within its elastic limit, not overstretched) the pull back grows **in proportion** to how far you move it: double the stretch, double the force. Let's see why that matters."
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "The middle and the push back",
+    "body": "A spring with nothing hanging on it has a position where it is happy: no stretch, no squash. We call it the **equilibrium position**, or just *the middle*. Its displacement is **y = 0**.\n\nWith a mass hanging on it, the middle is where the spring's pull balances the weight. At rest the spring is stretched by y_{eq} from its natural length, and **k·y_{eq} = m·g**. Now move the mass up by y. The stretch is y_{eq} − y, so the net force (spring's pull up minus weight down) is k·(y_{eq} − y) − m·g = **−k·y**. So measured from the middle, F = −k·y is the net force.\n\nMove the mass away from the middle and the spring pulls or pushes it **back towards the middle**. That force is called the **restoring force**.\n\nWe measure the displacement **y** from the middle, with **up = +** and **down = −**. Pull the mass down (y negative) and the force points up (positive). Push it up (y positive) and the force points down. The force always has the **opposite sign** to y.",
+    "check": {
+      "q": "A ball sits at the bottom of a bowl. You nudge it to the **right**. Which way does the restoring force point?",
+      "choices": [
+        "To the right, the way you pushed",
+        "To the left, back to the middle",
+        "Straight down",
+        "There is no force"
+      ],
+      "answer": 1,
+      "why": "The restoring force always points **back to the equilibrium**, the opposite way to the displacement.",
+      "whyNot": [
+        "That is the direction of your push, but your push stops when you let go. Ask what the shape of the bowl does to the ball after that.",
+        null,
+        "Gravity is there, but the bowl also pushes on the ball, at an angle. Together they leave a net force pointing along the slope, back towards the bottom. Ask which way the ball would roll if you let go.",
+        "There is one: a ball on the side of a bowl is not in balance. Picture letting go: does it stay where it is?"
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Hooke's law",
+    "body": "Experiments show that for a spring the restoring force is **proportional** to the displacement:",
+    "formula": "$ F = −k·y",
+    "after": "**y** is the displacement from the middle, in metres (m).\n**k** is the **spring constant**, in **newtons per metre (N/m)**. A big k means a stiff spring.\nThe **minus sign** means the force points opposite to the displacement, back to the middle.\n\n**Try it in the lab:** drag the mass, then watch the force arrow, the numbers and the F–y graph. The graph is a straight line through the origin, and its steepness is k.\n\n*Caveat:* Hooke's law only holds while the spring is not stretched beyond its elastic limit.",
+    "check": {
+      "q": "A spring with k = 50 N/m is stretched by 0.10 m. How big is the restoring force?",
+      "choices": [
+        "0.50 N",
+        "{l2F} N",
+        "500 N",
+        "0.002 N"
+      ],
+      "answer": 1,
+      "why": "F = k·y = 50 × 0.10 = **{l2F} N** (pointing back to the middle).",
+      "whyNot": [
+        "That is k·y², with y squared. Hooke's law uses y to the first power: F = k·y.",
+        null,
+        "That is k ÷ y. Hooke's law multiplies: N/m × m = N.",
+        "That is y ÷ k, upside down. Check the units: N/m × m gives N, so multiply."
+      ]
+    }
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: find the spring constant",
+        "problem": "A spring hangs from a hook. When a **200 g** mass hangs from it, the spring stretches by **4.0 cm**. Find k. (g = 9.81 m/s²)",
+        "steps": [
+          "Convert to SI units: m = 0.200 kg and y = 4.0 cm = 0.040 m.",
+          "At rest, the spring's force balances the weight: F = m·g = 0.200 × 9.81 = **{we1F} N**.",
+          "Hooke's law (size only): F = k·y, so k = F / y = {we1F} / 0.040 = {we1k2} N/m."
+        ],
+        "answer": "k = {we1k2} ≈ **{we1k} N/m**"
+      },
+      {
+        "title": "Example 2: force and acceleration",
+        "problem": "The same 200 g mass is pulled **3.0 cm below** its equilibrium position and held still. What is the restoring force when you let go, and the mass's acceleration at that moment?",
+        "steps": [
+          "Displacement from the loaded equilibrium (where the spring's pull balances the weight), up = +: y = −3.0 cm = −0.030 m.",
+          "Hooke's law, with k = {we1k2} N/m: F = −k·y = −{we1k2} × (−0.030) = {we2Fx} ≈ **+{we2F} N**. Positive means **upwards**, back to the middle.",
+          "Newton's second law: a = F / m = {we2Fx} / 0.200 = {we2a2} ≈ {we2a} m/s²."
+        ],
+        "answer": "F ≈ **{we2F} N upwards**, a ≈ **{we2a} m/s² upwards**"
+      },
+      {
+        "title": "Example 3: energy stored in a spring",
+        "problem": "A spring has k = 80 N/m. You stretch it by **5.0 cm** from its natural length. How much elastic energy W is stored? Then stretch it to **10 cm**: how much now?",
+        "steps": [
+          "Convert to SI units: y = 5.0 cm = 0.050 m.",
+          "The formula is not in the booklet, so we use the area under the F–y graph: W = ½·k·y² = ½ × 80 × 0.050² = ½ × 80 × {we3y2} = **{we3W} J**.",
+          "Twice the stretch: y = 10 cm = 0.10 m gives W = ½ × 80 × 0.10² = {we3W2} J. Twice the stretch, **four times** the energy."
+        ],
+        "answer": "W = **{we3W} J** at 5.0 cm and **{we3W2} J** at 10 cm"
+      }
+    ]
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "When is it simple harmonic motion?",
+    "lead": "Not everything with a restoring force wobbles in the same way. First: which of these oscillate at all? Tap each card.",
+    "rule": "**Oscillation needs a restoring force.** And when the restoring force is **proportional to the displacement** (F = −k·y), the motion is the simplest oscillation: a sine-wave motion called **simple harmonic motion (SHM)**. That is exactly the condition your syllabus asks you to state. Next chapter: what SHM looks like on a graph."
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Energy stored in a spring",
+    "lead": "When you stretch a spring you do work, and that work is stored as **elastic energy W**. Here y is the stretch from the natural length. Because the force grows as you stretch, the energy is the **area under the F–y graph**. This formula is **not printed in your formula booklet**, so you must remember it or derive it. Tap the right move at each step."
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A spring has k = 25 N/m. The mass is displaced by y = +0.08 m: 0.08 m above its middle position (vertical spring, up = +). What is the restoring force F?",
+        "choices": [
+          "−{p1F} N",
+          "+{p1F} N",
+          "−{p1w1} N",
+          "−{p1w2} N"
+        ],
+        "answer": 0,
+        "hint": "Use F = −k·y and keep the sign.",
+        "solution": "Hooke's law: F = −k·y. Numbers: F = −25 N/m × 0.08 m = **−{p1F} N**. The minus sign says the force points down, back to the middle (the mass is above it). Units: N/m × m = N.",
+        "whyNot": [
+          null,
+          "The size is right, the sign is not. y is up (+), so the force points down (−): F = −k·y = −{p1F} N.",
+          "{p1w1} is y ÷ k. Hooke's law multiplies: F = k·y = 25 × 0.08 = {p1F} N, with a minus sign for \"back to the middle\".",
+          "{p1w2} is k ÷ y. Multiply instead: F = −25 × 0.08 = −{p1F} N."
+        ]
+      },
+      {
+        "q": "A force of 6.0 N stretches a spring by 0.15 m. What is the spring constant?",
+        "choices": [
+          "{p2k} N/m",
+          "{p2w1} N/m",
+          "{p2w2} N/m",
+          "{p2w3} N/m"
+        ],
+        "answer": 0,
+        "hint": "k = F / y, with y in metres.",
+        "solution": "Rearrange F = k·y: k = F / y. Numbers: k = 6.0 N / 0.15 m = **{p2k} N/m** (y is already in metres). Sense check: a 6 N pull giving 15 cm is a soft spring.",
+        "whyNot": [
+          null,
+          "{p2w1} is F × y. Hooke's law gives k = F ÷ y = 6.0 / 0.15 = {p2k} N/m.",
+          "{p2w2} is y ÷ F, upside down. k = F ÷ y, and N divided by m gives N/m.",
+          "{p2w3} used 15 (the centimetre number) for y. In metres it is 0.15, so k = 6.0 / 0.15 = {p2k} N/m."
+        ]
+      },
+      {
+        "q": "You plot the restoring force F against the displacement y for a spring that obeys Hooke's law. The graph is...",
+        "choices": [
+          "a straight line through the origin",
+          "a parabola (a curve that gets steeper)",
+          "a horizontal line",
+          "a straight line that misses the origin"
+        ],
+        "answer": 0,
+        "hint": "F = −k·y has the form \"y = m·x\", with no constant.",
+        "solution": "Hooke's law F = −k·y has the form \"output = constant × input\", like y = m·x. So the graph is a **straight line through the origin**: no stretch, no force. The minus sign makes it slope down, and its steepness is k, in N/m. A curve, or a line that misses the origin, would not be Hooke's law.",
+        "whyNot": [
+          null,
+          "A parabola is the shape of the energy graph, W = ½·k·y² against y, so this mixes up the force graph with the energy graph. The force is proportional to y (first power), which gives a straight line.",
+          "A horizontal line is a constant force, the same at every stretch. Hooke's force grows with y.",
+          "A line that misses the origin means a force at y = 0. F = −k·y is zero at the middle, so the line goes through the origin."
+        ]
+      },
+      {
+        "q": "A spring with k = 40 N/m is stretched by 0.10 m from its natural length. How much elastic energy W is stored?",
+        "choices": [
+          "{p4E} J",
+          "{p4w1} J",
+          "{p4w2} J",
+          "{p4w3} J"
+        ],
+        "answer": 0,
+        "hint": "W = ½·k·y². Don't forget to square y.",
+        "solution": "Formula: W = ½·k·y². Numbers: W = ½ × 40 N/m × (0.10 m)² = ½ × 40 × {p4y2} = **{p4E} J**. Sense check: the pull grows from 0 to k·y = {p4w1} N, so it averages {p4w3} N over 0.10 m, and {p4w3} × 0.10 = {p4E} J.",
+        "whyNot": [
+          null,
+          "{p4w1} is k·y: the biggest **force** (in N), not the energy. W = ½·k·y² = {p4E} J.",
+          "{p4w2} is k·y², missing the ½. The area is a triangle: W = ½ × 40 × 0.10² = {p4E} J.",
+          "{p4w3} is ½·k·y with y not squared. Energy needs y²: ½ × 40 × {p4y2} = {p4E} J."
+        ]
+      },
+      {
+        "q": "For a motion to be simple harmonic, the restoring force must be...",
+        "choices": [
+          "proportional to the displacement and pointing back to the middle",
+          "constant in size",
+          "pointing away from the middle",
+          "proportional to the speed"
+        ],
+        "answer": 0,
+        "hint": "Think of F = −k·y.",
+        "solution": "The SHM condition is F = −k·y: the force is **proportional to the displacement** (double y, double F) and **opposite to it**, so it always points back towards the equilibrium. A constant force, a force pointing away, or one proportional to speed does not do that.",
+        "whyNot": [
+          null,
+          "A constant force pushes the same way everywhere, so it cannot bring the object back from both sides. SHM needs F proportional to y.",
+          "Pointing away makes the object run off (like the ball on the hilltop). The force must point back to the middle.",
+          "A force proportional to speed is drag-like: it slows things down. SHM needs F proportional to the displacement."
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "**Equilibrium** = the middle position, y = 0. The **restoring force** always points back to it.",
+      "**Hooke's law:** F = −k·y. k is the spring constant in **N/m**; y is the displacement in **m**. Only valid below the elastic limit.",
+      "The F–y graph is a **straight line through the origin**; its steepness is k.",
+      "**SHM condition:** the restoring force is proportional to the displacement and opposite to it.",
+      "**Elastic energy:** W = ½·k·y² (the area under the F–y graph). It is **not on your formula sheet**: remember or derive it. Double the stretch gives 4 × the energy."
+    ]
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: puzzles for when you want a challenge. Not needed for your tests."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "hang": {
+      "aria": "Two pictures of a mass hanging on a spring. At rest, the spring's upward pull equals the weight downwards. With the mass moved up by y, the pull is smaller than the weight, and the leftover force points down, back towards the middle.",
+      "rest": "At rest: y = 0",
+      "moved": "Moved up by y",
+      "pull_rest": "k·y_{eq}",
+      "pull_moved": "k·(y_{eq} − y)",
+      "weight": "m·g",
+      "net": "net: −k·y",
+      "middle": "middle",
+      "caption": "**Why F = −k·y is the net force.** Yellow: the spring's pull. Pink: the weight. Left: they are equal, so the mass rests in the middle. Right: the mass is moved up by y, the spring is less stretched, so its pull is **smaller by k·y**. The weight has not changed, so a net force of size k·y is left over (green). It points **down**, back to the middle."
+    },
+    "area": {
+      "aria": "Graph of the force you pull a spring with against the stretch y: a straight line from the origin up to the height k times y. The triangle under the line is shaded; its area is the work done.",
+      "y": "y",
+      "ky": "k·y",
+      "axis_f": "your pull F",
+      "axis_y": "stretch y",
+      "line": "F = k·y",
+      "area": "area = ½ · y · k·y = ½·k·y²",
+      "caption": "**The work is the shaded area.** Your pull grows in a straight line from 0 to k·y. The triangle has base y and height k·y, so its area is **½·y·k·y = ½·k·y²**. The dashed rectangle would be the work if the force were k·y all the way: the triangle is exactly half of it."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Find k of a rubber band",
+    "lead": "A rubber band or a hair band is a spring you can find at home. Load it with known weights, measure how far it stretches and plot F against y. Then look for the place where the line **stops being straight**.",
+    "safety": "**Safety:** a stretched band can snap back into your face. Keep your face and eyes away from it, never stretch it close to breaking, and use a band you don't mind losing. Hang the load low over a cushion or a bed, never over your feet or a hard floor. Keep the load light: **0.5 kg at most**. Use string loops, no sharp hooks.",
+    "need": "**You need:** a hair band or a thin rubber band, a stable hook or a chair back, a plastic carrier bag with a string loop, a small plastic bottle to stand in the bag, a ruler or tape measure (mm), a measuring jug (100 mL of water has a mass of 0.100 kg, so 0.5 L is 0.5 kg), and paper for the graph. Coins or other small things weighed on a kitchen scale also work as loads.",
+    "steps": "**Do this:**\n1. Hang the band from the hook and the bag, with the empty bottle in it, from the band. Let it settle and measure the band's length L_{0} with the ruler.\n2. Add **100 mL** of water to the bottle (0.100 kg). Wait a few seconds, then measure the length L. The stretch is **y = L − L_{0}**.\n3. Repeat in steps of 100 mL up to 500 mL (0.50 kg). Each time write the force you added: F = m·g, with g = 9.81 m/s².\n4. Plot F (up) against y (across, in metres) and draw the best straight line through the first points and the origin.\n5. Take the water out step by step and measure again on the way back.",
+    "measure": "**Measure:** the stretch y for each load (change mm or cm to m) and the force F = m·g. Then the stiffness is the slope: **k = ΔF / Δy**, in N/m.",
+    "compare": "**Compare with the formula:** Hooke's law says F = k·y, so doubling the load should double the stretch. For an example band with k = {expK} N/m, loads of 0.1, 0.3 and 0.5 kg give F = {expFa}, {expFb} and {expFc} N, and stretches of about **{expYa}, {expYb} and {expYc} cm**. Your band will differ, so your own k is the result. The pattern matters: for small loads the points should lie on a straight line through the origin. **Where the line starts to bend, Hooke's law has stopped working** for your band. Because you measure y from L_{0}, the weight of the empty bag and bottle is already in the starting point, so only the added water counts as F.",
+    "wrong": "**What goes wrong:** rubber is a poor Hooke's-law material. The line curves, the band slowly creeps longer as it hangs, and on the way back the points do not retrace the way up. The bag swings, so let it settle before reading. A ruler reading is uncertain by about a millimetre, which matters most for the smallest stretches, so find k from the larger loads. A pen spring or a toy spring is often closer to Hooke's law than a band: try one and compare the graphs."
+  }
+}

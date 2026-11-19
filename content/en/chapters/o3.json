@@ -1,0 +1,609 @@
+{
+  "hero": {
+    "sfx": "SWISH SWISH",
+    "caption": "A weight on a string keeps time. Almost perfectly."
+  },
+  "intro": "A weight on a string, swinging back and forth. It looks simple, and it ran the world's clocks for centuries. *Recap from The shape of a wobble:* a mass m on a spring of stiffness k, pulled a distance y from the middle, feels a restoring force **F = −k·y**, and its period is **T = 2π√(m/k)**. The pendulum has its own beat, and it's a close cousin. This chapter builds it step by step: formulas such as f = 1/T are on your formula sheet, but the pendulum's period formula is not, so you derive it from the spring result. Unless we say otherwise: g = {g} m/s², no air resistance.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "**identify the forces** on a swinging pendulum bob (weight and tension) and find the **restoring force**, −m·g·sin θ;",
+      "explain why a **small-angle** pendulum is **simple harmonic**: sin θ ≈ θ makes the restoring force proportional to the displacement;",
+      "use **T = 2π√(L/g)** and know what the period does and does not depend on;",
+      "**measure g** with a pendulum, using g = 4π²·L/T²;",
+      "describe how a **pendulum clock** (a seconds pendulum) keeps time, and find the speed at the lowest point from energy."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "Gut feeling, no maths!",
+    "question": "Two pendulums have strings of the same length. One has a **heavy bob**, the other a **light bob**. You pull both out to the same angle and let go together (no air resistance).\n\nDoes the heavy one take longer, shorter, or the same time for each swing?",
+    "choices": [
+      "Longer (heavy is slow)",
+      "Shorter (heavy falls faster)",
+      "The same",
+      "It depends on the size of the bob"
+    ],
+    "answer": 2,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Many people say that, but no:",
+      "Tempting! But no:",
+      "Yes! And it surprises almost everyone.",
+      "Not the size of the bob, and not its mass either:"
+    ],
+    "explain": "**The mass doesn't matter.** Gravity pulls a heavy bob harder, but a heavy bob is also harder to get moving. The two effects cancel exactly, just like a heavy and a light stone fall together. Let's see why, step by step.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "Forces on a swinging bob",
+    "body": "Pull a bob sideways and let go. Only **two forces** act on it:\n\n- the **weight** m·g, straight down;\n- the **tension** in the string, along the string, towards the pivot.\n\nSplit the weight into two parts. One part points **along the string**. It just pulls against the string (together with the tension it keeps the bob on its circle), but it can't speed the bob up or slow it down. The other part points **along the arc**, towards the lowest point. Only this part changes the bob's speed, and nothing cancels it, so it pulls the bob back. That is the **restoring force**:\n\n$ F = −m·g·sin θ\n\nθ is the angle of the string from the vertical. The minus sign means the force points back to the middle (the **equilibrium**, the lowest point). It is biggest at the ends of the swing (for swings up to 90°) and **zero at the bottom**.",
+    "energy": "**Speed at the lowest point (energy).** Recap from S5: movement energy is E_{kin} = ½·m·v², and lifting a mass by a height change Δh stores ΔE_{p} = m·g·Δh. The bob is released at rest, a height **h** above the lowest point, so Δh = h. All the height energy becomes movement energy:\n\n$ ΔE_{p} = m·g·Δh = ½·m·v²\n\nso v = √(2·g·h), and again **the mass cancels**.",
+    "check": {
+      "q": "The bob swings through its lowest point. What is the restoring force along the arc there?",
+      "choices": [
+        "Zero, because sin 0° = 0",
+        "Maximum",
+        "Equal to the weight m·g",
+        "Equal to the tension"
+      ],
+      "answer": 0,
+      "why": "At the bottom θ = 0°, so **F = −m·g·sin 0° = 0**. The bob moves fastest there only because it arrives with speed.",
+      "whyNot": [
+        null,
+        "Speed is biggest at the bottom, but force and speed are different things. How does the arc part, m·g·sin θ, depend on the angle θ?",
+        "The weight is not the part along the arc. Only the arc part of it pulls the bob back. How big is that at the bottom?",
+        "The tension acts along the string, at right angles to the swing, so it can't be the force along the arc."
+      ]
+    }
+  },
+  "bigidea": {
+    "kicker": "The big idea",
+    "title": "Light bob, heavy bob",
+    "lead": "Try it: two bobs on 1.0 m strings, **0.2 kg** (yellow) and **2.0 kg** (pink). Choose a release angle and press release. Watch the force and the acceleration boxes while they swing.",
+    "scene": "Two pendulums of equal length, a light bob and a heavy bob",
+    "release": "Release both",
+    "reset": "Back to start",
+    "angle": "Release angle",
+    "force": "Force along the swing",
+    "accel": "Acceleration along the arc",
+    "note": "Force along the swing = m·g·sin θ. Acceleration along the arc = force ÷ m = g·sin θ. (The simulation uses the same equation for both bobs, because the mass really does cancel from it.)",
+    "after": "The heavy bob is pulled **{massRatio} times harder**, but it has **{massRatio} times more mass** to move, so the acceleration along the arc is identical at every angle and the two swing in step. In real air a light bob is slowed more by drag, so a dense heavy bob keeps going longer. But the **period** itself ignores the mass."
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Small swings are SHM",
+    "lead": "For **simple harmonic motion** the restoring force must be **proportional to the displacement**, like the spring's F = −k·y. But the pendulum's force is −m·g·sin θ. Is that proportional? Tap the right move at each step.",
+    "check": {
+      "q": "Why does a pendulum swing in SHM only for **small** angles?",
+      "choices": [
+        "Only then is sin θ ≈ θ, so the force is proportional to the displacement",
+        "Only then is the string tight",
+        "Only then does gravity act on the bob",
+        "Only then does the mass cancel"
+      ],
+      "answer": 0,
+      "why": "The force is −m·g·sin θ. Only when θ is small (and in radians) is sin θ ≈ θ, which makes the force **proportional to the displacement y**.",
+      "whyNot": [
+        null,
+        "A string stays taut for swings up to 90° (a rod would for any angle). That is not why the motion stops being SHM: the force stops being proportional to the displacement.",
+        "Gravity pulls on the bob at every angle, big or small. The question is about the shape of the force.",
+        "The mass cancels at every angle. What fails for big angles is the proportionality, not the cancelling."
+      ]
+    }
+  },
+  "derive": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "A bob of mass m hangs from a string and is pulled aside by an angle θ. The string's pull and the part of gravity along the string don't change the bob's speed (together they bend its path into the circle). The part of gravity along the **arc**, pulling the bob back, is...",
+        "options": [
+          "−m·g·sin θ",
+          "−m·g·cos θ",
+          "−m·g"
+        ],
+        "answer": 0,
+        "then": "**F = −m·g·sin θ.** The minus sign means it points back towards the middle. It's a restoring force, but it's proportional to sin θ, not to the distance."
+      },
+      {
+        "prompt": "For a **small** angle, measured in **radians**, sin θ is almost equal to...",
+        "options": [
+          "θ",
+          "1",
+          "θ²"
+        ],
+        "answer": 0,
+        "then": "sin θ ≈ θ. Even at 10° the two differ by only about {sin10}%. (It only works in radians, and only for small angles.) The bob moves along an arc of length y = L·θ, so θ = y/L, and\n\n$ F ≈ −m·g·θ = −(m·g/L)·y"
+      },
+      {
+        "prompt": "That has the same shape as the spring's F = −k·y. So the pendulum behaves like a spring with k = ...",
+        "options": [
+          "m·g/L",
+          "m·L/g",
+          "g/L"
+        ],
+        "answer": 0,
+        "then": "**k = m·g/L.** (Here y is the arc length, and k is not the stiffness of the string: it just plays the same role as the spring constant.) The force is now proportional to the displacement, so it's SHM. Put k into the spring result T = 2π√(m/k):\n\n$ T = 2π√(m / (m·g/L)) = 2π√(L/g)\n\nThe **m cancels**. That's your warm-up answer: the mass makes the force bigger *and* the inertia bigger by the same factor."
+      }
+    ]
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "The beat of a pendulum",
+    "body": "For small swings the pendulum is a spring with k = m·g/L, so its period is:\n\n$ T = 2π√(L/g)\n\n**L** is the string length in metres (to the middle of the bob). The frequency is f = 1/T.\n\n- **Longer string, longer period.** Make L 4 times bigger and T doubles (√4 = 2).\n- **Weaker gravity, longer period.** On the Moon g = 1.62 m/s², so T is about {moonR} times longer.\n- **Measuring g.** Turn the formula round: g = 4π²·L/T². Measure L and T, and you have g (Example 3). Small swings only, and time many swings to get an accurate T.\n- **The mass doesn't appear**, and neither does the **amplitude**, as long as it is small.\n\nTest all that in the lab."
+  },
+  "lab": {
+    "kicker": "Play",
+    "title": "The swing lab",
+    "lead": "**Drag the bob sideways, then let go.** The yellow ring remembers where you released it. The lab times the swing itself, from the moment the bob turns round at each end, and compares it with the formula.",
+    "scene": "A pendulum: a bob on a rod that you can drag sideways",
+    "drag": "Release angle of the pendulum, in degrees",
+    "drag_hint": "Drag the bob (or use the arrow keys, then Release).",
+    "release": "Release",
+    "reset": "Hang it up again",
+    "length": "String length L",
+    "mass": "Bob mass",
+    "gravity": "Gravity g",
+    "earth": "Earth",
+    "moon": "Moon",
+    "mars": "Mars",
+    "angle": "Release angle",
+    "measured": "Measured period",
+    "small": "Small-angle formula",
+    "diff": "Measured vs formula",
+    "pull_first": "Pull the bob out sideways first (at least 1°).",
+    "status_run": "Swinging. The period appears at the first turning point.",
+    "status_small": "A small swing: the measurement and the formula agree.",
+    "status_big": "A bigger swing: a little slower than the formula says, and slower still for bigger swings. This is not simple harmonic motion any more.",
+    "tasks": "**Try these:**\n- Release at **10°**: the measured period and the formula agree.\n- Slide the **mass** from 0.1 to 2 kg. Does the period budge?\n- Set the string to **0.50 m**, then make it **4 times longer** (2.00 m). Period?\n- Switch to the **Moon**. Same string, a much slower swing: roughly **{moonR} times** longer.\n- Now release at **60°** and **150°** (the lab uses a light rod, not a string, so it can swing past 90°). Watch the last box: the measured period drifts away from the formula.\n\nThe formula T = 2π√(L/g) only holds for **small** angles. That's the price of using sin θ ≈ θ. For a big swing the force is not proportional to the displacement, so the motion is **not simple harmonic** and each swing takes longer."
+  },
+  "learn3check": {
+    "q": "A pendulum's string is made **4 times longer**. Its period becomes...",
+    "choices": [
+      "2 times longer",
+      "4 times longer",
+      "16 times longer",
+      "2 times shorter"
+    ],
+    "answer": 0,
+    "why": "T ∝ √L, and √4 = 2, so the period **doubles**.",
+    "whyNot": [
+      null,
+      "That would be T ∝ L. The period depends on the square root of L: T ∝ √L.",
+      "That is 4², which would mean T ∝ L². Check the formula: how does L enter T = 2π√(L/g)?",
+      "A longer string swings more slowly, so the period grows. Look at which way T moves with L."
+    ]
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Building a clock",
+    "body": "A pendulum's beat depends only on its length (and g), so it is a steady ticker. That is why it ran **pendulum clocks**: a falling weight gives the pendulum a tiny push each swing to replace what friction takes, and gears count the swings.\n\nA **seconds pendulum** takes exactly **1 s for each one-way swing**, so its period is T = 2 s. Which length does that need? Build one.",
+    "check": {
+      "q": "A pendulum clock runs **slow**. What should you do to the pendulum?",
+      "choices": [
+        "Make it a little shorter",
+        "Make it a little longer",
+        "Add mass to the bob",
+        "Swing it through a bigger angle"
+      ],
+      "answer": 0,
+      "why": "Slow means each swing takes too long. T = 2π√(L/g), so a **shorter** pendulum has a shorter period and the clock speeds up. Mass doesn't change the period.",
+      "whyNot": [
+        null,
+        "A longer string gives a longer period T. Is that the change a clock that is too slow needs?",
+        "The mass is not in T = 2π√(L/g), so it cannot change the beat.",
+        "A bigger swing makes the period slightly longer, which would slow the clock down even more."
+      ]
+    }
+  },
+  "game": {
+    "kicker": "Mini-game",
+    "title": "Build a seconds pendulum",
+    "lead": "Set the string length so that each one-way swing (left to right) takes **1.00 s** on Earth, to within 1%. Press **Test swing** to time it. (It starts from a small 5° swing.)",
+    "scene": "A pendulum hanging from a bar, for timing one swing",
+    "length": "String length L",
+    "test": "Test swing",
+    "oneway": "One-way swing",
+    "target": "Target",
+    "tries": "Tests",
+    "ok": "Within 1%. Built it!",
+    "too_slow": "Too slow. A shorter string swings faster.",
+    "too_fast": "Too quick. A longer string swings slower.",
+    "win_head": "SECONDS PENDULUM!",
+    "win": "A swing each way of 1 s means a full period of T = 2 s. Solve T = 2π√(L/g) for L:\n\n$ L = g·T² / (4π²) (the same algebra as in Example 2) = {g} × 2² / (4π²) ≈ {secL} m\n\nThat's almost exactly **one metre** (it varies very slightly from place to place), which did not go unnoticed. The seconds pendulum was proposed as a length standard more than once: Huygens suggested something like it in 1673, and in 1790 the French assembly first backed a seconds pendulum for the new unit. But g varies a little from place to place on Earth, so a pendulum's length would differ slightly between countries. In 1791 France chose a fraction of the Earth's size instead (one ten-millionth of the distance from the North Pole to the equator), and today the metre is defined from the speed of light."
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: find the period",
+        "problem": "A pendulum has a string of length **0.80 m**. Find its period and frequency on Earth. (g = {g} m/s², small swings)",
+        "steps": [
+          "Use T = 2π√(L/g) with L = 0.80 m.",
+          "L / g = 0.80 / {g} = {we1r} s².",
+          "√{we1r} = {we1s} s, and multiplying by 2π gives T = 2π × {we1s}.",
+          "Frequency: f = 1/T = 1 / {we1T}."
+        ],
+        "answer": "T ≈ **{we1T} s**, f ≈ **{we1f} Hz**"
+      },
+      {
+        "title": "Example 2: find the length",
+        "problem": "How long must a pendulum be to have a period of **1.5 s** on Earth? (g = {g} m/s²)",
+        "steps": [
+          "Start from T = 2π√(L/g). Square both sides: T² = 4π²·L/g.",
+          "Solve for L: L = g·T² / (4π²).",
+          "T² = 1.5² = {we2sq} s², so g·T² = {g} × {we2sq} = {we2gT}. And 4π² = {we2den}.",
+          "L = {we2gT} / {we2den}."
+        ],
+        "answer": "L ≈ **{we2L} m**"
+      },
+      {
+        "title": "Example 3: measure g",
+        "problem": "A student hangs a bob on a string with L = **1.00 m** and swings it through a small angle. Ten full swings take **{we3t} s**. Find g.",
+        "steps": [
+          "Time many swings for accuracy: T = {we3t} s / 10 = {we3T} s.",
+          "From T = 2π√(L/g), square both sides: T² = 4π²·L/g. Solve for g: g = 4π²·L / T².",
+          "T² = {we3T}² = {we3sq} s², and 4π²·L = {we3den} m.",
+          "g = {we3den} / {we3sq}."
+        ],
+        "answer": "g ≈ **{we3g} m/s²**"
+      }
+    ]
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A simple pendulum has a string of length 2.50 m. What is its period on Earth for small swings? (g = {g} m/s²)",
+        "choices": [
+          "{p1T} s",
+          "{p1w1} s",
+          "{p1w2} s",
+          "{p1w3} s"
+        ],
+        "answer": 0,
+        "hint": "T = 2π√(L/g). Don't forget the 2π, and L goes on top.",
+        "solution": "T = 2π√(L/g), with L = 2.50 m. L/g = 2.50 / {g} = {p1r} s², and √{p1r} = {p1s} s. So T = 2π × {p1s} = **{p1T} s**. Sense check: a bit over 3 s for a 2.5 m string, longer than the 2 s of a 1 m pendulum.",
+        "whyNot": [
+          null,
+          "That's √(L/g) alone: you left out the factor 2π. The right answer is {p1T} s.",
+          "g goes under L, not beside it: T = 2π√(L/g), so the answer is {p1T} s.",
+          "That's the fraction upside down, √(g/L). A longer string must give a longer period: {p1T} s."
+        ]
+      },
+      {
+        "q": "A pendulum's string is shortened from 2.00 m to 0.50 m. What happens to its period?",
+        "choices": [
+          "It halves",
+          "It quarters",
+          "It stays the same",
+          "It doubles"
+        ],
+        "answer": 0,
+        "hint": "T ∝ √L. The length becomes 4 times smaller.",
+        "solution": "T ∝ √L. The length is multiplied by 0.50/2.00 = 1/4, so T is multiplied by √(1/4) = 1/2. The period **halves**, from {p2b} s to {p2a} s.",
+        "whyNot": [
+          null,
+          "That would be T ∝ L. It's T ∝ √L, so L four times smaller gives T two times smaller (it halves).",
+          "The string length does change T (T ∝ √L). Four times shorter means T halves.",
+          "Upside down: a shorter string swings faster, so T falls. It halves."
+        ]
+      },
+      {
+        "q": "On Earth a pendulum has a period of 2.0 s. The same pendulum is taken to the Moon, where g = 1.62 m/s². What is its period there?",
+        "choices": [
+          "{p3M} s",
+          "{p3w1} s",
+          "{p3w2} s",
+          "2.0 s"
+        ],
+        "answer": 0,
+        "hint": "T ∝ 1/√g. The factor is √({g} / 1.62).",
+        "solution": "T ∝ 1/√g, so T(Moon)/T(Earth) = √(g_{Earth}/g_{Moon}) = √({g} / 1.62) = √{p3q} = {p3s}. T(Moon) = 2.0 s × {p3s} = **{p3M} s**. Sense check: weaker gravity, slower swing, so more than 2.0 s.",
+        "whyNot": [
+          null,
+          "You forgot the square root: T ∝ 1/√g, so the factor is √({g}/1.62) = {moonR}, giving {p3M} s.",
+          "Upside down: weaker gravity makes the swing slower, so T on the Moon is longer: {p3M} s.",
+          "g is in the formula, so the place matters. Only the mass and small amplitude don't. It's {p3M} s."
+        ]
+      },
+      {
+        "q": "A pendulum bob is released at rest 0.20 m above its lowest point. How fast does it move through the lowest point? Ignore air resistance. (g = {g} m/s²)",
+        "choices": [
+          "{p4v} m/s",
+          "{p4w1} m/s",
+          "{p4w2} m/s",
+          "{p4w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "Height energy becomes movement energy: m·g·h = ½·m·v².",
+        "solution": "Height energy becomes movement energy: m·g·h = ½·m·v². The m cancels, so v² = 2·g·h = 2 × {g} × 0.20 = {p4w1} m²/s². Then v = √{p4w1} = **{p4v} m/s**.",
+        "whyNot": [
+          null,
+          "That's 2·g·h, which is v², not v. Take the square root: v = {p4v} m/s.",
+          "You dropped the 2: m·g·h = ½·m·v² gives v² = 2·g·h, so v = {p4v} m/s.",
+          "That's √(2h/g), the time to fall 0.20 m (in s), not a speed. From energy: v = √(2·g·h) = {p4v} m/s."
+        ]
+      },
+      {
+        "q": "A pendulum swings through small angles. The bob is replaced by one with **twice the mass** (same string). What happens to the period?",
+        "choices": [
+          "It stays the same",
+          "It doubles",
+          "It becomes √2 times longer",
+          "It halves"
+        ],
+        "answer": 0,
+        "hint": "Look at T = 2π√(L/g): is m in it?",
+        "solution": "The restoring force −m·g·sin θ is twice as big, but the inertia is twice as big too, so the acceleration is unchanged. In T = 2π√(L/g) there is no m, so the period **stays the same**.",
+        "whyNot": [
+          null,
+          "A heavier bob has a larger restoring force but also more inertia, and the two cancel. The period stays the same.",
+          "√2 would come from T = 2π√(m/k) with k fixed. Here k = m·g/L doubles too, so m cancels: no change.",
+          "Heavier bobs don't swing faster. Force and inertia both double, so the period stays the same."
+        ]
+      },
+      {
+        "q": "To measure g, a student uses a pendulum with L = 0.640 m and times **10 full swings**: 16.1 s. Which value of g does this give? (small swings)",
+        "choices": [
+          "{p6g} m/s²",
+          "{p6w1} m/s²",
+          "{p6w2} m/s²",
+          "{p6w3} m/s²"
+        ],
+        "answer": 0,
+        "hint": "First find T for one swing, then g = 4π²·L/T².",
+        "solution": "One swing: T = 16.1 s / 10 = {p6T} s. Then g = 4π²·L/T² = 4π² × 0.640 / {p6T}² = {p6num} / {p6sq} = **{p6g} m/s²**. Sense check: close to 9.81 m/s².",
+        "whyNot": [
+          null,
+          "You used the total time for T. T is one swing: 16.1 s / 10 = {p6T} s, giving g = {p6g} m/s².",
+          "You forgot to square T. It is g = 4π²·L/T², giving {p6g} m/s².",
+          "That's 2π²·L/T²: (2π)² is 4π², not 2π². The right value is {p6g} m/s²."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "The lamp and the clock",
+    "frames": [
+      {
+        "cap": "Pisa, the story goes",
+        "text": "A young Galileo watches a lamp swing in the cathedral. He has no clock, so he counts his **pulse**. Wide swing or small swing: the same number of beats! *(We only know this tale from his biographer, written long after.)*",
+        "fx": "BEAT"
+      },
+      {
+        "cap": "The idea",
+        "text": "A pendulum's beat depends on its **length**, not on how far it swings (when the swing is small). That's a steady beat, ideal for timing."
+      },
+      {
+        "cap": "1656 to 1657",
+        "text": "Christiaan Huygens, a Dutch scientist, designs the first **pendulum clock**, built with a clockmaker in 1657. A falling weight gives the pendulum a tiny push each swing, to replace what friction takes.",
+        "fx": "TICK"
+      },
+      {
+        "cap": "Result",
+        "text": "Clocks that were often off by about a quarter of an hour a day get down to roughly **15 seconds a day** (the commonly quoted figures). The best pendulum clocks stay the world's most accurate timekeepers until quartz clocks take over in the 1930s.",
+        "fx": "TOCK"
+      }
+    ],
+    "question": "Why do pendulum clocks keep the swing small?",
+    "choices": [
+      "Big swings are dangerous",
+      "For big swings the period changes, so the beat would drift as the swing size changes",
+      "A small swing is quieter"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Not the reason:",
+      "Exactly.",
+      "Not the reason:"
+    ],
+    "explain": "You saw it in the lab: the bigger the swing, the longer the period. At 5° the period is only a tiny bit above the small-angle value, but at 60° the difference is clearly noticeable. Keeping swings small keeps the clock's beat nearly constant, even as the swing slowly changes."
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Pendulum Lab",
+    "body": "Swap the bob's mass, change the string length, take your pendulum to the Moon, and time the swing with the period timer. Does it follow T = 2π√(L/g)? Predict first, then check. Try a big angle too.\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The hero's swing",
+    "body": "Draw an anime-style hero on a rope swing as a 4-panel strip. **Panel 1:** the hero held still, high on one side. **Panel 2:** the bottom, where she's fastest. **Panel 3:** the other side, rising to the same height and stopping for an instant. **Panel 4:** a small swing next to a huge one, with the huge one taking a bit longer. Add speed lines where it's fastest."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "Two forces act on the bob: **weight m·g** and **tension**. The restoring force along the arc is **F = −m·g·sin θ**, zero at the bottom.",
+      "For **small angles** (in radians) sin θ ≈ θ, so **F ≈ −(m·g/L)·y**: proportional to the displacement, so the motion is **SHM**.",
+      "**T = 2π√(L/g)**, f = 1/T. It depends on L and g only, not on the **mass** or (for small swings) the **amplitude**.",
+      "4 times the length gives 2 times the period. Weaker g gives a longer period.",
+      "**Measuring g:** g = 4π²·L/T². Time many small swings, find T, and put L and T in.",
+      "A **seconds pendulum** has T = 2 s (about 1 m on Earth); pendulum clocks use the steady beat to keep time.",
+      "**Speed at the lowest point:** m·g·h = ½·m·v², so v = √(2·g·h), independent of the mass.",
+      "For **big swings** the force is not proportional to y: the motion is not SHM and the period is longer than the formula says."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A student measures the length L and the period T of a pendulum. Which formula gives g?",
+        "choices": [
+          "g = 2π√(L/T)",
+          "g = 4π²·L/T²",
+          "g = T²/(4π²·L)",
+          "g = 4π²·T²/L"
+        ],
+        "answer": 1,
+        "why": "Square T = 2π√(L/g): T² = 4π²·L/g. Solving for g gives **g = 4π²·L/T²**.",
+        "whyNot": [
+          "You swapped g and T without squaring. Squaring T = 2π√(L/g) removes the root and leaves T² = 4π²·L/g, so T² ends up underneath: g = 4π²·L/T².",
+          null,
+          "That's upside down: L and T² are the wrong way round. g = 4π²·L/T².",
+          "T² is on the wrong side. Longer T means weaker g, so T² belongs underneath: g = 4π²·L/T²."
+        ]
+      },
+      {
+        "q": "The same pendulum goes to the Moon, where g = 1.62 m/s². Its period...",
+        "choices": [
+          "is shorter",
+          "stays the same",
+          "is about {moonR} times longer",
+          "is about 6 times longer"
+        ],
+        "answer": 2,
+        "why": "T ∝ 1/√g. Moon gravity is about 6 times weaker, and the period grows by √({g} / 1.62) ≈ **{moonR}**, not 6.",
+        "whyNot": [
+          "Weaker gravity gives slower swings, so the period is longer, not shorter.",
+          "g is in T = 2π√(L/g), so a different g changes the period.",
+          null,
+          "g is 6 times weaker, but T ∝ 1/√g, so the period grows by √(9.81/1.62) ≈ {moonR}, not 6."
+        ]
+      },
+      {
+        "q": "At the lowest point of the swing, the bob has...",
+        "choices": [
+          "maximum speed, no force along the swing",
+          "zero speed, maximum force along the swing",
+          "zero speed, no force along the swing",
+          "maximum speed, maximum force along the swing"
+        ],
+        "answer": 0,
+        "why": "At the bottom the pull back along the swing is **m·g·sin 0° = 0**, and all the stored height has turned into speed: **fastest**.",
+        "whyNot": [
+          null,
+          "The bob is at rest and the force is biggest at the ends. At the bottom the speed is biggest and sin 0° = 0 kills the force.",
+          "At the bottom the bob moves fastest, so the speed is not zero. Only the force along the swing is zero.",
+          "Fastest, yes, but the force along the swing is m·g·sin 0° = 0 there, not the maximum."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: extra challenges for when you want more. Not needed for your tests."
+  },
+  "check": {
+    "kicker": "Bonus: could it really happen?",
+    "title": "The rope swing",
+    "say": "An anime-style hero swings on a {heroL} m rope!",
+    "lead": "She is released from rest with the rope at **{heroDeg}°** from the vertical. No air resistance, g = {g} m/s². Vote on the speed at the bottom first. The steps also work out how long one full swing takes.",
+    "question": "How fast is she going at the lowest point?",
+    "choices": [
+      "About 5 m/s (a jog)",
+      "About 9 m/s (a sprint)",
+      "About {heroV} m/s (a car in town)",
+      "About 30 m/s (a motorway)"
+    ],
+    "answer": 2,
+    "lock": "Decide",
+    "verdicts": [
+      "Faster than that:",
+      "Faster than that:",
+      "Right. Here's the calculation:",
+      "Slower than that:"
+    ],
+    "steps": [
+      "**Height:** at the bottom she has dropped h = L(1 − cos θ) = {heroL} × (1 − cos {heroDeg}°) = **{heroH} m**.",
+      "**Energy:** gravitational energy turns into movement energy: m·g·h = ½·m·v², so v = √(2·g·h) = √(2 × {g} × {heroH}) ≈ **{heroV} m/s**, about {heroKmh} km/h. Her mass cancels.",
+      "**One full swing** (there and back): the small-angle formula gives T = 2π√(L/g) = {heroT0} s. But {heroDeg}° is a big swing, so the exact calculation gives **{heroT} s**, about {heroPct}% longer.",
+      "**The rope:** at the bottom it carries her weight and also bends her path into a circle: tension = m·g + m·v²/L = **{heroTen} × her weight**."
+    ],
+    "after": "So yes, it could happen, with a strong rope and a hero who doesn't mind about {heroKmh} km/h at the bottom. We treated her as a point on a massless rope."
+  },
+  "bigswing": {
+    "kicker": "Bonus: how much slower?",
+    "title": "Big swings in numbers",
+    "body": "The formula T = 2π√(L/g) assumes sin θ ≈ θ. For bigger angles the exact period (found with a computer) is longer. For a 1 m pendulum:\n\n- at **5°** it is only **{pct5}%** longer than the formula;\n- at **60°** it is **{pct60}%** longer;\n- at **170°** it is about **{r170} times** the formula's value.\n\nThat is why clockmakers keep the swing small."
+  },
+  "challenge": {
+    "kicker": "Bonus challenge",
+    "title": "The summer clock",
+    "lead": "A pendulum clock has a long steel rod holding its bob. On a hot summer day the rod gets slightly longer. Assume steel expands by α ≈ {alphaE}×10⁻⁶ per kelvin and the room is {heatDT} K warmer.",
+    "question": "Does the clock run fast, slow, or keep perfect time?",
+    "choices": [
+      "Fast",
+      "Slow",
+      "Perfect time"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Other way round:",
+      "Right. By how much?",
+      "A longer rod changes the period:"
+    ],
+    "explain": "A longer pendulum has a longer period, T = 2π√(L/g): each swing takes more time, so the clock counts fewer swings per real hour and shows **less time**. It runs **slow**.\n\nHow slow: ΔL/L = α·ΔT = {alphaE}×10⁻⁶ × {heatDT} = {heatStrain}×10⁻⁴. Since T ∝ √L, the period grows by about half of that, {heatT}×10⁻⁴. Over a day (86 400 s) that's about **{heatDay} s lost**. Clockmakers fight this with compensated pendulums made from two different metals, such as the gridiron pendulum."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "forces": {
+      "aria": "A pendulum bob pulled out to the right by an angle θ from the vertical. The weight m·g points straight down from the bob. It is split into a part along the string, pointing away from the pivot, and a part along the arc, pointing back towards the lowest point. The tension points along the string towards the pivot.",
+      "weight": "m·g (weight)",
+      "tension": "tension",
+      "along_string": [
+        "m·g·cos θ",
+        "along the string"
+      ],
+      "along_arc": [
+        "m·g·sin θ",
+        "along the arc"
+      ],
+      "theta": "θ",
+      "lowest": "lowest point",
+      "caption": "**The weight split in two.** The white arrow is the weight m·g. The dotted lines show how it splits into a part **along the string** (yellow, m·g·cos θ), which only pulls against the string, and a part **along the arc** (pink, m·g·sin θ), which pulls the bob back towards the lowest point. At θ = {figTh}° the arc part is {figSin} of the weight and the string part {figCos}. The cyan tension arrow points to the pivot. At the bottom θ = 0° and the arc part vanishes."
+    },
+    "measure": {
+      "aria": "A pendulum hanging from a support. The length L is measured from the support to the centre of the bob. A shorter distance, from the support to the top of the bob (the thread only), is marked as too short.",
+      "pivot": "fixed support",
+      "bob": "bob: key or nut",
+      "right": [
+        "L: support to",
+        "the centre of the bob"
+      ],
+      "wrong": [
+        "thread only:",
+        "too short"
+      ],
+      "caption": "**Measure L to the centre of the bob**, not just to the end of the thread. The pendulum swings about the support, and the bob's centre is the point that matters."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Measure g with a key on a string",
+    "lead": "Example 3 and Practice 6 did it on paper. Now do it for real: you measure g yourself with a key or a nut on a thread, a ruler and a stopwatch.",
+    "safety": "**Safety:** use a small, light bob (a key or a nut, not something heavy or sharp). Hang the thread from a door frame, a shelf edge or a hook you can reach from the floor, never from a ladder or a chair. Keep your face out of the swing's path, and check nobody walks through it.",
+    "need": "**You need:** a key or a nut, about 1.2 m of thin thread or string, tape, a ruler or tape measure, and a stopwatch (a phone is fine). No app needed.",
+    "steps": "**Do this:**\n1. Tie the bob to the thread. Tape the other end to a fixed support so the thread can swing freely. Measure **L** from the support to the **centre of the bob**: set it to about {exL1} m.\n2. Pull the bob aside by a **small angle** (about 10°, which is about 17 cm sideways for a 1 m string) and let go. Don't push.\n3. Start the stopwatch as the bob passes the **middle** (call that 0), and stop it after **10 full swings** (there and back each time). Write down the time t.\n4. Find T = t / 10. Then g = 4π²·L/T².\n5. Repeat for **{exL2} m** and **{exL3} m**, then take the average of your three values of g.",
+    "measure": "**Measure:** L (to the centre of the bob) and the time t for 10 swings, for each of the three lengths. Then T = t / 10 and g = 4π²·L/T².",
+    "compare": "**Compare with the formula:** with g = {g} m/s², expect 10 swings to take about **{exTen1} s** at L = {exL1} m (T = {exT1} s), **{exTen2} s** at {exL2} m (T = {exT2} s) and **{exTen3} s** at {exL3} m (T = {exT3} s). Your three values of g should land within about {exTol} m/s² of {g} (a key is not a point mass, and a stopwatch is not perfect). A shorter string gives a smaller T, but g should come out the same: that is the check. (Also try a heavier bob: the period should not change.)",
+    "wrong": "**What goes wrong:** (1) **Counting:** if you start the count at \"1\" instead of \"0\", you stop after only 9 swings but call it 10, so T comes out too small and g about {exCount} m/s². Say \"zero\" at the start. (2) **Big swings:** a 30° release makes T about 2% too long and g about {exBig} m/s². Keep it small. (3) **Measuring L to the top of the bob** instead of its centre: if that is {exOff} cm short on a 1 m string, g comes out about {exWrongL} m/s². (4) **Reaction time:** {exRt} s of error on one 2 s swing puts g off by about {exRtOne}%, but the same {exRt} s on 10 swings puts g off by only about {exRtTen}%. That is why you time many swings. (5) The thread must not slip or twist at the support, and the bob must swing in a plane, not in an ellipse."
+  }
+}

@@ -1,0 +1,650 @@
+{
+  "hero": {
+    "sfx": "WHOOSH",
+    "caption": "The wave goes. The rope stays."
+  },
+  "intro": "Flick one end of a rope. A bump runs down to the far end, but the rope itself doesn't go anywhere. That's a **wave**: an oscillation that **spreads through space**. This chapter teaches waves step by step: what they are, how to describe them (**A**, **λ**, **T**, **f**), the speed formula **v = f·λ**, and the two flavours, transverse and longitudinal.",
+  "goals": {
+    "title": "In this chapter you'll learn to",
+    "items": [
+      "explain a **wave** as an oscillation that spreads through space, passing energy along **without moving matter**;",
+      "describe a wave with **amplitude A**, **wavelength λ**, **period T** and **frequency f = 1/T**, and measure them in the wave lab and from pictures of a wave (the graphs of y against x and y against t come in *A wave in space and time*);",
+      "use the wave speed formula **v = f·λ** (and rearrange it for f or λ);",
+      "tell **transverse** from **longitudinal** waves, with examples: rope, sound, earthquake P and S waves."
+    ]
+  },
+  "warmup": {
+    "kicker": "Warm-up",
+    "say": "You shake a rope's end. Then shake twice as often!",
+    "question": "You shake one end of a long rope up and down. Now you shake it **twice as often** (double the frequency).\n\nThe wave travels along the rope...",
+    "choices": [
+      "faster",
+      "at the same speed",
+      "slower"
+    ],
+    "answer": 1,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Tempting, but no:",
+      "Yes! The rope decides, not your hand.",
+      "Not that either:"
+    ],
+    "explain": "**The medium sets the speed.** How fast a bump runs along a rope depends on the rope (how tight it is, how heavy), not on how you shake it. So when the frequency doubles but v stays put, the **wavelength must halve**: λ = v/f. With v = {labV} m/s, going from {labF} Hz to {f2} Hz shrinks λ from {labLam} m to {lam2} m. You'll see it in the lab.",
+    "gate": "Answer to unlock the chapter"
+  },
+  "lab": {
+    "scene": "A rope of beads carrying a wave, with a ruler showing one wavelength",
+    "freq": "Frequency f",
+    "amp": "Amplitude A",
+    "speed": "Wave speed v",
+    "transverse": "Transverse",
+    "longitudinal": "Longitudinal",
+    "track": "Track one bead",
+    "freeze": "Freeze",
+    "play": "Play",
+    "step": "Step 1/8 period",
+    "restart": "Shake from rest",
+    "r_T": "Period T",
+    "r_f": "Frequency f",
+    "r_lam": "Wavelength λ",
+    "r_v": "Wave speed v",
+    "track_disp": "Yellow bead's displacement",
+    "track_crest": "Wave pattern has travelled",
+    "up_down": "(up/down)",
+    "back_forth": "(back/forth)",
+    "ruler": "one wavelength = {n} m",
+    "ruler_long": "one wavelength = {n} m (longer than the rope)",
+    "status_t": "Transverse: the beads move sideways, across the direction the wave travels.",
+    "status_l": "Longitudinal: the beads shuffle back and forth along the direction of travel. Look for squeezed (compressions) and stretched (rarefactions) regions.",
+    "status_track_t": "The yellow bead only moves up and down. The wave runs past it. Nothing travels along the rope.",
+    "status_track_l": "The yellow bead only shuffles back and forth around the same spot. The wave runs past it."
+  },
+  "learn1": {
+    "kicker": "Learn · Step 1",
+    "title": "What is a wave?",
+    "body": "Think of the rope as a row of little **oscillators**, like the masses on springs from *Push back* and *The shape of a wobble*. Each piece is tied to its neighbours. Shake the first piece and it pulls the second, which starts moving a moment later, and pulls the third, and so on. The oscillation is **passed down the line**. That is a **wave**: the spreading of an oscillation in space. The material the wave runs through (the rope, the air, the rock) is called the **medium**.\n\nThe lab below is a rope of 41 beads, each tugging on its neighbours. Press **Shake from rest** and watch the disturbance run to the right.",
+    "tasks": "**Try this:** press **Track one bead**. A yellow bead is picked out. Watch it, then compare it with the readout **wave pattern has travelled**. The bead only goes up and down in place, while the pattern races along the rope.\n\nThe oscillation travels. The matter doesn't.",
+    "check": {
+      "q": "A wave runs along a rope from left to right. A bit of red paint marks one piece of the rope. What does the red mark do?",
+      "choices": [
+        "It moves up and down around its own spot",
+        "It travels to the right with the wave",
+        "It travels to the left",
+        "It stays completely still"
+      ],
+      "answer": 0,
+      "why": "Each piece of rope just **oscillates around its own position**. The wave pattern travels along the rope, the paint mark doesn't.",
+      "whyNot": [
+        null,
+        "The wave travels, the rope doesn't. If the mark went along, the rope would pile up at the far end.",
+        "Nothing in the rope travels left either. Think about what each piece of rope actually does.",
+        "It isn't still: the wave is pieces of rope moving. What does one piece do while the pattern passes?"
+      ]
+    }
+  },
+  "learn2": {
+    "kicker": "Learn · Step 2",
+    "title": "Describing a wave",
+    "body": "Five quantities describe a wave.\n- **Displacement y**: how far a piece of the medium is from its rest position, in metres (m).\n- **Amplitude A**: the **largest** displacement, in m. Measure from the middle line up to a crest (not from trough to crest).\n- **Wavelength λ**: the distance along the wave between two neighbouring crests (or any two neighbouring points that are doing exactly the same thing), in m. You read it from a **snapshot** (y against position x).\n- **Period T**: the time for **one full oscillation**, in seconds (s). You read it from a **time graph** (y against t) of one piece of the medium.\n\n**Frequency f** is the number of oscillations per second. Its unit is the hertz, 1 Hz = 1 s⁻¹.",
+    "formula": "$ f = 1/T",
+    "after": "**Phase:** two points are **in phase** if they are at the same stage of their oscillation (e.g. both at a crest, or both moving up through the middle). Points exactly one wavelength apart are in phase. Points half a wavelength apart do the opposite of each other.\n\nThe **frequency is set by the source** (your hand). The wave speed does **not** depend on the amplitude: a bigger shake makes taller crests, not faster ones. The lab shows the same ideas live.",
+    "tasks": "**Try this in the lab:** the ruler at the bottom shows one wavelength. Hit **Freeze** and slide **A**: only the height of the crests changes. Slide **f** up: T gets shorter and the crests bunch together, so λ gets shorter (keep v fixed). Assumptions: the rope is {rope} m long, no damping.",
+    "check": {
+      "q": "In a snapshot of a wave, a crest is at x = {x1} m and the next crest is at x = {x2} m. The crests reach +{sA} m and the troughs −{sA} m (measured from the middle line). What are λ and A?",
+      "choices": [
+        "λ = {sLam} m, A = {sA} m",
+        "λ = {sLam} m, A = {sAbad} m",
+        "λ = {x2} m, A = {sA} m",
+        "λ = {sLamHalf} m, A = {sA} m"
+      ],
+      "answer": 0,
+      "why": "λ is the **distance between neighbouring crests**: {x2} − {x1} = **{sLam} m**. A is measured from the middle line to a crest: **{sA} m** (the trough-to-crest height {sAbad} m is 2A).",
+      "whyNot": [
+        null,
+        "{sAbad} m is measured from trough to crest. A is measured from a different starting line.",
+        "{x2} m is where the second crest sits, not the gap to it. λ is a distance between two crests.",
+        "That is half the crest-to-crest gap: the way from a crest to a trough. Check what λ counts."
+      ]
+    },
+    "check2": {
+      "q": "A piece of rope goes through {oN} full oscillations in {oT} s. What are its period T and the frequency f?",
+      "choices": [
+        "T = {oPer} s, f = {oF} Hz",
+        "T = {oF} s, f = {oPer} Hz",
+        "T = {oPerBad} s, f = {oFbad} Hz",
+        "T = {oPer} s, f = {oFmix} Hz"
+      ],
+      "answer": 0,
+      "why": "T = {oT} s ÷ {oN} = **{oPer} s**, and f = 1/T = 1/{oPer} = **{oF} Hz**. (Check: {oN} oscillations in {oT} s is {oF} per second.)",
+      "whyNot": [
+        null,
+        "You swapped T and f. T is the time for ONE oscillation; f is how many fit in one second.",
+        "You multiplied {oN} by {oT}. To get the time for one oscillation, divide the total time by the count.",
+        "T looks fine, but f is not equal to T. Use f = 1/T instead of copying the number."
+      ]
+    }
+  },
+  "examples": {
+    "kicker": "Worked examples",
+    "title": "Watch it done, step by step",
+    "next": "Show next step",
+    "items": [
+      {
+        "title": "Example 1: find the wave speed",
+        "problem": "A wave on a long spring has frequency **{we1f} Hz** and wavelength **{we1lam} m**. Find its speed and its period.",
+        "steps": [
+          "Write the formula from the booklet: **v = f·λ**.",
+          "Substitute (both already in SI units): v = {we1f} × {we1lam}.",
+          "The period is the inverse of the frequency: T = 1/f = 1/{we1f}."
+        ],
+        "answer": "v = **{we1v} m/s**, T = **{we1T} s**"
+      },
+      {
+        "title": "Example 2: wavelength of a sound",
+        "problem": "A loudspeaker plays the note A at **{soundF} Hz**. Sound travels in air at 20 °C at **{soundV} m/s**. Find the wavelength.",
+        "steps": [
+          "Rearrange v = f·λ for the unknown: **λ = v/f**.",
+          "Substitute: λ = {soundV} m/s ÷ {soundF} Hz.",
+          "Units: (m/s) ÷ (1/s) = m, so the answer is a length, as it should be."
+        ],
+        "answer": "λ ≈ **{we2lam} m**"
+      },
+      {
+        "title": "Example 3: from the period to the speed",
+        "problem": "Ripples pass a floating cork, which bobs up and down once every **{we3T} s**. Neighbouring crests are **{we3lam} m** apart. Find the speed of the ripples.",
+        "steps": [
+          "The time for one bob is the period: T = {we3T} s. Convert to a frequency: **f = 1/T** = 1/{we3T} = {we3f} Hz.",
+          "Use the booklet formula: **v = f·λ** = {we3f} × {we3lam}.",
+          "Check with the other recipe: in one period the crest moves one wavelength, so v = λ/T = {we3lam}/{we3T}. Same answer."
+        ],
+        "answer": "v = **{we3v} m/s**"
+      }
+    ]
+  },
+  "learn3": {
+    "kicker": "Learn · Step 3",
+    "title": "The wave speed v = f·λ",
+    "lead": "How fast does the wave pattern travel? Tap the right move at each step to get the formula yourself.",
+    "rule": "$ v = f·λ\n\nRearranged: **λ = v/f** and **f = v/λ**. In SI units, v is in m/s, f in Hz and λ in m.\n\n**Who decides what?** The **source** sets the frequency (your hand shakes f times a second). The **medium** sets the speed (the rope's tension and mass, the air's temperature). The wavelength then has no choice: λ = v/f. Shake faster and the wave is just as fast but its wavelength is shorter. (The full wave equation y(x, t) comes in the chapter *A wave in space and time*.)",
+    "check": {
+      "q": "A wave on a rope travels at {c4v} m/s and the source shakes at {c4f} Hz. What is the wavelength?",
+      "choices": [
+        "{c4lam} m",
+        "{c4w1} m",
+        "{c4w2} m",
+        "{c4w3} m"
+      ],
+      "answer": 0,
+      "why": "λ = v/f = {c4v} / {c4f} = **{c4lam} m**. The others come from multiplying, flipping or adding the numbers.",
+      "whyNot": [
+        null,
+        "That is v × f = {c4w1}. Multiplying gives the wrong unit: (m/s) × Hz is not a length.",
+        "That is f/v, the formula upside down. Check the unit: Hz ÷ (m/s) is not metres.",
+        "You added {c4v} and {c4f}. m/s and Hz have different units, so you can't add them."
+      ]
+    }
+  },
+  "game": {
+    "kicker": "Mini-game",
+    "title": "Time the crest: measure a speed yourself",
+    "lead": "The source on the left shakes at **f = {gF} Hz**, and the rope's speed is a secret. The yellow dot rides the **first crest**. Markers **A** and **B** are **{gD} m** apart. Press **Shake!**, then tap **Start clock** as the crest passes A and **Stop clock** as it passes B. Your taps will be a little late, but both are late by about the same amount, so the difference is still good. Measure v = d/Δt to within **{gTol}%** of the true speed. A new rope has a new secret speed.",
+    "scene": "A rope with markers A and B and a yellow dot riding the first crest",
+    "distance_label": "{n} m",
+    "launch": "Shake!",
+    "tap_start": "Start clock",
+    "tap_stop": "Stop clock",
+    "show_a": "Freeze crest at A",
+    "show_b": "Freeze crest at B",
+    "next": "New rope",
+    "r_f": "Source frequency f",
+    "r_d": "Distance A to B",
+    "r_clock": "Clock Δt",
+    "r_vmeas": "Your speed d/Δt",
+    "ok": "Within the tolerance. You measured a wave's speed!",
+    "too_fast": "Your speed came out too high: the clock was too short. Stop it later, or start it earlier.",
+    "too_slow": "Your speed came out too low: the clock was too long. Stop it sooner, or start it later.",
+    "truth": "The rope's true speed is {v} m/s. Check with the other recipe: the wavelength was λ = {lam} m, so f·λ = {f} Hz × {lam} m = {prod} m/s.",
+    "win_head": "CREST TIMED!",
+    "win": "You found the speed from **distance ÷ time**, the way you'd time any moving thing. The same speed also comes out of **v = f·λ**: the source shakes at f = {gF} Hz, and the wavelength is however far the crest gets in one period. Two recipes, one speed. (Reduced motion: use the freeze buttons, which show the moment the crest reaches A and B.)"
+  },
+  "derive": {
+    "try_again": "Not that one. Try again!",
+    "steps": [
+      {
+        "prompt": "The source shakes with period T. In exactly **one period** T, how far does a crest travel along the rope?",
+        "options": [
+          "One wavelength λ",
+          "Half a wavelength",
+          "One amplitude A"
+        ],
+        "answer": 0,
+        "then": "**One wavelength λ.** After one full shake the source makes the next crest, so the first crest has moved ahead by exactly the gap between crests."
+      },
+      {
+        "prompt": "Speed is distance divided by time. With distance λ and time T, the wave speed is...",
+        "options": [
+          "v = λ/T",
+          "v = λ·T",
+          "v = T/λ"
+        ],
+        "answer": 0,
+        "then": "**v = λ/T.** Check the units: metres per second."
+      },
+      {
+        "prompt": "Frequency is f = 1/T. So λ/T can also be written as...",
+        "options": [
+          "v = f·λ",
+          "v = f/λ",
+          "v = λ/f"
+        ],
+        "answer": 0,
+        "then": "**v = f·λ.** That's the booklet's formula.\n\nWith it you can find any one of the three: **λ = v/f** or **f = v/λ**. And since the medium fixes v, a higher frequency means a shorter wavelength."
+      }
+    ]
+  },
+  "learn4": {
+    "kicker": "Learn · Step 4",
+    "title": "Transverse and longitudinal waves",
+    "lead": "The lab can shake the beads in two ways. Press **Longitudinal**, then press it back to **Transverse** and compare.\n\n- **Transverse wave:** the pieces oscillate **at right angles** to the direction the wave travels (a rope; a stadium wave looks the same).\n- **Longitudinal wave:** the pieces oscillate **along** the direction the wave travels. You get squeezed regions (**compressions**) and stretched regions (**rarefactions**). Sound in air and a pushed long spring are longitudinal. The **wavelength** of a longitudinal wave is the distance from one compression to the next compression.\n\n**Earthquakes** send out both kinds through the rock: **P waves** are longitudinal (and faster), **S waves** are transverse (and slower).",
+    "tasks": "In the longitudinal view, find where the beads bunch up (a compression). *(For the picture the shuffle is drawn smaller than the real amplitude when the wavelength is short, so beads never pass through each other.)* Then do the sort cards below.",
+    "check0": {
+      "q": "In a longitudinal wave on a long spring, which distance is one wavelength?",
+      "choices": [
+        "From one compression to the next compression",
+        "From a compression to the next rarefaction",
+        "The distance one coil moves back and forth",
+        "The whole length of the spring"
+      ],
+      "answer": 0,
+      "why": "The pattern repeats from one **compression to the next compression** (or one rarefaction to the next). That distance is λ. Half of it separates a compression from a rarefaction.",
+      "whyNot": [
+        null,
+        "That is only half the repeat distance. The pattern has to look exactly the same again.",
+        "How far one coil shuffles is the size of the oscillation, not the length of the wave.",
+        "The wave pattern repeats many times along the spring, so the spring's length isn't λ."
+      ]
+    },
+    "check": {
+      "q": "Which statement about earthquake waves is correct?",
+      "choices": [
+        "P waves are longitudinal and S waves are transverse",
+        "Both are longitudinal",
+        "P waves are transverse and S waves are longitudinal",
+        "Both are transverse"
+      ],
+      "answer": 0,
+      "why": "**P** waves (primary, faster) are **longitudinal**, like sound. **S** waves (secondary, slower) are **transverse**: the rock shakes sideways.",
+      "whyNot": [
+        null,
+        "Then P and S would be the same kind of wave, yet they arrive at different speeds. Look back at what the chapter said about each of them.",
+        "Check the order. Which of P and S is the fast one, and which kind of wave does sound make? Match them up.",
+        "Then P and S would be the same kind of wave, yet one is faster than the other. Look back at what the chapter said about each of them."
+      ]
+    }
+  },
+  "bigidea": {
+    "title": "Energy moves, matter doesn't",
+    "lead": "A wave carries **energy** from A to B. Does it also carry **matter** from A to B? Tap each card to find out.",
+    "yes": "Matter travels",
+    "no": "Only the wave travels",
+    "cards": [
+      {
+        "label": "Stadium wave",
+        "tagline": "tap",
+        "yes": false,
+        "why": "Each person stands up and sits down in their own seat. The wave runs round the stadium, the people don't."
+      },
+      {
+        "label": "Flick along a rope",
+        "tagline": "tap",
+        "yes": false,
+        "why": "The bump runs from one end to the other, but each piece of rope only moves up and down. Track a bead in the lab to see it."
+      },
+      {
+        "label": "Sound from a speaker",
+        "tagline": "tap",
+        "yes": false,
+        "why": "Air molecules shuffle back and forth a tiny distance. The compression travels at about {soundV} m/s in air at 20 °C, but no air travels from the speaker to your ear."
+      },
+      {
+        "label": "Water in a hose",
+        "tagline": "tap",
+        "yes": true,
+        "why": "This is a flow, not a wave: the water itself moves from the tap to the end of the hose."
+      },
+      {
+        "label": "Cork on a pond",
+        "tagline": "tap",
+        "yes": false,
+        "why": "A ripple passes and the cork bobs, staying roughly where it is. The ripple spreads, the cork doesn't follow it."
+      },
+      {
+        "label": "A thrown ball",
+        "tagline": "tap",
+        "yes": true,
+        "why": "Matter and energy both go from A to B. A ball is not a wave."
+      }
+    ],
+    "after": "A wave moves **energy and a pattern**, not material. Why? Each bead pulls on its neighbour, which starts to move a moment later. That's a system of **coupled oscillators**: bead 1 passes the shake to bead 2, bead 2 to bead 3, and so on, while every bead stays near its own home. Energy is handed down the line like a baton."
+  },
+  "practice": {
+    "kicker": "Practice",
+    "title": "Your turn: exam-style questions",
+    "labels": {
+      "hint": "Hint",
+      "solution": "Solution:",
+      "score": "You got {right} of {n}. Check the solutions for any you missed.",
+      "perfect": "All {n} right! You are ready for this in a test."
+    },
+    "items": [
+      {
+        "q": "A point on a rope oscillates with period T = {p1T} s. What is the frequency?",
+        "choices": [
+          "{p1f} Hz",
+          "{p1w1} Hz",
+          "{p1w2} Hz",
+          "{p1w3} Hz"
+        ],
+        "answer": 0,
+        "hint": "f = 1/T.",
+        "solution": "Formula (booklet): f = 1/T. Substitute: f = 1/{p1T} s = **{p1f} Hz**. Sense check: a short period means many oscillations per second, so a big f is right.",
+        "whyNot": [
+          null,
+          "{p1w1} Hz is the period T = {p1T} s read as a frequency. f = 1/T = {p1f} Hz.",
+          "{p1w2} would be {p1f} Hz converted to kHz but still labelled Hz. Keep Hz: f = {p1f} Hz.",
+          "{p1w3} Hz is ten times too big: check the decimal places in T. 1/{p1T} = {p1f} Hz."
+        ]
+      },
+      {
+        "q": "A wave on a string has frequency {p2f} Hz and wavelength {p2lam} m. What is its speed?",
+        "choices": [
+          "{p2v} m/s",
+          "{p2w1} m/s",
+          "{p2w2} m/s",
+          "{p2w3} m/s"
+        ],
+        "answer": 0,
+        "hint": "v = f·λ.",
+        "solution": "Formula (booklet): v = f·λ. Substitute: v = {p2f} Hz × {p2lam} m = **{p2v} m/s**. Units: Hz × m = (1/s) × m = m/s. Sense check: a few metres per second is typical for a wave on a rope or spring.",
+        "whyNot": [
+          null,
+          "That is f ÷ λ. The formula multiplies: v = f·λ = {p2v} m/s.",
+          "That is λ ÷ f, upside down. v = f·λ = {p2v} m/s.",
+          "That adds f and λ, but Hz and m can't be added. v = f·λ = {p2v} m/s."
+        ]
+      },
+      {
+        "q": "The time graph of one piece of a medium repeats every {p3T} s. The wave speed is {p3v} m/s. What is the wavelength?",
+        "choices": [
+          "{p3lam} m",
+          "{p3w1} m",
+          "{p3w2} m",
+          "{p3w3} m"
+        ],
+        "answer": 0,
+        "hint": "The repeat time is the period T. Then f = 1/T and λ = v/f.",
+        "solution": "The repeat time is the period, T = {p3T} s, so f = 1/T = 1/{p3T} = {p3f} Hz. Then v = f·λ gives λ = v/f = {p3v} m/s ÷ {p3f} Hz = **{p3lam} m**. Shortcut: λ = v·T gives the same, because in one period the wave moves one wavelength.",
+        "whyNot": [
+          null,
+          "{p3w1} is v ÷ T, which is v·f and not a length. λ = v/f = v·T = {p3lam} m.",
+          "{p3w2} is T ÷ v, upside down. λ = v/f = v·T = {p3lam} m.",
+          "That adds v and T, but m/s and s can't be added. λ = v·T = {p3lam} m."
+        ]
+      },
+      {
+        "q": "Which of these is a transverse wave?",
+        "choices": [
+          "A wave on a rope",
+          "Sound in air",
+          "A P wave in an earthquake",
+          "Compressions running along a pushed spring"
+        ],
+        "answer": 0,
+        "hint": "Transverse: the pieces oscillate at right angles to the direction of travel.",
+        "solution": "In a transverse wave the pieces oscillate at right angles to the direction of travel: that is the **rope wave**. Sound, P waves and compressions on a spring all have the pieces shuffling along the direction of travel, so they are **longitudinal**.",
+        "whyNot": [
+          null,
+          "Sound is longitudinal: the air molecules shuffle along the direction it travels.",
+          "P waves are longitudinal (compressions, like sound). The transverse earthquake waves are the S waves.",
+          "Compressions on a spring are longitudinal: the coils move back and forth along the spring."
+        ]
+      },
+      {
+        "q": "A wave passes a cork floating on a pond. What does the wave transfer from one place to another?",
+        "choices": [
+          "Energy, with essentially no net movement of water",
+          "Water, but no energy",
+          "Both energy and water",
+          "Neither energy nor water"
+        ],
+        "answer": 0,
+        "hint": "Think about what the cork does.",
+        "solution": "A wave passes energy along through coupled oscillators: each piece is pulled by its neighbour and pulls the next. The water and cork only move in small circles around their positions. So the wave transfers **energy, with essentially no net movement of water**.",
+        "whyNot": [
+          null,
+          "It's the other way round: the wave carries energy, and the water stays near its place (it moves in small circles, with almost no drift).",
+          "Energy yes, but the water doesn't travel with the wave: the cork bobs around the same spot instead of drifting along.",
+          "A wave does transfer energy: that is how it can lift the cork, shake a boat or move your eardrum."
+        ]
+      }
+    ]
+  },
+  "story": {
+    "kicker": "The story",
+    "title": "Waves that look inside the Earth",
+    "frames": [
+      {
+        "cap": "1897",
+        "text": "A huge earthquake shakes Assam, in north-east India. Instruments around the world, **seismographs**, record wiggly lines of the ground shaking.",
+        "fx": "RUMBLE"
+      },
+      {
+        "cap": "1900",
+        "text": "Richard Dixon Oldham, a geologist who studied the Indian earthquake, sorts the wiggles. In the records from far away he sees **three kinds of arrival**: a first small shudder, a second one later, and a big slow rolling one last (the **surface wave**, which runs along the ground instead of deep inside)."
+      },
+      {
+        "cap": "P and S",
+        "text": "The first two are **body waves**, which travel through the inside of the Earth: **P** (primary, first, longitudinal) and **S** (secondary, second, transverse). The delay between them tells you the distance (see the bonus at the end of the chapter if you want to do the sums).",
+        "fx": "P ... S"
+      },
+      {
+        "cap": "1906 and after",
+        "text": "In 1906 Oldham saw that waves crossing deep through the Earth arrived late, and he argued the planet has a distinct **core**. Later work found that S waves **never get through the outer core**: it must be liquid.",
+        "fx": "CORE"
+      }
+    ],
+    "question": "S waves are transverse: the rock must spring back when pushed **sideways**, and a liquid can't do that. Seismometers on the far side of the Earth never record S waves that went through the core. What does that tell us?",
+    "choices": [
+      "Part of the Earth's interior is liquid",
+      "The core is made of something that absorbs sound",
+      "S waves are too slow to cross the planet"
+    ],
+    "answer": 0,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Exactly.",
+      "Not the reason:",
+      "Not the reason:"
+    ],
+    "explain": "Liquids don't resist being sheared, so a **transverse** wave can't be passed along. P waves, which are compressions, do get through a liquid (slowed down). Together, the missing S waves and the bent, delayed P waves are how we know about the Earth's core without ever going there. (Details: Oldham's 1900 and 1906 papers; the liquid outer core was firmly established over the following decades.)"
+  },
+  "sim": {
+    "kicker": "Play in a lab",
+    "title": "Wave on a String",
+    "body": "Shake the end of a string by hand or with an oscillator. Change the frequency, amplitude, damping and tension, and use the ruler and timer to measure λ, T and the speed. Does v = f·λ hold? Predict first, then check. Try changing only the tension: what does it do to the speed?\n\n*Tip: on a phone, turn it sideways.*",
+    "open": "Open the simulation",
+    "attribution": "Simulation by PhET Interactive Simulations, University of Colorado Boulder (phet.colorado.edu). Opens on the PhET website."
+  },
+  "manga": {
+    "kicker": "Manga challenge",
+    "title": "The wave that left everyone behind",
+    "body": "Draw a 4-panel strip about a stadium wave. **Panel 1:** one hero stands up in the crowd, a ripple starting. **Panel 2:** the ripple passes along the rows, each person standing and sitting in their own seat. **Panel 3:** an aerial view where the wave has gone a quarter of the way round but nobody has left their seat. **Panel 4:** the hero looks at a tiny label: wave speed = f × λ. Add speed lines for the wave, and none for the people."
+  },
+  "summary": {
+    "kicker": "Remember for the test",
+    "title": "Summary card",
+    "items": [
+      "A **wave** is an oscillation that spreads through space. It carries **energy**, not matter: the pieces of the medium (**coupled oscillators**) only oscillate around their place.",
+      "**Amplitude A** (m): largest displacement. **Wavelength λ** (m): distance between neighbouring crests, read from a snapshot. **Period T** (s): time for one oscillation, read from a time graph. **Phase:** points at the same stage of their oscillation are in phase (one wavelength apart); half a wavelength apart they do the opposite.",
+      "**Frequency:** f = 1/T, in Hz (= s⁻¹). The **source** sets f.",
+      "**Wave speed:** v = f·λ, so λ = v/f and f = v/λ. The **medium** sets v, not the amplitude.",
+      "**Transverse:** oscillation at right angles to the travel direction (rope). **Longitudinal:** along it (sound). Earthquake **P** waves are longitudinal and faster, **S** waves transverse and slower."
+    ]
+  },
+  "quiz": {
+    "kicker": "Quick-fire",
+    "title": "Three in a row",
+    "items": [
+      {
+        "q": "A wave has frequency 5 Hz and wavelength 0.4 m. Its speed is...",
+        "choices": [
+          "{q1v} m/s",
+          "12.5 m/s",
+          "0.08 m/s",
+          "5.4 m/s"
+        ],
+        "answer": 0,
+        "why": "v = f·λ = 5 × 0.4 = **{q1v} m/s**.",
+        "whyNot": [
+          null,
+          "That is f ÷ λ. The formula multiplies: v = f·λ.",
+          "That is λ ÷ f, upside down. v = f·λ.",
+          "That adds f and λ, but Hz and m can't be added. Multiply: v = f·λ."
+        ]
+      },
+      {
+        "q": "Sound in air at 20 °C (take v = {soundV} m/s) of frequency {q2f} Hz has a wavelength of about...",
+        "choices": [
+          "{q2lam} m",
+          "{q2w1} m",
+          "{q2w2} m",
+          "{q2w3} m"
+        ],
+        "answer": 0,
+        "why": "λ = v/f = {soundV} / {q2f} = **{q2lam} m**. The others come from flipping or mis-scaling the formula.",
+        "whyNot": [
+          null,
+          "{q2w1} is f ÷ v, the formula flipped. λ = v/f = {q2lam} m.",
+          "{q2w2} m is v + f: you added the speed and the frequency, but m/s and Hz cannot be added. λ = v/f = {q2lam} m.",
+          "{q2w3} is the frequency, in Hz, not a length. λ = v/f = {q2lam} m."
+        ]
+      },
+      {
+        "q": "When a sound wave passes, the air molecules move...",
+        "choices": [
+          "back and forth along the direction the wave travels",
+          "up and down across the direction the wave travels",
+          "steadily from the source to your ear",
+          "in huge circles"
+        ],
+        "answer": 0,
+        "why": "Sound is **longitudinal**: the molecules shuffle along the line of travel, making compressions and rarefactions. They don't travel to your ear, only the wave does.",
+        "whyNot": [
+          null,
+          "Up and down is a transverse wave, like a rope. Sound is longitudinal: the shuffle is along the travel direction.",
+          "That would be wind. In a sound wave only the pattern travels; each molecule just shuffles around its place.",
+          "No circles: the molecules shuffle back and forth along a line, in the direction the wave travels."
+        ]
+      }
+    ],
+    "labels": {
+      "next": "Next",
+      "finish": "Finish",
+      "perfect": "Perfect run!",
+      "done": "Done. Go again for a perfect run?",
+      "again": "Play again"
+    }
+  },
+  "bonus": {
+    "title": "BONUS",
+    "note": "Beyond the syllabus: calculations and puzzles for when you want a challenge. Not needed for your tests."
+  },
+  "quake": {
+    "kicker": "Bonus: could it really happen?",
+    "title": "The earthquake clock",
+    "say": "A seismometer feels the S wave {qDt} s after the P wave!",
+    "lead": "An earthquake sends out two kinds of wave through the rock. **P waves** (primary) are longitudinal: the rock is squeezed and stretched along the direction of travel, like sound. They're faster. **S waves** (secondary) are transverse: the rock shakes sideways. They're slower. Assumptions (typical crust values): **v_{P} ≈ {vP} km/s, v_{S} ≈ {vS} km/s**, straight-line paths, both waves leave at the same instant. One station records the S wave **{qDt} s** after the P wave.",
+    "question": "How far away is the earthquake?",
+    "choices": [
+      "About {qWrong} km",
+      "About {qDist} km",
+      "About 600 km",
+      "About 1500 km"
+    ],
+    "answer": 1,
+    "lock": "Decide",
+    "verdicts": [
+      "Too close. That would be the distance S travels in {qDt} s alone:",
+      "Right. Here's the calculation:",
+      "Too far:",
+      "Much too far:"
+    ],
+    "steps": [
+      "**Travel times:** the quake is a distance d away. P arrives after t_{P} = d/v_{P}, S after t_{S} = d/v_{S}.",
+      "**The gap:** Δt = t_{S} − t_{P} = d·(1/v_{S} − 1/v_{P}). The delay grows in proportion to the distance: each extra km adds 1/{vS} − 1/{vP} ≈ {gapS} s.",
+      "**Solve for d:** d = Δt / (1/v_{S} − 1/v_{P}) = {qDt} / (1/{vS} − 1/{vP}) = **{qDist} km**.",
+      "**Check:** t_{P} = {qDist}/{vP} = {tP} s and t_{S} = {qDist}/{vS} = {tS} s, and {tS} − {tP} = {qDt} s. ✓ With these speeds, every second of delay means about **{rule} km** of distance."
+    ],
+    "after": "So yes, a delay of {qDt} s puts the quake about {qDist} km away. Real speeds vary with depth and rock type, so seismologists use several stations, each giving a distance circle; where the circles meet is the epicentre."
+  },
+  "challenge": {
+    "kicker": "Bonus challenge",
+    "title": "Thick rope, thin rope",
+    "lead": "A thick rope is tied to a thin one, and your hand shakes the thick end at a steady f = {cF} Hz. Waves run along the thick rope at **{thickV} m/s**, then cross the knot onto the thin rope, where they run at **{thinV} m/s** (a lighter rope at the same tension is faster).",
+    "question": "As the wave crosses the knot, which one stays **the same**?",
+    "choices": [
+      "The frequency",
+      "The wavelength",
+      "The speed",
+      "None of them stay the same"
+    ],
+    "answer": 0,
+    "lock": "Lock it in",
+    "verdicts": [
+      "Yes! And that settles the other two.",
+      "No, that one changes:",
+      "No, that one changes:",
+      "One of them survives the knot:"
+    ],
+    "explain": "The knot is shaken by the thick rope, and it shakes the thin rope, so both ropes wiggle at the **same frequency**: f = {cF} Hz. If the knot gained or lost cycles, a piece of rope would have to appear or vanish. The speed is set by each rope, and then λ = v/f has no choice: thick rope λ = {thickV}/{cF} = **{thickLam} m**, thin rope λ = {thinV}/{cF} = **{thinLam} m**. Same f, faster v, so a longer wavelength."
+  },
+  "checks": {
+    "tag": "CHECK",
+    "right": "Right!",
+    "wrong": "Not quite, try again."
+  },
+  "figs": {
+    "snapshot": {
+      "aria": "Snapshot graph of a transverse wave: displacement y against position x. The wave is a smooth up-and-down curve around a dashed middle line. The amplitude A is marked from the middle line up to a crest. The wavelength is marked between two neighbouring crests.",
+      "axis_y": "y",
+      "axis_x": "x",
+      "mid": "rest line",
+      "crest": "crest",
+      "trough": "trough",
+      "amp": "A",
+      "lam": "λ",
+      "caption": "**A snapshot of a transverse wave** (y against x): the wave frozen at one moment. **A** is measured from the middle line up to a crest (not trough to crest). **λ** is the distance between two neighbouring crests, or any two neighbouring points doing the same thing. The period **T** is not in this picture: it comes from a time graph of one piece of the medium (y against t)."
+    },
+    "long": {
+      "aria": "Two rows of dots. The top row shows spring coils at rest, evenly spaced. The bottom row shows the same coils with a longitudinal wave: the coils are bunched close together at the compressions and spread out at the rarefactions. The wavelength is marked from one compression to the next compression.",
+      "rest_row": "spring at rest",
+      "wave_row": "with a wave",
+      "compression": "compression",
+      "rarefaction": "rarefaction",
+      "lam": "λ",
+      "travel": "wave travels",
+      "caption": "**A longitudinal wave on a spring.** Each coil shuffles back and forth along the spring, so the coils bunch up in **compressions** and spread out in **rarefactions**. One wavelength **λ** is the distance from one compression to the **next compression**. Sound in air looks the same, with air molecules instead of coils."
+    }
+  },
+  "trial": {
+    "kicker": "Try it for real",
+    "title": "Measure the speed of sound with an echo",
+    "lead": "Sound is a wave, and a wave that bounces back is an **echo**. Here the echo keeps the time for you: you clap, the sound runs to a wall and back, and you clap again just as the echo arrives. Then the time between claps is the **round trip** of the sound.",
+    "safety": "**Safety:** do this in a school yard, park or sports field, **well away from roads and car parks**. Look where you walk and stay clear of the wall. Clapping is all the noise you need: no horns, whistles or bangs.",
+    "need": "**You need:** a big flat wall (a school wall or sports hall side) with about {eD} m of open ground in front of it, a tape measure or trundle wheel (or measure one stride and count strides), a stopwatch (a phone is fine) and a friend to time.",
+    "steps": "**Do this:**\n1. Stand a measured distance **d** from the wall (aim for about {eD} m). Clap once and listen for the echo.\n2. Clap again exactly when you hear the echo, then again on the next echo, and so on: **each clap lands on the echo of the one before**. You are aiming at a steady rhythm of about {eF} claps per second.\n3. Your friend starts the stopwatch on one clap and stops it {eN} claps later (count {eN} gaps between claps).\n4. Repeat three times and average the times. Then try clapping softer, and louder.",
+    "measure": "**Measure:** d (m) and the total time t (s) for N = {eN} claps. Between two claps the sound travels to the wall and back, a distance 2d, in a time t/N. So **v = 2d / (t/N) = 2d·N / t**.",
+    "compare": "**Compare with the chapter:** in air at 20 °C, v = {soundV} m/s, so each clap takes 2d/v = {eInt} s and {eN} claps take about **{eT} s**. A stopwatch time between {eTlo} s and {eThi} s gives a speed between {eVlo} and {eVhi} m/s: good for a stopwatch. Clapping softer or louder should not change the time: **the medium sets v, not the amplitude**.",
+    "wrong": "**What goes wrong:** your reaction time delays both the start and the stop of the stopwatch, so the errors mostly cancel, and timing more claps makes the leftover error a smaller fraction. If your rhythm drifts you start clapping on the wrong echo, so listen for the echo of the clap just before. Closer than about {eD} m the claps must come too fast to keep up. Other walls give extra echoes, and on a cold day sound is a little slower."
+  }
+}
